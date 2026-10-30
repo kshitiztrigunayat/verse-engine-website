@@ -3,10 +3,11 @@
 // picks up from the finished logo, so the two pages read as one animation. Skipped for reduced motion, ?motion-off and ?poster;
 // any click or key skips it.
 (()=>{
-const html=document.documentElement,NAV_KEY='verse-nav';
+const html=document.documentElement,NAV_KEY='verse-nav',SKIP_KEY='verse-skip-intro';
 const uncover=()=>html.classList.remove('intro-on');
 const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches||/motion-off|poster/.test(location.search);
-let fromNav=false;try{const v=+sessionStorage.getItem(NAV_KEY);fromNav=v&&Date.now()-v<8000;sessionStorage.removeItem(NAV_KEY)}catch(e){}
+let fromNav=false,skipArrival=false;try{const k=+sessionStorage.getItem(SKIP_KEY);skipArrival=!!k&&Date.now()-k<8000;sessionStorage.removeItem(SKIP_KEY)}catch(e){}
+try{const v=+sessionStorage.getItem(NAV_KEY);fromNav=v&&Date.now()-v<8000;sessionStorage.removeItem(NAV_KEY)}catch(e){}
 if(reduced){uncover();return}
 const BLUE=[61,117,243],INK=[29,29,31];
 const clamp=(v,a,b)=>Math.min(b,Math.max(a,v)),lerp=(a,b,k)=>a+(b-a)*k;
@@ -81,11 +82,14 @@ addEventListener('pageshow',e=>{if(e.persisted){closed=true;cancelAnimationFrame
 document.addEventListener('click',e=>{
  if(e.defaultPrevented||e.button!==0||e.metaKey||e.ctrlKey||e.shiftKey||e.altKey)return;
  const a=e.target.closest&&e.target.closest('a[href]');if(!a||mode==='exit')return;
+ // Moving around inside the documentation (left nav) is plain navigation: no transition on either page.
+ if(a.closest('.docs-sidebar,.docs-mobile,.docs-nav-content')){try{sessionStorage.setItem(SKIP_KEY,String(Date.now()))}catch(x){}return}
  if(a.target&&a.target!=='_self'||a.hasAttribute('download'))return;
  let u;try{u=new URL(a.href,location.href)}catch(x){return}
  if(u.origin!==location.origin)return;
  if(u.pathname===location.pathname&&u.search===location.search)return;     // same page / hash jumps
  if(/\.(zip|tgz|rbz|pdf|json|xml|txt|mp4|png|jpe?g|webp)$/i.test(u.pathname))return;
  e.preventDefault();runExit(u.href)},true);
-if(document.body)runIntro();else addEventListener('DOMContentLoaded',runIntro);
+const start=()=>{if(skipArrival){uncover();return}runIntro()};
+if(document.body)start();else addEventListener('DOMContentLoaded',start);
 })();
