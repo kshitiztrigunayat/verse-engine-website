@@ -1,6 +1,6 @@
 # Verse Engine website
 
-Run `node server.mjs` and open http://127.0.0.1:4173/. No install is required.
+Run `node preview-server.mjs` and open http://127.0.0.1:4173/. No install is required.
 
 - `node source/build-production-pages.mjs` regenerates pages from the captured content and templates.
 - `node tools/verify.mjs` validates resources, syntax and JSON.

@@ -1,0 +1,7 @@
+{
+  "framework": null,
+  "installCommand": "echo 'static site: nothing to install'",
+  "buildCommand": "echo 'static site: website/dist is already built'",
+  "outputDirectory": "website/dist",
+  "cleanUrls": false
+}

@@ -8,7 +8,7 @@ Reference website: https://verse-engine-ctruh-design.rajat83.chatgpt.site/
 
 1. Extract the full archive. Open a terminal in `website/`.
 2. Use Node.js 22 or later. This handoff was checked with Node.js 24.19.0.
-3. Run `node server.mjs` and open http://127.0.0.1:4173/.
+3. Run `node preview-server.mjs` and open http://127.0.0.1:4173/.
 4. Run `node tools/verify.mjs` to check local resources, JavaScript syntax and JSON.
 5. To regenerate pages after content edits, run `node source/build-production-pages.mjs` from `website/`, then run verification again.
 
@@ -20,7 +20,7 @@ No dependency installation, API key, framework build or database is required. Se
 | --- | --- |
 | `website/dist/` | Complete deployable HTML, CSS, JavaScript, fonts, images and vendored libraries |
 | `website/source/` | Editable page generators, public content snapshots and 88 documentation Markdown files |
-| `website/server.mjs` | Local preview server, bound to 127.0.0.1:4173; not a production server |
+| `website/preview-server.mjs` | Local preview server, bound to 127.0.0.1:4173; not a production server |
 | `website/tools/verify.mjs` | Repeatable local resource, syntax, JSON and optional HTTP checks |
 | `docs/architecture.md` | Page ownership, generation, source mapping and maintenance recipes |
 | `docs/design-and-motion.md` | Design tokens, responsive behavior and interaction contracts |
@@ -32,6 +32,10 @@ No dependency installation, API key, framework build or database is required. Se
 The website has 112 index routes, including Home, Developers, Pricing, Plug-ins, three core plug-in installation guides, About, Samples, 88 production documentation articles, an introductory overview and retained article aliases. All routes are listed in `reference/routes.json`. This count includes aliases and entry routes; it does not mean 112 unique articles.
 
 The landing page keeps the approved sequence: particle-world story; possibilities; Take the Challenge; the three-step publishing workflow; plug-in workbench; FAQ; footer. The opening story progressively reveals an object, table, interior, building and neighbourhood. Its experience chapter changes between browser, phone and headset outlines.
+
+## Deploying to Vercel
+
+The site is fully static: deploy `website/dist/`. `vercel.json` (repo root) and `website/vercel.json` set the output directory, so either Root Directory (repo root or `website`) works; set Framework Preset to "Other". The local preview server is named `preview-server.mjs` on purpose: a file called `server.mjs` makes Vercel treat the project as a Node server and every request, static files included, fails with `500 FUNCTION_INVOCATION_FAILED`.
 
 ## Read before changing the site
 

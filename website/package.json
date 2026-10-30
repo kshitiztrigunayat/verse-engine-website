@@ -3,7 +3,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "start": "node server.mjs",
+    "start": "node preview-server.mjs",
     "build": "node source/build-production-pages.mjs",
     "check": "node tools/verify.mjs"
   },
