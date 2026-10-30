@@ -1,0 +1,11 @@
+{
+  "name": "verse-engine-marketing-site",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node server.mjs",
+    "build": "node source/build-production-pages.mjs",
+    "check": "node tools/verify.mjs"
+  },
+  "engines": { "node": ">=22" }
+}

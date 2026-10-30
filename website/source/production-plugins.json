@@ -1,0 +1,509 @@
+{
+  "url": "https://verse.ctruh.com/plug-ins",
+  "panels": {
+    "unreal": {
+      "html": "<article class=\"card\" id=\"dl-unreal\" data-editor=\"unreal\" data-match=\"^VersePublish-UE\" role=\"tabpanel\" aria-labelledby=\"tab-unreal\" data-on=\"\">\n      <div>\n        <h2>Unreal Engine <span class=\"tag live\">shipped</span></h2>\n        <p class=\"req\">Unreal Engine 5.8 with a C++ toolchain (Xcode on macOS, Visual Studio 2022 on Windows). Source plug-in; the editor compiles it on first open.</p>\n        <div class=\"dl\"><a class=\"btn\" href=\"/downloads/VersePublish-UE5.8-3.0.0-beta.1.zip\" download=\"VersePublish-UE5.8-3.0.0-beta.1.zip\" data-size=\"3182551\" data-sha256=\"32385ecc8f96b71d04034f940b497a10432e5e680926727881e33c36a5a49ea3\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M12 4v11M7 10l5 5 5-5M5 20h14\"></path></svg>Download for Unreal</a><div class=\"file mono\">v3.0.0-beta.1 · 3.0 MB · VersePublish-UE5.8-3.0.0-beta.1.zip</div></div>\n        <div class=\"sha mono\"><span>SHA-256</span><code title=\"32385ecc8f96b71d04034f940b497a10432e5e680926727881e33c36a5a49ea3\">32385ecc8f96b71d04034f940b497a10432e5e680926727881e33c36a5a49ea3</code><button type=\"button\">Copy</button></div>\n        <ol class=\"steps\" aria-label=\"Install and publish\">\n          <li>Close the editor and unzip into your project, so you have <code>&lt;Project&gt;/Plugins/VersePublish/VersePublish.uplugin</code>.<span>The Plugins folder sits next to your .uproject.</span></li>\n          <li>Open the project and accept the prompt to rebuild the module.<span>A Tools › Verse menu appears.</span></li>\n          <li>Optional: paste an account token from <a href=\"/studio\">Studio</a> in <b>Project Settings › Plugins › Verse Publish</b>.<span>Your scenes become permanent and are listed in your library.</span></li>\n          <li>Open <b>Tools › Verse › Publish to Verse</b> and press <b>Publish to Verse</b>.<span>Upload %, then the build stages, then the link — copied for you.</span></li>\n        </ol>\n      </div>\n      <div class=\"side\">\n        <div class=\"box\"><h3>What gets published</h3><ul>\n          <li>The level (or the selected actors) as one scene</li>\n          <li>Unreal materials and lighting, baked on publish</li>\n          <li>Textures at source resolution — nothing downscaled</li>\n        </ul></div>\n        <div class=\"box\"><h3>Big projects</h3><p>Up to <b data-max-prepared=\"\">20 GB</b>, sent in resumable parts. Browser uploads stop at <b data-max-browser=\"\">500 MB</b>.</p></div>\n        <p class=\"req\"><a href=\"/docs/#/guides/publish-from-unreal\">Full guide: Publish from Unreal →</a></p>\n      </div>\n    </article>",
+      "links": [
+        {
+          "href": "https://verse.ctruh.com/downloads/VersePublish-UE5.8-3.0.0-beta.1.zip",
+          "text": "Download for Unreal"
+        },
+        {
+          "href": "https://verse.ctruh.com/studio",
+          "text": "Studio"
+        },
+        {
+          "href": "https://verse.ctruh.com/docs/#/guides/publish-from-unreal",
+          "text": "Full guide: Publish from Unreal →"
+        }
+      ],
+      "text": "Unreal Engine\nSHIPPED\n\nUnreal Engine 5.8 with a C++ toolchain (Xcode on macOS, Visual Studio 2022 on Windows). Source plug-in; the editor compiles it on first open.\n\nDownload for Unreal\nv3.0.0-beta.1 · 3.0 MB · VersePublish-UE5.8-3.0.0-beta.1.zip\nSHA-256\n32385ecc8f96b71d04034f940b497a10432e5e680926727881e33c36a5a49ea3\nCopy\nClose the editor and unzip into your project, so you have <Project>/Plugins/VersePublish/VersePublish.uplugin.\nThe Plugins folder sits next to your .uproject.\nOpen the project and accept the prompt to rebuild the module.\nA Tools › Verse menu appears.\nOptional: paste an account token from Studio in Project Settings › Plugins › Verse Publish.\nYour scenes become permanent and are listed in your library.\nOpen Tools › Verse › Publish to Verse and press Publish to Verse.\nUpload %, then the build stages, then the link — copied for you.\nWHAT GETS PUBLISHED\nThe level (or the selected actors) as one scene\nUnreal materials and lighting, baked on publish\nTextures at source resolution — nothing downscaled\nBIG PROJECTS\n\nUp to 20 GB, sent in resumable parts. Browser uploads stop at 500 MB.\n\nFull guide: Publish from Unreal →"
+    },
+    "unity": {
+      "html": "<article class=\"card\" id=\"dl-unity\" data-editor=\"unity\" data-match=\"^com\\.ctruh\\.verse-publish-\" role=\"tabpanel\" aria-labelledby=\"tab-unity\" data-on=\"\">\n      <div>\n        <h2>Unity <span class=\"tag live\">shipped</span></h2>\n        <p class=\"req\">Unity 2021.3 or newer (URP, HDRP, Built-in). UPM tarball; glTFast is pulled in for you.</p>\n        <div class=\"dl\"><a class=\"btn\" href=\"/downloads/com.ctruh.verse-publish-3.0.0-beta.1.tgz\" download=\"com.ctruh.verse-publish-3.0.0-beta.1.tgz\" data-size=\"3188679\" data-sha256=\"24741c9d4736784af4ed7ac9240d928d90d6cefd8c773a92dfc48df55a4d8505\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M12 4v11M7 10l5 5 5-5M5 20h14\"></path></svg>Download for Unity</a><div class=\"file mono\">v3.0.0-beta.1 · 3.0 MB · com.ctruh.verse-publish-3.0.0-beta.1.tgz</div></div>\n        <div class=\"sha mono\"><span>SHA-256</span><code title=\"24741c9d4736784af4ed7ac9240d928d90d6cefd8c773a92dfc48df55a4d8505\">24741c9d4736784af4ed7ac9240d928d90d6cefd8c773a92dfc48df55a4d8505</code><button type=\"button\">Copy</button></div>\n        <ol class=\"steps\" aria-label=\"Install and publish\">\n          <li>Download the <code>.tgz</code> and keep it somewhere stable — your project's <code>Packages/</code> folder is ideal.<span>Unity references the file by path.</span></li>\n          <li><b>Window › Package Manager › + › Add package from tarball…</b> and pick it.<span>The install finishes with no console errors.</span></li>\n          <li>Open <b>Tools › Verse › Publish Scene</b>; optionally paste an account token from <a href=\"/studio\">Studio</a>.<span>The window remembers it.</span></li>\n          <li>Press <b>Publish scene</b>.<span>Upload %, then the build stages, then the link — copied for you.</span></li>\n        </ol>\n      </div>\n      <div class=\"side\">\n        <div class=\"box\"><h3>What gets published</h3><ul>\n          <li>The open scene (or the selection) as one scene</li>\n          <li>Lighting baked on publish; the skybox as the background</li>\n          <li>Terrain as tile meshes, LOD0 of every LOD group</li>\n          <li>Textures at source resolution — nothing downscaled</li>\n        </ul></div>\n        <div class=\"box\"><h3>Big projects</h3><p>Up to <b data-max-prepared=\"\">20 GB</b>, sent in resumable parts. Browser uploads stop at <b data-max-browser=\"\">500 MB</b>.</p></div>\n        <p class=\"req\"><a href=\"/docs/#/guides/publish-from-unity\">Full guide: Publish from Unity →</a></p>\n      </div>\n    </article>",
+      "links": [
+        {
+          "href": "https://verse.ctruh.com/downloads/com.ctruh.verse-publish-3.0.0-beta.1.tgz",
+          "text": "Download for Unity"
+        },
+        {
+          "href": "https://verse.ctruh.com/studio",
+          "text": "Studio"
+        },
+        {
+          "href": "https://verse.ctruh.com/docs/#/guides/publish-from-unity",
+          "text": "Full guide: Publish from Unity →"
+        }
+      ],
+      "text": "Unity\nSHIPPED\n\nUnity 2021.3 or newer (URP, HDRP, Built-in). UPM tarball; glTFast is pulled in for you.\n\nDownload for Unity\nv3.0.0-beta.1 · 3.0 MB · com.ctruh.verse-publish-3.0.0-beta.1.tgz\nSHA-256\n24741c9d4736784af4ed7ac9240d928d90d6cefd8c773a92dfc48df55a4d8505\nCopy\nDownload the .tgz and keep it somewhere stable — your project's Packages/ folder is ideal.\nUnity references the file by path.\nWindow › Package Manager › + › Add package from tarball… and pick it.\nThe install finishes with no console errors.\nOpen Tools › Verse › Publish Scene; optionally paste an account token from Studio.\nThe window remembers it.\nPress Publish scene.\nUpload %, then the build stages, then the link — copied for you.\nWHAT GETS PUBLISHED\nThe open scene (or the selection) as one scene\nLighting baked on publish; the skybox as the background\nTerrain as tile meshes, LOD0 of every LOD group\nTextures at source resolution — nothing downscaled\nBIG PROJECTS\n\nUp to 20 GB, sent in resumable parts. Browser uploads stop at 500 MB.\n\nFull guide: Publish from Unity →"
+    },
+    "blender": {
+      "html": "<article class=\"card\" id=\"dl-blender\" data-editor=\"blender\" data-match=\"^verse_publish-blender-\" role=\"tabpanel\" aria-labelledby=\"tab-blender\" data-on=\"\">\n      <div>\n        <h2>Blender <span class=\"tag live\">shipped</span></h2>\n        <p class=\"req\">Blender 4.2 or newer. Extension zip; also installs as a legacy add-on.</p>\n        <div class=\"dl\"><a class=\"btn\" href=\"/downloads/verse_publish-blender-3.0.0-beta.1.zip\" download=\"verse_publish-blender-3.0.0-beta.1.zip\" data-size=\"3182552\" data-sha256=\"2ff2dd7074cf3073b0e68e78af5ee2dcb6047b701824a84e8823930f0ba4f545\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M12 4v11M7 10l5 5 5-5M5 20h14\"></path></svg>Download for Blender</a><div class=\"file mono\">v3.0.0-beta.1 · 3.0 MB · verse_publish-blender-3.0.0-beta.1.zip</div></div>\n        <div class=\"sha mono\"><span>SHA-256</span><code title=\"2ff2dd7074cf3073b0e68e78af5ee2dcb6047b701824a84e8823930f0ba4f545\">2ff2dd7074cf3073b0e68e78af5ee2dcb6047b701824a84e8823930f0ba4f545</code><button type=\"button\">Copy</button></div>\n        <ol class=\"steps\" aria-label=\"Install and publish\">\n          <li>Download the zip — don't unzip it.<span>One file; Blender installs it as it is.</span></li>\n          <li><b>Edit › Preferences › Get Extensions</b>, open the <b>⌄</b> menu, choose <b>Install from Disk…</b> and pick the zip (or drag it onto Blender).<span>\"Verse Publish\" is listed and enabled — no restart.</span></li>\n          <li>Optional: paste an account token from <a href=\"/studio\">Studio</a> in <b>Preferences › Add-ons › Verse Publish</b>.<span>Your scenes become permanent and are listed in your library.</span></li>\n          <li>Press <b>N</b> in the 3D viewport, open the <b>Verse</b> tab and click <b>Publish scene</b>.<span>Export, optimise, upload, build — then the link is on your clipboard.</span></li>\n        </ol>\n      </div>\n      <div class=\"side\">\n        <div class=\"box\"><h3>What gets published</h3><ul>\n          <li>The scene (or the selected objects), modifiers applied</li>\n          <li>Node materials — and at High your lighting — baked on publish</li>\n          <li>Textures at source resolution, right-sized to what the scene can show</li>\n        </ul></div>\n        <div class=\"box\"><h3>Big projects</h3><p>Up to <b data-max-prepared=\"\">20 GB</b>, sent in resumable parts. Browser uploads stop at <b data-max-browser=\"\">500 MB</b>.</p></div>\n        <p class=\"req\"><a href=\"/docs/#/guides/publish-from-blender\">Full guide: Publish from Blender →</a></p>\n      </div>\n    </article>",
+      "links": [
+        {
+          "href": "https://verse.ctruh.com/downloads/verse_publish-blender-3.0.0-beta.1.zip",
+          "text": "Download for Blender"
+        },
+        {
+          "href": "https://verse.ctruh.com/studio",
+          "text": "Studio"
+        },
+        {
+          "href": "https://verse.ctruh.com/docs/#/guides/publish-from-blender",
+          "text": "Full guide: Publish from Blender →"
+        }
+      ],
+      "text": "Blender\nSHIPPED\n\nBlender 4.2 or newer. Extension zip; also installs as a legacy add-on.\n\nDownload for Blender\nv3.0.0-beta.1 · 3.0 MB · verse_publish-blender-3.0.0-beta.1.zip\nSHA-256\n2ff2dd7074cf3073b0e68e78af5ee2dcb6047b701824a84e8823930f0ba4f545\nCopy\nDownload the zip — don't unzip it.\nOne file; Blender installs it as it is.\nEdit › Preferences › Get Extensions, open the ⌄ menu, choose Install from Disk… and pick the zip (or drag it onto Blender).\n\"Verse Publish\" is listed and enabled — no restart.\nOptional: paste an account token from Studio in Preferences › Add-ons › Verse Publish.\nYour scenes become permanent and are listed in your library.\nPress N in the 3D viewport, open the Verse tab and click Publish scene.\nExport, optimise, upload, build — then the link is on your clipboard.\nWHAT GETS PUBLISHED\nThe scene (or the selected objects), modifiers applied\nNode materials — and at High your lighting — baked on publish\nTextures at source resolution, right-sized to what the scene can show\nBIG PROJECTS\n\nUp to 20 GB, sent in resumable parts. Browser uploads stop at 500 MB.\n\nFull guide: Publish from Blender →"
+    }
+  },
+  "aec": [
+    {
+      "html": "<article class=\"card\" id=\"dl-sketchup\" data-editor=\"sketchup\" data-match=\"^verse_publish-sketchup-\">\n      <h2>SketchUp <span class=\"tag beta\">beta</span></h2>\n      <p class=\"req\">SketchUp 2021 or newer (GLB export on 2025+; OBJ / FBX on older needs Pro). Extension <code>.rbz</code>.</p>\n      <a class=\"btn\" href=\"/downloads/verse_publish-sketchup-4.0.0-beta.1.rbz\" download=\"verse_publish-sketchup-4.0.0-beta.1.rbz\" data-size=\"15914\" data-sha256=\"e2d88cbec07bc2374630058b56ee1821e01d37cae6c22f2992a50c1847ee665e\">Download for SketchUp</a>\n      <div class=\"file mono\">v4.0.0-beta.1 · 16 KB · verse_publish-sketchup-4.0.0-beta.1.rbz</div>\n      <div class=\"sha mono\"><span>SHA-256</span><code title=\"e2d88cbec07bc2374630058b56ee1821e01d37cae6c22f2992a50c1847ee665e\">e2d88cbec07bc2374630058b56ee1821e01d37cae6c22f2992a50c1847ee665e</code><button type=\"button\">Copy</button></div>\n      <details>\n        <summary>Install</summary>\n        <ol>\n          <li><b>Window › Extension Manager › Install Extension</b> and pick the <code>.rbz</code> (do not unzip it).</li>\n          <li><b>Extensions › Verse › Publish to Verse</b>. Server, API key and account token are under <b>Extensions › Verse › Settings…</b></li>\n        </ol>\n        <p class=\"req\" style=\"margin-top:8px\"><a href=\"/docs/#/guides/publish-from-sketchup\">Full guide: Publish from SketchUp</a></p>\n      </details>\n    </article>",
+      "id": "dl-sketchup",
+      "links": [
+        {
+          "href": "https://verse.ctruh.com/downloads/verse_publish-sketchup-4.0.0-beta.1.rbz",
+          "text": "Download for SketchUp"
+        },
+        {
+          "href": "https://verse.ctruh.com/docs/#/guides/publish-from-sketchup",
+          "text": "Full guide: Publish from SketchUp"
+        }
+      ],
+      "text": "\n      SketchUp beta\n      SketchUp 2021 or newer (GLB export on 2025+; OBJ / FBX on older needs Pro). Extension .rbz.\n      Download for SketchUp\n      v4.0.0-beta.1 · 16 KB · verse_publish-sketchup-4.0.0-beta.1.rbz\n      SHA-256e2d88cbec07bc2374630058b56ee1821e01d37cae6c22f2992a50c1847ee665eCopy\n      \n        Install\n        \n          Window › Extension Manager › Install Extension and pick the .rbz (do not unzip it).\n          Extensions › Verse › Publish to Verse. Server, API key and account token are under Extensions › Verse › Settings…\n        \n        Full guide: Publish from SketchUp\n      \n    "
+    },
+    {
+      "html": "<article class=\"card\" id=\"dl-revit\" data-editor=\"revit\" data-match=\"^VersePublish-Revit-\">\n      <h2>Revit <span class=\"tag beta\">beta</span></h2>\n      <p class=\"req\">Revit 2021–2024 and 2025+ (Windows). Add-in zip with both builds.</p>\n      <a class=\"btn\" href=\"/downloads/VersePublish-Revit-4.0.0-beta.1.zip\" download=\"VersePublish-Revit-4.0.0-beta.1.zip\" data-size=\"31878\" data-sha256=\"4c0a629f1102c89abd1d3854f17728ea18f9ac0160181a51519b69bde3ca4fae\">Download for Revit</a>\n      <div class=\"file mono\">v4.0.0-beta.1 · 31 KB · VersePublish-Revit-4.0.0-beta.1.zip</div>\n      <div class=\"sha mono\"><span>SHA-256</span><code title=\"4c0a629f1102c89abd1d3854f17728ea18f9ac0160181a51519b69bde3ca4fae\">4c0a629f1102c89abd1d3854f17728ea18f9ac0160181a51519b69bde3ca4fae</code><button type=\"button\">Copy</button></div>\n      <details>\n        <summary>Install</summary>\n        <ol>\n          <li>Close Revit. Unzip; copy <code>VersePublishRevit.dll</code> and <code>VersePublish.addin</code> from <code>build/net48</code> (2021–2024) or <code>build/net8.0-windows</code> (2025+) to <code>%APPDATA%\\Autodesk\\Revit\\Addins\\&lt;year&gt;\\</code>.</li>\n          <li>Start Revit, choose <b>Always Load</b>, open a 3D view and press <b>Verse › Publish to Verse</b> on the ribbon.</li>\n        </ol>\n        <p class=\"req\" style=\"margin-top:8px\"><a href=\"/docs/#/guides/publish-from-revit\">Full guide: Publish from Revit</a></p>\n      </details>\n    </article>",
+      "id": "dl-revit",
+      "links": [
+        {
+          "href": "https://verse.ctruh.com/downloads/VersePublish-Revit-4.0.0-beta.1.zip",
+          "text": "Download for Revit"
+        },
+        {
+          "href": "https://verse.ctruh.com/docs/#/guides/publish-from-revit",
+          "text": "Full guide: Publish from Revit"
+        }
+      ],
+      "text": "\n      Revit beta\n      Revit 2021–2024 and 2025+ (Windows). Add-in zip with both builds.\n      Download for Revit\n      v4.0.0-beta.1 · 31 KB · VersePublish-Revit-4.0.0-beta.1.zip\n      SHA-2564c0a629f1102c89abd1d3854f17728ea18f9ac0160181a51519b69bde3ca4faeCopy\n      \n        Install\n        \n          Close Revit. Unzip; copy VersePublishRevit.dll and VersePublish.addin from build/net48 (2021–2024) or build/net8.0-windows (2025+) to %APPDATA%\\Autodesk\\Revit\\Addins\\<year>\\.\n          Start Revit, choose Always Load, open a 3D view and press Verse › Publish to Verse on the ribbon.\n        \n        Full guide: Publish from Revit\n      \n    "
+    },
+    {
+      "html": "<article class=\"card\" id=\"dl-rhino\" data-editor=\"rhino\" data-match=\"^VersePublish-Rhino-\">\n      <h2>Rhino <span class=\"tag beta\">beta</span></h2>\n      <p class=\"req\">Rhino 8 (script, Windows + Mac) or Rhino 7 / 8 (plug-in, Windows). Zip.</p>\n      <a class=\"btn\" href=\"/downloads/VersePublish-Rhino-4.0.0-beta.1.zip\" download=\"VersePublish-Rhino-4.0.0-beta.1.zip\" data-size=\"34445\" data-sha256=\"d40509f96e0750468933813a86b18488e66bc00faf4d4a5ee7038174013326bd\">Download for Rhino</a>\n      <div class=\"file mono\">v4.0.0-beta.1 · 34 KB · VersePublish-Rhino-4.0.0-beta.1.zip</div>\n      <div class=\"sha mono\"><span>SHA-256</span><code title=\"d40509f96e0750468933813a86b18488e66bc00faf4d4a5ee7038174013326bd\">d40509f96e0750468933813a86b18488e66bc00faf4d4a5ee7038174013326bd</code><button type=\"button\">Copy</button></div>\n      <details>\n        <summary>Install</summary>\n        <ol>\n          <li>Unzip. Rhino 8: <b>Tools › Script › Run</b> and pick <code>script/VersePublishRhino.py</code>. Or drag <code>build/net48/VersePublishRhino.rhp</code> onto Rhino.</li>\n          <li>Run <b>VersePublish</b>; the first run asks for the server and an optional key / token.</li>\n        </ol>\n        <p class=\"req\" style=\"margin-top:8px\"><a href=\"/docs/#/guides/publish-from-rhino\">Full guide: Publish from Rhino</a></p>\n      </details>\n    </article>",
+      "id": "dl-rhino",
+      "links": [
+        {
+          "href": "https://verse.ctruh.com/downloads/VersePublish-Rhino-4.0.0-beta.1.zip",
+          "text": "Download for Rhino"
+        },
+        {
+          "href": "https://verse.ctruh.com/docs/#/guides/publish-from-rhino",
+          "text": "Full guide: Publish from Rhino"
+        }
+      ],
+      "text": "\n      Rhino beta\n      Rhino 8 (script, Windows + Mac) or Rhino 7 / 8 (plug-in, Windows). Zip.\n      Download for Rhino\n      v4.0.0-beta.1 · 34 KB · VersePublish-Rhino-4.0.0-beta.1.zip\n      SHA-256d40509f96e0750468933813a86b18488e66bc00faf4d4a5ee7038174013326bdCopy\n      \n        Install\n        \n          Unzip. Rhino 8: Tools › Script › Run and pick script/VersePublishRhino.py. Or drag build/net48/VersePublishRhino.rhp onto Rhino.\n          Run VersePublish; the first run asks for the server and an optional key / token.\n        \n        Full guide: Publish from Rhino\n      \n    "
+    },
+    {
+      "html": "<article class=\"card\" id=\"dl-3dsmax\" data-editor=\"3dsmax\" data-match=\"^VersePublish-3dsMax-\">\n      <h2>3ds Max <span class=\"tag beta\">beta</span></h2>\n      <p class=\"req\">3ds Max 2023 or newer (Windows). Python script + MAXScript macros.</p>\n      <a class=\"btn\" href=\"/downloads/VersePublish-3dsMax-4.0.0-beta.1.zip\" download=\"VersePublish-3dsMax-4.0.0-beta.1.zip\" data-size=\"18365\" data-sha256=\"4f9a47098f161c9b4dea1ec408a54efba08e9b6d532ebd638d641fbf22bf6e76\">Download for 3ds Max</a>\n      <div class=\"file mono\">v4.0.0-beta.1 · 18 KB · VersePublish-3dsMax-4.0.0-beta.1.zip</div>\n      <div class=\"sha mono\"><span>SHA-256</span><code title=\"4f9a47098f161c9b4dea1ec408a54efba08e9b6d532ebd638d641fbf22bf6e76\">4f9a47098f161c9b4dea1ec408a54efba08e9b6d532ebd638d641fbf22bf6e76</code><button type=\"button\">Copy</button></div>\n      <details>\n        <summary>Install</summary>\n        <ol>\n          <li>Unzip to a folder you keep. <b>Scripting › Run Script</b> and pick <code>VersePublish.ms</code>.</li>\n          <li><b>Customize › Toolbars</b>, category <b>Verse</b>: drag <b>Publish to Verse</b> onto a toolbar and press it.</li>\n        </ol>\n        <p class=\"req\" style=\"margin-top:8px\"><a href=\"/docs/#/guides/publish-from-3dsmax\">Full guide: Publish from 3ds Max</a></p>\n      </details>\n    </article>",
+      "id": "dl-3dsmax",
+      "links": [
+        {
+          "href": "https://verse.ctruh.com/downloads/VersePublish-3dsMax-4.0.0-beta.1.zip",
+          "text": "Download for 3ds Max"
+        },
+        {
+          "href": "https://verse.ctruh.com/docs/#/guides/publish-from-3dsmax",
+          "text": "Full guide: Publish from 3ds Max"
+        }
+      ],
+      "text": "\n      3ds Max beta\n      3ds Max 2023 or newer (Windows). Python script + MAXScript macros.\n      Download for 3ds Max\n      v4.0.0-beta.1 · 18 KB · VersePublish-3dsMax-4.0.0-beta.1.zip\n      SHA-2564f9a47098f161c9b4dea1ec408a54efba08e9b6d532ebd638d641fbf22bf6e76Copy\n      \n        Install\n        \n          Unzip to a folder you keep. Scripting › Run Script and pick VersePublish.ms.\n          Customize › Toolbars, category Verse: drag Publish to Verse onto a toolbar and press it.\n        \n        Full guide: Publish from 3ds Max\n      \n    "
+    },
+    {
+      "html": "<article class=\"card\" id=\"dl-archicad\" data-editor=\"archicad\" data-match=\"^VersePublish-Archicad-\">\n      <h2>Archicad <span class=\"tag beta\">beta</span></h2>\n      <p class=\"req\">Archicad 23 or newer (IFC). Python 3.8+ script.</p>\n      <a class=\"btn\" href=\"/downloads/VersePublish-Archicad-4.0.0-beta.1.zip\" download=\"VersePublish-Archicad-4.0.0-beta.1.zip\" data-size=\"17515\" data-sha256=\"cfb29af4ae34b53a89e48a625abb60f3cc7b7b154ae2fa35eba43e060b790f86\">Download for Archicad</a>\n      <div class=\"file mono\">v4.0.0-beta.1 · 17 KB · VersePublish-Archicad-4.0.0-beta.1.zip</div>\n      <div class=\"sha mono\"><span>SHA-256</span><code title=\"cfb29af4ae34b53a89e48a625abb60f3cc7b7b154ae2fa35eba43e060b790f86\">cfb29af4ae34b53a89e48a625abb60f3cc7b7b154ae2fa35eba43e060b790f86</code><button type=\"button\">Copy</button></div>\n      <details>\n        <summary>Install</summary>\n        <ol>\n          <li>Unzip. Once: <code>python3 verse_publish_archicad.py --save-settings --server https://verse.ctruh.com</code>.</li>\n          <li><b>File › Save As › IFC</b>, then <code>python3 verse_publish_archicad.py model.ifc</code>; it prints the link.</li>\n        </ol>\n        <p class=\"req\" style=\"margin-top:8px\"><a href=\"/docs/#/guides/publish-from-archicad\">Full guide: Publish from Archicad</a></p>\n      </details>\n    </article>",
+      "id": "dl-archicad",
+      "links": [
+        {
+          "href": "https://verse.ctruh.com/downloads/VersePublish-Archicad-4.0.0-beta.1.zip",
+          "text": "Download for Archicad"
+        },
+        {
+          "href": "https://verse.ctruh.com/docs/#/guides/publish-from-archicad",
+          "text": "Full guide: Publish from Archicad"
+        }
+      ],
+      "text": "\n      Archicad beta\n      Archicad 23 or newer (IFC). Python 3.8+ script.\n      Download for Archicad\n      v4.0.0-beta.1 · 17 KB · VersePublish-Archicad-4.0.0-beta.1.zip\n      SHA-256cfb29af4ae34b53a89e48a625abb60f3cc7b7b154ae2fa35eba43e060b790f86Copy\n      \n        Install\n        \n          Unzip. Once: python3 verse_publish_archicad.py --save-settings --server https://verse.ctruh.com.\n          File › Save As › IFC, then python3 verse_publish_archicad.py model.ifc; it prints the link.\n        \n        Full guide: Publish from Archicad\n      \n    "
+    },
+    {
+      "html": "<article class=\"card\" id=\"dl-maya\" data-editor=\"maya\" data-match=\"^VersePublish-Maya-\">\n      <h2>Maya <span class=\"tag beta\">beta</span></h2>\n      <p class=\"req\">Maya 2022 or newer (Windows, Mac, Linux). Zip with a drag-to-install script.</p>\n      <a class=\"btn\" href=\"/downloads/VersePublish-Maya-4.0.0-beta.1.zip\" download=\"VersePublish-Maya-4.0.0-beta.1.zip\" data-size=\"26466\" data-sha256=\"982d7eed443410882afb36e8647bf27d441c1c3c50fd4d8ae9804167e6f19338\">Download for Maya</a>\n      <div class=\"file mono\">v4.0.0-beta.1 · 26 KB · VersePublish-Maya-4.0.0-beta.1.zip</div>\n      <div class=\"sha mono\"><span>SHA-256</span><code title=\"982d7eed443410882afb36e8647bf27d441c1c3c50fd4d8ae9804167e6f19338\">982d7eed443410882afb36e8647bf27d441c1c3c50fd4d8ae9804167e6f19338</code><button type=\"button\">Copy</button></div>\n      <details>\n        <summary>Install</summary>\n        <ol>\n          <li>Unzip and drag <code>drag_to_install.py</code> onto a Maya viewport. A <b>Verse</b> menu and shelf appear (and come back after a restart).</li>\n          <li><b>Verse › Publish to Verse</b>.</li>\n        </ol>\n        <p class=\"req\" style=\"margin-top:8px\"><a href=\"/docs/#/guides/publish-from-maya\">Full guide: Publish from Maya</a></p>\n      </details>\n    </article>",
+      "id": "dl-maya",
+      "links": [
+        {
+          "href": "https://verse.ctruh.com/downloads/VersePublish-Maya-4.0.0-beta.1.zip",
+          "text": "Download for Maya"
+        },
+        {
+          "href": "https://verse.ctruh.com/docs/#/guides/publish-from-maya",
+          "text": "Full guide: Publish from Maya"
+        }
+      ],
+      "text": "\n      Maya beta\n      Maya 2022 or newer (Windows, Mac, Linux). Zip with a drag-to-install script.\n      Download for Maya\n      v4.0.0-beta.1 · 26 KB · VersePublish-Maya-4.0.0-beta.1.zip\n      SHA-256982d7eed443410882afb36e8647bf27d441c1c3c50fd4d8ae9804167e6f19338Copy\n      \n        Install\n        \n          Unzip and drag drag_to_install.py onto a Maya viewport. A Verse menu and shelf appear (and come back after a restart).\n          Verse › Publish to Verse.\n        \n        Full guide: Publish from Maya\n      \n    "
+    },
+    {
+      "html": "<article class=\"card\" id=\"dl-cinema4d\" data-editor=\"cinema4d\" data-match=\"^VersePublish-Cinema4D-\">\n      <h2>Cinema 4D <span class=\"tag beta\">beta</span></h2>\n      <p class=\"req\">Cinema 4D 2023 or newer. Python plug-in folder.</p>\n      <a class=\"btn\" href=\"/downloads/VersePublish-Cinema4D-4.0.0-beta.1.zip\" download=\"VersePublish-Cinema4D-4.0.0-beta.1.zip\" data-size=\"26242\" data-sha256=\"a6a34a74bb019f2ac1f9106df3d857ee32eb344f53dc23d26600d65d70a9f7ee\">Download for Cinema 4D</a>\n      <div class=\"file mono\">v4.0.0-beta.1 · 26 KB · VersePublish-Cinema4D-4.0.0-beta.1.zip</div>\n      <div class=\"sha mono\"><span>SHA-256</span><code title=\"a6a34a74bb019f2ac1f9106df3d857ee32eb344f53dc23d26600d65d70a9f7ee\">a6a34a74bb019f2ac1f9106df3d857ee32eb344f53dc23d26600d65d70a9f7ee</code><button type=\"button\">Copy</button></div>\n      <details>\n        <summary>Install</summary>\n        <ol>\n          <li>Unzip and copy the <code>VersePublish</code> folder into Cinema 4D's <code>plugins</code> folder (<b>Preferences › Open Preferences Folder…</b>), then restart.</li>\n          <li><b>Extensions › Verse Publish › Publish to Verse</b>.</li>\n        </ol>\n        <p class=\"req\" style=\"margin-top:8px\"><a href=\"/docs/#/guides/publish-from-cinema4d\">Full guide: Publish from Cinema 4D</a></p>\n      </details>\n    </article>",
+      "id": "dl-cinema4d",
+      "links": [
+        {
+          "href": "https://verse.ctruh.com/downloads/VersePublish-Cinema4D-4.0.0-beta.1.zip",
+          "text": "Download for Cinema 4D"
+        },
+        {
+          "href": "https://verse.ctruh.com/docs/#/guides/publish-from-cinema4d",
+          "text": "Full guide: Publish from Cinema 4D"
+        }
+      ],
+      "text": "\n      Cinema 4D beta\n      Cinema 4D 2023 or newer. Python plug-in folder.\n      Download for Cinema 4D\n      v4.0.0-beta.1 · 26 KB · VersePublish-Cinema4D-4.0.0-beta.1.zip\n      SHA-256a6a34a74bb019f2ac1f9106df3d857ee32eb344f53dc23d26600d65d70a9f7eeCopy\n      \n        Install\n        \n          Unzip and copy the VersePublish folder into Cinema 4D's plugins folder (Preferences › Open Preferences Folder…), then restart.\n          Extensions › Verse Publish › Publish to Verse.\n        \n        Full guide: Publish from Cinema 4D\n      \n    "
+    },
+    {
+      "html": "<article class=\"card\" id=\"dl-houdini\" data-editor=\"houdini\" data-match=\"^VersePublish-Houdini-\">\n      <h2>Houdini <span class=\"tag beta\">beta</span></h2>\n      <p class=\"req\">Houdini 19.5 or newer. Houdini package + shelf.</p>\n      <a class=\"btn\" href=\"/downloads/VersePublish-Houdini-4.0.0-beta.1.zip\" download=\"VersePublish-Houdini-4.0.0-beta.1.zip\" data-size=\"26015\" data-sha256=\"880ac99d461fa1b0e7a86b40faabdd19825ff77238b3f43747fb8d9610b5ec4d\">Download for Houdini</a>\n      <div class=\"file mono\">v4.0.0-beta.1 · 25 KB · VersePublish-Houdini-4.0.0-beta.1.zip</div>\n      <div class=\"sha mono\"><span>SHA-256</span><code title=\"880ac99d461fa1b0e7a86b40faabdd19825ff77238b3f43747fb8d9610b5ec4d\">880ac99d461fa1b0e7a86b40faabdd19825ff77238b3f43747fb8d9610b5ec4d</code><button type=\"button\">Copy</button></div>\n      <details>\n        <summary>Install</summary>\n        <ol>\n          <li>Unzip. In <b>Windows › Python Shell</b>: <code>exec(open(r\"&lt;folder&gt;/install_houdini.py\").read())</code>, then restart Houdini.</li>\n          <li>Add the <b>Verse</b> shelf (shelf <b>+</b> menu) and press <b>Publish to Verse</b>.</li>\n        </ol>\n        <p class=\"req\" style=\"margin-top:8px\"><a href=\"/docs/#/guides/publish-from-houdini\">Full guide: Publish from Houdini</a></p>\n      </details>\n    </article>",
+      "id": "dl-houdini",
+      "links": [
+        {
+          "href": "https://verse.ctruh.com/downloads/VersePublish-Houdini-4.0.0-beta.1.zip",
+          "text": "Download for Houdini"
+        },
+        {
+          "href": "https://verse.ctruh.com/docs/#/guides/publish-from-houdini",
+          "text": "Full guide: Publish from Houdini"
+        }
+      ],
+      "text": "\n      Houdini beta\n      Houdini 19.5 or newer. Houdini package + shelf.\n      Download for Houdini\n      v4.0.0-beta.1 · 25 KB · VersePublish-Houdini-4.0.0-beta.1.zip\n      SHA-256880ac99d461fa1b0e7a86b40faabdd19825ff77238b3f43747fb8d9610b5ec4dCopy\n      \n        Install\n        \n          Unzip. In Windows › Python Shell: exec(open(r\"<folder>/install_houdini.py\").read()), then restart Houdini.\n          Add the Verse shelf (shelf + menu) and press Publish to Verse.\n        \n        Full guide: Publish from Houdini\n      \n    "
+    },
+    {
+      "html": "<article class=\"card\" id=\"dl-solidworks\" data-editor=\"solidworks\" data-match=\"^VersePublish-SolidWorks-\">\n      <h2>SolidWorks <span class=\"tag beta\">beta</span></h2>\n      <p class=\"req\">SolidWorks 2019 or newer (Windows). Add-in source: build it against your SolidWorks install.</p>\n      <a class=\"btn\" href=\"/downloads/VersePublish-SolidWorks-4.0.0-beta.1.zip\" download=\"VersePublish-SolidWorks-4.0.0-beta.1.zip\" data-size=\"26570\" data-sha256=\"d2371b43ebffe23f9a0c514ea408f837e8b01c3725a2fca42e62a7977744574b\">Download for SolidWorks</a>\n      <div class=\"file mono\">v4.0.0-beta.1 · 26 KB · VersePublish-SolidWorks-4.0.0-beta.1.zip</div>\n      <div class=\"sha mono\"><span>SHA-256</span><code title=\"d2371b43ebffe23f9a0c514ea408f837e8b01c3725a2fca42e62a7977744574b\">d2371b43ebffe23f9a0c514ea408f837e8b01c3725a2fca42e62a7977744574b</code><button type=\"button\">Copy</button></div>\n      <details>\n        <summary>Install</summary>\n        <ol>\n          <li>Unzip; build with <code>dotnet build -c Release -p:SolidWorksApi=&lt;SolidWorks&gt;\\api\\redist</code>, then <code>RegAsm /codebase VersePublishSolidWorks.dll</code> as administrator.</li>\n          <li><b>Tools › Add-Ins</b>, tick <b>Verse Publish</b>, then <b>Verse › Publish to Verse</b>.</li>\n        </ol>\n        <p class=\"req\" style=\"margin-top:8px\"><a href=\"/docs/#/guides/publish-from-solidworks\">Full guide: Publish from SolidWorks</a></p>\n      </details>\n    </article>",
+      "id": "dl-solidworks",
+      "links": [
+        {
+          "href": "https://verse.ctruh.com/downloads/VersePublish-SolidWorks-4.0.0-beta.1.zip",
+          "text": "Download for SolidWorks"
+        },
+        {
+          "href": "https://verse.ctruh.com/docs/#/guides/publish-from-solidworks",
+          "text": "Full guide: Publish from SolidWorks"
+        }
+      ],
+      "text": "\n      SolidWorks beta\n      SolidWorks 2019 or newer (Windows). Add-in source: build it against your SolidWorks install.\n      Download for SolidWorks\n      v4.0.0-beta.1 · 26 KB · VersePublish-SolidWorks-4.0.0-beta.1.zip\n      SHA-256d2371b43ebffe23f9a0c514ea408f837e8b01c3725a2fca42e62a7977744574bCopy\n      \n        Install\n        \n          Unzip; build with dotnet build -c Release -p:SolidWorksApi=<SolidWorks>\\api\\redist, then RegAsm /codebase VersePublishSolidWorks.dll as administrator.\n          Tools › Add-Ins, tick Verse Publish, then Verse › Publish to Verse.\n        \n        Full guide: Publish from SolidWorks\n      \n    "
+    },
+    {
+      "html": "<article class=\"card\" id=\"dl-figma\" data-editor=\"figma\" data-match=\"^VersePublish-Figma-\">\n      <h2>Figma (+ Spline) <span class=\"tag beta\">beta</span></h2>\n      <p class=\"req\">Figma desktop app. Development plug-in; publishes a GLB such as a Spline export.</p>\n      <a class=\"btn\" href=\"/downloads/VersePublish-Figma-4.0.0-beta.1.zip\" download=\"VersePublish-Figma-4.0.0-beta.1.zip\" data-size=\"11744\" data-sha256=\"a9acd18f385a46ccbe4a24d1931b2067d212be293d43703c8d54ff2c198d59d2\">Download for Figma</a>\n      <div class=\"file mono\">v4.0.0-beta.1 · 11 KB · VersePublish-Figma-4.0.0-beta.1.zip</div>\n      <div class=\"sha mono\"><span>SHA-256</span><code title=\"a9acd18f385a46ccbe4a24d1931b2067d212be293d43703c8d54ff2c198d59d2\">a9acd18f385a46ccbe4a24d1931b2067d212be293d43703c8d54ff2c198d59d2</code><button type=\"button\">Copy</button></div>\n      <details>\n        <summary>Install</summary>\n        <ol>\n          <li>Unzip. In Figma desktop: <b>Plugins › Development › Import plugin from manifest…</b> and pick <code>manifest.json</code>.</li>\n          <li><b>Plugins › Development › Verse Publish › Insert a Verse link</b>. <i>Publish a GLB</i> needs a server that accepts uploads from plug-ins (cross-origin) — not yet the case on verse.ctruh.com.</li>\n        </ol>\n        <p class=\"req\" style=\"margin-top:8px\"><a href=\"/docs/#/guides/publish-from-spline\">Full guide: Publish from Spline and Figma</a></p>\n      </details>\n    </article>",
+      "id": "dl-figma",
+      "links": [
+        {
+          "href": "https://verse.ctruh.com/downloads/VersePublish-Figma-4.0.0-beta.1.zip",
+          "text": "Download for Figma"
+        },
+        {
+          "href": "https://verse.ctruh.com/docs/#/guides/publish-from-spline",
+          "text": "Full guide: Publish from Spline and Figma"
+        }
+      ],
+      "text": "\n      Figma (+ Spline) beta\n      Figma desktop app. Development plug-in; publishes a GLB such as a Spline export.\n      Download for Figma\n      v4.0.0-beta.1 · 11 KB · VersePublish-Figma-4.0.0-beta.1.zip\n      SHA-256a9acd18f385a46ccbe4a24d1931b2067d212be293d43703c8d54ff2c198d59d2Copy\n      \n        Install\n        \n          Unzip. In Figma desktop: Plugins › Development › Import plugin from manifest… and pick manifest.json.\n          Plugins › Development › Verse Publish › Insert a Verse link. Publish a GLB needs a server that accepts uploads from plug-ins (cross-origin) — not yet the case on verse.ctruh.com.\n        \n        Full guide: Publish from Spline and Figma\n      \n    "
+    }
+  ],
+  "shell": {
+    "html": "\n<div role=\"banner\" class=\"sx-head sx-site\" id=\"sx-head\"><div class=\"sx-in\"><a class=\"sx-brand\" href=\"/\" aria-label=\"Verse by Ctruh, home\"><img src=\"/assets/site/brand/ctruh-logo.webp\" width=\"1200\" height=\"237\" alt=\"Ctruh\"><span class=\"sx-sep\" aria-hidden=\"true\"></span><span class=\"sx-name\">Verse</span></a><div class=\"sx-nav\" role=\"navigation\" aria-label=\"Primary\"><ul><li><button type=\"button\" aria-expanded=\"false\" aria-controls=\"sx-m-product\">Products <svg class=\"sx-chev\" viewBox=\"0 0 12 12\" aria-hidden=\"true\"><path d=\"M2 4l4 4 4-4\"></path></svg></button><div class=\"sx-mega\" id=\"sx-m-product\"><div class=\"sx-cols\"><div><p class=\"sx-gh\">Create</p><ul class=\"sx-list\"><li><a href=\"/docs/#/guides/instant-home\"><span class=\"sx-mi\" aria-hidden=\"true\"><svg viewBox=\"0 0 24 24\"><path d=\"M3.5 11L12 4l8.5 7\"></path><path d=\"M5.5 9.5V20h13V9.5\"></path><path d=\"M10 20v-5h4v5\"></path></svg></span><span class=\"sx-mt\"><strong>Verse Home</strong><small>Floor plan to a walkable home in about a minute</small></span></a></li><li><a href=\"/docs/#/guides/film-a-room\"><span class=\"sx-mi\" aria-hidden=\"true\"><svg viewBox=\"0 0 24 24\"><path d=\"M4 8h3l1.5-2h7L17 8h3v11H4z\"></path><circle cx=\"12\" cy=\"13.5\" r=\"3.2\"></circle></svg></span><span class=\"sx-mt\"><strong>Verse Capture</strong><small>Film a room on your phone, get a walkable room</small></span></a></li><li><a href=\"/#create\"><span class=\"sx-mi\" aria-hidden=\"true\"><svg viewBox=\"0 0 24 24\"><circle cx=\"12\" cy=\"12\" r=\"9\"></circle><path d=\"M3 12h18M12 3c3 3.2 3 14.8 0 18M12 3c-3 3.2-3 14.8 0 18\"></path></svg></span><span class=\"sx-mt\"><strong>Verse Worlds</strong><small>Photo, video or text to a 3D world. Coming soon</small></span></a></li><li><a href=\"/studio\"><span class=\"sx-mi\" aria-hidden=\"true\"><svg viewBox=\"0 0 24 24\"><rect x=\"3.5\" y=\"3.5\" width=\"7\" height=\"7\" rx=\"1.6\"></rect><rect x=\"13.5\" y=\"3.5\" width=\"7\" height=\"7\" rx=\"1.6\"></rect><rect x=\"3.5\" y=\"13.5\" width=\"7\" height=\"7\" rx=\"1.6\"></rect><rect x=\"13.5\" y=\"13.5\" width=\"7\" height=\"7\" rx=\"1.6\"></rect></svg></span><span class=\"sx-mt\"><strong>Verse Studio</strong><small>No-code editor: hotspots, doors, tours, branding</small></span></a></li><li><a href=\"/plug-ins\"><span class=\"sx-mi\" aria-hidden=\"true\"><svg viewBox=\"0 0 24 24\"><path d=\"M9 3v5M15 3v5M6 8h12v3a6 6 0 0 1-12 0z\"></path><path d=\"M12 17v4\"></path></svg></span><span class=\"sx-mt\"><strong>Verse plug-ins</strong><small>Publish from Blender, Unreal, Unity, Revit and more</small></span></a></li></ul></div><div><p class=\"sx-gh\">Stream</p><ul class=\"sx-list\"><li><a href=\"/engine\"><span class=\"sx-mi\" aria-hidden=\"true\"><svg viewBox=\"0 0 24 24\"><path d=\"M12 3l8 4.5v9L12 21l-8-4.5v-9z\"></path><path d=\"M4 7.5l8 4.5 8-4.5M12 12v9\"></path></svg></span><span class=\"sx-mt\"><strong>Verse Engine</strong><small>Streams geometry and textures to any device</small></span></a></li></ul></div><div><p class=\"sx-gh\">Use</p><ul class=\"sx-list\"><li><a href=\"/docs/#/guides/embed-the-viewer\"><span class=\"sx-mi\" aria-hidden=\"true\"><svg viewBox=\"0 0 24 24\"><path d=\"M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1\"></path><path d=\"M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1\"></path></svg></span><span class=\"sx-mt\"><strong>Verse links and embeds</strong><small>One link or one line of HTML, anywhere</small></span></a></li><li><a href=\"/#use\"><span class=\"sx-mi\" aria-hidden=\"true\"><svg viewBox=\"0 0 24 24\"><path d=\"M5 21V4h9v17M14 9h5v12M3 21h18M8 8h3M8 12h3M8 16h3\"></path></svg></span><span class=\"sx-mt\"><strong>Verse for Real Estate</strong><small>Walkable homes, tours, lead capture, analytics</small></span></a></li><li><a href=\"/docs/#/guides/commerce\"><span class=\"sx-mi\" aria-hidden=\"true\"><svg viewBox=\"0 0 24 24\"><path d=\"M5 8h14l-1 12H6z\"></path><path d=\"M9 8V6a3 3 0 0 1 6 0v2\"></path></svg></span><span class=\"sx-mt\"><strong>Verse for Commerce</strong><small>Products that look exactly as designed, on any store</small></span></a></li><li><a href=\"/docs/#/guides/host-a-web-game\"><span class=\"sx-mi\" aria-hidden=\"true\"><svg viewBox=\"0 0 24 24\"><rect x=\"3\" y=\"8\" width=\"18\" height=\"10\" rx=\"5\"></rect><path d=\"M8 11v4M6 13h4M15.5 12h.01M18 14h.01\"></path></svg></span><span class=\"sx-mt\"><strong>Verse Play</strong><small>Host web games on an isolated, fast domain</small></span></a></li><li><a href=\"/developers\"><span class=\"sx-mi\" aria-hidden=\"true\"><svg viewBox=\"0 0 24 24\"><path d=\"M8.5 7L3.5 12l5 5M15.5 7l5 5-5 5M13.5 5l-3 14\"></path></svg></span><span class=\"sx-mt\"><strong>Verse API, SDK and MCP</strong><small>3D infrastructure for developers and AI agents</small></span></a></li></ul></div></div></div></li><li><a href=\"/pricing\">Pricing</a></li><li><a href=\"/docs/\">Docs</a></li><li><a href=\"/plug-ins\" aria-current=\"page\">Plug-ins</a></li><li><a href=\"/signin\">Sign in</a></li></ul></div><div class=\"sx-actions\"><div class=\"nav-links sx-slot\"><button id=\"theme-btn\" class=\"sx-theme\" type=\"button\" aria-label=\"Switch between light and dark theme\" aria-pressed=\"false\"><svg class=\"sun\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><circle cx=\"12\" cy=\"12\" r=\"4\"></circle><path d=\"M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.4 1.4M17.6 17.6L19 19M5 19l1.4-1.4M17.6 6.4L19 5\"></path></svg><svg class=\"moon\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z\"></path></svg></button></div><a class=\"sx-cta\" href=\"/app\">Try it free</a><button class=\"sx-burger\" type=\"button\" id=\"sx-open\" aria-label=\"Open menu\" aria-expanded=\"false\" aria-controls=\"sx-panel\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M4 7h16M4 12h16M4 17h16\"></path></svg></button></div></div></div><div class=\"sx-panel\" id=\"sx-panel\" role=\"dialog\" aria-modal=\"true\" aria-label=\"Menu\"><div class=\"sx-pbar\"><img src=\"/assets/site/brand/ctruh-logo.webp\" width=\"1200\" height=\"237\" alt=\"Ctruh\" loading=\"lazy\"><button class=\"sx-burger\" type=\"button\" id=\"sx-close\" aria-label=\"Close menu\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M6 6l12 12M18 6L6 18\"></path></svg></button></div><h2>Create</h2><a class=\"sub\" href=\"/docs/#/guides/instant-home\"><span class=\"sx-mi\" aria-hidden=\"true\"><svg viewBox=\"0 0 24 24\"><path d=\"M3.5 11L12 4l8.5 7\"></path><path d=\"M5.5 9.5V20h13V9.5\"></path><path d=\"M10 20v-5h4v5\"></path></svg></span><span><b>Verse Home</b><small>Floor plan to a walkable home in about a minute</small></span></a><a class=\"sub\" href=\"/docs/#/guides/film-a-room\"><span class=\"sx-mi\" aria-hidden=\"true\"><svg viewBox=\"0 0 24 24\"><path d=\"M4 8h3l1.5-2h7L17 8h3v11H4z\"></path><circle cx=\"12\" cy=\"13.5\" r=\"3.2\"></circle></svg></span><span><b>Verse Capture</b><small>Film a room on your phone, get a walkable room</small></span></a><a class=\"sub\" href=\"/#create\"><span class=\"sx-mi\" aria-hidden=\"true\"><svg viewBox=\"0 0 24 24\"><circle cx=\"12\" cy=\"12\" r=\"9\"></circle><path d=\"M3 12h18M12 3c3 3.2 3 14.8 0 18M12 3c-3 3.2-3 14.8 0 18\"></path></svg></span><span><b>Verse Worlds</b><small>Photo, video or text to a 3D world. Coming soon</small></span></a><a class=\"sub\" href=\"/studio\"><span class=\"sx-mi\" aria-hidden=\"true\"><svg viewBox=\"0 0 24 24\"><rect x=\"3.5\" y=\"3.5\" width=\"7\" height=\"7\" rx=\"1.6\"></rect><rect x=\"13.5\" y=\"3.5\" width=\"7\" height=\"7\" rx=\"1.6\"></rect><rect x=\"3.5\" y=\"13.5\" width=\"7\" height=\"7\" rx=\"1.6\"></rect><rect x=\"13.5\" y=\"13.5\" width=\"7\" height=\"7\" rx=\"1.6\"></rect></svg></span><span><b>Verse Studio</b><small>No-code editor: hotspots, doors, tours, branding</small></span></a><a class=\"sub\" href=\"/plug-ins\"><span class=\"sx-mi\" aria-hidden=\"true\"><svg viewBox=\"0 0 24 24\"><path d=\"M9 3v5M15 3v5M6 8h12v3a6 6 0 0 1-12 0z\"></path><path d=\"M12 17v4\"></path></svg></span><span><b>Verse plug-ins</b><small>Publish from Blender, Unreal, Unity, Revit and more</small></span></a><h2>Stream</h2><a class=\"sub\" href=\"/engine\"><span class=\"sx-mi\" aria-hidden=\"true\"><svg viewBox=\"0 0 24 24\"><path d=\"M12 3l8 4.5v9L12 21l-8-4.5v-9z\"></path><path d=\"M4 7.5l8 4.5 8-4.5M12 12v9\"></path></svg></span><span><b>Verse Engine</b><small>Streams geometry and textures to any device</small></span></a><h2>Use</h2><a class=\"sub\" href=\"/docs/#/guides/embed-the-viewer\"><span class=\"sx-mi\" aria-hidden=\"true\"><svg viewBox=\"0 0 24 24\"><path d=\"M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1\"></path><path d=\"M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1\"></path></svg></span><span><b>Verse links and embeds</b><small>One link or one line of HTML, anywhere</small></span></a><a class=\"sub\" href=\"/#use\"><span class=\"sx-mi\" aria-hidden=\"true\"><svg viewBox=\"0 0 24 24\"><path d=\"M5 21V4h9v17M14 9h5v12M3 21h18M8 8h3M8 12h3M8 16h3\"></path></svg></span><span><b>Verse for Real Estate</b><small>Walkable homes, tours, lead capture, analytics</small></span></a><a class=\"sub\" href=\"/docs/#/guides/commerce\"><span class=\"sx-mi\" aria-hidden=\"true\"><svg viewBox=\"0 0 24 24\"><path d=\"M5 8h14l-1 12H6z\"></path><path d=\"M9 8V6a3 3 0 0 1 6 0v2\"></path></svg></span><span><b>Verse for Commerce</b><small>Products that look exactly as designed, on any store</small></span></a><a class=\"sub\" href=\"/docs/#/guides/host-a-web-game\"><span class=\"sx-mi\" aria-hidden=\"true\"><svg viewBox=\"0 0 24 24\"><rect x=\"3\" y=\"8\" width=\"18\" height=\"10\" rx=\"5\"></rect><path d=\"M8 11v4M6 13h4M15.5 12h.01M18 14h.01\"></path></svg></span><span><b>Verse Play</b><small>Host web games on an isolated, fast domain</small></span></a><a class=\"sub\" href=\"/developers\"><span class=\"sx-mi\" aria-hidden=\"true\"><svg viewBox=\"0 0 24 24\"><path d=\"M8.5 7L3.5 12l5 5M15.5 7l5 5-5 5M13.5 5l-3 14\"></path></svg></span><span><b>Verse API, SDK and MCP</b><small>3D infrastructure for developers and AI agents</small></span></a><h2 aria-hidden=\"true\"></h2><a href=\"/pricing\">Pricing</a><a href=\"/docs/\">Docs</a><a href=\"/signin\">Sign in</a><a class=\"sx-btn\" href=\"/app\">Try it free</a></div>\n\n<main class=\"wrap\">\n  <header class=\"hero\">\n    <div class=\"kicker\">Plug-ins for Unreal, Unity and Blender</div>\n    <h1>Publish big projects straight from your tool</h1>\n    <p class=\"sub\">Press one button in your editor and get a link anyone can open in a browser. A Blender project goes live in about 45 seconds, Unreal in 70, Unity in 101. Also for <a href=\"#aec\">SketchUp, Revit, Rhino and seven more design tools</a>.</p>\n    <ul class=\"promises\" aria-label=\"What the plug-ins add\">\n      <li><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M4 7h16M4 12h16M4 17h10\"></path></svg><span>Up to <b data-max-prepared=\"\">20 GB</b> per scene</span></li>\n      <li><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M20 12a8 8 0 1 1-2.600-5.900M20 4v5h-5\"></path></svg><span>Resumable — a dropped connection picks up where it stopped</span></li>\n      <li><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M12 3l2.200 5.500L20 9l-4.400 3.800L17 19l-5-3.200L7 19l1.400-6.200L4 9l5.800-.500z\"></path></svg><span>We optimise it for you</span></li>\n    </ul>\n    <section class=\"send\" aria-labelledby=\"send-h\">\n      <b id=\"send-h\">On your phone? Send this to your computer</b>\n      <p>The plug-ins install in the editor on your desktop. Send yourself this page and open it there.</p>\n      <div class=\"row\">\n        <button type=\"button\" class=\"ghost\" id=\"send-copy\">Copy link</button>\n        <a class=\"ghost\" id=\"send-wa\" href=\"https://wa.me/?text=Verse%20plug-ins%20%E2%80%94%20open%20on%20my%20computer%3A%20https%3A%2F%2Fverse.ctruh.com%2Fdownloads\" target=\"_blank\" rel=\"noopener\">WhatsApp it to me</a>\n      </div>\n      <p id=\"send-note\" role=\"status\" style=\"margin:8px 0 0\"></p>\n    </section>\n  </header>\n\n  <ul class=\"tools\" role=\"tablist\" aria-label=\"Choose your tool\">\n    <li role=\"presentation\"><button type=\"button\" class=\"tool-tile\" role=\"tab\" id=\"tab-unreal\" aria-controls=\"dl-unreal\" aria-selected=\"true\" data-tool=\"unreal\" tabindex=\"0\">\n      <svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><circle cx=\"12\" cy=\"12\" r=\"9\"></circle><path d=\"M9 7.500v6a3 3 0 0 0 6 0v-6M15 13.500v3\"></path></svg>\n      <b>Unreal Engine</b><small>Levels, materials and lighting</small></button></li>\n    <li role=\"presentation\"><button type=\"button\" class=\"tool-tile\" role=\"tab\" id=\"tab-unity\" aria-controls=\"dl-unity\" aria-selected=\"false\" data-tool=\"unity\" tabindex=\"-1\">\n      <svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M12 3l8 4.600v8.800L12 21l-8-4.600V7.600z\"></path><path d=\"M12 12V7.800M12 12l3.700 2.100M12 12l-3.700 2.100\"></path></svg>\n      <b>Unity</b><small>URP, HDRP and Built-in scenes</small></button></li>\n    <li role=\"presentation\"><button type=\"button\" class=\"tool-tile\" role=\"tab\" id=\"tab-blender\" aria-controls=\"dl-blender\" aria-selected=\"false\" data-tool=\"blender\" tabindex=\"-1\">\n      <svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><circle cx=\"14.200\" cy=\"13.500\" r=\"5.600\"></circle><circle cx=\"14.200\" cy=\"13.500\" r=\"2.200\"></circle><path d=\"M9.800 10.100L3 6.300M8.700 12.900H3.800M9.900 17l-4.200 3\"></path></svg>\n      <b>Blender</b><small>Scenes and products, baked on publish</small></button></li>\n  </ul>\n\n  <p id=\"status\" role=\"status\"></p>\n\n  <section class=\"grid\" aria-label=\"Downloads\">\n    <article class=\"card\" id=\"dl-unreal\" data-editor=\"unreal\" data-match=\"^VersePublish-UE\" role=\"tabpanel\" aria-labelledby=\"tab-unreal\" data-on=\"\">\n      <div>\n        <h2>Unreal Engine <span class=\"tag live\">shipped</span></h2>\n        <p class=\"req\">Unreal Engine 5.8 with a C++ toolchain (Xcode on macOS, Visual Studio 2022 on Windows). Source plug-in; the editor compiles it on first open.</p>\n        <div class=\"dl\"><a class=\"btn\" href=\"/downloads/VersePublish-UE5.8-3.0.0-beta.1.zip\" download=\"VersePublish-UE5.8-3.0.0-beta.1.zip\" data-size=\"3182551\" data-sha256=\"32385ecc8f96b71d04034f940b497a10432e5e680926727881e33c36a5a49ea3\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M12 4v11M7 10l5 5 5-5M5 20h14\"></path></svg>Download for Unreal</a><div class=\"file mono\">v3.0.0-beta.1 · 3.0 MB · VersePublish-UE5.8-3.0.0-beta.1.zip</div></div>\n        <div class=\"sha mono\"><span>SHA-256</span><code title=\"32385ecc8f96b71d04034f940b497a10432e5e680926727881e33c36a5a49ea3\">32385ecc8f96b71d04034f940b497a10432e5e680926727881e33c36a5a49ea3</code><button type=\"button\">Copy</button></div>\n        <ol class=\"steps\" aria-label=\"Install and publish\">\n          <li>Close the editor and unzip into your project, so you have <code>&lt;Project&gt;/Plugins/VersePublish/VersePublish.uplugin</code>.<span>The Plugins folder sits next to your .uproject.</span></li>\n          <li>Open the project and accept the prompt to rebuild the module.<span>A Tools › Verse menu appears.</span></li>\n          <li>Optional: paste an account token from <a href=\"/studio\">Studio</a> in <b>Project Settings › Plugins › Verse Publish</b>.<span>Your scenes become permanent and are listed in your library.</span></li>\n          <li>Open <b>Tools › Verse › Publish to Verse</b> and press <b>Publish to Verse</b>.<span>Upload %, then the build stages, then the link — copied for you.</span></li>\n        </ol>\n      </div>\n      <div class=\"side\">\n        <div class=\"box\"><h3>What gets published</h3><ul>\n          <li>The level (or the selected actors) as one scene</li>\n          <li>Unreal materials and lighting, baked on publish</li>\n          <li>Textures at source resolution — nothing downscaled</li>\n        </ul></div>\n        <div class=\"box\"><h3>Big projects</h3><p>Up to <b data-max-prepared=\"\">20 GB</b>, sent in resumable parts. Browser uploads stop at <b data-max-browser=\"\">500 MB</b>.</p></div>\n        <p class=\"req\"><a href=\"/docs/#/guides/publish-from-unreal\">Full guide: Publish from Unreal →</a></p>\n      </div>\n    </article>\n\n    <article class=\"card\" id=\"dl-unity\" data-editor=\"unity\" data-match=\"^com\\.ctruh\\.verse-publish-\" role=\"tabpanel\" aria-labelledby=\"tab-unity\">\n      <div>\n        <h2>Unity <span class=\"tag live\">shipped</span></h2>\n        <p class=\"req\">Unity 2021.3 or newer (URP, HDRP, Built-in). UPM tarball; glTFast is pulled in for you.</p>\n        <div class=\"dl\"><a class=\"btn\" href=\"/downloads/com.ctruh.verse-publish-3.0.0-beta.1.tgz\" download=\"com.ctruh.verse-publish-3.0.0-beta.1.tgz\" data-size=\"3188679\" data-sha256=\"24741c9d4736784af4ed7ac9240d928d90d6cefd8c773a92dfc48df55a4d8505\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M12 4v11M7 10l5 5 5-5M5 20h14\"></path></svg>Download for Unity</a><div class=\"file mono\">v3.0.0-beta.1 · 3.0 MB · com.ctruh.verse-publish-3.0.0-beta.1.tgz</div></div>\n        <div class=\"sha mono\"><span>SHA-256</span><code title=\"24741c9d4736784af4ed7ac9240d928d90d6cefd8c773a92dfc48df55a4d8505\">24741c9d4736784af4ed7ac9240d928d90d6cefd8c773a92dfc48df55a4d8505</code><button type=\"button\">Copy</button></div>\n        <ol class=\"steps\" aria-label=\"Install and publish\">\n          <li>Download the <code>.tgz</code> and keep it somewhere stable — your project's <code>Packages/</code> folder is ideal.<span>Unity references the file by path.</span></li>\n          <li><b>Window › Package Manager › + › Add package from tarball…</b> and pick it.<span>The install finishes with no console errors.</span></li>\n          <li>Open <b>Tools › Verse › Publish Scene</b>; optionally paste an account token from <a href=\"/studio\">Studio</a>.<span>The window remembers it.</span></li>\n          <li>Press <b>Publish scene</b>.<span>Upload %, then the build stages, then the link — copied for you.</span></li>\n        </ol>\n      </div>\n      <div class=\"side\">\n        <div class=\"box\"><h3>What gets published</h3><ul>\n          <li>The open scene (or the selection) as one scene</li>\n          <li>Lighting baked on publish; the skybox as the background</li>\n          <li>Terrain as tile meshes, LOD0 of every LOD group</li>\n          <li>Textures at source resolution — nothing downscaled</li>\n        </ul></div>\n        <div class=\"box\"><h3>Big projects</h3><p>Up to <b data-max-prepared=\"\">20 GB</b>, sent in resumable parts. Browser uploads stop at <b data-max-browser=\"\">500 MB</b>.</p></div>\n        <p class=\"req\"><a href=\"/docs/#/guides/publish-from-unity\">Full guide: Publish from Unity →</a></p>\n      </div>\n    </article>\n\n    <article class=\"card\" id=\"dl-blender\" data-editor=\"blender\" data-match=\"^verse_publish-blender-\" role=\"tabpanel\" aria-labelledby=\"tab-blender\">\n      <div>\n        <h2>Blender <span class=\"tag live\">shipped</span></h2>\n        <p class=\"req\">Blender 4.2 or newer. Extension zip; also installs as a legacy add-on.</p>\n        <div class=\"dl\"><a class=\"btn\" href=\"/downloads/verse_publish-blender-3.0.0-beta.1.zip\" download=\"verse_publish-blender-3.0.0-beta.1.zip\" data-size=\"3182552\" data-sha256=\"2ff2dd7074cf3073b0e68e78af5ee2dcb6047b701824a84e8823930f0ba4f545\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M12 4v11M7 10l5 5 5-5M5 20h14\"></path></svg>Download for Blender</a><div class=\"file mono\">v3.0.0-beta.1 · 3.0 MB · verse_publish-blender-3.0.0-beta.1.zip</div></div>\n        <div class=\"sha mono\"><span>SHA-256</span><code title=\"2ff2dd7074cf3073b0e68e78af5ee2dcb6047b701824a84e8823930f0ba4f545\">2ff2dd7074cf3073b0e68e78af5ee2dcb6047b701824a84e8823930f0ba4f545</code><button type=\"button\">Copy</button></div>\n        <ol class=\"steps\" aria-label=\"Install and publish\">\n          <li>Download the zip — don't unzip it.<span>One file; Blender installs it as it is.</span></li>\n          <li><b>Edit › Preferences › Get Extensions</b>, open the <b>⌄</b> menu, choose <b>Install from Disk…</b> and pick the zip (or drag it onto Blender).<span>\"Verse Publish\" is listed and enabled — no restart.</span></li>\n          <li>Optional: paste an account token from <a href=\"/studio\">Studio</a> in <b>Preferences › Add-ons › Verse Publish</b>.<span>Your scenes become permanent and are listed in your library.</span></li>\n          <li>Press <b>N</b> in the 3D viewport, open the <b>Verse</b> tab and click <b>Publish scene</b>.<span>Export, optimise, upload, build — then the link is on your clipboard.</span></li>\n        </ol>\n      </div>\n      <div class=\"side\">\n        <div class=\"box\"><h3>What gets published</h3><ul>\n          <li>The scene (or the selected objects), modifiers applied</li>\n          <li>Node materials — and at High your lighting — baked on publish</li>\n          <li>Textures at source resolution, right-sized to what the scene can show</li>\n        </ul></div>\n        <div class=\"box\"><h3>Big projects</h3><p>Up to <b data-max-prepared=\"\">20 GB</b>, sent in resumable parts. Browser uploads stop at <b data-max-browser=\"\">500 MB</b>.</p></div>\n        <p class=\"req\"><a href=\"/docs/#/guides/publish-from-blender\">Full guide: Publish from Blender →</a></p>\n      </div>\n    </article>\n  </section>\n\n  <h2 class=\"group\" id=\"aec\">Architecture, design and CAD tools <span class=\"tag beta\">4.0 beta</span></h2>\n  <p class=\"req\">Tested against a real Verse server through each plug-in's own upload code; not yet run inside every host app — each guide says what has and has not been checked.</p>\n  <section class=\"grid aec\" aria-label=\"AEC and design downloads\">\n    <article class=\"card\" id=\"dl-sketchup\" data-editor=\"sketchup\" data-match=\"^verse_publish-sketchup-\">\n      <h2>SketchUp <span class=\"tag beta\">beta</span></h2>\n      <p class=\"req\">SketchUp 2021 or newer (GLB export on 2025+; OBJ / FBX on older needs Pro). Extension <code>.rbz</code>.</p>\n      <a class=\"btn\" href=\"/downloads/verse_publish-sketchup-4.0.0-beta.1.rbz\" download=\"verse_publish-sketchup-4.0.0-beta.1.rbz\" data-size=\"15914\" data-sha256=\"e2d88cbec07bc2374630058b56ee1821e01d37cae6c22f2992a50c1847ee665e\">Download for SketchUp</a>\n      <div class=\"file mono\">v4.0.0-beta.1 · 16 KB · verse_publish-sketchup-4.0.0-beta.1.rbz</div>\n      <div class=\"sha mono\"><span>SHA-256</span><code title=\"e2d88cbec07bc2374630058b56ee1821e01d37cae6c22f2992a50c1847ee665e\">e2d88cbec07bc2374630058b56ee1821e01d37cae6c22f2992a50c1847ee665e</code><button type=\"button\">Copy</button></div>\n      <details>\n        <summary>Install</summary>\n        <ol>\n          <li><b>Window › Extension Manager › Install Extension</b> and pick the <code>.rbz</code> (do not unzip it).</li>\n          <li><b>Extensions › Verse › Publish to Verse</b>. Server, API key and account token are under <b>Extensions › Verse › Settings…</b></li>\n        </ol>\n        <p class=\"req\" style=\"margin-top:8px\"><a href=\"/docs/#/guides/publish-from-sketchup\">Full guide: Publish from SketchUp</a></p>\n      </details>\n    </article>\n    <article class=\"card\" id=\"dl-revit\" data-editor=\"revit\" data-match=\"^VersePublish-Revit-\">\n      <h2>Revit <span class=\"tag beta\">beta</span></h2>\n      <p class=\"req\">Revit 2021–2024 and 2025+ (Windows). Add-in zip with both builds.</p>\n      <a class=\"btn\" href=\"/downloads/VersePublish-Revit-4.0.0-beta.1.zip\" download=\"VersePublish-Revit-4.0.0-beta.1.zip\" data-size=\"31878\" data-sha256=\"4c0a629f1102c89abd1d3854f17728ea18f9ac0160181a51519b69bde3ca4fae\">Download for Revit</a>\n      <div class=\"file mono\">v4.0.0-beta.1 · 31 KB · VersePublish-Revit-4.0.0-beta.1.zip</div>\n      <div class=\"sha mono\"><span>SHA-256</span><code title=\"4c0a629f1102c89abd1d3854f17728ea18f9ac0160181a51519b69bde3ca4fae\">4c0a629f1102c89abd1d3854f17728ea18f9ac0160181a51519b69bde3ca4fae</code><button type=\"button\">Copy</button></div>\n      <details>\n        <summary>Install</summary>\n        <ol>\n          <li>Close Revit. Unzip; copy <code>VersePublishRevit.dll</code> and <code>VersePublish.addin</code> from <code>build/net48</code> (2021–2024) or <code>build/net8.0-windows</code> (2025+) to <code>%APPDATA%\\Autodesk\\Revit\\Addins\\&lt;year&gt;\\</code>.</li>\n          <li>Start Revit, choose <b>Always Load</b>, open a 3D view and press <b>Verse › Publish to Verse</b> on the ribbon.</li>\n        </ol>\n        <p class=\"req\" style=\"margin-top:8px\"><a href=\"/docs/#/guides/publish-from-revit\">Full guide: Publish from Revit</a></p>\n      </details>\n    </article>\n    <article class=\"card\" id=\"dl-rhino\" data-editor=\"rhino\" data-match=\"^VersePublish-Rhino-\">\n      <h2>Rhino <span class=\"tag beta\">beta</span></h2>\n      <p class=\"req\">Rhino 8 (script, Windows + Mac) or Rhino 7 / 8 (plug-in, Windows). Zip.</p>\n      <a class=\"btn\" href=\"/downloads/VersePublish-Rhino-4.0.0-beta.1.zip\" download=\"VersePublish-Rhino-4.0.0-beta.1.zip\" data-size=\"34445\" data-sha256=\"d40509f96e0750468933813a86b18488e66bc00faf4d4a5ee7038174013326bd\">Download for Rhino</a>\n      <div class=\"file mono\">v4.0.0-beta.1 · 34 KB · VersePublish-Rhino-4.0.0-beta.1.zip</div>\n      <div class=\"sha mono\"><span>SHA-256</span><code title=\"d40509f96e0750468933813a86b18488e66bc00faf4d4a5ee7038174013326bd\">d40509f96e0750468933813a86b18488e66bc00faf4d4a5ee7038174013326bd</code><button type=\"button\">Copy</button></div>\n      <details>\n        <summary>Install</summary>\n        <ol>\n          <li>Unzip. Rhino 8: <b>Tools › Script › Run</b> and pick <code>script/VersePublishRhino.py</code>. Or drag <code>build/net48/VersePublishRhino.rhp</code> onto Rhino.</li>\n          <li>Run <b>VersePublish</b>; the first run asks for the server and an optional key / token.</li>\n        </ol>\n        <p class=\"req\" style=\"margin-top:8px\"><a href=\"/docs/#/guides/publish-from-rhino\">Full guide: Publish from Rhino</a></p>\n      </details>\n    </article>\n    <article class=\"card\" id=\"dl-3dsmax\" data-editor=\"3dsmax\" data-match=\"^VersePublish-3dsMax-\">\n      <h2>3ds Max <span class=\"tag beta\">beta</span></h2>\n      <p class=\"req\">3ds Max 2023 or newer (Windows). Python script + MAXScript macros.</p>\n      <a class=\"btn\" href=\"/downloads/VersePublish-3dsMax-4.0.0-beta.1.zip\" download=\"VersePublish-3dsMax-4.0.0-beta.1.zip\" data-size=\"18365\" data-sha256=\"4f9a47098f161c9b4dea1ec408a54efba08e9b6d532ebd638d641fbf22bf6e76\">Download for 3ds Max</a>\n      <div class=\"file mono\">v4.0.0-beta.1 · 18 KB · VersePublish-3dsMax-4.0.0-beta.1.zip</div>\n      <div class=\"sha mono\"><span>SHA-256</span><code title=\"4f9a47098f161c9b4dea1ec408a54efba08e9b6d532ebd638d641fbf22bf6e76\">4f9a47098f161c9b4dea1ec408a54efba08e9b6d532ebd638d641fbf22bf6e76</code><button type=\"button\">Copy</button></div>\n      <details>\n        <summary>Install</summary>\n        <ol>\n          <li>Unzip to a folder you keep. <b>Scripting › Run Script</b> and pick <code>VersePublish.ms</code>.</li>\n          <li><b>Customize › Toolbars</b>, category <b>Verse</b>: drag <b>Publish to Verse</b> onto a toolbar and press it.</li>\n        </ol>\n        <p class=\"req\" style=\"margin-top:8px\"><a href=\"/docs/#/guides/publish-from-3dsmax\">Full guide: Publish from 3ds Max</a></p>\n      </details>\n    </article>\n    <article class=\"card\" id=\"dl-archicad\" data-editor=\"archicad\" data-match=\"^VersePublish-Archicad-\">\n      <h2>Archicad <span class=\"tag beta\">beta</span></h2>\n      <p class=\"req\">Archicad 23 or newer (IFC). Python 3.8+ script.</p>\n      <a class=\"btn\" href=\"/downloads/VersePublish-Archicad-4.0.0-beta.1.zip\" download=\"VersePublish-Archicad-4.0.0-beta.1.zip\" data-size=\"17515\" data-sha256=\"cfb29af4ae34b53a89e48a625abb60f3cc7b7b154ae2fa35eba43e060b790f86\">Download for Archicad</a>\n      <div class=\"file mono\">v4.0.0-beta.1 · 17 KB · VersePublish-Archicad-4.0.0-beta.1.zip</div>\n      <div class=\"sha mono\"><span>SHA-256</span><code title=\"cfb29af4ae34b53a89e48a625abb60f3cc7b7b154ae2fa35eba43e060b790f86\">cfb29af4ae34b53a89e48a625abb60f3cc7b7b154ae2fa35eba43e060b790f86</code><button type=\"button\">Copy</button></div>\n      <details>\n        <summary>Install</summary>\n        <ol>\n          <li>Unzip. Once: <code>python3 verse_publish_archicad.py --save-settings --server https://verse.ctruh.com</code>.</li>\n          <li><b>File › Save As › IFC</b>, then <code>python3 verse_publish_archicad.py model.ifc</code>; it prints the link.</li>\n        </ol>\n        <p class=\"req\" style=\"margin-top:8px\"><a href=\"/docs/#/guides/publish-from-archicad\">Full guide: Publish from Archicad</a></p>\n      </details>\n    </article>\n    <article class=\"card\" id=\"dl-maya\" data-editor=\"maya\" data-match=\"^VersePublish-Maya-\">\n      <h2>Maya <span class=\"tag beta\">beta</span></h2>\n      <p class=\"req\">Maya 2022 or newer (Windows, Mac, Linux). Zip with a drag-to-install script.</p>\n      <a class=\"btn\" href=\"/downloads/VersePublish-Maya-4.0.0-beta.1.zip\" download=\"VersePublish-Maya-4.0.0-beta.1.zip\" data-size=\"26466\" data-sha256=\"982d7eed443410882afb36e8647bf27d441c1c3c50fd4d8ae9804167e6f19338\">Download for Maya</a>\n      <div class=\"file mono\">v4.0.0-beta.1 · 26 KB · VersePublish-Maya-4.0.0-beta.1.zip</div>\n      <div class=\"sha mono\"><span>SHA-256</span><code title=\"982d7eed443410882afb36e8647bf27d441c1c3c50fd4d8ae9804167e6f19338\">982d7eed443410882afb36e8647bf27d441c1c3c50fd4d8ae9804167e6f19338</code><button type=\"button\">Copy</button></div>\n      <details>\n        <summary>Install</summary>\n        <ol>\n          <li>Unzip and drag <code>drag_to_install.py</code> onto a Maya viewport. A <b>Verse</b> menu and shelf appear (and come back after a restart).</li>\n          <li><b>Verse › Publish to Verse</b>.</li>\n        </ol>\n        <p class=\"req\" style=\"margin-top:8px\"><a href=\"/docs/#/guides/publish-from-maya\">Full guide: Publish from Maya</a></p>\n      </details>\n    </article>\n    <article class=\"card\" id=\"dl-cinema4d\" data-editor=\"cinema4d\" data-match=\"^VersePublish-Cinema4D-\">\n      <h2>Cinema 4D <span class=\"tag beta\">beta</span></h2>\n      <p class=\"req\">Cinema 4D 2023 or newer. Python plug-in folder.</p>\n      <a class=\"btn\" href=\"/downloads/VersePublish-Cinema4D-4.0.0-beta.1.zip\" download=\"VersePublish-Cinema4D-4.0.0-beta.1.zip\" data-size=\"26242\" data-sha256=\"a6a34a74bb019f2ac1f9106df3d857ee32eb344f53dc23d26600d65d70a9f7ee\">Download for Cinema 4D</a>\n      <div class=\"file mono\">v4.0.0-beta.1 · 26 KB · VersePublish-Cinema4D-4.0.0-beta.1.zip</div>\n      <div class=\"sha mono\"><span>SHA-256</span><code title=\"a6a34a74bb019f2ac1f9106df3d857ee32eb344f53dc23d26600d65d70a9f7ee\">a6a34a74bb019f2ac1f9106df3d857ee32eb344f53dc23d26600d65d70a9f7ee</code><button type=\"button\">Copy</button></div>\n      <details>\n        <summary>Install</summary>\n        <ol>\n          <li>Unzip and copy the <code>VersePublish</code> folder into Cinema 4D's <code>plugins</code> folder (<b>Preferences › Open Preferences Folder…</b>), then restart.</li>\n          <li><b>Extensions › Verse Publish › Publish to Verse</b>.</li>\n        </ol>\n        <p class=\"req\" style=\"margin-top:8px\"><a href=\"/docs/#/guides/publish-from-cinema4d\">Full guide: Publish from Cinema 4D</a></p>\n      </details>\n    </article>\n    <article class=\"card\" id=\"dl-houdini\" data-editor=\"houdini\" data-match=\"^VersePublish-Houdini-\">\n      <h2>Houdini <span class=\"tag beta\">beta</span></h2>\n      <p class=\"req\">Houdini 19.5 or newer. Houdini package + shelf.</p>\n      <a class=\"btn\" href=\"/downloads/VersePublish-Houdini-4.0.0-beta.1.zip\" download=\"VersePublish-Houdini-4.0.0-beta.1.zip\" data-size=\"26015\" data-sha256=\"880ac99d461fa1b0e7a86b40faabdd19825ff77238b3f43747fb8d9610b5ec4d\">Download for Houdini</a>\n      <div class=\"file mono\">v4.0.0-beta.1 · 25 KB · VersePublish-Houdini-4.0.0-beta.1.zip</div>\n      <div class=\"sha mono\"><span>SHA-256</span><code title=\"880ac99d461fa1b0e7a86b40faabdd19825ff77238b3f43747fb8d9610b5ec4d\">880ac99d461fa1b0e7a86b40faabdd19825ff77238b3f43747fb8d9610b5ec4d</code><button type=\"button\">Copy</button></div>\n      <details>\n        <summary>Install</summary>\n        <ol>\n          <li>Unzip. In <b>Windows › Python Shell</b>: <code>exec(open(r\"&lt;folder&gt;/install_houdini.py\").read())</code>, then restart Houdini.</li>\n          <li>Add the <b>Verse</b> shelf (shelf <b>+</b> menu) and press <b>Publish to Verse</b>.</li>\n        </ol>\n        <p class=\"req\" style=\"margin-top:8px\"><a href=\"/docs/#/guides/publish-from-houdini\">Full guide: Publish from Houdini</a></p>\n      </details>\n    </article>\n    <article class=\"card\" id=\"dl-solidworks\" data-editor=\"solidworks\" data-match=\"^VersePublish-SolidWorks-\">\n      <h2>SolidWorks <span class=\"tag beta\">beta</span></h2>\n      <p class=\"req\">SolidWorks 2019 or newer (Windows). Add-in source: build it against your SolidWorks install.</p>\n      <a class=\"btn\" href=\"/downloads/VersePublish-SolidWorks-4.0.0-beta.1.zip\" download=\"VersePublish-SolidWorks-4.0.0-beta.1.zip\" data-size=\"26570\" data-sha256=\"d2371b43ebffe23f9a0c514ea408f837e8b01c3725a2fca42e62a7977744574b\">Download for SolidWorks</a>\n      <div class=\"file mono\">v4.0.0-beta.1 · 26 KB · VersePublish-SolidWorks-4.0.0-beta.1.zip</div>\n      <div class=\"sha mono\"><span>SHA-256</span><code title=\"d2371b43ebffe23f9a0c514ea408f837e8b01c3725a2fca42e62a7977744574b\">d2371b43ebffe23f9a0c514ea408f837e8b01c3725a2fca42e62a7977744574b</code><button type=\"button\">Copy</button></div>\n      <details>\n        <summary>Install</summary>\n        <ol>\n          <li>Unzip; build with <code>dotnet build -c Release -p:SolidWorksApi=&lt;SolidWorks&gt;\\api\\redist</code>, then <code>RegAsm /codebase VersePublishSolidWorks.dll</code> as administrator.</li>\n          <li><b>Tools › Add-Ins</b>, tick <b>Verse Publish</b>, then <b>Verse › Publish to Verse</b>.</li>\n        </ol>\n        <p class=\"req\" style=\"margin-top:8px\"><a href=\"/docs/#/guides/publish-from-solidworks\">Full guide: Publish from SolidWorks</a></p>\n      </details>\n    </article>\n    <article class=\"card\" id=\"dl-figma\" data-editor=\"figma\" data-match=\"^VersePublish-Figma-\">\n      <h2>Figma (+ Spline) <span class=\"tag beta\">beta</span></h2>\n      <p class=\"req\">Figma desktop app. Development plug-in; publishes a GLB such as a Spline export.</p>\n      <a class=\"btn\" href=\"/downloads/VersePublish-Figma-4.0.0-beta.1.zip\" download=\"VersePublish-Figma-4.0.0-beta.1.zip\" data-size=\"11744\" data-sha256=\"a9acd18f385a46ccbe4a24d1931b2067d212be293d43703c8d54ff2c198d59d2\">Download for Figma</a>\n      <div class=\"file mono\">v4.0.0-beta.1 · 11 KB · VersePublish-Figma-4.0.0-beta.1.zip</div>\n      <div class=\"sha mono\"><span>SHA-256</span><code title=\"a9acd18f385a46ccbe4a24d1931b2067d212be293d43703c8d54ff2c198d59d2\">a9acd18f385a46ccbe4a24d1931b2067d212be293d43703c8d54ff2c198d59d2</code><button type=\"button\">Copy</button></div>\n      <details>\n        <summary>Install</summary>\n        <ol>\n          <li>Unzip. In Figma desktop: <b>Plugins › Development › Import plugin from manifest…</b> and pick <code>manifest.json</code>.</li>\n          <li><b>Plugins › Development › Verse Publish › Insert a Verse link</b>. <i>Publish a GLB</i> needs a server that accepts uploads from plug-ins (cross-origin) — not yet the case on verse.ctruh.com.</li>\n        </ol>\n        <p class=\"req\" style=\"margin-top:8px\"><a href=\"/docs/#/guides/publish-from-spline\">Full guide: Publish from Spline and Figma</a></p>\n      </details>\n    </article>\n  </section>\n\n  <div class=\"note\">\n    <h3>Check a download</h3>\n    Every file's SHA-256 is shown with it and listed in <a id=\"sums-link\" href=\"/downloads/SHA256SUMS\">SHA256SUMS</a>. Compare before installing:\n    <pre>shasum -a 256 &lt;file&gt;            # macOS / Linux\nGet-FileHash &lt;file&gt; -Algorithm SHA256   # Windows PowerShell</pre>\n    <p style=\"margin:10px 0 0\">Each package bundles <code>verse-prepare</code> (the optimiser) for macOS (Apple silicon and Intel), Windows and Linux. To publish to your own server instead, change the server URL in the plug-in's settings (<a href=\"/docs/#/guides/run-your-own-server\">Run your own server</a>).</p>\n  </div>\n</main>\n\n<footer class=\"sx-foot\"><div class=\"sx-foot-in\"><img src=\"/assets/site/brand/ctruh-logo.webp\" width=\"1200\" height=\"237\" alt=\"Ctruh\" loading=\"lazy\"><nav aria-label=\"Footer\"><a href=\"/terms\">Terms</a><a href=\"/privacy\">Privacy</a><a href=\"/refunds\">Refunds</a><a href=\"/docs/\">Docs</a><a href=\"/plug-ins\">Plug-ins</a><a href=\"/challenge\">Challenge</a><a href=\"/bench\">Bench</a><a href=\"mailto:hello@ctruh.com\">Contact</a></nav><div class=\"sx-foot-bottom\">hello@ctruh.com · © Ctruh</div></div></footer>\n\n<script>{const e=document.documentElement;document.getElementById(\"theme-btn\").addEventListener(\"click\",()=>{const n=e.dataset.theme===\"light\"?\"dark\":\"light\";e.dataset.theme=n,e.dataset.themeSource=\"user\";try{localStorage.setItem(\"verse-theme\",n)}catch{}})}{const e=[...document.querySelectorAll(\".tool-tile\")],n=(t,s)=>{for(const o of e){const r=o.dataset.tool===t;o.setAttribute(\"aria-selected\",String(r)),o.tabIndex=r?0:-1,document.getElementById(`dl-${o.dataset.tool}`).toggleAttribute(\"data-on\",r),r&&s&&o.focus()}},a=()=>/^#dl-(unreal|unity|blender)$/.exec(location.hash)?.[1];n(a()||\"unreal\"),addEventListener(\"hashchange\",()=>a()&&n(a()));for(const t of e)t.addEventListener(\"click\",()=>{n(t.dataset.tool),history.replaceState(null,\"\",`#dl-${t.dataset.tool}`)}),t.addEventListener(\"keydown\",s=>{const o=e.indexOf(t),r=s.key===\"ArrowRight\"||s.key===\"ArrowDown\"?(o+1)%e.length:s.key===\"ArrowLeft\"||s.key===\"ArrowUp\"?(o+e.length-1)%e.length:-1;r>=0&&(s.preventDefault(),n(e[r].dataset.tool,!0))})}{const e=()=>`${location.origin}/downloads${location.hash||\"\"}`,n=document.getElementById(\"send-wa\"),a=()=>{n.href=`https://wa.me/?text=${encodeURIComponent(`Verse plug-ins — open on my computer: ${e()}`)}`};a(),addEventListener(\"hashchange\",a),document.querySelector(\".tools\").addEventListener(\"click\",()=>setTimeout(a,0)),document.getElementById(\"send-copy\").addEventListener(\"click\",async()=>{const t=document.getElementById(\"send-note\");try{await navigator.clipboard.writeText(e()),t.textContent=\"Link copied — paste it into a message to yourself.\"}catch{t.textContent=e()}})}fetch(\"/v1/limits\").then(e=>e.ok?e.json():null).then(e=>{const n=e?.limits;if(!n)return;const a=t=>t>=1024?`${Math.round(t/1024)} GB`:`${t} MB`;for(const t of document.querySelectorAll(\"[data-max-prepared]\"))n.maxPreparedUploadMB&&(t.textContent=a(n.maxPreparedUploadMB));for(const t of document.querySelectorAll(\"[data-max-browser]\"))n.maxUploadMB&&(t.textContent=a(n.maxUploadMB))}).catch(()=>{});const mb=e=>e>=1048576?`${(e/1048576).toFixed(1)} MB`:`${Math.max(1,Math.round(e/1024))} KB`;(async()=>{const e=document.getElementById(\"status\");let n=[];try{const t=await fetch(\"/downloads/index.json\",{cache:\"no-cache\"});if(!t.ok)throw new Error(`HTTP ${t.status}`);n=(await t.json()).files??[]}catch{e.textContent=\"The download list could not be loaded right now. Please try again in a minute.\";return}let a=0;for(const t of document.querySelectorAll(\".card[data-editor]\")){const s=new RegExp(t.dataset.match),o=n.filter(c=>s.test(c.name)).sort((c,d)=>String(d.published).localeCompare(String(c.published)))[0],r=t.querySelector(\".btn\");if(!o){t.querySelector(\".file\").textContent=\"Not published on this server yet.\";continue}if(a++,r.href=o.url,r.setAttribute(\"download\",o.name),r.removeAttribute(\"aria-disabled\"),r.dataset.size=String(o.size),o.sha256&&(r.dataset.sha256=o.sha256),t.querySelector(\".file\").textContent=`${o.version?`v${o.version} · `:\"\"}${mb(o.size)} · ${o.name}`,o.sha256){const c=t.querySelector(\".sha\");c.hidden=!1,c.querySelector(\"code\").textContent=o.sha256,c.querySelector(\"code\").title=o.sha256,c.querySelector(\"button\").addEventListener(\"click\",async d=>{try{await navigator.clipboard.writeText(o.sha256),d.target.textContent=\"Copied\"}catch{d.target.textContent=\"Select it\"}})}}n.some(t=>t.name===\"SHA256SUMS\")||document.getElementById(\"sums-link\").removeAttribute(\"href\"),e.textContent=a?\"\":\"No packages are published on this server yet.\",document.body.dataset.ready=\"1\"})();</script>\n\n\n",
+    "links": [
+      {
+        "href": "https://verse.ctruh.com/",
+        "text": "Verse"
+      },
+      {
+        "href": "https://verse.ctruh.com/docs/#/guides/instant-home",
+        "text": "Verse HomeFloor plan to a walkable home in about a minute"
+      },
+      {
+        "href": "https://verse.ctruh.com/docs/#/guides/film-a-room",
+        "text": "Verse CaptureFilm a room on your phone, get a walkable room"
+      },
+      {
+        "href": "https://verse.ctruh.com/#create",
+        "text": "Verse WorldsPhoto, video or text to a 3D world. Coming soon"
+      },
+      {
+        "href": "https://verse.ctruh.com/studio",
+        "text": "Verse StudioNo-code editor: hotspots, doors, tours, branding"
+      },
+      {
+        "href": "https://verse.ctruh.com/plug-ins",
+        "text": "Verse plug-insPublish from Blender, Unreal, Unity, Revit and more"
+      },
+      {
+        "href": "https://verse.ctruh.com/engine",
+        "text": "Verse EngineStreams geometry and textures to any device"
+      },
+      {
+        "href": "https://verse.ctruh.com/docs/#/guides/embed-the-viewer",
+        "text": "Verse links and embedsOne link or one line of HTML, anywhere"
+      },
+      {
+        "href": "https://verse.ctruh.com/#use",
+        "text": "Verse for Real EstateWalkable homes, tours, lead capture, analytics"
+      },
+      {
+        "href": "https://verse.ctruh.com/docs/#/guides/commerce",
+        "text": "Verse for CommerceProducts that look exactly as designed, on any store"
+      },
+      {
+        "href": "https://verse.ctruh.com/docs/#/guides/host-a-web-game",
+        "text": "Verse PlayHost web games on an isolated, fast domain"
+      },
+      {
+        "href": "https://verse.ctruh.com/developers",
+        "text": "Verse API, SDK and MCP3D infrastructure for developers and AI agents"
+      },
+      {
+        "href": "https://verse.ctruh.com/pricing",
+        "text": "Pricing"
+      },
+      {
+        "href": "https://verse.ctruh.com/docs/",
+        "text": "Docs"
+      },
+      {
+        "href": "https://verse.ctruh.com/plug-ins",
+        "text": "Plug-ins"
+      },
+      {
+        "href": "https://verse.ctruh.com/signin",
+        "text": "Sign in"
+      },
+      {
+        "href": "https://verse.ctruh.com/app",
+        "text": "Try it free"
+      },
+      {
+        "href": "https://verse.ctruh.com/docs/#/guides/instant-home",
+        "text": "Verse HomeFloor plan to a walkable home in about a minute"
+      },
+      {
+        "href": "https://verse.ctruh.com/docs/#/guides/film-a-room",
+        "text": "Verse CaptureFilm a room on your phone, get a walkable room"
+      },
+      {
+        "href": "https://verse.ctruh.com/#create",
+        "text": "Verse WorldsPhoto, video or text to a 3D world. Coming soon"
+      },
+      {
+        "href": "https://verse.ctruh.com/studio",
+        "text": "Verse StudioNo-code editor: hotspots, doors, tours, branding"
+      },
+      {
+        "href": "https://verse.ctruh.com/plug-ins",
+        "text": "Verse plug-insPublish from Blender, Unreal, Unity, Revit and more"
+      },
+      {
+        "href": "https://verse.ctruh.com/engine",
+        "text": "Verse EngineStreams geometry and textures to any device"
+      },
+      {
+        "href": "https://verse.ctruh.com/docs/#/guides/embed-the-viewer",
+        "text": "Verse links and embedsOne link or one line of HTML, anywhere"
+      },
+      {
+        "href": "https://verse.ctruh.com/#use",
+        "text": "Verse for Real EstateWalkable homes, tours, lead capture, analytics"
+      },
+      {
+        "href": "https://verse.ctruh.com/docs/#/guides/commerce",
+        "text": "Verse for CommerceProducts that look exactly as designed, on any store"
+      },
+      {
+        "href": "https://verse.ctruh.com/docs/#/guides/host-a-web-game",
+        "text": "Verse PlayHost web games on an isolated, fast domain"
+      },
+      {
+        "href": "https://verse.ctruh.com/developers",
+        "text": "Verse API, SDK and MCP3D infrastructure for developers and AI agents"
+      },
+      {
+        "href": "https://verse.ctruh.com/pricing",
+        "text": "Pricing"
+      },
+      {
+        "href": "https://verse.ctruh.com/docs/",
+        "text": "Docs"
+      },
+      {
+        "href": "https://verse.ctruh.com/signin",
+        "text": "Sign in"
+      },
+      {
+        "href": "https://verse.ctruh.com/app",
+        "text": "Try it free"
+      },
+      {
+        "href": "https://verse.ctruh.com/plug-ins#aec",
+        "text": "SketchUp, Revit, Rhino and seven more design tools"
+      },
+      {
+        "href": "https://wa.me/?text=Verse%20plug-ins%20%E2%80%94%20open%20on%20my%20computer%3A%20https%3A%2F%2Fverse.ctruh.com%2Fdownloads",
+        "text": "WhatsApp it to me"
+      },
+      {
+        "href": "https://verse.ctruh.com/downloads/VersePublish-UE5.8-3.0.0-beta.1.zip",
+        "text": "Download for Unreal"
+      },
+      {
+        "href": "https://verse.ctruh.com/studio",
+        "text": "Studio"
+      },
+      {
+        "href": "https://verse.ctruh.com/docs/#/guides/publish-from-unreal",
+        "text": "Full guide: Publish from Unreal →"
+      },
+      {
+        "href": "https://verse.ctruh.com/downloads/com.ctruh.verse-publish-3.0.0-beta.1.tgz",
+        "text": "Download for Unity"
+      },
+      {
+        "href": "https://verse.ctruh.com/studio",
+        "text": "Studio"
+      },
+      {
+        "href": "https://verse.ctruh.com/docs/#/guides/publish-from-unity",
+        "text": "Full guide: Publish from Unity →"
+      },
+      {
+        "href": "https://verse.ctruh.com/downloads/verse_publish-blender-3.0.0-beta.1.zip",
+        "text": "Download for Blender"
+      },
+      {
+        "href": "https://verse.ctruh.com/studio",
+        "text": "Studio"
+      },
+      {
+        "href": "https://verse.ctruh.com/docs/#/guides/publish-from-blender",
+        "text": "Full guide: Publish from Blender →"
+      },
+      {
+        "href": "https://verse.ctruh.com/downloads/verse_publish-sketchup-4.0.0-beta.1.rbz",
+        "text": "Download for SketchUp"
+      },
+      {
+        "href": "https://verse.ctruh.com/docs/#/guides/publish-from-sketchup",
+        "text": ""
+      },
+      {
+        "href": "https://verse.ctruh.com/downloads/VersePublish-Revit-4.0.0-beta.1.zip",
+        "text": "Download for Revit"
+      },
+      {
+        "href": "https://verse.ctruh.com/docs/#/guides/publish-from-revit",
+        "text": ""
+      },
+      {
+        "href": "https://verse.ctruh.com/downloads/VersePublish-Rhino-4.0.0-beta.1.zip",
+        "text": "Download for Rhino"
+      },
+      {
+        "href": "https://verse.ctruh.com/docs/#/guides/publish-from-rhino",
+        "text": ""
+      },
+      {
+        "href": "https://verse.ctruh.com/downloads/VersePublish-3dsMax-4.0.0-beta.1.zip",
+        "text": "Download for 3ds Max"
+      },
+      {
+        "href": "https://verse.ctruh.com/docs/#/guides/publish-from-3dsmax",
+        "text": ""
+      },
+      {
+        "href": "https://verse.ctruh.com/downloads/VersePublish-Archicad-4.0.0-beta.1.zip",
+        "text": "Download for Archicad"
+      },
+      {
+        "href": "https://verse.ctruh.com/docs/#/guides/publish-from-archicad",
+        "text": ""
+      },
+      {
+        "href": "https://verse.ctruh.com/downloads/VersePublish-Maya-4.0.0-beta.1.zip",
+        "text": "Download for Maya"
+      },
+      {
+        "href": "https://verse.ctruh.com/docs/#/guides/publish-from-maya",
+        "text": ""
+      },
+      {
+        "href": "https://verse.ctruh.com/downloads/VersePublish-Cinema4D-4.0.0-beta.1.zip",
+        "text": "Download for Cinema 4D"
+      },
+      {
+        "href": "https://verse.ctruh.com/docs/#/guides/publish-from-cinema4d",
+        "text": ""
+      },
+      {
+        "href": "https://verse.ctruh.com/downloads/VersePublish-Houdini-4.0.0-beta.1.zip",
+        "text": "Download for Houdini"
+      },
+      {
+        "href": "https://verse.ctruh.com/docs/#/guides/publish-from-houdini",
+        "text": ""
+      },
+      {
+        "href": "https://verse.ctruh.com/downloads/VersePublish-SolidWorks-4.0.0-beta.1.zip",
+        "text": "Download for SolidWorks"
+      },
+      {
+        "href": "https://verse.ctruh.com/docs/#/guides/publish-from-solidworks",
+        "text": ""
+      },
+      {
+        "href": "https://verse.ctruh.com/downloads/VersePublish-Figma-4.0.0-beta.1.zip",
+        "text": "Download for Figma"
+      },
+      {
+        "href": "https://verse.ctruh.com/docs/#/guides/publish-from-spline",
+        "text": ""
+      },
+      {
+        "href": "https://verse.ctruh.com/downloads/SHA256SUMS",
+        "text": "SHA256SUMS"
+      },
+      {
+        "href": "https://verse.ctruh.com/docs/#/guides/run-your-own-server",
+        "text": "Run your own server"
+      },
+      {
+        "href": "https://verse.ctruh.com/terms",
+        "text": "Terms"
+      },
+      {
+        "href": "https://verse.ctruh.com/privacy",
+        "text": "Privacy"
+      },
+      {
+        "href": "https://verse.ctruh.com/refunds",
+        "text": "Refunds"
+      },
+      {
+        "href": "https://verse.ctruh.com/docs/",
+        "text": "Docs"
+      },
+      {
+        "href": "https://verse.ctruh.com/plug-ins",
+        "text": "Plug-ins"
+      },
+      {
+        "href": "https://verse.ctruh.com/challenge",
+        "text": "Challenge"
+      },
+      {
+        "href": "https://verse.ctruh.com/bench",
+        "text": "Bench"
+      },
+      {
+        "href": "mailto:hello@ctruh.com",
+        "text": "Contact"
+      }
+    ],
+    "text": "Verse\nProducts\nPricing\nDocs\nPlug-ins\nSign in\nTry it free\nPLUG-INS FOR UNREAL, UNITY AND BLENDER\nPublish big projects straight from your tool\n\nPress one button in your editor and get a link anyone can open in a browser. A Blender project goes live in about 45 seconds, Unreal in 70, Unity in 101. Also for SketchUp, Revit, Rhino and seven more design tools.\n\nUp to 20 GB per scene\nResumable — a dropped connection picks up where it stopped\nWe optimise it for you\nUnreal Engine\nLevels, materials and lighting\nUnity\nURP, HDRP and Built-in scenes\nBlender\nScenes and products, baked on publish\nUnreal Engine\nSHIPPED\n\nUnreal Engine 5.8 with a C++ toolchain (Xcode on macOS, Visual Studio 2022 on Windows). Source plug-in; the editor compiles it on first open.\n\nDownload for Unreal\nv3.0.0-beta.1 · 3.0 MB · VersePublish-UE5.8-3.0.0-beta.1.zip\nSHA-256\n32385ecc8f96b71d04034f940b497a10432e5e680926727881e33c36a5a49ea3\nCopy\nClose the editor and unzip into your project, so you have <Project>/Plugins/VersePublish/VersePublish.uplugin.\nThe Plugins folder sits next to your .uproject.\nOpen the project and accept the prompt to rebuild the module.\nA Tools › Verse menu appears.\nOptional: paste an account token from Studio in Project Settings › Plugins › Verse Publish.\nYour scenes become permanent and are listed in your library.\nOpen Tools › Verse › Publish to Verse and press Publish to Verse.\nUpload %, then the build stages, then the link — copied for you.\nWHAT GETS PUBLISHED\nThe level (or the selected actors) as one scene\nUnreal materials and lighting, baked on publish\nTextures at source resolution — nothing downscaled\nBIG PROJECTS\n\nUp to 20 GB, sent in resumable parts. Browser uploads stop at 500 MB.\n\nFull guide: Publish from Unreal →\n\nArchitecture, design and CAD tools\n4.0 BETA\n\nTested against a real Verse server through each plug-in's own upload code; not yet run inside every host app — each guide says what has and has not been checked.\n\nSketchUp\nBETA\n\nSketchUp 2021 or newer (GLB export on 2025+; OBJ / FBX on older needs Pro). Extension .rbz.\n\nDownload for SketchUp\nv4.0.0-beta.1 · 16 KB · verse_publish-sketchup-4.0.0-beta.1.rbz\nSHA-256\ne2d88cbec07bc2374630058b56ee1821e01d37cae6c22f2992a50c1847ee665e\nCopy\nInstall\nRevit\nBETA\n\nRevit 2021–2024 and 2025+ (Windows). Add-in zip with both builds.\n\nDownload for Revit\nv4.0.0-beta.1 · 31 KB · VersePublish-Revit-4.0.0-beta.1.zip\nSHA-256\n4c0a629f1102c89abd1d3854f17728ea18f9ac0160181a51519b69bde3ca4fae\nCopy\nInstall\nRhino\nBETA\n\nRhino 8 (script, Windows + Mac) or Rhino 7 / 8 (plug-in, Windows). Zip.\n\nDownload for Rhino\nv4.0.0-beta.1 · 34 KB · VersePublish-Rhino-4.0.0-beta.1.zip\nSHA-256\nd40509f96e0750468933813a86b18488e66bc00faf4d4a5ee7038174013326bd\nCopy\nInstall\n3ds Max\nBETA\n\n3ds Max 2023 or newer (Windows). Python script + MAXScript macros.\n\nDownload for 3ds Max\nv4.0.0-beta.1 · 18 KB · VersePublish-3dsMax-4.0.0-beta.1.zip\nSHA-256\n4f9a47098f161c9b4dea1ec408a54efba08e9b6d532ebd638d641fbf22bf6e76\nCopy\nInstall\nArchicad\nBETA\n\nArchicad 23 or newer (IFC). Python 3.8+ script.\n\nDownload for Archicad\nv4.0.0-beta.1 · 17 KB · VersePublish-Archicad-4.0.0-beta.1.zip\nSHA-256\ncfb29af4ae34b53a89e48a625abb60f3cc7b7b154ae2fa35eba43e060b790f86\nCopy\nInstall\nMaya\nBETA\n\nMaya 2022 or newer (Windows, Mac, Linux). Zip with a drag-to-install script.\n\nDownload for Maya\nv4.0.0-beta.1 · 26 KB · VersePublish-Maya-4.0.0-beta.1.zip\nSHA-256\n982d7eed443410882afb36e8647bf27d441c1c3c50fd4d8ae9804167e6f19338\nCopy\nInstall\nCinema 4D\nBETA\n\nCinema 4D 2023 or newer. Python plug-in folder.\n\nDownload for Cinema 4D\nv4.0.0-beta.1 · 26 KB · VersePublish-Cinema4D-4.0.0-beta.1.zip\nSHA-256\na6a34a74bb019f2ac1f9106df3d857ee32eb344f53dc23d26600d65d70a9f7ee\nCopy\nInstall\nHoudini\nBETA\n\nHoudini 19.5 or newer. Houdini package + shelf.\n\nDownload for Houdini\nv4.0.0-beta.1 · 25 KB · VersePublish-Houdini-4.0.0-beta.1.zip\nSHA-256\n880ac99d461fa1b0e7a86b40faabdd19825ff77238b3f43747fb8d9610b5ec4d\nCopy\nInstall\nSolidWorks\nBETA\n\nSolidWorks 2019 or newer (Windows). Add-in source: build it against your SolidWorks install.\n\nDownload for SolidWorks\nv4.0.0-beta.1 · 26 KB · VersePublish-SolidWorks-4.0.0-beta.1.zip\nSHA-256\nd2371b43ebffe23f9a0c514ea408f837e8b01c3725a2fca42e62a7977744574b\nCopy\nInstall\nFigma (+ Spline)\nBETA\n\nFigma desktop app. Development plug-in; publishes a GLB such as a Spline export.\n\nDownload for Figma\nv4.0.0-beta.1 · 11 KB · VersePublish-Figma-4.0.0-beta.1.zip\nSHA-256\na9acd18f385a46ccbe4a24d1931b2067d212be293d43703c8d54ff2c198d59d2\nCopy\nInstall\nCheck a download\nEvery file's SHA-256 is shown with it and listed in SHA256SUMS. Compare before installing:\nshasum -a 256 <file>            # macOS / Linux\nGet-FileHash <file> -Algorithm SHA256   # Windows PowerShell\n\nEach package bundles verse-prepare (the optimiser) for macOS (Apple silicon and Intel), Windows and Linux. To publish to your own server instead, change the server URL in the plug-in's settings (Run your own server).\n\nTerms\nPrivacy\nRefunds\nDocs\nPlug-ins\nChallenge\nBench\nContact\nhello@ctruh.com · © Ctruh"
+  }
+}

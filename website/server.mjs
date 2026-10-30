@@ -1,0 +1,7 @@
+import http from 'node:http';
+import fs from 'node:fs';
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
+const root=path.join(path.dirname(fileURLToPath(import.meta.url)),'dist');
+const mime={'.html':'text/html','.css':'text/css','.js':'text/javascript','.mjs':'text/javascript','.svg':'image/svg+xml','.jpg':'image/jpeg','.mp4':'video/mp4','.xml':'application/xml','.txt':'text/plain','.png':'image/png','.webp':'image/webp','.woff2':'font/woff2','.otf':'font/otf'};
+http.createServer((req,res)=>{const url=new URL(req.url,'http://localhost');let p=path.resolve(root,'.'+decodeURIComponent(url.pathname==='/'?'/index.html':url.pathname));if(!p.startsWith(root+path.sep)&&p!==root){res.writeHead(403);return res.end()}if(fs.existsSync(p)&&fs.statSync(p).isDirectory())p=path.join(p,'index.html');fs.readFile(p,(err,b)=>{if(err){res.writeHead(404,{'Content-Type':'text/html'});return res.end(fs.readFileSync(path.join(root,'404.html')))}const headers={'Content-Type':mime[path.extname(p)]||'application/octet-stream','Cache-Control':'no-cache','Accept-Ranges':'bytes'};const range=/bytes=(\d+)-(\d*)/.exec(req.headers.range||'');if(range){const start=Number(range[1]),end=range[2]?Math.min(Number(range[2]),b.length-1):b.length-1;res.writeHead(206,{...headers,'Content-Range':`bytes ${start}-${end}/${b.length}`,'Content-Length':end-start+1});return res.end(b.subarray(start,end+1))}res.writeHead(200,{...headers,'Content-Length':b.length});res.end(b)})}).listen(4173,'127.0.0.1',()=>console.log('Local: http://localhost:4173'));

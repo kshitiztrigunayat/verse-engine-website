@@ -1,0 +1,2632 @@
+[
+  {
+    "url": "https://verse-engine-ctruh-design.rajat83.chatgpt.site/about",
+    "pages": [
+      "/about/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/app",
+    "pages": [
+      "/about/",
+      "/developers/",
+      "/docs/api/",
+      "/docs/api-changelog/",
+      "/docs/api-quickstart/",
+      "/docs/attributions/",
+      "/docs/authentication/",
+      "/docs/blender/",
+      "/docs/blog/2-0-release-notes-for-humans/",
+      "/docs/blog/how-verse-streams-a-building/",
+      "/docs/blog/index/",
+      "/docs/blog/verse-engine-2-7-whats-new/",
+      "/docs/browser-support/",
+      "/docs/changelog/",
+      "/docs/concepts/",
+      "/docs/developers/",
+      "/docs/embed-sdk/",
+      "/docs/experience-format/",
+      "/docs/exporter-smoke-tests/",
+      "/docs/fixing-doors-and-windows/",
+      "/docs/floor-plan-to-3d-home/",
+      "/docs/getting-started/",
+      "/docs/glossary/",
+      "/docs/guides/analytics/",
+      "/docs/guides/ask-verse/",
+      "/docs/guides/author-a-guided-tour/",
+      "/docs/guides/automate-with-make/",
+      "/docs/guides/automate-with-n8n/",
+      "/docs/guides/automate-with-zapier/",
+      "/docs/guides/bake-for-me/",
+      "/docs/guides/build-a-configurator/",
+      "/docs/guides/camera-paths/",
+      "/docs/guides/collect-review-comments/",
+      "/docs/guides/commerce/",
+      "/docs/guides/designer-tools/",
+      "/docs/guides/embed-anywhere/",
+      "/docs/guides/embed-in-framer/",
+      "/docs/guides/embed-in-ghost-and-hubspot/",
+      "/docs/guides/embed-in-squarespace/",
+      "/docs/guides/embed-in-wix/",
+      "/docs/guides/embed-the-viewer/",
+      "/docs/guides/export-video/",
+      "/docs/guides/exteriors/",
+      "/docs/guides/fidelity-mode/",
+      "/docs/guides/film-a-room/",
+      "/docs/guides/floor-plan-to-3d/",
+      "/docs/guides/host-a-web-game/",
+      "/docs/guides/hotspots-and-doors/",
+      "/docs/guides/instant-home/",
+      "/docs/guides/light-and-dark-theme/",
+      "/docs/guides/make-it-look-good/",
+      "/docs/guides/monitor-production/",
+      "/docs/guides/plans-and-pricing/",
+      "/docs/guides/present-a-scene/",
+      "/docs/guides/publish-from-3dsmax/",
+      "/docs/guides/publish-from-archicad/",
+      "/docs/guides/publish-from-blender/",
+      "/docs/guides/publish-from-cinema4d/",
+      "/docs/guides/publish-from-houdini/",
+      "/docs/guides/publish-from-ifc/",
+      "/docs/guides/publish-from-maya/",
+      "/docs/guides/publish-from-revit/",
+      "/docs/guides/publish-from-rhino/",
+      "/docs/guides/publish-from-sketchup/",
+      "/docs/guides/publish-from-solidworks/",
+      "/docs/guides/publish-from-spline/",
+      "/docs/guides/publish-from-unity/",
+      "/docs/guides/publish-from-unreal/",
+      "/docs/guides/react-and-vue/",
+      "/docs/guides/rest-client/",
+      "/docs/guides/restyle/",
+      "/docs/guides/run-your-own-server/",
+      "/docs/guides/sell-with-bigcommerce/",
+      "/docs/guides/sell-with-magento/",
+      "/docs/guides/sell-with-woocommerce/",
+      "/docs/guides/share-privately/",
+      "/docs/guides/sign-in/",
+      "/docs/guides/spatial-bench/",
+      "/docs/guides/take-the-tour/",
+      "/docs/guides/tour-together/",
+      "/docs/guides/tune-quality/",
+      "/docs/guides/upload-fbx-obj/",
+      "/docs/guides/verse-prepare/",
+      "/docs/guides/video-and-audio/",
+      "/docs/guides/view-in-ar/",
+      "/docs/guides/web-component/",
+      "/docs/guides/what-you-can-upload/",
+      "/docs/help/",
+      "/docs/how-streaming-works/",
+      "/docs/how-we-measure/",
+      "/docs/",
+      "/docs/integrations/",
+      "/docs/materials-and-lighting/",
+      "/docs/mcp/",
+      "/docs/scan-import/",
+      "/docs/scenes-api/",
+      "/docs/sdk/",
+      "/docs/start-a-live-tour/",
+      "/docs/supported-file-types/",
+      "/docs/telemetry/",
+      "/docs/unity/",
+      "/docs/unreal/",
+      "/docs/upload-your-first-scene/",
+      "/docs/webhooks/",
+      "/docs/what-is-verse-engine/",
+      "/",
+      "/plugins/blender/",
+      "/plugins/",
+      "/plugins/unity/",
+      "/plugins/unreal/",
+      "/pricing/",
+      "/samples/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/studio",
+    "pages": [
+      "/about/",
+      "/developers/",
+      "/docs/api/",
+      "/docs/api-changelog/",
+      "/docs/api-quickstart/",
+      "/docs/attributions/",
+      "/docs/authentication/",
+      "/docs/blender/",
+      "/docs/blog/2-0-release-notes-for-humans/",
+      "/docs/blog/how-verse-streams-a-building/",
+      "/docs/blog/index/",
+      "/docs/blog/verse-engine-2-7-whats-new/",
+      "/docs/browser-support/",
+      "/docs/changelog/",
+      "/docs/concepts/",
+      "/docs/developers/",
+      "/docs/embed-sdk/",
+      "/docs/experience-format/",
+      "/docs/exporter-smoke-tests/",
+      "/docs/fixing-doors-and-windows/",
+      "/docs/floor-plan-to-3d-home/",
+      "/docs/getting-started/",
+      "/docs/glossary/",
+      "/docs/guides/analytics/",
+      "/docs/guides/ask-verse/",
+      "/docs/guides/author-a-guided-tour/",
+      "/docs/guides/automate-with-make/",
+      "/docs/guides/automate-with-n8n/",
+      "/docs/guides/automate-with-zapier/",
+      "/docs/guides/bake-for-me/",
+      "/docs/guides/build-a-configurator/",
+      "/docs/guides/camera-paths/",
+      "/docs/guides/collect-review-comments/",
+      "/docs/guides/commerce/",
+      "/docs/guides/designer-tools/",
+      "/docs/guides/embed-anywhere/",
+      "/docs/guides/embed-in-framer/",
+      "/docs/guides/embed-in-ghost-and-hubspot/",
+      "/docs/guides/embed-in-squarespace/",
+      "/docs/guides/embed-in-wix/",
+      "/docs/guides/embed-the-viewer/",
+      "/docs/guides/export-video/",
+      "/docs/guides/exteriors/",
+      "/docs/guides/fidelity-mode/",
+      "/docs/guides/film-a-room/",
+      "/docs/guides/floor-plan-to-3d/",
+      "/docs/guides/host-a-web-game/",
+      "/docs/guides/hotspots-and-doors/",
+      "/docs/guides/instant-home/",
+      "/docs/guides/light-and-dark-theme/",
+      "/docs/guides/make-it-look-good/",
+      "/docs/guides/monitor-production/",
+      "/docs/guides/plans-and-pricing/",
+      "/docs/guides/present-a-scene/",
+      "/docs/guides/publish-from-3dsmax/",
+      "/docs/guides/publish-from-archicad/",
+      "/docs/guides/publish-from-blender/",
+      "/docs/guides/publish-from-cinema4d/",
+      "/docs/guides/publish-from-houdini/",
+      "/docs/guides/publish-from-ifc/",
+      "/docs/guides/publish-from-maya/",
+      "/docs/guides/publish-from-revit/",
+      "/docs/guides/publish-from-rhino/",
+      "/docs/guides/publish-from-sketchup/",
+      "/docs/guides/publish-from-solidworks/",
+      "/docs/guides/publish-from-spline/",
+      "/docs/guides/publish-from-unity/",
+      "/docs/guides/publish-from-unreal/",
+      "/docs/guides/react-and-vue/",
+      "/docs/guides/rest-client/",
+      "/docs/guides/restyle/",
+      "/docs/guides/run-your-own-server/",
+      "/docs/guides/sell-with-bigcommerce/",
+      "/docs/guides/sell-with-magento/",
+      "/docs/guides/sell-with-woocommerce/",
+      "/docs/guides/share-privately/",
+      "/docs/guides/sign-in/",
+      "/docs/guides/spatial-bench/",
+      "/docs/guides/take-the-tour/",
+      "/docs/guides/tour-together/",
+      "/docs/guides/tune-quality/",
+      "/docs/guides/upload-fbx-obj/",
+      "/docs/guides/verse-prepare/",
+      "/docs/guides/video-and-audio/",
+      "/docs/guides/view-in-ar/",
+      "/docs/guides/web-component/",
+      "/docs/guides/what-you-can-upload/",
+      "/docs/help/",
+      "/docs/how-streaming-works/",
+      "/docs/how-we-measure/",
+      "/docs/",
+      "/docs/integrations/",
+      "/docs/materials-and-lighting/",
+      "/docs/mcp/",
+      "/docs/scan-import/",
+      "/docs/scenes-api/",
+      "/docs/sdk/",
+      "/docs/start-a-live-tour/",
+      "/docs/supported-file-types/",
+      "/docs/telemetry/",
+      "/docs/unity/",
+      "/docs/unreal/",
+      "/docs/upload-your-first-scene/",
+      "/docs/webhooks/",
+      "/docs/what-is-verse-engine/",
+      "/plugins/blender/",
+      "/plugins/",
+      "/plugins/unity/",
+      "/plugins/unreal/",
+      "/pricing/",
+      "/samples/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/signin",
+    "pages": [
+      "/about/",
+      "/developers/",
+      "/docs/api/",
+      "/docs/api-changelog/",
+      "/docs/api-quickstart/",
+      "/docs/attributions/",
+      "/docs/authentication/",
+      "/docs/blender/",
+      "/docs/blog/2-0-release-notes-for-humans/",
+      "/docs/blog/how-verse-streams-a-building/",
+      "/docs/blog/index/",
+      "/docs/blog/verse-engine-2-7-whats-new/",
+      "/docs/browser-support/",
+      "/docs/changelog/",
+      "/docs/concepts/",
+      "/docs/developers/",
+      "/docs/embed-sdk/",
+      "/docs/experience-format/",
+      "/docs/exporter-smoke-tests/",
+      "/docs/fixing-doors-and-windows/",
+      "/docs/floor-plan-to-3d-home/",
+      "/docs/getting-started/",
+      "/docs/glossary/",
+      "/docs/guides/analytics/",
+      "/docs/guides/ask-verse/",
+      "/docs/guides/author-a-guided-tour/",
+      "/docs/guides/automate-with-make/",
+      "/docs/guides/automate-with-n8n/",
+      "/docs/guides/automate-with-zapier/",
+      "/docs/guides/bake-for-me/",
+      "/docs/guides/build-a-configurator/",
+      "/docs/guides/camera-paths/",
+      "/docs/guides/collect-review-comments/",
+      "/docs/guides/commerce/",
+      "/docs/guides/designer-tools/",
+      "/docs/guides/embed-anywhere/",
+      "/docs/guides/embed-in-framer/",
+      "/docs/guides/embed-in-ghost-and-hubspot/",
+      "/docs/guides/embed-in-squarespace/",
+      "/docs/guides/embed-in-wix/",
+      "/docs/guides/embed-the-viewer/",
+      "/docs/guides/export-video/",
+      "/docs/guides/exteriors/",
+      "/docs/guides/fidelity-mode/",
+      "/docs/guides/film-a-room/",
+      "/docs/guides/floor-plan-to-3d/",
+      "/docs/guides/host-a-web-game/",
+      "/docs/guides/hotspots-and-doors/",
+      "/docs/guides/instant-home/",
+      "/docs/guides/light-and-dark-theme/",
+      "/docs/guides/make-it-look-good/",
+      "/docs/guides/monitor-production/",
+      "/docs/guides/plans-and-pricing/",
+      "/docs/guides/present-a-scene/",
+      "/docs/guides/publish-from-3dsmax/",
+      "/docs/guides/publish-from-archicad/",
+      "/docs/guides/publish-from-blender/",
+      "/docs/guides/publish-from-cinema4d/",
+      "/docs/guides/publish-from-houdini/",
+      "/docs/guides/publish-from-ifc/",
+      "/docs/guides/publish-from-maya/",
+      "/docs/guides/publish-from-revit/",
+      "/docs/guides/publish-from-rhino/",
+      "/docs/guides/publish-from-sketchup/",
+      "/docs/guides/publish-from-solidworks/",
+      "/docs/guides/publish-from-spline/",
+      "/docs/guides/publish-from-unity/",
+      "/docs/guides/publish-from-unreal/",
+      "/docs/guides/react-and-vue/",
+      "/docs/guides/rest-client/",
+      "/docs/guides/restyle/",
+      "/docs/guides/run-your-own-server/",
+      "/docs/guides/sell-with-bigcommerce/",
+      "/docs/guides/sell-with-magento/",
+      "/docs/guides/sell-with-woocommerce/",
+      "/docs/guides/share-privately/",
+      "/docs/guides/sign-in/",
+      "/docs/guides/spatial-bench/",
+      "/docs/guides/take-the-tour/",
+      "/docs/guides/tour-together/",
+      "/docs/guides/tune-quality/",
+      "/docs/guides/upload-fbx-obj/",
+      "/docs/guides/verse-prepare/",
+      "/docs/guides/video-and-audio/",
+      "/docs/guides/view-in-ar/",
+      "/docs/guides/web-component/",
+      "/docs/guides/what-you-can-upload/",
+      "/docs/help/",
+      "/docs/how-streaming-works/",
+      "/docs/how-we-measure/",
+      "/docs/",
+      "/docs/integrations/",
+      "/docs/materials-and-lighting/",
+      "/docs/mcp/",
+      "/docs/scan-import/",
+      "/docs/scenes-api/",
+      "/docs/sdk/",
+      "/docs/start-a-live-tour/",
+      "/docs/supported-file-types/",
+      "/docs/telemetry/",
+      "/docs/unity/",
+      "/docs/unreal/",
+      "/docs/upload-your-first-scene/",
+      "/docs/webhooks/",
+      "/docs/what-is-verse-engine/",
+      "/plugins/blender/",
+      "/plugins/",
+      "/plugins/unity/",
+      "/plugins/unreal/",
+      "/pricing/",
+      "/samples/"
+    ]
+  },
+  {
+    "url": "https://www.ctruh.com/",
+    "pages": [
+      "/about/",
+      "/developers/",
+      "/docs/api/",
+      "/docs/api-changelog/",
+      "/docs/api-quickstart/",
+      "/docs/attributions/",
+      "/docs/authentication/",
+      "/docs/blender/",
+      "/docs/blog/2-0-release-notes-for-humans/",
+      "/docs/blog/how-verse-streams-a-building/",
+      "/docs/blog/index/",
+      "/docs/blog/verse-engine-2-7-whats-new/",
+      "/docs/browser-support/",
+      "/docs/changelog/",
+      "/docs/concepts/",
+      "/docs/developers/",
+      "/docs/embed-sdk/",
+      "/docs/experience-format/",
+      "/docs/exporter-smoke-tests/",
+      "/docs/fixing-doors-and-windows/",
+      "/docs/floor-plan-to-3d-home/",
+      "/docs/getting-started/",
+      "/docs/glossary/",
+      "/docs/guides/analytics/",
+      "/docs/guides/ask-verse/",
+      "/docs/guides/author-a-guided-tour/",
+      "/docs/guides/automate-with-make/",
+      "/docs/guides/automate-with-n8n/",
+      "/docs/guides/automate-with-zapier/",
+      "/docs/guides/bake-for-me/",
+      "/docs/guides/build-a-configurator/",
+      "/docs/guides/camera-paths/",
+      "/docs/guides/collect-review-comments/",
+      "/docs/guides/commerce/",
+      "/docs/guides/designer-tools/",
+      "/docs/guides/embed-anywhere/",
+      "/docs/guides/embed-in-framer/",
+      "/docs/guides/embed-in-ghost-and-hubspot/",
+      "/docs/guides/embed-in-squarespace/",
+      "/docs/guides/embed-in-wix/",
+      "/docs/guides/embed-the-viewer/",
+      "/docs/guides/export-video/",
+      "/docs/guides/exteriors/",
+      "/docs/guides/fidelity-mode/",
+      "/docs/guides/film-a-room/",
+      "/docs/guides/floor-plan-to-3d/",
+      "/docs/guides/host-a-web-game/",
+      "/docs/guides/hotspots-and-doors/",
+      "/docs/guides/instant-home/",
+      "/docs/guides/light-and-dark-theme/",
+      "/docs/guides/make-it-look-good/",
+      "/docs/guides/monitor-production/",
+      "/docs/guides/plans-and-pricing/",
+      "/docs/guides/present-a-scene/",
+      "/docs/guides/publish-from-3dsmax/",
+      "/docs/guides/publish-from-archicad/",
+      "/docs/guides/publish-from-blender/",
+      "/docs/guides/publish-from-cinema4d/",
+      "/docs/guides/publish-from-houdini/",
+      "/docs/guides/publish-from-ifc/",
+      "/docs/guides/publish-from-maya/",
+      "/docs/guides/publish-from-revit/",
+      "/docs/guides/publish-from-rhino/",
+      "/docs/guides/publish-from-sketchup/",
+      "/docs/guides/publish-from-solidworks/",
+      "/docs/guides/publish-from-spline/",
+      "/docs/guides/publish-from-unity/",
+      "/docs/guides/publish-from-unreal/",
+      "/docs/guides/react-and-vue/",
+      "/docs/guides/rest-client/",
+      "/docs/guides/restyle/",
+      "/docs/guides/run-your-own-server/",
+      "/docs/guides/sell-with-bigcommerce/",
+      "/docs/guides/sell-with-magento/",
+      "/docs/guides/sell-with-woocommerce/",
+      "/docs/guides/share-privately/",
+      "/docs/guides/sign-in/",
+      "/docs/guides/spatial-bench/",
+      "/docs/guides/take-the-tour/",
+      "/docs/guides/tour-together/",
+      "/docs/guides/tune-quality/",
+      "/docs/guides/upload-fbx-obj/",
+      "/docs/guides/verse-prepare/",
+      "/docs/guides/video-and-audio/",
+      "/docs/guides/view-in-ar/",
+      "/docs/guides/web-component/",
+      "/docs/guides/what-you-can-upload/",
+      "/docs/help/",
+      "/docs/how-streaming-works/",
+      "/docs/how-we-measure/",
+      "/docs/",
+      "/docs/integrations/",
+      "/docs/materials-and-lighting/",
+      "/docs/mcp/",
+      "/docs/scan-import/",
+      "/docs/scenes-api/",
+      "/docs/sdk/",
+      "/docs/start-a-live-tour/",
+      "/docs/supported-file-types/",
+      "/docs/telemetry/",
+      "/docs/unity/",
+      "/docs/unreal/",
+      "/docs/upload-your-first-scene/",
+      "/docs/webhooks/",
+      "/docs/what-is-verse-engine/",
+      "/",
+      "/plugins/blender/",
+      "/plugins/",
+      "/plugins/unity/",
+      "/plugins/unreal/",
+      "/pricing/",
+      "/samples/"
+    ]
+  },
+  {
+    "url": "https://www.linkedin.com/company/ctruh/",
+    "pages": [
+      "/about/",
+      "/developers/",
+      "/docs/api/",
+      "/docs/api-changelog/",
+      "/docs/api-quickstart/",
+      "/docs/attributions/",
+      "/docs/authentication/",
+      "/docs/blender/",
+      "/docs/blog/2-0-release-notes-for-humans/",
+      "/docs/blog/how-verse-streams-a-building/",
+      "/docs/blog/index/",
+      "/docs/blog/verse-engine-2-7-whats-new/",
+      "/docs/browser-support/",
+      "/docs/changelog/",
+      "/docs/concepts/",
+      "/docs/developers/",
+      "/docs/embed-sdk/",
+      "/docs/experience-format/",
+      "/docs/exporter-smoke-tests/",
+      "/docs/fixing-doors-and-windows/",
+      "/docs/floor-plan-to-3d-home/",
+      "/docs/getting-started/",
+      "/docs/glossary/",
+      "/docs/guides/analytics/",
+      "/docs/guides/ask-verse/",
+      "/docs/guides/author-a-guided-tour/",
+      "/docs/guides/automate-with-make/",
+      "/docs/guides/automate-with-n8n/",
+      "/docs/guides/automate-with-zapier/",
+      "/docs/guides/bake-for-me/",
+      "/docs/guides/build-a-configurator/",
+      "/docs/guides/camera-paths/",
+      "/docs/guides/collect-review-comments/",
+      "/docs/guides/commerce/",
+      "/docs/guides/designer-tools/",
+      "/docs/guides/embed-anywhere/",
+      "/docs/guides/embed-in-framer/",
+      "/docs/guides/embed-in-ghost-and-hubspot/",
+      "/docs/guides/embed-in-squarespace/",
+      "/docs/guides/embed-in-wix/",
+      "/docs/guides/embed-the-viewer/",
+      "/docs/guides/export-video/",
+      "/docs/guides/exteriors/",
+      "/docs/guides/fidelity-mode/",
+      "/docs/guides/film-a-room/",
+      "/docs/guides/floor-plan-to-3d/",
+      "/docs/guides/host-a-web-game/",
+      "/docs/guides/hotspots-and-doors/",
+      "/docs/guides/instant-home/",
+      "/docs/guides/light-and-dark-theme/",
+      "/docs/guides/make-it-look-good/",
+      "/docs/guides/monitor-production/",
+      "/docs/guides/plans-and-pricing/",
+      "/docs/guides/present-a-scene/",
+      "/docs/guides/publish-from-3dsmax/",
+      "/docs/guides/publish-from-archicad/",
+      "/docs/guides/publish-from-blender/",
+      "/docs/guides/publish-from-cinema4d/",
+      "/docs/guides/publish-from-houdini/",
+      "/docs/guides/publish-from-ifc/",
+      "/docs/guides/publish-from-maya/",
+      "/docs/guides/publish-from-revit/",
+      "/docs/guides/publish-from-rhino/",
+      "/docs/guides/publish-from-sketchup/",
+      "/docs/guides/publish-from-solidworks/",
+      "/docs/guides/publish-from-spline/",
+      "/docs/guides/publish-from-unity/",
+      "/docs/guides/publish-from-unreal/",
+      "/docs/guides/react-and-vue/",
+      "/docs/guides/rest-client/",
+      "/docs/guides/restyle/",
+      "/docs/guides/run-your-own-server/",
+      "/docs/guides/sell-with-bigcommerce/",
+      "/docs/guides/sell-with-magento/",
+      "/docs/guides/sell-with-woocommerce/",
+      "/docs/guides/share-privately/",
+      "/docs/guides/sign-in/",
+      "/docs/guides/spatial-bench/",
+      "/docs/guides/take-the-tour/",
+      "/docs/guides/tour-together/",
+      "/docs/guides/tune-quality/",
+      "/docs/guides/upload-fbx-obj/",
+      "/docs/guides/verse-prepare/",
+      "/docs/guides/video-and-audio/",
+      "/docs/guides/view-in-ar/",
+      "/docs/guides/web-component/",
+      "/docs/guides/what-you-can-upload/",
+      "/docs/help/",
+      "/docs/how-streaming-works/",
+      "/docs/how-we-measure/",
+      "/docs/",
+      "/docs/integrations/",
+      "/docs/materials-and-lighting/",
+      "/docs/mcp/",
+      "/docs/scan-import/",
+      "/docs/scenes-api/",
+      "/docs/sdk/",
+      "/docs/start-a-live-tour/",
+      "/docs/supported-file-types/",
+      "/docs/telemetry/",
+      "/docs/unity/",
+      "/docs/unreal/",
+      "/docs/upload-your-first-scene/",
+      "/docs/webhooks/",
+      "/docs/what-is-verse-engine/",
+      "/",
+      "/plugins/blender/",
+      "/plugins/",
+      "/plugins/unity/",
+      "/plugins/unreal/",
+      "/pricing/",
+      "/samples/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/privacy",
+    "pages": [
+      "/about/",
+      "/developers/",
+      "/docs/api/",
+      "/docs/api-changelog/",
+      "/docs/api-quickstart/",
+      "/docs/attributions/",
+      "/docs/authentication/",
+      "/docs/blender/",
+      "/docs/blog/2-0-release-notes-for-humans/",
+      "/docs/blog/how-verse-streams-a-building/",
+      "/docs/blog/index/",
+      "/docs/blog/verse-engine-2-7-whats-new/",
+      "/docs/browser-support/",
+      "/docs/changelog/",
+      "/docs/concepts/",
+      "/docs/developers/",
+      "/docs/embed-sdk/",
+      "/docs/experience-format/",
+      "/docs/exporter-smoke-tests/",
+      "/docs/fixing-doors-and-windows/",
+      "/docs/floor-plan-to-3d-home/",
+      "/docs/getting-started/",
+      "/docs/glossary/",
+      "/docs/guides/analytics/",
+      "/docs/guides/ask-verse/",
+      "/docs/guides/author-a-guided-tour/",
+      "/docs/guides/automate-with-make/",
+      "/docs/guides/automate-with-n8n/",
+      "/docs/guides/automate-with-zapier/",
+      "/docs/guides/bake-for-me/",
+      "/docs/guides/build-a-configurator/",
+      "/docs/guides/camera-paths/",
+      "/docs/guides/collect-review-comments/",
+      "/docs/guides/commerce/",
+      "/docs/guides/designer-tools/",
+      "/docs/guides/embed-anywhere/",
+      "/docs/guides/embed-in-framer/",
+      "/docs/guides/embed-in-ghost-and-hubspot/",
+      "/docs/guides/embed-in-squarespace/",
+      "/docs/guides/embed-in-wix/",
+      "/docs/guides/embed-the-viewer/",
+      "/docs/guides/export-video/",
+      "/docs/guides/exteriors/",
+      "/docs/guides/fidelity-mode/",
+      "/docs/guides/film-a-room/",
+      "/docs/guides/floor-plan-to-3d/",
+      "/docs/guides/host-a-web-game/",
+      "/docs/guides/hotspots-and-doors/",
+      "/docs/guides/instant-home/",
+      "/docs/guides/light-and-dark-theme/",
+      "/docs/guides/make-it-look-good/",
+      "/docs/guides/monitor-production/",
+      "/docs/guides/plans-and-pricing/",
+      "/docs/guides/present-a-scene/",
+      "/docs/guides/publish-from-3dsmax/",
+      "/docs/guides/publish-from-archicad/",
+      "/docs/guides/publish-from-blender/",
+      "/docs/guides/publish-from-cinema4d/",
+      "/docs/guides/publish-from-houdini/",
+      "/docs/guides/publish-from-ifc/",
+      "/docs/guides/publish-from-maya/",
+      "/docs/guides/publish-from-revit/",
+      "/docs/guides/publish-from-rhino/",
+      "/docs/guides/publish-from-sketchup/",
+      "/docs/guides/publish-from-solidworks/",
+      "/docs/guides/publish-from-spline/",
+      "/docs/guides/publish-from-unity/",
+      "/docs/guides/publish-from-unreal/",
+      "/docs/guides/react-and-vue/",
+      "/docs/guides/rest-client/",
+      "/docs/guides/restyle/",
+      "/docs/guides/run-your-own-server/",
+      "/docs/guides/sell-with-bigcommerce/",
+      "/docs/guides/sell-with-magento/",
+      "/docs/guides/sell-with-woocommerce/",
+      "/docs/guides/share-privately/",
+      "/docs/guides/sign-in/",
+      "/docs/guides/spatial-bench/",
+      "/docs/guides/take-the-tour/",
+      "/docs/guides/tour-together/",
+      "/docs/guides/tune-quality/",
+      "/docs/guides/upload-fbx-obj/",
+      "/docs/guides/verse-prepare/",
+      "/docs/guides/video-and-audio/",
+      "/docs/guides/view-in-ar/",
+      "/docs/guides/web-component/",
+      "/docs/guides/what-you-can-upload/",
+      "/docs/help/",
+      "/docs/how-streaming-works/",
+      "/docs/how-we-measure/",
+      "/docs/",
+      "/docs/integrations/",
+      "/docs/materials-and-lighting/",
+      "/docs/mcp/",
+      "/docs/scan-import/",
+      "/docs/scenes-api/",
+      "/docs/sdk/",
+      "/docs/start-a-live-tour/",
+      "/docs/supported-file-types/",
+      "/docs/telemetry/",
+      "/docs/unity/",
+      "/docs/unreal/",
+      "/docs/upload-your-first-scene/",
+      "/docs/webhooks/",
+      "/docs/what-is-verse-engine/",
+      "/",
+      "/plugins/blender/",
+      "/plugins/",
+      "/plugins/unity/",
+      "/plugins/unreal/",
+      "/pricing/",
+      "/samples/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/terms",
+    "pages": [
+      "/about/",
+      "/developers/",
+      "/docs/api/",
+      "/docs/api-changelog/",
+      "/docs/api-quickstart/",
+      "/docs/attributions/",
+      "/docs/authentication/",
+      "/docs/blender/",
+      "/docs/blog/2-0-release-notes-for-humans/",
+      "/docs/blog/how-verse-streams-a-building/",
+      "/docs/blog/index/",
+      "/docs/blog/verse-engine-2-7-whats-new/",
+      "/docs/browser-support/",
+      "/docs/changelog/",
+      "/docs/concepts/",
+      "/docs/developers/",
+      "/docs/embed-sdk/",
+      "/docs/experience-format/",
+      "/docs/exporter-smoke-tests/",
+      "/docs/fixing-doors-and-windows/",
+      "/docs/floor-plan-to-3d-home/",
+      "/docs/getting-started/",
+      "/docs/glossary/",
+      "/docs/guides/analytics/",
+      "/docs/guides/ask-verse/",
+      "/docs/guides/author-a-guided-tour/",
+      "/docs/guides/automate-with-make/",
+      "/docs/guides/automate-with-n8n/",
+      "/docs/guides/automate-with-zapier/",
+      "/docs/guides/bake-for-me/",
+      "/docs/guides/build-a-configurator/",
+      "/docs/guides/camera-paths/",
+      "/docs/guides/collect-review-comments/",
+      "/docs/guides/commerce/",
+      "/docs/guides/designer-tools/",
+      "/docs/guides/embed-anywhere/",
+      "/docs/guides/embed-in-framer/",
+      "/docs/guides/embed-in-ghost-and-hubspot/",
+      "/docs/guides/embed-in-squarespace/",
+      "/docs/guides/embed-in-wix/",
+      "/docs/guides/embed-the-viewer/",
+      "/docs/guides/export-video/",
+      "/docs/guides/exteriors/",
+      "/docs/guides/fidelity-mode/",
+      "/docs/guides/film-a-room/",
+      "/docs/guides/floor-plan-to-3d/",
+      "/docs/guides/host-a-web-game/",
+      "/docs/guides/hotspots-and-doors/",
+      "/docs/guides/instant-home/",
+      "/docs/guides/light-and-dark-theme/",
+      "/docs/guides/make-it-look-good/",
+      "/docs/guides/monitor-production/",
+      "/docs/guides/plans-and-pricing/",
+      "/docs/guides/present-a-scene/",
+      "/docs/guides/publish-from-3dsmax/",
+      "/docs/guides/publish-from-archicad/",
+      "/docs/guides/publish-from-blender/",
+      "/docs/guides/publish-from-cinema4d/",
+      "/docs/guides/publish-from-houdini/",
+      "/docs/guides/publish-from-ifc/",
+      "/docs/guides/publish-from-maya/",
+      "/docs/guides/publish-from-revit/",
+      "/docs/guides/publish-from-rhino/",
+      "/docs/guides/publish-from-sketchup/",
+      "/docs/guides/publish-from-solidworks/",
+      "/docs/guides/publish-from-spline/",
+      "/docs/guides/publish-from-unity/",
+      "/docs/guides/publish-from-unreal/",
+      "/docs/guides/react-and-vue/",
+      "/docs/guides/rest-client/",
+      "/docs/guides/restyle/",
+      "/docs/guides/run-your-own-server/",
+      "/docs/guides/sell-with-bigcommerce/",
+      "/docs/guides/sell-with-magento/",
+      "/docs/guides/sell-with-woocommerce/",
+      "/docs/guides/share-privately/",
+      "/docs/guides/sign-in/",
+      "/docs/guides/spatial-bench/",
+      "/docs/guides/take-the-tour/",
+      "/docs/guides/tour-together/",
+      "/docs/guides/tune-quality/",
+      "/docs/guides/upload-fbx-obj/",
+      "/docs/guides/verse-prepare/",
+      "/docs/guides/video-and-audio/",
+      "/docs/guides/view-in-ar/",
+      "/docs/guides/web-component/",
+      "/docs/guides/what-you-can-upload/",
+      "/docs/help/",
+      "/docs/how-streaming-works/",
+      "/docs/how-we-measure/",
+      "/docs/",
+      "/docs/integrations/",
+      "/docs/materials-and-lighting/",
+      "/docs/mcp/",
+      "/docs/scan-import/",
+      "/docs/scenes-api/",
+      "/docs/sdk/",
+      "/docs/start-a-live-tour/",
+      "/docs/supported-file-types/",
+      "/docs/telemetry/",
+      "/docs/unity/",
+      "/docs/unreal/",
+      "/docs/upload-your-first-scene/",
+      "/docs/webhooks/",
+      "/docs/what-is-verse-engine/",
+      "/",
+      "/plugins/blender/",
+      "/plugins/",
+      "/plugins/unity/",
+      "/plugins/unreal/",
+      "/pricing/",
+      "/samples/"
+    ]
+  },
+  {
+    "url": "https://verse-engine-ctruh-design.rajat83.chatgpt.site/developers",
+    "pages": [
+      "/developers/"
+    ]
+  },
+  {
+    "url": "https://verse-engine-ctruh-design.rajat83.chatgpt.site/docs/api",
+    "pages": [
+      "/docs/api/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/verse-api.postman_collection.json",
+    "pages": [
+      "/docs/api/",
+      "/docs/api-quickstart/",
+      "/docs/authentication/",
+      "/docs/scenes-api/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/status",
+    "pages": [
+      "/docs/api/",
+      "/docs/scenes-api/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/docs/#/api",
+    "pages": [
+      "/docs/api/",
+      "/docs/scenes-api/"
+    ]
+  },
+  {
+    "url": "https://verse-engine-ctruh-design.rajat83.chatgpt.site/docs/api-changelog",
+    "pages": [
+      "/docs/api-changelog/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/docs/../CHANGELOG.md",
+    "pages": [
+      "/docs/api-changelog/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/docs/#/api-changelog",
+    "pages": [
+      "/docs/api-changelog/"
+    ]
+  },
+  {
+    "url": "https://verse-engine-ctruh-design.rajat83.chatgpt.site/docs/api-quickstart",
+    "pages": [
+      "/docs/api-quickstart/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/v1/pubkey",
+    "pages": [
+      "/docs/api-quickstart/",
+      "/docs/authentication/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/docs/#/api-quickstart",
+    "pages": [
+      "/docs/api-quickstart/",
+      "/docs/authentication/"
+    ]
+  },
+  {
+    "url": "https://verse-engine-ctruh-design.rajat83.chatgpt.site/docs/attributions",
+    "pages": [
+      "/docs/attributions/"
+    ]
+  },
+  {
+    "url": "https://polyhaven.com/a/chess_set",
+    "pages": [
+      "/docs/attributions/"
+    ]
+  },
+  {
+    "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "pages": [
+      "/docs/attributions/"
+    ]
+  },
+  {
+    "url": "https://polyhaven.com/a/marble_bust_01",
+    "pages": [
+      "/docs/attributions/"
+    ]
+  },
+  {
+    "url": "https://github.com/KhronosGroup/glTF-Sample-Assets/tree/main/Models/AntiqueCamera",
+    "pages": [
+      "/docs/attributions/"
+    ]
+  },
+  {
+    "url": "https://github.com/KhronosGroup/glTF-Sample-Assets/tree/main/Models/DamagedHelmet",
+    "pages": [
+      "/docs/attributions/"
+    ]
+  },
+  {
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "pages": [
+      "/docs/attributions/"
+    ]
+  },
+  {
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/",
+    "pages": [
+      "/docs/attributions/"
+    ]
+  },
+  {
+    "url": "https://ambientcg.com",
+    "pages": [
+      "/docs/attributions/"
+    ]
+  },
+  {
+    "url": "https://sketchfab.com/3d-models/bce9b8d05b5b4480bdd89ee7e3066063",
+    "pages": [
+      "/docs/attributions/"
+    ]
+  },
+  {
+    "url": "https://huggingface.co/datasets/allenai/objaverse/resolve/main/glbs/000-038/bce9b8d05b5b4480bdd89ee7e3066063.glb",
+    "pages": [
+      "/docs/attributions/"
+    ]
+  },
+  {
+    "url": "https://sketchfab.com/3d-models/c4ee511cca09453ba3ae6acf181dc764",
+    "pages": [
+      "/docs/attributions/"
+    ]
+  },
+  {
+    "url": "https://huggingface.co/datasets/allenai/objaverse/resolve/main/glbs/000-005/c4ee511cca09453ba3ae6acf181dc764.glb",
+    "pages": [
+      "/docs/attributions/"
+    ]
+  },
+  {
+    "url": "https://sketchfab.com/3d-models/14fee65f91644eb78ea9cfea7703f544",
+    "pages": [
+      "/docs/attributions/"
+    ]
+  },
+  {
+    "url": "https://huggingface.co/datasets/allenai/objaverse/resolve/main/glbs/000-016/14fee65f91644eb78ea9cfea7703f544.glb",
+    "pages": [
+      "/docs/attributions/"
+    ]
+  },
+  {
+    "url": "https://sketchfab.com/3d-models/02e4d750159e4bc5b0b1952019c61f4f",
+    "pages": [
+      "/docs/attributions/"
+    ]
+  },
+  {
+    "url": "https://huggingface.co/datasets/allenai/objaverse/resolve/main/glbs/000-011/02e4d750159e4bc5b0b1952019c61f4f.glb",
+    "pages": [
+      "/docs/attributions/"
+    ]
+  },
+  {
+    "url": "https://polyhaven.com/a/modern_arm_chair_01",
+    "pages": [
+      "/docs/attributions/"
+    ]
+  },
+  {
+    "url": "https://polyhaven.com/a/mid_century_lounge_chair",
+    "pages": [
+      "/docs/attributions/"
+    ]
+  },
+  {
+    "url": "https://polyhaven.com/a/modern_coffee_table_01",
+    "pages": [
+      "/docs/attributions/"
+    ]
+  },
+  {
+    "url": "https://polyhaven.com/a/coffee_table_round_01",
+    "pages": [
+      "/docs/attributions/"
+    ]
+  },
+  {
+    "url": "https://polyhaven.com/a/modern_wooden_cabinet",
+    "pages": [
+      "/docs/attributions/"
+    ]
+  },
+  {
+    "url": "https://polyhaven.com/a/dining_chair_02",
+    "pages": [
+      "/docs/attributions/"
+    ]
+  },
+  {
+    "url": "https://polyhaven.com/a/side_table_01",
+    "pages": [
+      "/docs/attributions/"
+    ]
+  },
+  {
+    "url": "https://polyhaven.com/a/potted_plant_01",
+    "pages": [
+      "/docs/attributions/"
+    ]
+  },
+  {
+    "url": "https://polyhaven.com/a/potted_plant_02",
+    "pages": [
+      "/docs/attributions/"
+    ]
+  },
+  {
+    "url": "https://polyhaven.com/a/potted_plant_04",
+    "pages": [
+      "/docs/attributions/"
+    ]
+  },
+  {
+    "url": "https://polyhaven.com/a/modern_ceiling_lamp_01",
+    "pages": [
+      "/docs/attributions/"
+    ]
+  },
+  {
+    "url": "https://polyhaven.com/a/ceramic_vase_01",
+    "pages": [
+      "/docs/attributions/"
+    ]
+  },
+  {
+    "url": "https://polyhaven.com/a/ceramic_vase_02",
+    "pages": [
+      "/docs/attributions/"
+    ]
+  },
+  {
+    "url": "https://polyhaven.com/a/ceramic_vase_04",
+    "pages": [
+      "/docs/attributions/"
+    ]
+  },
+  {
+    "url": "https://polyhaven.com/a/brass_vase_02",
+    "pages": [
+      "/docs/attributions/"
+    ]
+  },
+  {
+    "url": "https://polyhaven.com/a/hanging_picture_frame_02",
+    "pages": [
+      "/docs/attributions/"
+    ]
+  },
+  {
+    "url": "https://polyhaven.com/a/fancy_picture_frame_01",
+    "pages": [
+      "/docs/attributions/"
+    ]
+  },
+  {
+    "url": "https://polyhaven.com/a/standing_picture_frame_01",
+    "pages": [
+      "/docs/attributions/"
+    ]
+  },
+  {
+    "url": "https://polyhaven.com/a/wooden_bowl_01",
+    "pages": [
+      "/docs/attributions/"
+    ]
+  },
+  {
+    "url": "https://polyhaven.com/a/wooden_display_shelves_01",
+    "pages": [
+      "/docs/attributions/"
+    ]
+  },
+  {
+    "url": "https://polyhaven.com/a/Ottoman_01",
+    "pages": [
+      "/docs/attributions/"
+    ]
+  },
+  {
+    "url": "https://polyhaven.com/a/book_encyclopedia_set_01",
+    "pages": [
+      "/docs/attributions/"
+    ]
+  },
+  {
+    "url": "https://polyhaven.com/a/sunset_jhbcentral",
+    "pages": [
+      "/docs/attributions/"
+    ]
+  },
+  {
+    "url": "https://ambientcg.com/view?id=WoodFloor051",
+    "pages": [
+      "/docs/attributions/"
+    ]
+  },
+  {
+    "url": "https://ambientcg.com/view?id=Marble012",
+    "pages": [
+      "/docs/attributions/"
+    ]
+  },
+  {
+    "url": "https://ambientcg.com/view?id=Tiles074",
+    "pages": [
+      "/docs/attributions/"
+    ]
+  },
+  {
+    "url": "https://ambientcg.com/view?id=Tiles101",
+    "pages": [
+      "/docs/attributions/"
+    ]
+  },
+  {
+    "url": "https://ambientcg.com/view?id=Tiles012",
+    "pages": [
+      "/docs/attributions/"
+    ]
+  },
+  {
+    "url": "https://ambientcg.com/view?id=PaintedPlaster017",
+    "pages": [
+      "/docs/attributions/"
+    ]
+  },
+  {
+    "url": "https://ambientcg.com/view?id=Fabric030",
+    "pages": [
+      "/docs/attributions/"
+    ]
+  },
+  {
+    "url": "https://ambientcg.com/view?id=Wood049",
+    "pages": [
+      "/docs/attributions/"
+    ]
+  },
+  {
+    "url": "https://ambientcg.com/view?id=Concrete034",
+    "pages": [
+      "/docs/attributions/"
+    ]
+  },
+  {
+    "url": "https://ambientcg.com/view?id=Carpet013",
+    "pages": [
+      "/docs/attributions/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/docs/#/attributions",
+    "pages": [
+      "/docs/attributions/"
+    ]
+  },
+  {
+    "url": "https://verse-engine-ctruh-design.rajat83.chatgpt.site/docs/authentication",
+    "pages": [
+      "/docs/authentication/"
+    ]
+  },
+  {
+    "url": "https://verse-engine-ctruh-design.rajat83.chatgpt.site/docs/blender",
+    "pages": [
+      "/docs/blender/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/downloads/verse_publish-blender-3.0.0.zip",
+    "pages": [
+      "/docs/blender/",
+      "/docs/guides/publish-from-blender/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/downloads",
+    "pages": [
+      "/docs/blender/",
+      "/docs/exporter-smoke-tests/",
+      "/docs/guides/publish-from-3dsmax/",
+      "/docs/guides/publish-from-archicad/",
+      "/docs/guides/publish-from-blender/",
+      "/docs/guides/publish-from-cinema4d/",
+      "/docs/guides/publish-from-houdini/",
+      "/docs/guides/publish-from-maya/",
+      "/docs/guides/publish-from-revit/",
+      "/docs/guides/publish-from-rhino/",
+      "/docs/guides/publish-from-sketchup/",
+      "/docs/guides/publish-from-solidworks/",
+      "/docs/guides/publish-from-spline/",
+      "/docs/guides/publish-from-unity/",
+      "/docs/guides/publish-from-unreal/",
+      "/docs/unity/",
+      "/docs/unreal/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/docs/#/guides/publish-from-blender",
+    "pages": [
+      "/docs/blender/",
+      "/docs/guides/publish-from-blender/"
+    ]
+  },
+  {
+    "url": "https://verse-engine-ctruh-design.rajat83.chatgpt.site/docs/blog/2-0-release-notes-for-humans",
+    "pages": [
+      "/docs/blog/2-0-release-notes-for-humans/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/docs/#/blog/2-0-release-notes-for-humans",
+    "pages": [
+      "/docs/blog/2-0-release-notes-for-humans/"
+    ]
+  },
+  {
+    "url": "https://verse-engine-ctruh-design.rajat83.chatgpt.site/docs/blog/how-verse-streams-a-building",
+    "pages": [
+      "/docs/blog/how-verse-streams-a-building/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/docs/#/blog/how-verse-streams-a-building",
+    "pages": [
+      "/docs/blog/how-verse-streams-a-building/"
+    ]
+  },
+  {
+    "url": "https://verse-engine-ctruh-design.rajat83.chatgpt.site/docs/blog/index",
+    "pages": [
+      "/docs/blog/index/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/docs/#/blog/index",
+    "pages": [
+      "/docs/blog/index/"
+    ]
+  },
+  {
+    "url": "https://verse-engine-ctruh-design.rajat83.chatgpt.site/docs/blog/verse-engine-2-7-whats-new",
+    "pages": [
+      "/docs/blog/verse-engine-2-7-whats-new/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/docs/#/blog/verse-engine-2-7-whats-new",
+    "pages": [
+      "/docs/blog/verse-engine-2-7-whats-new/"
+    ]
+  },
+  {
+    "url": "https://verse-engine-ctruh-design.rajat83.chatgpt.site/docs/browser-support",
+    "pages": [
+      "/docs/browser-support/"
+    ]
+  },
+  {
+    "url": "https://caniuse.com/webgpu",
+    "pages": [
+      "/docs/browser-support/"
+    ]
+  },
+  {
+    "url": "https://github.com/gpuweb/gpuweb/wiki/Implementation-Status",
+    "pages": [
+      "/docs/browser-support/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/docs/#/browser-support",
+    "pages": [
+      "/docs/browser-support/"
+    ]
+  },
+  {
+    "url": "https://verse-engine-ctruh-design.rajat83.chatgpt.site/docs/changelog",
+    "pages": [
+      "/docs/changelog/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/docs/#/changelog",
+    "pages": [
+      "/docs/changelog/"
+    ]
+  },
+  {
+    "url": "https://verse-engine-ctruh-design.rajat83.chatgpt.site/docs/concepts",
+    "pages": [
+      "/docs/concepts/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/docs/#/concepts",
+    "pages": [
+      "/docs/concepts/",
+      "/docs/how-streaming-works/"
+    ]
+  },
+  {
+    "url": "https://verse-engine-ctruh-design.rajat83.chatgpt.site/docs/developers",
+    "pages": [
+      "/docs/developers/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/developers",
+    "pages": [
+      "/docs/developers/",
+      "/docs/webhooks/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/developers/playground",
+    "pages": [
+      "/docs/developers/",
+      "/docs/webhooks/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/developers/adoption",
+    "pages": [
+      "/docs/developers/",
+      "/docs/webhooks/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/docs/#/developers",
+    "pages": [
+      "/docs/developers/",
+      "/docs/webhooks/"
+    ]
+  },
+  {
+    "url": "https://verse-engine-ctruh-design.rajat83.chatgpt.site/docs/embed-sdk",
+    "pages": [
+      "/docs/embed-sdk/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/docs/#/embed-sdk",
+    "pages": [
+      "/docs/embed-sdk/"
+    ]
+  },
+  {
+    "url": "https://verse-engine-ctruh-design.rajat83.chatgpt.site/docs/experience-format",
+    "pages": [
+      "/docs/experience-format/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/docs/#/experience-format",
+    "pages": [
+      "/docs/experience-format/"
+    ]
+  },
+  {
+    "url": "https://verse-engine-ctruh-design.rajat83.chatgpt.site/docs/exporter-smoke-tests",
+    "pages": [
+      "/docs/exporter-smoke-tests/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/docs/#/exporter-smoke-tests",
+    "pages": [
+      "/docs/exporter-smoke-tests/"
+    ]
+  },
+  {
+    "url": "https://verse-engine-ctruh-design.rajat83.chatgpt.site/docs/fixing-doors-and-windows",
+    "pages": [
+      "/docs/fixing-doors-and-windows/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/docs/#/guides/instant-home",
+    "pages": [
+      "/docs/fixing-doors-and-windows/",
+      "/docs/guides/instant-home/"
+    ]
+  },
+  {
+    "url": "https://verse-engine-ctruh-design.rajat83.chatgpt.site/docs/floor-plan-to-3d-home",
+    "pages": [
+      "/docs/floor-plan-to-3d-home/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/docs/#/guides/floor-plan-to-3d",
+    "pages": [
+      "/docs/floor-plan-to-3d-home/",
+      "/docs/guides/floor-plan-to-3d/"
+    ]
+  },
+  {
+    "url": "https://verse-engine-ctruh-design.rajat83.chatgpt.site/docs/getting-started",
+    "pages": [
+      "/docs/getting-started/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/docs/#/getting-started",
+    "pages": [
+      "/docs/getting-started/",
+      "/docs/upload-your-first-scene/"
+    ]
+  },
+  {
+    "url": "https://verse-engine-ctruh-design.rajat83.chatgpt.site/docs/glossary",
+    "pages": [
+      "/docs/glossary/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/docs/#/glossary",
+    "pages": [
+      "/docs/glossary/"
+    ]
+  },
+  {
+    "url": "https://verse-engine-ctruh-design.rajat83.chatgpt.site/docs/guides/analytics",
+    "pages": [
+      "/docs/guides/analytics/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/docs/#/guides/analytics",
+    "pages": [
+      "/docs/guides/analytics/"
+    ]
+  },
+  {
+    "url": "https://verse-engine-ctruh-design.rajat83.chatgpt.site/docs/guides/ask-verse",
+    "pages": [
+      "/docs/guides/ask-verse/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/docs/#/guides/ask-verse",
+    "pages": [
+      "/docs/guides/ask-verse/"
+    ]
+  },
+  {
+    "url": "https://verse-engine-ctruh-design.rajat83.chatgpt.site/docs/guides/author-a-guided-tour",
+    "pages": [
+      "/docs/guides/author-a-guided-tour/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/docs/#/guides/author-a-guided-tour",
+    "pages": [
+      "/docs/guides/author-a-guided-tour/"
+    ]
+  },
+  {
+    "url": "https://verse-engine-ctruh-design.rajat83.chatgpt.site/docs/guides/automate-with-make",
+    "pages": [
+      "/docs/guides/automate-with-make/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/docs/#/guides/automate-with-make",
+    "pages": [
+      "/docs/guides/automate-with-make/"
+    ]
+  },
+  {
+    "url": "https://verse-engine-ctruh-design.rajat83.chatgpt.site/docs/guides/automate-with-n8n",
+    "pages": [
+      "/docs/guides/automate-with-n8n/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/docs/#/guides/automate-with-n8n",
+    "pages": [
+      "/docs/guides/automate-with-n8n/"
+    ]
+  },
+  {
+    "url": "https://verse-engine-ctruh-design.rajat83.chatgpt.site/docs/guides/automate-with-zapier",
+    "pages": [
+      "/docs/guides/automate-with-zapier/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/docs/#/guides/automate-with-zapier",
+    "pages": [
+      "/docs/guides/automate-with-zapier/"
+    ]
+  },
+  {
+    "url": "https://verse-engine-ctruh-design.rajat83.chatgpt.site/docs/guides/bake-for-me",
+    "pages": [
+      "/docs/guides/bake-for-me/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/docs/#/guides/bake-for-me",
+    "pages": [
+      "/docs/guides/bake-for-me/"
+    ]
+  },
+  {
+    "url": "https://verse-engine-ctruh-design.rajat83.chatgpt.site/docs/guides/build-a-configurator",
+    "pages": [
+      "/docs/guides/build-a-configurator/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/docs/#/guides/build-a-configurator",
+    "pages": [
+      "/docs/guides/build-a-configurator/"
+    ]
+  },
+  {
+    "url": "https://verse-engine-ctruh-design.rajat83.chatgpt.site/docs/guides/camera-paths",
+    "pages": [
+      "/docs/guides/camera-paths/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/docs/#/guides/camera-paths",
+    "pages": [
+      "/docs/guides/camera-paths/"
+    ]
+  },
+  {
+    "url": "https://verse-engine-ctruh-design.rajat83.chatgpt.site/docs/guides/collect-review-comments",
+    "pages": [
+      "/docs/guides/collect-review-comments/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/docs/#/guides/collect-review-comments",
+    "pages": [
+      "/docs/guides/collect-review-comments/"
+    ]
+  },
+  {
+    "url": "https://verse-engine-ctruh-design.rajat83.chatgpt.site/docs/guides/commerce",
+    "pages": [
+      "/docs/guides/commerce/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/docs/#/guides/commerce",
+    "pages": [
+      "/docs/guides/commerce/"
+    ]
+  },
+  {
+    "url": "https://verse-engine-ctruh-design.rajat83.chatgpt.site/docs/guides/designer-tools",
+    "pages": [
+      "/docs/guides/designer-tools/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/docs/#/guides/designer-tools",
+    "pages": [
+      "/docs/guides/designer-tools/"
+    ]
+  },
+  {
+    "url": "https://verse-engine-ctruh-design.rajat83.chatgpt.site/docs/guides/embed-anywhere",
+    "pages": [
+      "/docs/guides/embed-anywhere/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/docs/#/guides/embed-anywhere",
+    "pages": [
+      "/docs/guides/embed-anywhere/"
+    ]
+  },
+  {
+    "url": "https://verse-engine-ctruh-design.rajat83.chatgpt.site/docs/guides/embed-in-framer",
+    "pages": [
+      "/docs/guides/embed-in-framer/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/docs/#/guides/embed-in-framer",
+    "pages": [
+      "/docs/guides/embed-in-framer/"
+    ]
+  },
+  {
+    "url": "https://verse-engine-ctruh-design.rajat83.chatgpt.site/docs/guides/embed-in-ghost-and-hubspot",
+    "pages": [
+      "/docs/guides/embed-in-ghost-and-hubspot/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/docs/#/guides/embed-in-ghost-and-hubspot",
+    "pages": [
+      "/docs/guides/embed-in-ghost-and-hubspot/"
+    ]
+  },
+  {
+    "url": "https://verse-engine-ctruh-design.rajat83.chatgpt.site/docs/guides/embed-in-squarespace",
+    "pages": [
+      "/docs/guides/embed-in-squarespace/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/docs/#/guides/embed-in-squarespace",
+    "pages": [
+      "/docs/guides/embed-in-squarespace/"
+    ]
+  },
+  {
+    "url": "https://verse-engine-ctruh-design.rajat83.chatgpt.site/docs/guides/embed-in-wix",
+    "pages": [
+      "/docs/guides/embed-in-wix/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/docs/#/guides/embed-in-wix",
+    "pages": [
+      "/docs/guides/embed-in-wix/"
+    ]
+  },
+  {
+    "url": "https://verse-engine-ctruh-design.rajat83.chatgpt.site/docs/guides/embed-the-viewer",
+    "pages": [
+      "/docs/guides/embed-the-viewer/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/docs/#/guides/embed-the-viewer",
+    "pages": [
+      "/docs/guides/embed-the-viewer/"
+    ]
+  },
+  {
+    "url": "https://verse-engine-ctruh-design.rajat83.chatgpt.site/docs/guides/export-video",
+    "pages": [
+      "/docs/guides/export-video/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/docs/#/guides/export-video",
+    "pages": [
+      "/docs/guides/export-video/"
+    ]
+  },
+  {
+    "url": "https://verse-engine-ctruh-design.rajat83.chatgpt.site/docs/guides/exteriors",
+    "pages": [
+      "/docs/guides/exteriors/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/docs/#/guides/exteriors",
+    "pages": [
+      "/docs/guides/exteriors/"
+    ]
+  },
+  {
+    "url": "https://verse-engine-ctruh-design.rajat83.chatgpt.site/docs/guides/fidelity-mode",
+    "pages": [
+      "/docs/guides/fidelity-mode/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/docs/#/guides/fidelity-mode",
+    "pages": [
+      "/docs/guides/fidelity-mode/",
+      "/docs/materials-and-lighting/"
+    ]
+  },
+  {
+    "url": "https://verse-engine-ctruh-design.rajat83.chatgpt.site/docs/guides/film-a-room",
+    "pages": [
+      "/docs/guides/film-a-room/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/docs/#/guides/film-a-room",
+    "pages": [
+      "/docs/guides/film-a-room/"
+    ]
+  },
+  {
+    "url": "https://verse-engine-ctruh-design.rajat83.chatgpt.site/docs/guides/floor-plan-to-3d",
+    "pages": [
+      "/docs/guides/floor-plan-to-3d/"
+    ]
+  },
+  {
+    "url": "https://verse-engine-ctruh-design.rajat83.chatgpt.site/docs/guides/host-a-web-game",
+    "pages": [
+      "/docs/guides/host-a-web-game/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/docs/#/guides/host-a-web-game",
+    "pages": [
+      "/docs/guides/host-a-web-game/"
+    ]
+  },
+  {
+    "url": "https://verse-engine-ctruh-design.rajat83.chatgpt.site/docs/guides/hotspots-and-doors",
+    "pages": [
+      "/docs/guides/hotspots-and-doors/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/docs/#/guides/hotspots-and-doors",
+    "pages": [
+      "/docs/guides/hotspots-and-doors/"
+    ]
+  },
+  {
+    "url": "https://verse-engine-ctruh-design.rajat83.chatgpt.site/docs/guides/instant-home",
+    "pages": [
+      "/docs/guides/instant-home/"
+    ]
+  },
+  {
+    "url": "https://verse-engine-ctruh-design.rajat83.chatgpt.site/docs/guides/light-and-dark-theme",
+    "pages": [
+      "/docs/guides/light-and-dark-theme/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/docs/#/guides/light-and-dark-theme",
+    "pages": [
+      "/docs/guides/light-and-dark-theme/"
+    ]
+  },
+  {
+    "url": "https://verse-engine-ctruh-design.rajat83.chatgpt.site/docs/guides/make-it-look-good",
+    "pages": [
+      "/docs/guides/make-it-look-good/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/docs/#/guides/make-it-look-good",
+    "pages": [
+      "/docs/guides/make-it-look-good/"
+    ]
+  },
+  {
+    "url": "https://verse-engine-ctruh-design.rajat83.chatgpt.site/docs/guides/monitor-production",
+    "pages": [
+      "/docs/guides/monitor-production/"
+    ]
+  },
+  {
+    "url": "https://resend.com",
+    "pages": [
+      "/docs/guides/monitor-production/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/docs/#/guides/monitor-production",
+    "pages": [
+      "/docs/guides/monitor-production/"
+    ]
+  },
+  {
+    "url": "https://verse-engine-ctruh-design.rajat83.chatgpt.site/docs/guides/plans-and-pricing",
+    "pages": [
+      "/docs/guides/plans-and-pricing/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/pricing",
+    "pages": [
+      "/docs/guides/plans-and-pricing/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/refunds",
+    "pages": [
+      "/docs/guides/plans-and-pricing/",
+      "/pricing/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/docs/#/guides/plans-and-pricing",
+    "pages": [
+      "/docs/guides/plans-and-pricing/"
+    ]
+  },
+  {
+    "url": "https://verse-engine-ctruh-design.rajat83.chatgpt.site/docs/guides/present-a-scene",
+    "pages": [
+      "/docs/guides/present-a-scene/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/docs/#/guides/present-a-scene",
+    "pages": [
+      "/docs/guides/present-a-scene/"
+    ]
+  },
+  {
+    "url": "https://verse-engine-ctruh-design.rajat83.chatgpt.site/docs/guides/publish-from-3dsmax",
+    "pages": [
+      "/docs/guides/publish-from-3dsmax/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/docs/#/guides/publish-from-3dsmax",
+    "pages": [
+      "/docs/guides/publish-from-3dsmax/"
+    ]
+  },
+  {
+    "url": "https://verse-engine-ctruh-design.rajat83.chatgpt.site/docs/guides/publish-from-archicad",
+    "pages": [
+      "/docs/guides/publish-from-archicad/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/docs/#/guides/publish-from-archicad",
+    "pages": [
+      "/docs/guides/publish-from-archicad/"
+    ]
+  },
+  {
+    "url": "https://verse-engine-ctruh-design.rajat83.chatgpt.site/docs/guides/publish-from-blender",
+    "pages": [
+      "/docs/guides/publish-from-blender/"
+    ]
+  },
+  {
+    "url": "https://verse-engine-ctruh-design.rajat83.chatgpt.site/docs/guides/publish-from-cinema4d",
+    "pages": [
+      "/docs/guides/publish-from-cinema4d/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/docs/#/guides/publish-from-cinema4d",
+    "pages": [
+      "/docs/guides/publish-from-cinema4d/"
+    ]
+  },
+  {
+    "url": "https://verse-engine-ctruh-design.rajat83.chatgpt.site/docs/guides/publish-from-houdini",
+    "pages": [
+      "/docs/guides/publish-from-houdini/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/docs/#/guides/publish-from-houdini",
+    "pages": [
+      "/docs/guides/publish-from-houdini/"
+    ]
+  },
+  {
+    "url": "https://verse-engine-ctruh-design.rajat83.chatgpt.site/docs/guides/publish-from-ifc",
+    "pages": [
+      "/docs/guides/publish-from-ifc/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/docs/#/guides/publish-from-ifc",
+    "pages": [
+      "/docs/guides/publish-from-ifc/"
+    ]
+  },
+  {
+    "url": "https://verse-engine-ctruh-design.rajat83.chatgpt.site/docs/guides/publish-from-maya",
+    "pages": [
+      "/docs/guides/publish-from-maya/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/docs/#/guides/publish-from-maya",
+    "pages": [
+      "/docs/guides/publish-from-maya/"
+    ]
+  },
+  {
+    "url": "https://verse-engine-ctruh-design.rajat83.chatgpt.site/docs/guides/publish-from-revit",
+    "pages": [
+      "/docs/guides/publish-from-revit/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/docs/#/guides/publish-from-revit",
+    "pages": [
+      "/docs/guides/publish-from-revit/"
+    ]
+  },
+  {
+    "url": "https://verse-engine-ctruh-design.rajat83.chatgpt.site/docs/guides/publish-from-rhino",
+    "pages": [
+      "/docs/guides/publish-from-rhino/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/docs/#/guides/publish-from-rhino",
+    "pages": [
+      "/docs/guides/publish-from-rhino/"
+    ]
+  },
+  {
+    "url": "https://verse-engine-ctruh-design.rajat83.chatgpt.site/docs/guides/publish-from-sketchup",
+    "pages": [
+      "/docs/guides/publish-from-sketchup/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/docs/#/guides/publish-from-sketchup",
+    "pages": [
+      "/docs/guides/publish-from-sketchup/"
+    ]
+  },
+  {
+    "url": "https://verse-engine-ctruh-design.rajat83.chatgpt.site/docs/guides/publish-from-solidworks",
+    "pages": [
+      "/docs/guides/publish-from-solidworks/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/docs/#/guides/publish-from-solidworks",
+    "pages": [
+      "/docs/guides/publish-from-solidworks/"
+    ]
+  },
+  {
+    "url": "https://verse-engine-ctruh-design.rajat83.chatgpt.site/docs/guides/publish-from-spline",
+    "pages": [
+      "/docs/guides/publish-from-spline/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/docs/#/guides/publish-from-spline",
+    "pages": [
+      "/docs/guides/publish-from-spline/"
+    ]
+  },
+  {
+    "url": "https://verse-engine-ctruh-design.rajat83.chatgpt.site/docs/guides/publish-from-unity",
+    "pages": [
+      "/docs/guides/publish-from-unity/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/downloads/com.ctruh.verse-publish-3.0.0.tgz",
+    "pages": [
+      "/docs/guides/publish-from-unity/",
+      "/docs/unity/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/docs/#/guides/publish-from-unity",
+    "pages": [
+      "/docs/guides/publish-from-unity/",
+      "/docs/unity/"
+    ]
+  },
+  {
+    "url": "https://verse-engine-ctruh-design.rajat83.chatgpt.site/docs/guides/publish-from-unreal",
+    "pages": [
+      "/docs/guides/publish-from-unreal/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/downloads/VersePublish-UE5.8-3.0.0.zip",
+    "pages": [
+      "/docs/guides/publish-from-unreal/",
+      "/docs/unreal/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/docs/#/guides/publish-from-unreal",
+    "pages": [
+      "/docs/guides/publish-from-unreal/",
+      "/docs/unreal/"
+    ]
+  },
+  {
+    "url": "https://verse-engine-ctruh-design.rajat83.chatgpt.site/docs/guides/react-and-vue",
+    "pages": [
+      "/docs/guides/react-and-vue/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/docs/#/guides/react-and-vue",
+    "pages": [
+      "/docs/guides/react-and-vue/"
+    ]
+  },
+  {
+    "url": "https://verse-engine-ctruh-design.rajat83.chatgpt.site/docs/guides/rest-client",
+    "pages": [
+      "/docs/guides/rest-client/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/docs/#/guides/rest-client",
+    "pages": [
+      "/docs/guides/rest-client/"
+    ]
+  },
+  {
+    "url": "https://verse-engine-ctruh-design.rajat83.chatgpt.site/docs/guides/restyle",
+    "pages": [
+      "/docs/guides/restyle/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/docs/#/guides/restyle",
+    "pages": [
+      "/docs/guides/restyle/"
+    ]
+  },
+  {
+    "url": "https://verse-engine-ctruh-design.rajat83.chatgpt.site/docs/guides/run-your-own-server",
+    "pages": [
+      "/docs/guides/run-your-own-server/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/docs/#/guides/run-your-own-server",
+    "pages": [
+      "/docs/guides/run-your-own-server/"
+    ]
+  },
+  {
+    "url": "https://verse-engine-ctruh-design.rajat83.chatgpt.site/docs/guides/sell-with-bigcommerce",
+    "pages": [
+      "/docs/guides/sell-with-bigcommerce/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/docs/#/guides/sell-with-bigcommerce",
+    "pages": [
+      "/docs/guides/sell-with-bigcommerce/"
+    ]
+  },
+  {
+    "url": "https://verse-engine-ctruh-design.rajat83.chatgpt.site/docs/guides/sell-with-magento",
+    "pages": [
+      "/docs/guides/sell-with-magento/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/docs/#/guides/sell-with-magento",
+    "pages": [
+      "/docs/guides/sell-with-magento/"
+    ]
+  },
+  {
+    "url": "https://verse-engine-ctruh-design.rajat83.chatgpt.site/docs/guides/sell-with-woocommerce",
+    "pages": [
+      "/docs/guides/sell-with-woocommerce/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/docs/#/guides/sell-with-woocommerce",
+    "pages": [
+      "/docs/guides/sell-with-woocommerce/"
+    ]
+  },
+  {
+    "url": "https://verse-engine-ctruh-design.rajat83.chatgpt.site/docs/guides/share-privately",
+    "pages": [
+      "/docs/guides/share-privately/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/docs/#/guides/share-privately",
+    "pages": [
+      "/docs/guides/share-privately/"
+    ]
+  },
+  {
+    "url": "https://verse-engine-ctruh-design.rajat83.chatgpt.site/docs/guides/sign-in",
+    "pages": [
+      "/docs/guides/sign-in/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/docs/#/guides/sign-in",
+    "pages": [
+      "/docs/guides/sign-in/"
+    ]
+  },
+  {
+    "url": "https://verse-engine-ctruh-design.rajat83.chatgpt.site/docs/guides/spatial-bench",
+    "pages": [
+      "/docs/guides/spatial-bench/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/bench",
+    "pages": [
+      "/docs/guides/spatial-bench/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/docs/#/guides/spatial-bench",
+    "pages": [
+      "/docs/guides/spatial-bench/"
+    ]
+  },
+  {
+    "url": "https://verse-engine-ctruh-design.rajat83.chatgpt.site/docs/guides/take-the-tour",
+    "pages": [
+      "/docs/guides/take-the-tour/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/docs/#/guides/take-the-tour",
+    "pages": [
+      "/docs/guides/take-the-tour/"
+    ]
+  },
+  {
+    "url": "https://verse-engine-ctruh-design.rajat83.chatgpt.site/docs/guides/tour-together",
+    "pages": [
+      "/docs/guides/tour-together/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/docs/#/guides/tour-together",
+    "pages": [
+      "/docs/guides/tour-together/",
+      "/docs/start-a-live-tour/"
+    ]
+  },
+  {
+    "url": "https://verse-engine-ctruh-design.rajat83.chatgpt.site/docs/guides/tune-quality",
+    "pages": [
+      "/docs/guides/tune-quality/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/docs/#/guides/tune-quality",
+    "pages": [
+      "/docs/guides/tune-quality/"
+    ]
+  },
+  {
+    "url": "https://verse-engine-ctruh-design.rajat83.chatgpt.site/docs/guides/upload-fbx-obj",
+    "pages": [
+      "/docs/guides/upload-fbx-obj/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/docs/#/guides/upload-fbx-obj",
+    "pages": [
+      "/docs/guides/upload-fbx-obj/"
+    ]
+  },
+  {
+    "url": "https://verse-engine-ctruh-design.rajat83.chatgpt.site/docs/guides/verse-prepare",
+    "pages": [
+      "/docs/guides/verse-prepare/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/docs/#/guides/verse-prepare",
+    "pages": [
+      "/docs/guides/verse-prepare/"
+    ]
+  },
+  {
+    "url": "https://verse-engine-ctruh-design.rajat83.chatgpt.site/docs/guides/video-and-audio",
+    "pages": [
+      "/docs/guides/video-and-audio/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/docs/#/guides/video-and-audio",
+    "pages": [
+      "/docs/guides/video-and-audio/"
+    ]
+  },
+  {
+    "url": "https://verse-engine-ctruh-design.rajat83.chatgpt.site/docs/guides/view-in-ar",
+    "pages": [
+      "/docs/guides/view-in-ar/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/docs/#/guides/view-in-ar",
+    "pages": [
+      "/docs/guides/view-in-ar/"
+    ]
+  },
+  {
+    "url": "https://verse-engine-ctruh-design.rajat83.chatgpt.site/docs/guides/web-component",
+    "pages": [
+      "/docs/guides/web-component/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/docs/#/guides/web-component",
+    "pages": [
+      "/docs/guides/web-component/"
+    ]
+  },
+  {
+    "url": "https://verse-engine-ctruh-design.rajat83.chatgpt.site/docs/guides/what-you-can-upload",
+    "pages": [
+      "/docs/guides/what-you-can-upload/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/docs/#/guides/what-you-can-upload",
+    "pages": [
+      "/docs/guides/what-you-can-upload/",
+      "/docs/supported-file-types/"
+    ]
+  },
+  {
+    "url": "https://verse-engine-ctruh-design.rajat83.chatgpt.site/docs/help",
+    "pages": [
+      "/docs/help/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/docs/#/help",
+    "pages": [
+      "/docs/help/"
+    ]
+  },
+  {
+    "url": "https://verse-engine-ctruh-design.rajat83.chatgpt.site/docs/how-streaming-works",
+    "pages": [
+      "/docs/how-streaming-works/"
+    ]
+  },
+  {
+    "url": "https://verse-engine-ctruh-design.rajat83.chatgpt.site/docs/how-we-measure",
+    "pages": [
+      "/docs/how-we-measure/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/challenge",
+    "pages": [
+      "/docs/how-we-measure/",
+      "/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/docs/#/how-we-measure",
+    "pages": [
+      "/docs/how-we-measure/"
+    ]
+  },
+  {
+    "url": "https://verse-engine-ctruh-design.rajat83.chatgpt.site/docs/what-is-verse-engine",
+    "pages": [
+      "/docs/",
+      "/docs/what-is-verse-engine/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/docs/#/what-is-verse-engine",
+    "pages": [
+      "/docs/",
+      "/docs/what-is-verse-engine/"
+    ]
+  },
+  {
+    "url": "https://verse-engine-ctruh-design.rajat83.chatgpt.site/docs/integrations",
+    "pages": [
+      "/docs/integrations/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/docs/#/integrations",
+    "pages": [
+      "/docs/integrations/"
+    ]
+  },
+  {
+    "url": "https://verse-engine-ctruh-design.rajat83.chatgpt.site/docs/materials-and-lighting",
+    "pages": [
+      "/docs/materials-and-lighting/"
+    ]
+  },
+  {
+    "url": "https://verse-engine-ctruh-design.rajat83.chatgpt.site/docs/mcp",
+    "pages": [
+      "/docs/mcp/"
+    ]
+  },
+  {
+    "url": "https://modelcontextprotocol.io",
+    "pages": [
+      "/docs/mcp/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/docs/#/mcp",
+    "pages": [
+      "/docs/mcp/"
+    ]
+  },
+  {
+    "url": "https://verse-engine-ctruh-design.rajat83.chatgpt.site/docs/scan-import",
+    "pages": [
+      "/docs/scan-import/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/docs/#/scan-import",
+    "pages": [
+      "/docs/scan-import/"
+    ]
+  },
+  {
+    "url": "https://verse-engine-ctruh-design.rajat83.chatgpt.site/docs/scenes-api",
+    "pages": [
+      "/docs/scenes-api/"
+    ]
+  },
+  {
+    "url": "https://verse-engine-ctruh-design.rajat83.chatgpt.site/docs/sdk",
+    "pages": [
+      "/docs/sdk/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/docs/#/sdk",
+    "pages": [
+      "/docs/sdk/"
+    ]
+  },
+  {
+    "url": "https://verse-engine-ctruh-design.rajat83.chatgpt.site/docs/start-a-live-tour",
+    "pages": [
+      "/docs/start-a-live-tour/"
+    ]
+  },
+  {
+    "url": "https://verse-engine-ctruh-design.rajat83.chatgpt.site/docs/supported-file-types",
+    "pages": [
+      "/docs/supported-file-types/"
+    ]
+  },
+  {
+    "url": "https://verse-engine-ctruh-design.rajat83.chatgpt.site/docs/telemetry",
+    "pages": [
+      "/docs/telemetry/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/docs/#/telemetry",
+    "pages": [
+      "/docs/telemetry/"
+    ]
+  },
+  {
+    "url": "https://verse-engine-ctruh-design.rajat83.chatgpt.site/docs/unity",
+    "pages": [
+      "/docs/unity/"
+    ]
+  },
+  {
+    "url": "https://verse-engine-ctruh-design.rajat83.chatgpt.site/docs/unreal",
+    "pages": [
+      "/docs/unreal/"
+    ]
+  },
+  {
+    "url": "https://verse-engine-ctruh-design.rajat83.chatgpt.site/docs/upload-your-first-scene",
+    "pages": [
+      "/docs/upload-your-first-scene/"
+    ]
+  },
+  {
+    "url": "https://verse-engine-ctruh-design.rajat83.chatgpt.site/docs/webhooks",
+    "pages": [
+      "/docs/webhooks/"
+    ]
+  },
+  {
+    "url": "https://verse-engine-ctruh-design.rajat83.chatgpt.site/",
+    "pages": [
+      "/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/view?vpk=ingest/showflat-2026-0c5cab173679.vpk",
+    "pages": [
+      "/",
+      "/samples/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/view?vpk=ingest/demo-antique-camera.vpk",
+    "pages": [
+      "/",
+      "/samples/"
+    ]
+  },
+  {
+    "url": "https://www.ctruh.com/about/company/contact-us",
+    "pages": [
+      "/"
+    ]
+  },
+  {
+    "url": "https://www.ctruh.com/assets/pdf/ctruh-brand-guideline.pdf",
+    "pages": [
+      "/"
+    ]
+  },
+  {
+    "url": "https://www.instagram.com/ctruh.official/",
+    "pages": [
+      "/"
+    ]
+  },
+  {
+    "url": "https://www.youtube.com/@Ctruh",
+    "pages": [
+      "/"
+    ]
+  },
+  {
+    "url": "https://verse-engine-ctruh-design.rajat83.chatgpt.site/plugins/blender",
+    "pages": [
+      "/plugins/blender/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/downloads/verse_publish-blender-3.0.0-beta.1.zip",
+    "pages": [
+      "/plugins/blender/",
+      "/plugins/"
+    ]
+  },
+  {
+    "url": "https://verse-engine-ctruh-design.rajat83.chatgpt.site/plugins",
+    "pages": [
+      "/plugins/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/downloads/com.ctruh.verse-publish-3.0.0-beta.1.tgz",
+    "pages": [
+      "/plugins/",
+      "/plugins/unity/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/downloads/VersePublish-UE5.8-3.0.0-beta.1.zip",
+    "pages": [
+      "/plugins/",
+      "/plugins/unreal/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/downloads/verse_publish-sketchup-4.0.0-beta.1.rbz",
+    "pages": [
+      "/plugins/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/downloads/VersePublish-Revit-4.0.0-beta.1.zip",
+    "pages": [
+      "/plugins/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/downloads/VersePublish-Rhino-4.0.0-beta.1.zip",
+    "pages": [
+      "/plugins/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/downloads/VersePublish-3dsMax-4.0.0-beta.1.zip",
+    "pages": [
+      "/plugins/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/downloads/VersePublish-Archicad-4.0.0-beta.1.zip",
+    "pages": [
+      "/plugins/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/downloads/VersePublish-Maya-4.0.0-beta.1.zip",
+    "pages": [
+      "/plugins/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/downloads/VersePublish-Cinema4D-4.0.0-beta.1.zip",
+    "pages": [
+      "/plugins/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/downloads/VersePublish-Houdini-4.0.0-beta.1.zip",
+    "pages": [
+      "/plugins/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/downloads/VersePublish-SolidWorks-4.0.0-beta.1.zip",
+    "pages": [
+      "/plugins/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/downloads/VersePublish-Figma-4.0.0-beta.1.zip",
+    "pages": [
+      "/plugins/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/downloads/SHA256SUMS",
+    "pages": [
+      "/plugins/"
+    ]
+  },
+  {
+    "url": "https://verse-engine-ctruh-design.rajat83.chatgpt.site/plugins/unity",
+    "pages": [
+      "/plugins/unity/"
+    ]
+  },
+  {
+    "url": "https://verse-engine-ctruh-design.rajat83.chatgpt.site/plugins/unreal",
+    "pages": [
+      "/plugins/unreal/"
+    ]
+  },
+  {
+    "url": "https://verse-engine-ctruh-design.rajat83.chatgpt.site/pricing",
+    "pages": [
+      "/pricing/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/pricing#code-form",
+    "pages": [
+      "/pricing/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/pricing?plan=starter&period=month",
+    "pages": [
+      "/pricing/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/pricing?plan=pro&period=month",
+    "pages": [
+      "/pricing/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/pricing?plan=scale&period=month",
+    "pages": [
+      "/pricing/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/pricing#packs",
+    "pages": [
+      "/pricing/"
+    ]
+  },
+  {
+    "url": "https://verse.ctruh.com/pricing#enterprise",
+    "pages": [
+      "/pricing/"
+    ]
+  },
+  {
+    "url": "https://verse-engine-ctruh-design.rajat83.chatgpt.site/samples",
+    "pages": [
+      "/samples/"
+    ]
+  }
+]

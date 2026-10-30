@@ -1,0 +1,18 @@
+export function createShowcase({gsap,ST,reduced}){
+ const $=s=>document.querySelector(s),abort=new AbortController(),options={signal:abort.signal},animations=[];
+ const viewport=$('[data-scene-inspector]'),image=viewport.querySelector('img'),state={scale:1,x:0,y:0};let width=1,height=1,gesture=null,zoomTween=null;
+ const clamp=(a,b,v)=>Math.max(a,Math.min(b,v));
+ function paint(){state.x=clamp(-(state.scale-1)*width/2,(state.scale-1)*width/2,state.x);state.y=clamp(-(state.scale-1)*height/2,(state.scale-1)*height/2,state.y);image.style.transform=`translate3d(${state.x}px,${state.y}px,0) scale(${state.scale})`;viewport.classList.toggle('is-zoomed',state.scale>1.01);viewport.style.touchAction=state.scale>1.01?'none':'pan-y';$('#inspect-zoom').textContent=`${Number(state.scale.toFixed(1))}×`;$('#inspect-hint').textContent=state.scale>1.01?'Drag to explore':'Zoom in to inspect';$('[data-inspect=out]').disabled=state.scale<=1.01;$('[data-inspect=in]').disabled=state.scale>=2.39;}
+ function zoom(value,instant=false){zoomTween?.kill();const scale=clamp(1,2.4,value);if(instant||reduced){state.scale=scale;paint()}else zoomTween=gsap.to(state,{scale,duration:.4,ease:'power3.out',onUpdate:paint,overwrite:true});}
+ const resize=new ResizeObserver(entries=>{width=entries[0].contentRect.width;height=entries[0].contentRect.height;paint()});resize.observe(viewport);
+ document.querySelectorAll('[data-inspect]').forEach(button=>button.addEventListener('click',event=>{const action=button.dataset.inspect;if(action==='reset'){state.x=state.y=0;zoom(1,event.detail===0)}else zoom(state.scale+(action==='in'?.35:-.35),event.detail===0);},options));
+ viewport.addEventListener('pointerdown',event=>{if(event.button!==0||state.scale<=1.01)return;zoomTween?.kill();gesture={id:event.pointerId,x:event.clientX,y:event.clientY,panX:state.x,panY:state.y};viewport.setPointerCapture(event.pointerId);viewport.classList.add('is-dragging');},options);
+ viewport.addEventListener('pointermove',event=>{if(!gesture||gesture.id!==event.pointerId)return;state.x=gesture.panX+event.clientX-gesture.x;state.y=gesture.panY+event.clientY-gesture.y;paint();},options);
+ function release(){gesture=null;viewport.classList.remove('is-dragging')}
+ viewport.addEventListener('pointerup',release,options);viewport.addEventListener('pointercancel',release,options);viewport.addEventListener('lostpointercapture',release,options);
+ viewport.addEventListener('dblclick',()=>zoom(state.scale>1.1?1:1.8),options);
+ viewport.addEventListener('keydown',event=>{if(['+','=','-','Home','ArrowLeft','ArrowRight','ArrowUp','ArrowDown'].includes(event.key)){event.preventDefault();if(event.key==='Home'){state.x=state.y=0;zoom(1,true)}else if(['+','=','-'].includes(event.key))zoom(state.scale+(event.key==='-'?-.35:.35),true);else{if(state.scale<=1.01)zoom(1.6,true);if(event.key==='ArrowLeft')state.x+=40;if(event.key==='ArrowRight')state.x-=40;if(event.key==='ArrowUp')state.y+=40;if(event.key==='ArrowDown')state.y-=40;paint()}}},options);
+ const questions=[...document.querySelectorAll('.faq-list details')];questions[0].open=true;const syncQuestion=item=>item.querySelector('summary>span').textContent=item.open?'−':'+';questions.forEach(item=>{syncQuestion(item);item.addEventListener('toggle',()=>{syncQuestion(item);if(item.open)questions.forEach(other=>{if(other!==item){other.open=false;syncQuestion(other)}})},options)});
+ paint();
+ return{mount(){if(!reduced&&gsap&&ST){animations.push(gsap.fromTo('.footer-landscape img',{scale:1.08},{scale:1,ease:'none',scrollTrigger:{trigger:'.footer-world',start:'top bottom',end:'bottom bottom',scrub:true}}));}},dispose(){abort.abort();resize.disconnect();zoomTween?.kill();animations.forEach(t=>{t.scrollTrigger?.kill();t.kill()})}};
+}

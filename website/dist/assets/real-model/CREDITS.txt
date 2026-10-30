@@ -1,0 +1,35 @@
+Chronograph Watch
+
+Model and textures: Copyright 2025 Darmstadt Graphics Group GmbH.
+Adapted by Eric Chadwick. Licensed under Creative Commons Attribution 4.0
+International (CC-BY-4.0): https://creativecommons.org/licenses/by/4.0/
+
+Based on "Chronograph Watch Mudmaster" by graphiccompressor:
+https://skfb.ly/oAsPA (CC-BY-4.0).
+
+Official source:
+https://github.com/KhronosGroup/glTF-Sample-Assets/tree/main/Models/ChronographWatch
+Original binary:
+https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/ChronographWatch/glTF-Binary/ChronographWatch.glb
+
+Local modifications: ORM and AO textures were resized to a maximum dimension
+of 1024 with Lanczos resampling. The original 2048-pixel face/base-color image,
+256-pixel normal image and logo images remain byte-identical. Palette PNGs
+retain their original color palette. All images remain PNG. Geometry was subsequently reordered and
+quantized with glTF Transform 4.2.1 meshopt({level: 'high'}) and meshoptimizer
+0.22.0. The resulting GLB requires EXT_meshopt_compression and
+KHR_mesh_quantization. No topology simplification was applied. Material
+variants, glass transmission, textures, animation structure and copyright are
+preserved. No endorsement implied.
+
+Logos and trademarks are excluded from the CC-BY license:
+Khronos logo, Copyright 2015 Khronos Group.
+3D Commerce logo, Copyright 2017 Khronos Group.
+DGG logo, Copyright 2020 Darmstadt Graphics Group GmbH.
+See LicenseRef-LegalMark-Khronos.txt and LicenseRef-LegalMark-DGG.txt.
+
+See LICENSE.md, README.original.md and metadata.original.json for the
+unmodified license statement, author documentation and attribution metadata.
+See optimization-report.json for texture-stage byte counts, textures and source
+bounds. See meshopt-report.json for final compressed size, decoded readback
+checks and final bounds.

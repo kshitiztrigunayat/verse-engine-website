@@ -1,0 +1,52 @@
+[
+  {
+    "title": "Verse for Real Estate",
+    "description": "Sell homes before they're built. A walkable home on every buyer's phone, from a floor plan, in a minute.",
+    "action": "Walk the apartment",
+    "href": "https://verse.ctruh.com/view?vpk=ingest/showflat-2026-0c5cab173679.vpk",
+    "fallback": null,
+    "image": "https://verse.ctruh.com/assets/site/uc-realestate-720.webp?v=d6cdb5cfa0",
+    "alt": "A furnished living room and dining area, rendered live in the browser",
+    "localImage": "/assets/sample-0.webp"
+  },
+  {
+    "title": "Architects and interior designers",
+    "description": "Share the whole design at full detail, straight from your design tool with a Verse plug-in.",
+    "action": "Open the interior",
+    "href": "https://verse.ctruh.com/view?vpk=ingest/demo-reception.vpk",
+    "fallback": "https://verse.ctruh.com/docs/#/guides/publish-from-ifc",
+    "image": "https://verse.ctruh.com/assets/site/uc-architects-720.webp?v=c9568e06d9",
+    "alt": "A designed reception interior with lounge seating and floor-to-ceiling glazing",
+    "localImage": "/assets/sample-1.webp"
+  },
+  {
+    "title": "Verse for Commerce",
+    "description": "Products that look exactly as designed, on any store, any phone.",
+    "action": "See a product",
+    "href": "https://verse.ctruh.com/view?vpk=ingest/demo-antique-camera.vpk",
+    "fallback": null,
+    "image": "https://verse.ctruh.com/assets/site/uc-brands-720.webp?v=804783f30e",
+    "alt": "An antique bellows camera on a wooden tripod, lit like a product shot",
+    "localImage": "/assets/sample-2.webp"
+  },
+  {
+    "title": "Verse Play",
+    "description": "Your Blender, Unity or Unreal world in a browser tab, not a download. Host web games on a fast, isolated domain.",
+    "action": "Explore a world",
+    "href": "https://verse.ctruh.com/view?vpk=ingest/demo-bistro.vpk",
+    "fallback": "https://verse.ctruh.com/docs/#/guides/publish-from-unreal",
+    "image": "https://verse.ctruh.com/assets/site/uc-game-720.webp?v=7ac63e7a5a",
+    "alt": "A large game-world street scene with buildings, trees and a market square (Amazon Lumberyard Bistro, CC BY 4.0)",
+    "localImage": "/assets/sample-3.webp"
+  },
+  {
+    "title": "Verse API, SDK and MCP",
+    "description": "For developers and AI agents. One line of code, or one AI tool call, turns any 3D into a link.",
+    "action": "Build with Verse",
+    "href": "https://verse.ctruh.com/developers",
+    "fallback": null,
+    "image": "https://verse.ctruh.com/assets/site/uc-scans-720.webp?v=fdce553969",
+    "alt": "A photo-scanned marble bust, streamed at full detail",
+    "localImage": "/assets/sample-4.webp"
+  }
+]

@@ -1,0 +1,256 @@
+{
+  "before": {
+    "meshes": 13,
+    "materials": [
+      "Backplate Khronos",
+      "Band Carbon Fiber",
+      "Band Plastic",
+      "Bezel Frame",
+      "Button Metal",
+      "Button Plastic",
+      "Clasp DGG",
+      "Glass Face",
+      "Hand Plastic",
+      "Hand Metal",
+      "Hand Color",
+      "Watch Face",
+      "Band Carbon Fiber Gold",
+      "Band Plastic Gold",
+      "Bezel Frame Gold",
+      "Button Plastic Gold",
+      "Hand Color Gold",
+      "Band Carbon Fiber Green",
+      "Band Plastic Green",
+      "Bezel Frame Green",
+      "Button Plastic Green",
+      "Hand Color Green",
+      "Band Carbon Fiber Red",
+      "Band Plastic Red",
+      "Bezel Frame Red",
+      "Button Plastic Red",
+      "Hand Color Red",
+      "Button Metal Red",
+      "Button Metal Green"
+    ],
+    "animations": [
+      {
+        "name": "Anim_0",
+        "channels": 1,
+        "samplers": 1
+      }
+    ],
+    "variants": [
+      "Surgical White",
+      "Midnight Gold",
+      "Commerce Green",
+      "Khronos Red"
+    ],
+    "textureSizes": [
+      {
+        "mime": "image/png",
+        "bytes": 254221,
+        "size": [
+          2048,
+          2048
+        ]
+      },
+      {
+        "mime": "image/png",
+        "bytes": 882431,
+        "size": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "mime": "image/png",
+        "bytes": 9307,
+        "size": [
+          512,
+          256
+        ]
+      },
+      {
+        "mime": "image/png",
+        "bytes": 10366,
+        "size": [
+          512,
+          256
+        ]
+      },
+      {
+        "mime": "image/png",
+        "bytes": 307768,
+        "size": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "mime": "image/png",
+        "bytes": 9426,
+        "size": [
+          1024,
+          256
+        ]
+      },
+      {
+        "mime": "image/png",
+        "bytes": 89873,
+        "size": [
+          256,
+          256
+        ]
+      },
+      {
+        "mime": "image/png",
+        "bytes": 9889,
+        "size": [
+          1024,
+          256
+        ]
+      }
+    ],
+    "asset": {
+      "generator": "glTF-Transform v4.2.1",
+      "version": "2.0",
+      "copyright": "Asset © 2025 Darmstadt Graphics Group GmbH, CC BY 4.0 International, adapted by Eric Chadwick. Original asset Chronograph Watch Mudmaster (https://skfb.ly/oAsPA) by graphiccompressor is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/). Khronos logo © 2015, Khronos Group. DGG logo © 2020, Darmstadt Graphics Group GmbH."
+    }
+  },
+  "after": {
+    "meshes": 13,
+    "materials": [
+      "Backplate Khronos",
+      "Band Carbon Fiber",
+      "Band Plastic",
+      "Bezel Frame",
+      "Button Metal",
+      "Button Plastic",
+      "Clasp DGG",
+      "Glass Face",
+      "Hand Plastic",
+      "Hand Metal",
+      "Hand Color",
+      "Watch Face",
+      "Band Carbon Fiber Gold",
+      "Band Plastic Gold",
+      "Bezel Frame Gold",
+      "Button Plastic Gold",
+      "Hand Color Gold",
+      "Band Carbon Fiber Green",
+      "Band Plastic Green",
+      "Bezel Frame Green",
+      "Button Plastic Green",
+      "Hand Color Green",
+      "Band Carbon Fiber Red",
+      "Band Plastic Red",
+      "Bezel Frame Red",
+      "Button Plastic Red",
+      "Hand Color Red",
+      "Button Metal Red",
+      "Button Metal Green"
+    ],
+    "animations": [
+      {
+        "name": "Anim_0",
+        "channels": 1,
+        "samplers": 1
+      }
+    ],
+    "variants": [
+      "Surgical White",
+      "Midnight Gold",
+      "Commerce Green",
+      "Khronos Red"
+    ],
+    "textureSizes": [
+      {
+        "mime": "image/png",
+        "bytes": 254221,
+        "size": [
+          2048,
+          2048
+        ]
+      },
+      {
+        "mime": "image/png",
+        "bytes": 882431,
+        "size": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "mime": "image/png",
+        "bytes": 9307,
+        "size": [
+          512,
+          256
+        ]
+      },
+      {
+        "mime": "image/png",
+        "bytes": 10366,
+        "size": [
+          512,
+          256
+        ]
+      },
+      {
+        "mime": "image/png",
+        "bytes": 307768,
+        "size": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "mime": "image/png",
+        "bytes": 9426,
+        "size": [
+          1024,
+          256
+        ]
+      },
+      {
+        "mime": "image/png",
+        "bytes": 89873,
+        "size": [
+          256,
+          256
+        ]
+      },
+      {
+        "mime": "image/png",
+        "bytes": 9889,
+        "size": [
+          1024,
+          256
+        ]
+      }
+    ],
+    "asset": {
+      "generator": "glTF-Transform v4.2.1",
+      "version": "2.0",
+      "copyright": "Asset © 2025 Darmstadt Graphics Group GmbH, CC BY 4.0 International, adapted by Eric Chadwick. Original asset Chronograph Watch Mudmaster (https://skfb.ly/oAsPA) by graphiccompressor is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/). Khronos logo © 2015, Khronos Group. DGG logo © 2020, Darmstadt Graphics Group GmbH."
+    }
+  },
+  "originalBytes": 5714260,
+  "compressedBytes": 2699856,
+  "bounds": {
+    "min": [
+      -2.138473295658317,
+      -2.952116012573242,
+      -5.0328396611732185
+    ],
+    "max": [
+      2.236015556381915,
+      2.8639800548553467,
+      1.1488248696440162
+    ]
+  },
+  "extensionsRequired": [
+    "EXT_meshopt_compression",
+    "KHR_mesh_quantization"
+  ]
+}

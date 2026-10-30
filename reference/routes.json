@@ -1,0 +1,454 @@
+[
+  {
+    "route": "/",
+    "file": "index.html"
+  },
+  {
+    "route": "/about/",
+    "file": "about/index.html"
+  },
+  {
+    "route": "/developers/",
+    "file": "developers/index.html"
+  },
+  {
+    "route": "/docs/",
+    "file": "docs/index.html"
+  },
+  {
+    "route": "/docs/api-changelog/",
+    "file": "docs/api-changelog/index.html"
+  },
+  {
+    "route": "/docs/api-quickstart/",
+    "file": "docs/api-quickstart/index.html"
+  },
+  {
+    "route": "/docs/api/",
+    "file": "docs/api/index.html"
+  },
+  {
+    "route": "/docs/attributions/",
+    "file": "docs/attributions/index.html"
+  },
+  {
+    "route": "/docs/authentication/",
+    "file": "docs/authentication/index.html"
+  },
+  {
+    "route": "/docs/blender/",
+    "file": "docs/blender/index.html"
+  },
+  {
+    "route": "/docs/blog/2-0-release-notes-for-humans/",
+    "file": "docs/blog/2-0-release-notes-for-humans/index.html"
+  },
+  {
+    "route": "/docs/blog/how-verse-streams-a-building/",
+    "file": "docs/blog/how-verse-streams-a-building/index.html"
+  },
+  {
+    "route": "/docs/blog/index/",
+    "file": "docs/blog/index/index.html"
+  },
+  {
+    "route": "/docs/blog/verse-engine-2-7-whats-new/",
+    "file": "docs/blog/verse-engine-2-7-whats-new/index.html"
+  },
+  {
+    "route": "/docs/browser-support/",
+    "file": "docs/browser-support/index.html"
+  },
+  {
+    "route": "/docs/changelog/",
+    "file": "docs/changelog/index.html"
+  },
+  {
+    "route": "/docs/concepts/",
+    "file": "docs/concepts/index.html"
+  },
+  {
+    "route": "/docs/developers/",
+    "file": "docs/developers/index.html"
+  },
+  {
+    "route": "/docs/embed-sdk/",
+    "file": "docs/embed-sdk/index.html"
+  },
+  {
+    "route": "/docs/experience-format/",
+    "file": "docs/experience-format/index.html"
+  },
+  {
+    "route": "/docs/exporter-smoke-tests/",
+    "file": "docs/exporter-smoke-tests/index.html"
+  },
+  {
+    "route": "/docs/fixing-doors-and-windows/",
+    "file": "docs/fixing-doors-and-windows/index.html"
+  },
+  {
+    "route": "/docs/floor-plan-to-3d-home/",
+    "file": "docs/floor-plan-to-3d-home/index.html"
+  },
+  {
+    "route": "/docs/getting-started/",
+    "file": "docs/getting-started/index.html"
+  },
+  {
+    "route": "/docs/glossary/",
+    "file": "docs/glossary/index.html"
+  },
+  {
+    "route": "/docs/guides/analytics/",
+    "file": "docs/guides/analytics/index.html"
+  },
+  {
+    "route": "/docs/guides/ask-verse/",
+    "file": "docs/guides/ask-verse/index.html"
+  },
+  {
+    "route": "/docs/guides/author-a-guided-tour/",
+    "file": "docs/guides/author-a-guided-tour/index.html"
+  },
+  {
+    "route": "/docs/guides/automate-with-make/",
+    "file": "docs/guides/automate-with-make/index.html"
+  },
+  {
+    "route": "/docs/guides/automate-with-n8n/",
+    "file": "docs/guides/automate-with-n8n/index.html"
+  },
+  {
+    "route": "/docs/guides/automate-with-zapier/",
+    "file": "docs/guides/automate-with-zapier/index.html"
+  },
+  {
+    "route": "/docs/guides/bake-for-me/",
+    "file": "docs/guides/bake-for-me/index.html"
+  },
+  {
+    "route": "/docs/guides/build-a-configurator/",
+    "file": "docs/guides/build-a-configurator/index.html"
+  },
+  {
+    "route": "/docs/guides/camera-paths/",
+    "file": "docs/guides/camera-paths/index.html"
+  },
+  {
+    "route": "/docs/guides/collect-review-comments/",
+    "file": "docs/guides/collect-review-comments/index.html"
+  },
+  {
+    "route": "/docs/guides/commerce/",
+    "file": "docs/guides/commerce/index.html"
+  },
+  {
+    "route": "/docs/guides/designer-tools/",
+    "file": "docs/guides/designer-tools/index.html"
+  },
+  {
+    "route": "/docs/guides/embed-anywhere/",
+    "file": "docs/guides/embed-anywhere/index.html"
+  },
+  {
+    "route": "/docs/guides/embed-in-framer/",
+    "file": "docs/guides/embed-in-framer/index.html"
+  },
+  {
+    "route": "/docs/guides/embed-in-ghost-and-hubspot/",
+    "file": "docs/guides/embed-in-ghost-and-hubspot/index.html"
+  },
+  {
+    "route": "/docs/guides/embed-in-squarespace/",
+    "file": "docs/guides/embed-in-squarespace/index.html"
+  },
+  {
+    "route": "/docs/guides/embed-in-wix/",
+    "file": "docs/guides/embed-in-wix/index.html"
+  },
+  {
+    "route": "/docs/guides/embed-the-viewer/",
+    "file": "docs/guides/embed-the-viewer/index.html"
+  },
+  {
+    "route": "/docs/guides/export-video/",
+    "file": "docs/guides/export-video/index.html"
+  },
+  {
+    "route": "/docs/guides/exteriors/",
+    "file": "docs/guides/exteriors/index.html"
+  },
+  {
+    "route": "/docs/guides/fidelity-mode/",
+    "file": "docs/guides/fidelity-mode/index.html"
+  },
+  {
+    "route": "/docs/guides/film-a-room/",
+    "file": "docs/guides/film-a-room/index.html"
+  },
+  {
+    "route": "/docs/guides/floor-plan-to-3d/",
+    "file": "docs/guides/floor-plan-to-3d/index.html"
+  },
+  {
+    "route": "/docs/guides/host-a-web-game/",
+    "file": "docs/guides/host-a-web-game/index.html"
+  },
+  {
+    "route": "/docs/guides/hotspots-and-doors/",
+    "file": "docs/guides/hotspots-and-doors/index.html"
+  },
+  {
+    "route": "/docs/guides/instant-home/",
+    "file": "docs/guides/instant-home/index.html"
+  },
+  {
+    "route": "/docs/guides/light-and-dark-theme/",
+    "file": "docs/guides/light-and-dark-theme/index.html"
+  },
+  {
+    "route": "/docs/guides/make-it-look-good/",
+    "file": "docs/guides/make-it-look-good/index.html"
+  },
+  {
+    "route": "/docs/guides/monitor-production/",
+    "file": "docs/guides/monitor-production/index.html"
+  },
+  {
+    "route": "/docs/guides/plans-and-pricing/",
+    "file": "docs/guides/plans-and-pricing/index.html"
+  },
+  {
+    "route": "/docs/guides/present-a-scene/",
+    "file": "docs/guides/present-a-scene/index.html"
+  },
+  {
+    "route": "/docs/guides/publish-from-3dsmax/",
+    "file": "docs/guides/publish-from-3dsmax/index.html"
+  },
+  {
+    "route": "/docs/guides/publish-from-archicad/",
+    "file": "docs/guides/publish-from-archicad/index.html"
+  },
+  {
+    "route": "/docs/guides/publish-from-blender/",
+    "file": "docs/guides/publish-from-blender/index.html"
+  },
+  {
+    "route": "/docs/guides/publish-from-cinema4d/",
+    "file": "docs/guides/publish-from-cinema4d/index.html"
+  },
+  {
+    "route": "/docs/guides/publish-from-houdini/",
+    "file": "docs/guides/publish-from-houdini/index.html"
+  },
+  {
+    "route": "/docs/guides/publish-from-ifc/",
+    "file": "docs/guides/publish-from-ifc/index.html"
+  },
+  {
+    "route": "/docs/guides/publish-from-maya/",
+    "file": "docs/guides/publish-from-maya/index.html"
+  },
+  {
+    "route": "/docs/guides/publish-from-revit/",
+    "file": "docs/guides/publish-from-revit/index.html"
+  },
+  {
+    "route": "/docs/guides/publish-from-rhino/",
+    "file": "docs/guides/publish-from-rhino/index.html"
+  },
+  {
+    "route": "/docs/guides/publish-from-sketchup/",
+    "file": "docs/guides/publish-from-sketchup/index.html"
+  },
+  {
+    "route": "/docs/guides/publish-from-solidworks/",
+    "file": "docs/guides/publish-from-solidworks/index.html"
+  },
+  {
+    "route": "/docs/guides/publish-from-spline/",
+    "file": "docs/guides/publish-from-spline/index.html"
+  },
+  {
+    "route": "/docs/guides/publish-from-unity/",
+    "file": "docs/guides/publish-from-unity/index.html"
+  },
+  {
+    "route": "/docs/guides/publish-from-unreal/",
+    "file": "docs/guides/publish-from-unreal/index.html"
+  },
+  {
+    "route": "/docs/guides/react-and-vue/",
+    "file": "docs/guides/react-and-vue/index.html"
+  },
+  {
+    "route": "/docs/guides/rest-client/",
+    "file": "docs/guides/rest-client/index.html"
+  },
+  {
+    "route": "/docs/guides/restyle/",
+    "file": "docs/guides/restyle/index.html"
+  },
+  {
+    "route": "/docs/guides/run-your-own-server/",
+    "file": "docs/guides/run-your-own-server/index.html"
+  },
+  {
+    "route": "/docs/guides/sell-with-bigcommerce/",
+    "file": "docs/guides/sell-with-bigcommerce/index.html"
+  },
+  {
+    "route": "/docs/guides/sell-with-magento/",
+    "file": "docs/guides/sell-with-magento/index.html"
+  },
+  {
+    "route": "/docs/guides/sell-with-woocommerce/",
+    "file": "docs/guides/sell-with-woocommerce/index.html"
+  },
+  {
+    "route": "/docs/guides/share-privately/",
+    "file": "docs/guides/share-privately/index.html"
+  },
+  {
+    "route": "/docs/guides/sign-in/",
+    "file": "docs/guides/sign-in/index.html"
+  },
+  {
+    "route": "/docs/guides/spatial-bench/",
+    "file": "docs/guides/spatial-bench/index.html"
+  },
+  {
+    "route": "/docs/guides/take-the-tour/",
+    "file": "docs/guides/take-the-tour/index.html"
+  },
+  {
+    "route": "/docs/guides/tour-together/",
+    "file": "docs/guides/tour-together/index.html"
+  },
+  {
+    "route": "/docs/guides/tune-quality/",
+    "file": "docs/guides/tune-quality/index.html"
+  },
+  {
+    "route": "/docs/guides/upload-fbx-obj/",
+    "file": "docs/guides/upload-fbx-obj/index.html"
+  },
+  {
+    "route": "/docs/guides/verse-prepare/",
+    "file": "docs/guides/verse-prepare/index.html"
+  },
+  {
+    "route": "/docs/guides/video-and-audio/",
+    "file": "docs/guides/video-and-audio/index.html"
+  },
+  {
+    "route": "/docs/guides/view-in-ar/",
+    "file": "docs/guides/view-in-ar/index.html"
+  },
+  {
+    "route": "/docs/guides/web-component/",
+    "file": "docs/guides/web-component/index.html"
+  },
+  {
+    "route": "/docs/guides/what-you-can-upload/",
+    "file": "docs/guides/what-you-can-upload/index.html"
+  },
+  {
+    "route": "/docs/help/",
+    "file": "docs/help/index.html"
+  },
+  {
+    "route": "/docs/how-streaming-works/",
+    "file": "docs/how-streaming-works/index.html"
+  },
+  {
+    "route": "/docs/how-we-measure/",
+    "file": "docs/how-we-measure/index.html"
+  },
+  {
+    "route": "/docs/integrations/",
+    "file": "docs/integrations/index.html"
+  },
+  {
+    "route": "/docs/materials-and-lighting/",
+    "file": "docs/materials-and-lighting/index.html"
+  },
+  {
+    "route": "/docs/mcp/",
+    "file": "docs/mcp/index.html"
+  },
+  {
+    "route": "/docs/scan-import/",
+    "file": "docs/scan-import/index.html"
+  },
+  {
+    "route": "/docs/scenes-api/",
+    "file": "docs/scenes-api/index.html"
+  },
+  {
+    "route": "/docs/sdk/",
+    "file": "docs/sdk/index.html"
+  },
+  {
+    "route": "/docs/start-a-live-tour/",
+    "file": "docs/start-a-live-tour/index.html"
+  },
+  {
+    "route": "/docs/supported-file-types/",
+    "file": "docs/supported-file-types/index.html"
+  },
+  {
+    "route": "/docs/telemetry/",
+    "file": "docs/telemetry/index.html"
+  },
+  {
+    "route": "/docs/unity/",
+    "file": "docs/unity/index.html"
+  },
+  {
+    "route": "/docs/unreal/",
+    "file": "docs/unreal/index.html"
+  },
+  {
+    "route": "/docs/upload-your-first-scene/",
+    "file": "docs/upload-your-first-scene/index.html"
+  },
+  {
+    "route": "/docs/webhooks/",
+    "file": "docs/webhooks/index.html"
+  },
+  {
+    "route": "/docs/what-is-verse-engine/",
+    "file": "docs/what-is-verse-engine/index.html"
+  },
+  {
+    "route": "/plugins/",
+    "file": "plugins/index.html"
+  },
+  {
+    "route": "/plugins/blender/",
+    "file": "plugins/blender/index.html"
+  },
+  {
+    "route": "/plugins/unity/",
+    "file": "plugins/unity/index.html"
+  },
+  {
+    "route": "/plugins/unreal/",
+    "file": "plugins/unreal/index.html"
+  },
+  {
+    "route": "/pricing/",
+    "file": "pricing/index.html"
+  },
+  {
+    "route": "/samples/",
+    "file": "samples/index.html"
+  },
+  {
+    "route": "/studio/",
+    "file": "studio/index.html"
+  }
+]

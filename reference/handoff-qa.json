@@ -1,0 +1,44 @@
+{
+  "date": "2026-10-30",
+  "node": "v24.19.0",
+  "runtimeBaseline": "Published checkout f103b3f3bb85073cd21b5b0d1259d1e99111b652",
+  "rebuilds": [
+    {
+      "changed": [],
+      "missing": []
+    },
+    {
+      "changed": [],
+      "missing": []
+    }
+  ],
+  "verification": {
+    "ok": true,
+    "routes": 112,
+    "runtimeFiles": 186,
+    "checkedReferences": 22664,
+    "httpRoutes": 112,
+    "errors": [],
+    "missingRouteStatus": 404
+  },
+  "previousBrowserReview": {
+    "widths": [
+      320,
+      390,
+      768,
+      1440
+    ],
+    "note": "Prior implementation QA; not a new browser audit for this documentation package."
+  },
+  "screenshots": "Copied prior website QA references",
+  "logoConceptFilesIncluded": false,
+  "handoffDocumentReview": {
+    "browser": "in-app browser",
+    "title": "Verse Engine developer handoff",
+    "chapters": 5,
+    "viewportWidth": 1265,
+    "documentScrollWidth": 1265,
+    "brokenLoadedImages": 0,
+    "screenshot": "reference/handoff-preview.png"
+  }
+}

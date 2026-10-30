@@ -1,0 +1,144 @@
+{
+  "original_bytes": 7446368,
+  "optimized_bytes": 5714260,
+  "images": [
+    {
+      "image": 0,
+      "original_size": [
+        2048,
+        2048
+      ],
+      "size": [
+        2048,
+        2048
+      ],
+      "original_bytes": 254221,
+      "bytes": 254221,
+      "mimeType": "image/png"
+    },
+    {
+      "image": 1,
+      "original_size": [
+        2048,
+        2048
+      ],
+      "size": [
+        1024,
+        1024
+      ],
+      "original_bytes": 1674059,
+      "bytes": 882431,
+      "mimeType": "image/png"
+    },
+    {
+      "image": 2,
+      "original_size": [
+        512,
+        256
+      ],
+      "size": [
+        512,
+        256
+      ],
+      "original_bytes": 9307,
+      "bytes": 9307,
+      "mimeType": "image/png"
+    },
+    {
+      "image": 3,
+      "original_size": [
+        512,
+        256
+      ],
+      "size": [
+        512,
+        256
+      ],
+      "original_bytes": 10366,
+      "bytes": 10366,
+      "mimeType": "image/png"
+    },
+    {
+      "image": 4,
+      "original_size": [
+        2048,
+        2048
+      ],
+      "size": [
+        1024,
+        1024
+      ],
+      "original_bytes": 1248241,
+      "bytes": 307768,
+      "mimeType": "image/png"
+    },
+    {
+      "image": 5,
+      "original_size": [
+        1024,
+        256
+      ],
+      "size": [
+        1024,
+        256
+      ],
+      "original_bytes": 9426,
+      "bytes": 9426,
+      "mimeType": "image/png"
+    },
+    {
+      "image": 6,
+      "original_size": [
+        256,
+        256
+      ],
+      "size": [
+        256,
+        256
+      ],
+      "original_bytes": 89873,
+      "bytes": 89873,
+      "mimeType": "image/png"
+    },
+    {
+      "image": 7,
+      "original_size": [
+        1024,
+        256
+      ],
+      "size": [
+        1024,
+        256
+      ],
+      "original_bytes": 9889,
+      "bytes": 9889,
+      "mimeType": "image/png"
+    }
+  ],
+  "triangles": 100002,
+  "meshes": 13,
+  "materials": 29,
+  "bounds_min": [
+    -2.1385717391967773,
+    -2.952116012573242,
+    -5.032817363739014
+  ],
+  "bounds_max": [
+    2.235898017883301,
+    2.8639800548553467,
+    1.14897882938385
+  ],
+  "bounds_size": [
+    4.374469757080078,
+    5.816096067428589,
+    6.181796193122864
+  ],
+  "bounds_center": [
+    0.04866313934326172,
+    -0.044067978858947754,
+    -1.9419192671775818
+  ],
+  "face_normal": "+Z",
+  "top": "+Y",
+  "geometry_and_animations": "byte-identical original bufferViews and JSON, respectively"
+}
