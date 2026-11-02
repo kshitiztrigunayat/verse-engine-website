@@ -12,7 +12,7 @@
 | Challenge | `https://verse.ctruh.com/challenge` |
 | Plug-in files and checksums | Production `/downloads/` and `/downloads/SHA256SUMS` |
 | Real samples | Production `/view?vpk=...` URLs in `production-samples.json` |
-| Docs, pricing, Developers and marketing navigation | Local static routes |
+| Docs, pricing, Developers and marketing navigation | Client-side routes (single-page app, payloads in `dist/content/`) |
 
 The marketing frontend does not own authentication, billing, upload processing, callback submission, or the Verse engine runtime. Keep these as genuine production handoffs unless a separate integration is implemented. Do not put product service credentials into this static package.
 
@@ -46,9 +46,9 @@ Preserve vendor notices: GSAP/ScrollTrigger 3.13.0 include GreenSock licensing n
 
 ## Hosting and domain changes
 
-Upload `website/dist/` as the static web root. Preserve nested directory indexes, JS module MIME types, JSON, font types, SVG and image delivery. Use HTTPS for clipboard and browser capabilities. Serve missing routes as 404 with `404.html`; do not rewrite every request to the home page. A host that redirects `/pricing` to `/pricing/` is compatible.
+Upload `website/dist/` as the static web root and rewrite every extension-less path to `/index.html` (`vercel.json` does this); real files must still be served as files, with JS module MIME types, JSON, font types, SVG and image delivery. Use HTTPS for clipboard and browser capabilities. Unknown routes render the in-app 404 view with HTTP 200 (a soft 404); missing static files return a real 404. Content is rendered by JavaScript, so link previews outside Google/Bing-style crawlers show the generic home meta.
 
-For a new domain, replace the design-site origin in the base generator and the production generator's sitemap writer. Rebuild, then update the retained landing canonical, Open Graph image URL and `robots.txt` sitemap address. Scan all canonical/Open Graph/sitemap output for the old origin. Preserve real product-service URLs unless changing product infrastructure too.
+For a new domain, build with `SITE_ORIGIN=https://your-domain npm run build`. It sets the origin used by the shell, route canonicals, Open Graph URLs, `sitemap.xml` and `robots.txt`. Scan the output for the old origin afterwards. Preserve real product-service URLs unless changing product infrastructure too.
 
 The existing design Site's audience is owner-controlled. Publishing this archive on another host is a separate release decision; no credentials or account access are bundled here. The local preview server is not intended for public hosting.
 

@@ -4,8 +4,10 @@
   "type": "module",
   "scripts": {
     "start": "node preview-server.mjs",
-    "build": "node source/build-production-pages.mjs && node source/finalize-seo.mjs",
+    "build": "node source/build.mjs",
     "check": "node tools/verify.mjs"
   },
-  "engines": { "node": ">=22" }
+  "engines": {
+    "node": ">=22"
+  }
 }

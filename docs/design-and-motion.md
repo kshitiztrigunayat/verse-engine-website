@@ -23,7 +23,7 @@ Primary actions have a blue fill, white text, pill radius, approximately 11px ×
 
 The story uses a single procedural point-cloud scene and one camera. Geometry levels gradually reveal the vessel, table/furniture, interior, building and neighbourhood in shared world coordinates. Surface points are illustrative vertices; the scene is not a production Verse model or a photogrammetry capture.
 
-`app.js` drives raw timeline values 0–7. Values 0–4 move through the first chapters. Values 4–6 hold the experience chapter while the device changes Web 3D → AR → XR. Values 6–7 resolve to the final chapter. Chapter seeking and experience tabs share that timeline; they should not start separate competing animation clocks.
+`js/landing/index.js` drives raw timeline values 0–7. Values 0–4 move through the first chapters. Values 4–6 hold the experience chapter while the device changes Web 3D → AR → XR. Values 6–7 resolve to the final chapter. Chapter seeking and experience tabs share that timeline; they should not start separate competing animation clocks.
 
 ScrollTrigger pins the stage for roughly eight viewport heights on desktop and 7.4 on phone, with a .7 scrub. Lenis is initialized above 800px. The 3D renderer samples less geometry below 600px and caps pixel ratio at 1.3 on mobile / 1.6 elsewhere. These are implementation values, not measured frame-rate guarantees.
 
@@ -55,6 +55,6 @@ At narrow widths, titles must fit, device content must remain centered, tables/c
 
 Preserve native links/buttons, skip links, visible focus, real labels, tab ARIA relationships, inactive story-panel `inert` state, reduced-motion handling, image alt text and 44px action targets. Validate keyboard-only operation and contrast after edits. Prior manual checks are not an accessibility certification.
 
-## Page transition (`dist/intro.js`)
+## Page transition (`dist/js/transition.js`)
 
-On every load and refresh, about 780 small dots form a rotating globe that shrinks and resolves into the Verse logo, then fades out to reveal the page. Clicking an internal link plays the globe-to-logo part and then navigates; the next page starts from the finished logo so the two pages read as one animation. It is skipped for `prefers-reduced-motion`, `?motion-off` and `?poster`, and any click or key press skips it. Same-page and hash links, new-tab links, modifier-clicks, external links and file downloads are not intercepted. The head snippet (white cover plus a 4.5 s failsafe) and the script tag are injected into every HTML page by `build-production-pages.mjs`; if `intro.js` fails to load, the page shows normally.
+On first load, about 780 small dots form a rotating globe that shrinks and resolves into the Verse logo, then fades out to reveal the page. Clicking an internal link covers the page with the globe-to-logo animation, the router renders the next route while covered, and the reveal starts from the finished logo so both halves read as one animation (`transitionTo()` in `main.js`). It is skipped for `prefers-reduced-motion`, `?motion-off` and `?poster`, and any click or key press skips the intro. Same-page and hash links, new-tab links, modifier-clicks, external links, file downloads and documentation sidebar links are not animated (the sidebar navigates instantly). The shell's inline boot script (white cover plus a 4.5 s failsafe) arms the cover before first paint.

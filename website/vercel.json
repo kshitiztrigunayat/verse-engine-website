@@ -1,9 +1,15 @@
 {
   "framework": null,
   "installCommand": "echo 'static site: nothing to install'",
-  "buildCommand": "echo 'static site: already built'",
+  "buildCommand": "echo 'static site: dist/ is already built'",
   "outputDirectory": "dist",
   "cleanUrls": false,
+  "rewrites": [
+    {
+      "source": "/((?!.*\\.).*)",
+      "destination": "/index.html"
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)",
@@ -49,7 +55,25 @@
       ]
     },
     {
-      "source": "/(.*)\\.(css|js|json)",
+      "source": "/(css|js|content)/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        }
+      ]
+    },
+    {
+      "source": "/",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        }
+      ]
+    },
+    {
+      "source": "/index.html",
       "headers": [
         {
           "key": "Cache-Control",

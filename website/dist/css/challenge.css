@@ -1,0 +1,47 @@
+.challenge-page .ch-lede{color:#59616e;font-size:18px;line-height:1.6;margin-top:14px;max-width:560px}
+.ch-enter{display:grid;gap:40px}
+.ch-methods{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.ch-methods article,.ch-rule-grid article{border:1px solid #1d1d1f1f;border-radius:18px;padding:28px;background:#fff;display:flex;flex-direction:column;gap:14px}
+.ch-methods h3,.ch-rule-grid h3{font-size:24px;margin:0}
+.ch-methods p{color:#59616e;line-height:1.6;margin:0;flex:1}
+.ch-methods .site-button{align-self:flex-start;margin-top:8px}
+.ch-fine{color:#59616e;font-size:13px;line-height:1.7;max-width:760px}
+.ch-fine a,.ch-rule-grid a{text-decoration:underline;text-underline-offset:3px}
+.ch-proof h2{max-width:900px}
+.ch-badge{display:inline-block;font:700 12px Metropolis,sans-serif;letter-spacing:.08em;text-transform:uppercase;border:1.5px solid #0066cc;color:#0066cc;border-radius:999px;padding:4px 12px;vertical-align:middle;margin-right:8px}
+.ch-empty{margin-top:26px;padding:28px;border:1px dashed #1d1d1f33;border-radius:18px;color:#59616e}
+.ch-rule-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:28px}
+.ch-rule-grid ul{margin:0;padding-left:18px;color:#59616e;line-height:1.7;display:grid;gap:10px}
+@media(max-width:860px){.ch-methods,.ch-rule-grid{grid-template-columns:1fr}.ch-methods article,.ch-rule-grid article{padding:22px}.challenge-page .ch-lede{font-size:16px}}
+.ch-proof{padding-block:56px}.ch-proof .content-width>p:last-child{margin-top:20px;color:#59616e}
+.ch-form{display:grid;gap:22px;border:1px solid #1d1d1f1f;border-radius:20px;background:#fff;padding:32px;max-width:860px}
+.ch-preview{margin:0;padding:12px 16px;border-radius:12px;background:#eef3ff;color:#1d3a7a;font-size:14px;line-height:1.5}
+.ch-preview a{text-decoration:underline}
+.ch-tabs{display:flex;gap:6px;padding:4px;background:#f1f2f4;border-radius:999px;width:fit-content;max-width:100%;overflow-x:auto}
+.ch-tabs button{border:0;background:none;border-radius:999px;padding:10px 18px;min-height:44px;font:600 14px Metropolis,sans-serif;color:#59616e;cursor:pointer;white-space:nowrap}
+.ch-tabs button[aria-selected=true]{background:#fff;color:#1d1d1f;box-shadow:0 1px 3px #0002}
+.ch-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.ch-form label{display:grid;gap:8px;font:600 14px Metropolis,sans-serif;color:#1d1d1f}
+.ch-form label em{font-style:normal;font-weight:400;color:#6e6e73}
+.ch-wide{grid-column:1/-1}
+.ch-form input:not([type=checkbox]):not([type=file]),.ch-form textarea{font:400 16px Metropolis,sans-serif;padding:12px 14px;min-height:48px;border:1px solid #1d1d1f33;border-radius:10px;background:#fff;color:#1d1d1f;width:100%}
+.ch-form input:focus-visible,.ch-form textarea:focus-visible,.ch-tabs button:focus-visible,.ch-drop:focus-within{outline:2px solid #0066cc;outline-offset:2px}
+.ch-drop{display:grid;justify-items:center;gap:8px;text-align:center;padding:36px 20px;border:1.5px dashed #0066cc88;border-radius:16px;background:#f7faff;cursor:pointer}
+.ch-drop input{position:absolute;opacity:0;width:1px;height:1px}
+.ch-drop span{color:#59616e;font-weight:400}
+.ch-drop-icon{display:grid!important;place-items:center;width:44px;height:44px;border-radius:50%;background:#0066cc;color:#fff!important;font-size:20px}
+.ch-help{margin:0;color:#59616e;font-size:14px;line-height:1.6}
+.ch-panel{display:grid;gap:12px;align-content:start}.ch-panel[hidden]{display:none}
+.ch-panel .site-button{justify-self:start}
+.ch-check{grid-template-columns:22px 1fr!important;align-items:start;font-weight:400!important;font-size:14px!important;line-height:1.55;color:#59616e!important}
+.ch-check input{width:20px;height:20px;margin-top:2px}
+.ch-check a{text-decoration:underline}
+.ch-error{margin:0;color:#b3261e;font-size:14px}
+.ch-form>.site-button{justify-self:start}
+.ch-done{padding:20px;border-radius:14px;background:#f1f6ff;display:grid;gap:10px;justify-items:start}.ch-done[hidden]{display:none}.ch-done h3{margin:0}.ch-done p{margin:0;color:#59616e}
+@media(max-width:700px){.ch-form{padding:20px}.ch-grid{grid-template-columns:1fr}}
+.ch-form label:not(.ch-check):not(.ch-drop){display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 8px}.ch-form label:not(.ch-check):not(.ch-drop)>input,.ch-form label:not(.ch-check):not(.ch-drop)>textarea{flex:1 0 100%}
+@media(max-width:700px){
+ .ch-tabs{display:grid;grid-template-columns:repeat(3,1fr);width:100%;gap:4px;overflow:visible;border-radius:16px}
+ .ch-tabs button{white-space:normal;padding:8px 6px;font-size:13px;line-height:1.25;border-radius:12px;min-height:48px;text-align:center}
+}

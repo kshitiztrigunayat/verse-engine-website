@@ -1,454 +1,577 @@
 [
   {
     "route": "/",
-    "file": "index.html"
+    "kind": "landing",
+    "payload": "content/index.json"
   },
   {
-    "route": "/about/",
-    "file": "about/index.html"
+    "route": "/about",
+    "kind": "page",
+    "payload": "content/about.json"
   },
   {
-    "route": "/developers/",
-    "file": "developers/index.html"
+    "route": "/challenge",
+    "kind": "page",
+    "payload": "content/challenge.json"
   },
   {
-    "route": "/docs/",
-    "file": "docs/index.html"
+    "route": "/developers",
+    "kind": "page",
+    "payload": "content/developers.json"
   },
   {
-    "route": "/docs/api-changelog/",
-    "file": "docs/api-changelog/index.html"
+    "route": "/docs",
+    "kind": "page",
+    "payload": "content/docs.json"
   },
   {
-    "route": "/docs/api-quickstart/",
-    "file": "docs/api-quickstart/index.html"
+    "route": "/docs/api",
+    "kind": "page",
+    "payload": "content/docs__api.json"
   },
   {
-    "route": "/docs/api/",
-    "file": "docs/api/index.html"
+    "route": "/docs/api-changelog",
+    "kind": "page",
+    "payload": "content/docs__api-changelog.json"
   },
   {
-    "route": "/docs/attributions/",
-    "file": "docs/attributions/index.html"
+    "route": "/docs/api-quickstart",
+    "kind": "page",
+    "payload": "content/docs__api-quickstart.json"
   },
   {
-    "route": "/docs/authentication/",
-    "file": "docs/authentication/index.html"
+    "route": "/docs/attributions",
+    "kind": "page",
+    "payload": "content/docs__attributions.json"
   },
   {
-    "route": "/docs/blender/",
-    "file": "docs/blender/index.html"
+    "route": "/docs/authentication",
+    "kind": "page",
+    "payload": "content/docs__authentication.json"
   },
   {
-    "route": "/docs/blog/2-0-release-notes-for-humans/",
-    "file": "docs/blog/2-0-release-notes-for-humans/index.html"
+    "route": "/docs/blender",
+    "kind": "page",
+    "payload": "content/docs__blender.json"
   },
   {
-    "route": "/docs/blog/how-verse-streams-a-building/",
-    "file": "docs/blog/how-verse-streams-a-building/index.html"
+    "route": "/docs/blog/2-0-release-notes-for-humans",
+    "kind": "page",
+    "payload": "content/docs__blog__2-0-release-notes-for-humans.json"
   },
   {
-    "route": "/docs/blog/index/",
-    "file": "docs/blog/index/index.html"
+    "route": "/docs/blog/how-verse-streams-a-building",
+    "kind": "page",
+    "payload": "content/docs__blog__how-verse-streams-a-building.json"
   },
   {
-    "route": "/docs/blog/verse-engine-2-7-whats-new/",
-    "file": "docs/blog/verse-engine-2-7-whats-new/index.html"
+    "route": "/docs/blog/index",
+    "kind": "page",
+    "payload": "content/docs__blog__index.json"
   },
   {
-    "route": "/docs/browser-support/",
-    "file": "docs/browser-support/index.html"
+    "route": "/docs/blog/verse-engine-2-7-whats-new",
+    "kind": "page",
+    "payload": "content/docs__blog__verse-engine-2-7-whats-new.json"
   },
   {
-    "route": "/docs/changelog/",
-    "file": "docs/changelog/index.html"
+    "route": "/docs/browser-support",
+    "kind": "page",
+    "payload": "content/docs__browser-support.json"
   },
   {
-    "route": "/docs/concepts/",
-    "file": "docs/concepts/index.html"
+    "route": "/docs/changelog",
+    "kind": "page",
+    "payload": "content/docs__changelog.json"
   },
   {
-    "route": "/docs/developers/",
-    "file": "docs/developers/index.html"
+    "route": "/docs/concepts",
+    "kind": "page",
+    "payload": "content/docs__concepts.json"
   },
   {
-    "route": "/docs/embed-sdk/",
-    "file": "docs/embed-sdk/index.html"
+    "route": "/docs/developers",
+    "kind": "page",
+    "payload": "content/docs__developers.json"
   },
   {
-    "route": "/docs/experience-format/",
-    "file": "docs/experience-format/index.html"
+    "route": "/docs/embed-sdk",
+    "kind": "page",
+    "payload": "content/docs__embed-sdk.json"
   },
   {
-    "route": "/docs/exporter-smoke-tests/",
-    "file": "docs/exporter-smoke-tests/index.html"
+    "route": "/docs/experience-format",
+    "kind": "page",
+    "payload": "content/docs__experience-format.json"
   },
   {
-    "route": "/docs/fixing-doors-and-windows/",
-    "file": "docs/fixing-doors-and-windows/index.html"
+    "route": "/docs/exporter-smoke-tests",
+    "kind": "page",
+    "payload": "content/docs__exporter-smoke-tests.json"
   },
   {
-    "route": "/docs/floor-plan-to-3d-home/",
-    "file": "docs/floor-plan-to-3d-home/index.html"
+    "route": "/docs/fixing-doors-and-windows",
+    "kind": "page",
+    "payload": "content/docs__fixing-doors-and-windows.json"
   },
   {
-    "route": "/docs/getting-started/",
-    "file": "docs/getting-started/index.html"
+    "route": "/docs/floor-plan-to-3d-home",
+    "kind": "page",
+    "payload": "content/docs__floor-plan-to-3d-home.json"
   },
   {
-    "route": "/docs/glossary/",
-    "file": "docs/glossary/index.html"
+    "route": "/docs/getting-started",
+    "kind": "page",
+    "payload": "content/docs__getting-started.json"
   },
   {
-    "route": "/docs/guides/analytics/",
-    "file": "docs/guides/analytics/index.html"
+    "route": "/docs/glossary",
+    "kind": "page",
+    "payload": "content/docs__glossary.json"
   },
   {
-    "route": "/docs/guides/ask-verse/",
-    "file": "docs/guides/ask-verse/index.html"
+    "route": "/docs/guides/analytics",
+    "kind": "page",
+    "payload": "content/docs__guides__analytics.json"
   },
   {
-    "route": "/docs/guides/author-a-guided-tour/",
-    "file": "docs/guides/author-a-guided-tour/index.html"
+    "route": "/docs/guides/ask-verse",
+    "kind": "page",
+    "payload": "content/docs__guides__ask-verse.json"
   },
   {
-    "route": "/docs/guides/automate-with-make/",
-    "file": "docs/guides/automate-with-make/index.html"
+    "route": "/docs/guides/author-a-guided-tour",
+    "kind": "page",
+    "payload": "content/docs__guides__author-a-guided-tour.json"
   },
   {
-    "route": "/docs/guides/automate-with-n8n/",
-    "file": "docs/guides/automate-with-n8n/index.html"
+    "route": "/docs/guides/automate-with-make",
+    "kind": "page",
+    "payload": "content/docs__guides__automate-with-make.json"
   },
   {
-    "route": "/docs/guides/automate-with-zapier/",
-    "file": "docs/guides/automate-with-zapier/index.html"
+    "route": "/docs/guides/automate-with-n8n",
+    "kind": "page",
+    "payload": "content/docs__guides__automate-with-n8n.json"
   },
   {
-    "route": "/docs/guides/bake-for-me/",
-    "file": "docs/guides/bake-for-me/index.html"
+    "route": "/docs/guides/automate-with-zapier",
+    "kind": "page",
+    "payload": "content/docs__guides__automate-with-zapier.json"
   },
   {
-    "route": "/docs/guides/build-a-configurator/",
-    "file": "docs/guides/build-a-configurator/index.html"
+    "route": "/docs/guides/bake-for-me",
+    "kind": "page",
+    "payload": "content/docs__guides__bake-for-me.json"
   },
   {
-    "route": "/docs/guides/camera-paths/",
-    "file": "docs/guides/camera-paths/index.html"
+    "route": "/docs/guides/build-a-configurator",
+    "kind": "page",
+    "payload": "content/docs__guides__build-a-configurator.json"
   },
   {
-    "route": "/docs/guides/collect-review-comments/",
-    "file": "docs/guides/collect-review-comments/index.html"
+    "route": "/docs/guides/camera-paths",
+    "kind": "page",
+    "payload": "content/docs__guides__camera-paths.json"
   },
   {
-    "route": "/docs/guides/commerce/",
-    "file": "docs/guides/commerce/index.html"
+    "route": "/docs/guides/collect-review-comments",
+    "kind": "page",
+    "payload": "content/docs__guides__collect-review-comments.json"
   },
   {
-    "route": "/docs/guides/designer-tools/",
-    "file": "docs/guides/designer-tools/index.html"
+    "route": "/docs/guides/commerce",
+    "kind": "page",
+    "payload": "content/docs__guides__commerce.json"
   },
   {
-    "route": "/docs/guides/embed-anywhere/",
-    "file": "docs/guides/embed-anywhere/index.html"
+    "route": "/docs/guides/designer-tools",
+    "kind": "page",
+    "payload": "content/docs__guides__designer-tools.json"
   },
   {
-    "route": "/docs/guides/embed-in-framer/",
-    "file": "docs/guides/embed-in-framer/index.html"
+    "route": "/docs/guides/embed-anywhere",
+    "kind": "page",
+    "payload": "content/docs__guides__embed-anywhere.json"
   },
   {
-    "route": "/docs/guides/embed-in-ghost-and-hubspot/",
-    "file": "docs/guides/embed-in-ghost-and-hubspot/index.html"
+    "route": "/docs/guides/embed-in-framer",
+    "kind": "page",
+    "payload": "content/docs__guides__embed-in-framer.json"
   },
   {
-    "route": "/docs/guides/embed-in-squarespace/",
-    "file": "docs/guides/embed-in-squarespace/index.html"
+    "route": "/docs/guides/embed-in-ghost-and-hubspot",
+    "kind": "page",
+    "payload": "content/docs__guides__embed-in-ghost-and-hubspot.json"
   },
   {
-    "route": "/docs/guides/embed-in-wix/",
-    "file": "docs/guides/embed-in-wix/index.html"
+    "route": "/docs/guides/embed-in-squarespace",
+    "kind": "page",
+    "payload": "content/docs__guides__embed-in-squarespace.json"
   },
   {
-    "route": "/docs/guides/embed-the-viewer/",
-    "file": "docs/guides/embed-the-viewer/index.html"
+    "route": "/docs/guides/embed-in-wix",
+    "kind": "page",
+    "payload": "content/docs__guides__embed-in-wix.json"
   },
   {
-    "route": "/docs/guides/export-video/",
-    "file": "docs/guides/export-video/index.html"
+    "route": "/docs/guides/embed-the-viewer",
+    "kind": "page",
+    "payload": "content/docs__guides__embed-the-viewer.json"
   },
   {
-    "route": "/docs/guides/exteriors/",
-    "file": "docs/guides/exteriors/index.html"
+    "route": "/docs/guides/export-video",
+    "kind": "page",
+    "payload": "content/docs__guides__export-video.json"
   },
   {
-    "route": "/docs/guides/fidelity-mode/",
-    "file": "docs/guides/fidelity-mode/index.html"
+    "route": "/docs/guides/exteriors",
+    "kind": "page",
+    "payload": "content/docs__guides__exteriors.json"
   },
   {
-    "route": "/docs/guides/film-a-room/",
-    "file": "docs/guides/film-a-room/index.html"
+    "route": "/docs/guides/fidelity-mode",
+    "kind": "page",
+    "payload": "content/docs__guides__fidelity-mode.json"
   },
   {
-    "route": "/docs/guides/floor-plan-to-3d/",
-    "file": "docs/guides/floor-plan-to-3d/index.html"
+    "route": "/docs/guides/film-a-room",
+    "kind": "page",
+    "payload": "content/docs__guides__film-a-room.json"
   },
   {
-    "route": "/docs/guides/host-a-web-game/",
-    "file": "docs/guides/host-a-web-game/index.html"
+    "route": "/docs/guides/floor-plan-to-3d",
+    "kind": "page",
+    "payload": "content/docs__guides__floor-plan-to-3d.json"
   },
   {
-    "route": "/docs/guides/hotspots-and-doors/",
-    "file": "docs/guides/hotspots-and-doors/index.html"
+    "route": "/docs/guides/host-a-web-game",
+    "kind": "page",
+    "payload": "content/docs__guides__host-a-web-game.json"
   },
   {
-    "route": "/docs/guides/instant-home/",
-    "file": "docs/guides/instant-home/index.html"
+    "route": "/docs/guides/hotspots-and-doors",
+    "kind": "page",
+    "payload": "content/docs__guides__hotspots-and-doors.json"
   },
   {
-    "route": "/docs/guides/light-and-dark-theme/",
-    "file": "docs/guides/light-and-dark-theme/index.html"
+    "route": "/docs/guides/instant-home",
+    "kind": "page",
+    "payload": "content/docs__guides__instant-home.json"
   },
   {
-    "route": "/docs/guides/make-it-look-good/",
-    "file": "docs/guides/make-it-look-good/index.html"
+    "route": "/docs/guides/light-and-dark-theme",
+    "kind": "page",
+    "payload": "content/docs__guides__light-and-dark-theme.json"
   },
   {
-    "route": "/docs/guides/monitor-production/",
-    "file": "docs/guides/monitor-production/index.html"
+    "route": "/docs/guides/make-it-look-good",
+    "kind": "page",
+    "payload": "content/docs__guides__make-it-look-good.json"
   },
   {
-    "route": "/docs/guides/plans-and-pricing/",
-    "file": "docs/guides/plans-and-pricing/index.html"
+    "route": "/docs/guides/monitor-production",
+    "kind": "page",
+    "payload": "content/docs__guides__monitor-production.json"
   },
   {
-    "route": "/docs/guides/present-a-scene/",
-    "file": "docs/guides/present-a-scene/index.html"
+    "route": "/docs/guides/plans-and-pricing",
+    "kind": "page",
+    "payload": "content/docs__guides__plans-and-pricing.json"
   },
   {
-    "route": "/docs/guides/publish-from-3dsmax/",
-    "file": "docs/guides/publish-from-3dsmax/index.html"
+    "route": "/docs/guides/present-a-scene",
+    "kind": "page",
+    "payload": "content/docs__guides__present-a-scene.json"
   },
   {
-    "route": "/docs/guides/publish-from-archicad/",
-    "file": "docs/guides/publish-from-archicad/index.html"
+    "route": "/docs/guides/publish-from-3dsmax",
+    "kind": "page",
+    "payload": "content/docs__guides__publish-from-3dsmax.json"
   },
   {
-    "route": "/docs/guides/publish-from-blender/",
-    "file": "docs/guides/publish-from-blender/index.html"
+    "route": "/docs/guides/publish-from-archicad",
+    "kind": "page",
+    "payload": "content/docs__guides__publish-from-archicad.json"
   },
   {
-    "route": "/docs/guides/publish-from-cinema4d/",
-    "file": "docs/guides/publish-from-cinema4d/index.html"
+    "route": "/docs/guides/publish-from-blender",
+    "kind": "page",
+    "payload": "content/docs__guides__publish-from-blender.json"
   },
   {
-    "route": "/docs/guides/publish-from-houdini/",
-    "file": "docs/guides/publish-from-houdini/index.html"
+    "route": "/docs/guides/publish-from-cinema4d",
+    "kind": "page",
+    "payload": "content/docs__guides__publish-from-cinema4d.json"
   },
   {
-    "route": "/docs/guides/publish-from-ifc/",
-    "file": "docs/guides/publish-from-ifc/index.html"
+    "route": "/docs/guides/publish-from-houdini",
+    "kind": "page",
+    "payload": "content/docs__guides__publish-from-houdini.json"
   },
   {
-    "route": "/docs/guides/publish-from-maya/",
-    "file": "docs/guides/publish-from-maya/index.html"
+    "route": "/docs/guides/publish-from-ifc",
+    "kind": "page",
+    "payload": "content/docs__guides__publish-from-ifc.json"
   },
   {
-    "route": "/docs/guides/publish-from-revit/",
-    "file": "docs/guides/publish-from-revit/index.html"
+    "route": "/docs/guides/publish-from-maya",
+    "kind": "page",
+    "payload": "content/docs__guides__publish-from-maya.json"
   },
   {
-    "route": "/docs/guides/publish-from-rhino/",
-    "file": "docs/guides/publish-from-rhino/index.html"
+    "route": "/docs/guides/publish-from-revit",
+    "kind": "page",
+    "payload": "content/docs__guides__publish-from-revit.json"
   },
   {
-    "route": "/docs/guides/publish-from-sketchup/",
-    "file": "docs/guides/publish-from-sketchup/index.html"
+    "route": "/docs/guides/publish-from-rhino",
+    "kind": "page",
+    "payload": "content/docs__guides__publish-from-rhino.json"
   },
   {
-    "route": "/docs/guides/publish-from-solidworks/",
-    "file": "docs/guides/publish-from-solidworks/index.html"
+    "route": "/docs/guides/publish-from-sketchup",
+    "kind": "page",
+    "payload": "content/docs__guides__publish-from-sketchup.json"
   },
   {
-    "route": "/docs/guides/publish-from-spline/",
-    "file": "docs/guides/publish-from-spline/index.html"
+    "route": "/docs/guides/publish-from-solidworks",
+    "kind": "page",
+    "payload": "content/docs__guides__publish-from-solidworks.json"
   },
   {
-    "route": "/docs/guides/publish-from-unity/",
-    "file": "docs/guides/publish-from-unity/index.html"
+    "route": "/docs/guides/publish-from-spline",
+    "kind": "page",
+    "payload": "content/docs__guides__publish-from-spline.json"
   },
   {
-    "route": "/docs/guides/publish-from-unreal/",
-    "file": "docs/guides/publish-from-unreal/index.html"
+    "route": "/docs/guides/publish-from-unity",
+    "kind": "page",
+    "payload": "content/docs__guides__publish-from-unity.json"
   },
   {
-    "route": "/docs/guides/react-and-vue/",
-    "file": "docs/guides/react-and-vue/index.html"
+    "route": "/docs/guides/publish-from-unreal",
+    "kind": "page",
+    "payload": "content/docs__guides__publish-from-unreal.json"
   },
   {
-    "route": "/docs/guides/rest-client/",
-    "file": "docs/guides/rest-client/index.html"
+    "route": "/docs/guides/react-and-vue",
+    "kind": "page",
+    "payload": "content/docs__guides__react-and-vue.json"
   },
   {
-    "route": "/docs/guides/restyle/",
-    "file": "docs/guides/restyle/index.html"
+    "route": "/docs/guides/rest-client",
+    "kind": "page",
+    "payload": "content/docs__guides__rest-client.json"
   },
   {
-    "route": "/docs/guides/run-your-own-server/",
-    "file": "docs/guides/run-your-own-server/index.html"
+    "route": "/docs/guides/restyle",
+    "kind": "page",
+    "payload": "content/docs__guides__restyle.json"
   },
   {
-    "route": "/docs/guides/sell-with-bigcommerce/",
-    "file": "docs/guides/sell-with-bigcommerce/index.html"
+    "route": "/docs/guides/run-your-own-server",
+    "kind": "page",
+    "payload": "content/docs__guides__run-your-own-server.json"
   },
   {
-    "route": "/docs/guides/sell-with-magento/",
-    "file": "docs/guides/sell-with-magento/index.html"
+    "route": "/docs/guides/sell-with-bigcommerce",
+    "kind": "page",
+    "payload": "content/docs__guides__sell-with-bigcommerce.json"
   },
   {
-    "route": "/docs/guides/sell-with-woocommerce/",
-    "file": "docs/guides/sell-with-woocommerce/index.html"
+    "route": "/docs/guides/sell-with-magento",
+    "kind": "page",
+    "payload": "content/docs__guides__sell-with-magento.json"
   },
   {
-    "route": "/docs/guides/share-privately/",
-    "file": "docs/guides/share-privately/index.html"
+    "route": "/docs/guides/sell-with-woocommerce",
+    "kind": "page",
+    "payload": "content/docs__guides__sell-with-woocommerce.json"
   },
   {
-    "route": "/docs/guides/sign-in/",
-    "file": "docs/guides/sign-in/index.html"
+    "route": "/docs/guides/share-privately",
+    "kind": "page",
+    "payload": "content/docs__guides__share-privately.json"
   },
   {
-    "route": "/docs/guides/spatial-bench/",
-    "file": "docs/guides/spatial-bench/index.html"
+    "route": "/docs/guides/sign-in",
+    "kind": "page",
+    "payload": "content/docs__guides__sign-in.json"
   },
   {
-    "route": "/docs/guides/take-the-tour/",
-    "file": "docs/guides/take-the-tour/index.html"
+    "route": "/docs/guides/spatial-bench",
+    "kind": "page",
+    "payload": "content/docs__guides__spatial-bench.json"
   },
   {
-    "route": "/docs/guides/tour-together/",
-    "file": "docs/guides/tour-together/index.html"
+    "route": "/docs/guides/take-the-tour",
+    "kind": "page",
+    "payload": "content/docs__guides__take-the-tour.json"
   },
   {
-    "route": "/docs/guides/tune-quality/",
-    "file": "docs/guides/tune-quality/index.html"
+    "route": "/docs/guides/tour-together",
+    "kind": "page",
+    "payload": "content/docs__guides__tour-together.json"
   },
   {
-    "route": "/docs/guides/upload-fbx-obj/",
-    "file": "docs/guides/upload-fbx-obj/index.html"
+    "route": "/docs/guides/tune-quality",
+    "kind": "page",
+    "payload": "content/docs__guides__tune-quality.json"
   },
   {
-    "route": "/docs/guides/verse-prepare/",
-    "file": "docs/guides/verse-prepare/index.html"
+    "route": "/docs/guides/upload-fbx-obj",
+    "kind": "page",
+    "payload": "content/docs__guides__upload-fbx-obj.json"
   },
   {
-    "route": "/docs/guides/video-and-audio/",
-    "file": "docs/guides/video-and-audio/index.html"
+    "route": "/docs/guides/verse-prepare",
+    "kind": "page",
+    "payload": "content/docs__guides__verse-prepare.json"
   },
   {
-    "route": "/docs/guides/view-in-ar/",
-    "file": "docs/guides/view-in-ar/index.html"
+    "route": "/docs/guides/video-and-audio",
+    "kind": "page",
+    "payload": "content/docs__guides__video-and-audio.json"
   },
   {
-    "route": "/docs/guides/web-component/",
-    "file": "docs/guides/web-component/index.html"
+    "route": "/docs/guides/view-in-ar",
+    "kind": "page",
+    "payload": "content/docs__guides__view-in-ar.json"
   },
   {
-    "route": "/docs/guides/what-you-can-upload/",
-    "file": "docs/guides/what-you-can-upload/index.html"
+    "route": "/docs/guides/web-component",
+    "kind": "page",
+    "payload": "content/docs__guides__web-component.json"
   },
   {
-    "route": "/docs/help/",
-    "file": "docs/help/index.html"
+    "route": "/docs/guides/what-you-can-upload",
+    "kind": "page",
+    "payload": "content/docs__guides__what-you-can-upload.json"
   },
   {
-    "route": "/docs/how-streaming-works/",
-    "file": "docs/how-streaming-works/index.html"
+    "route": "/docs/help",
+    "kind": "page",
+    "payload": "content/docs__help.json"
   },
   {
-    "route": "/docs/how-we-measure/",
-    "file": "docs/how-we-measure/index.html"
+    "route": "/docs/how-streaming-works",
+    "kind": "page",
+    "payload": "content/docs__how-streaming-works.json"
   },
   {
-    "route": "/docs/integrations/",
-    "file": "docs/integrations/index.html"
+    "route": "/docs/how-we-measure",
+    "kind": "page",
+    "payload": "content/docs__how-we-measure.json"
   },
   {
-    "route": "/docs/materials-and-lighting/",
-    "file": "docs/materials-and-lighting/index.html"
+    "route": "/docs/integrations",
+    "kind": "page",
+    "payload": "content/docs__integrations.json"
   },
   {
-    "route": "/docs/mcp/",
-    "file": "docs/mcp/index.html"
+    "route": "/docs/materials-and-lighting",
+    "kind": "page",
+    "payload": "content/docs__materials-and-lighting.json"
   },
   {
-    "route": "/docs/scan-import/",
-    "file": "docs/scan-import/index.html"
+    "route": "/docs/mcp",
+    "kind": "page",
+    "payload": "content/docs__mcp.json"
   },
   {
-    "route": "/docs/scenes-api/",
-    "file": "docs/scenes-api/index.html"
+    "route": "/docs/scan-import",
+    "kind": "page",
+    "payload": "content/docs__scan-import.json"
   },
   {
-    "route": "/docs/sdk/",
-    "file": "docs/sdk/index.html"
+    "route": "/docs/scenes-api",
+    "kind": "page",
+    "payload": "content/docs__scenes-api.json"
   },
   {
-    "route": "/docs/start-a-live-tour/",
-    "file": "docs/start-a-live-tour/index.html"
+    "route": "/docs/sdk",
+    "kind": "page",
+    "payload": "content/docs__sdk.json"
   },
   {
-    "route": "/docs/supported-file-types/",
-    "file": "docs/supported-file-types/index.html"
+    "route": "/docs/start-a-live-tour",
+    "kind": "page",
+    "payload": "content/docs__start-a-live-tour.json"
   },
   {
-    "route": "/docs/telemetry/",
-    "file": "docs/telemetry/index.html"
+    "route": "/docs/supported-file-types",
+    "kind": "page",
+    "payload": "content/docs__supported-file-types.json"
   },
   {
-    "route": "/docs/unity/",
-    "file": "docs/unity/index.html"
+    "route": "/docs/telemetry",
+    "kind": "page",
+    "payload": "content/docs__telemetry.json"
   },
   {
-    "route": "/docs/unreal/",
-    "file": "docs/unreal/index.html"
+    "route": "/docs/unity",
+    "kind": "page",
+    "payload": "content/docs__unity.json"
   },
   {
-    "route": "/docs/upload-your-first-scene/",
-    "file": "docs/upload-your-first-scene/index.html"
+    "route": "/docs/unreal",
+    "kind": "page",
+    "payload": "content/docs__unreal.json"
   },
   {
-    "route": "/docs/webhooks/",
-    "file": "docs/webhooks/index.html"
+    "route": "/docs/upload-your-first-scene",
+    "kind": "page",
+    "payload": "content/docs__upload-your-first-scene.json"
   },
   {
-    "route": "/docs/what-is-verse-engine/",
-    "file": "docs/what-is-verse-engine/index.html"
+    "route": "/docs/webhooks",
+    "kind": "page",
+    "payload": "content/docs__webhooks.json"
   },
   {
-    "route": "/plugins/",
-    "file": "plugins/index.html"
+    "route": "/docs/what-is-verse-engine",
+    "kind": "page",
+    "payload": "content/docs__what-is-verse-engine.json"
   },
   {
-    "route": "/plugins/blender/",
-    "file": "plugins/blender/index.html"
+    "route": "/plugins",
+    "kind": "page",
+    "payload": "content/plugins.json"
   },
   {
-    "route": "/plugins/unity/",
-    "file": "plugins/unity/index.html"
+    "route": "/plugins/blender",
+    "kind": "page",
+    "payload": "content/plugins__blender.json"
   },
   {
-    "route": "/plugins/unreal/",
-    "file": "plugins/unreal/index.html"
+    "route": "/plugins/unity",
+    "kind": "page",
+    "payload": "content/plugins__unity.json"
   },
   {
-    "route": "/pricing/",
-    "file": "pricing/index.html"
+    "route": "/plugins/unreal",
+    "kind": "page",
+    "payload": "content/plugins__unreal.json"
   },
   {
-    "route": "/samples/",
-    "file": "samples/index.html"
+    "route": "/pricing",
+    "kind": "page",
+    "payload": "content/pricing.json"
   },
   {
-    "route": "/studio/",
-    "file": "studio/index.html"
+    "route": "/samples",
+    "kind": "page",
+    "payload": "content/samples.json"
+  },
+  {
+    "route": "/signin",
+    "kind": "app",
+    "payload": "content/signin.json"
+  },
+  {
+    "route": "/studio",
+    "kind": "app",
+    "payload": "content/studio.json"
   }
 ]
