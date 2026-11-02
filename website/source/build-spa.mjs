@@ -6,7 +6,8 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 const here=path.dirname(fileURLToPath(import.meta.url)), project=path.resolve(here,'..');
-const stage=process.env.VERSE_DIST, dist=path.join(project,'dist');
+// Output goes to public/, which Vite serves and copies into dist/ unchanged.
+const stage=process.env.VERSE_DIST, dist=path.join(project,'public');
 if(!stage)throw new Error('VERSE_DIST (stage directory) is required');
 const ORIGIN=(process.env.SITE_ORIGIN||'https://verse-engine-ctruh-design.rajat83.chatgpt.site').replace(/\/+$/,'');
 const NOINDEX=new Set(['/studio','/signin','/404']);
@@ -100,7 +101,9 @@ routes.sort((a,b)=>a.path.localeCompare(b.path));
 // ---------- shell ----------
 let shell=read(path.join(here,'templates/shell.html'));
 shell=shell.replace('<!--@header-->',shellHeader).replace('<!--@menu-->',shellMenu).replace('<!--@footer-->',shellFooter).replaceAll('@ORIGIN@',ORIGIN);
-fs.writeFileSync(path.join(dist,'index.html'),shell);
+// The shell is now the React component src/Shell.jsx (keep it in sync with templates/shell.html);
+// write the generated shell for reference only, outside public/.
+fs.writeFileSync(path.join(project,'.build-shell.html'),shell);
 
 // ---------- static data + discovery files ----------
 for(const f of ['pricing-data.json','code-samples.json'])fs.copyFileSync(path.join(stage,f),path.join(dist,f));

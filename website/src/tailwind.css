@@ -1,0 +1,9 @@
+/* Tailwind without its base reset (preflight), so existing styles are unchanged.
+   Utilities use the "tw:" prefix (e.g. tw:flex, tw:mt-4), so they can never
+   collide with the site's own class names (e.g. "hidden" in the page content).
+   Only src/ is scanned. Tailwind sits in cascade layers, so the site's unlayered
+   CSS always takes priority (e.g. its own --ease-out). */
+@layer theme, base, components, utilities;
+@import "tailwindcss/theme.css" layer(theme) prefix(tw) source(none);
+@import "tailwindcss/utilities.css" layer(utilities) source(none);
+@source "./";

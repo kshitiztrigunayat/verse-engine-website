@@ -41,7 +41,8 @@ function resolveRef(raw,from){
   if(routes.has(route)||exists(path.join(dist,pathname))&&fs.statSync(path.join(dist,pathname)).isFile())return;
   err(`${from.startsWith(dist)?path.relative(dist,from):from} -> ${ref}`);
 }
-const shell=read(path.join(dist,'index.html'));
+// The shell markup is the React component src/Shell.jsx (index.html only holds <head> and an empty <body>).
+const shell=read(path.join(dist,'index.html'))+read(path.join(project,'src/Shell.jsx'));
 const shellIds=[...shell.matchAll(/\sid="([^"]+)"/g)].map(m=>m[1]);
 const dup=ids=>ids.filter((id,i)=>ids.indexOf(id)!==i);
 for(const d of dup(shellIds))err('duplicate id in shell: '+d);
@@ -70,10 +71,10 @@ if(origin){
   for(let i=0;i<list.length;i+=8)await Promise.all(list.slice(i,i+8).map(async route=>{
     try{
       const page=await fetch(new URL(route,origin)),body=await page.text();
-      if(!page.ok||!body.includes('id="app-main"'))err(`HTTP ${page.status} (shell) ${route}`);
+      if(!page.ok||!body.includes('<body id="app-body">'))err(`HTTP ${page.status} (shell) ${route}`);
       const data=await fetch(new URL('/content/'+fileFor(route)+'.json',origin));if(!data.ok)err(`HTTP ${data.status} payload ${route}`);else{await data.arrayBuffer();httpRoutes++}
     }catch(e){err(route+': '+e.message)}}));
-  const unknown=await fetch(new URL('/no-such-route-xyz',origin));if(!(await unknown.text()).includes('id="app-main"'))err('Unknown routes should receive the app shell');
+  const unknown=await fetch(new URL('/no-such-route-xyz',origin));if(!(await unknown.text()).includes('<body id="app-body">'))err('Unknown routes should receive the app shell');
   const missing=await fetch(new URL('/assets/missing-file.png',origin));if(missing.status!==404)err('Missing static files should return 404');
 }
 const report={ok:errors.length===0,routes:routes.size,runtimeFiles:walk(dist).length,checkedReferences,httpRoutes,errors:errors.slice(0,40)};
