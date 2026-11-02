@@ -2,9 +2,11 @@
 // One HTML document; each route is a JSON payload in /content/ holding its meta
 // and HTML fragment. The shell (header, footer, main, ...) is rendered by React
 // (Shell.jsx); this module decides what it shows, in the same order as before.
-// Routes may also have a behaviour module (in public/js) that exports
+// Some routes still have a behaviour module (in public/js) that exports
 // mount(context) -> dispose; those modules are unchanged.
 import { flushSync } from "react-dom";
+import { PAGES } from "./pages/index.js";
+import DocsPage from "./pages/docs/DocsPage.jsx";
 
 const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
 const byId = (id) => document.getElementById(id);
@@ -21,8 +23,6 @@ const STYLES = {
 const MODULES = {
   "/": () => load("/js/landing/index.js"),
   "/studio": () => load("/js/studio.js"),
-  "/signin": () => load("/js/signin.js"),
-  "/challenge": () => load("/js/challenge.js"),
 };
 const THEME_COLOR = { landing: "#f5f6f7" };
 const origin = () => byId("meta-site-origin").content.replace(/\/+$/, "");
@@ -41,12 +41,13 @@ export const initialView = {
   // re-applies dangerouslySetInnerHTML whenever it gets a new object, which would
   // wipe what the behaviour modules did to the page after it was inserted.
   mainHtml: { __html: "" },
-  // Documentation pages are rendered by React (src/pages/docs/DocsPage.jsx) from the payload's
-  // `docs` data instead of HTML; the article HTML is again a { __html } object made once per route.
-  docs: null,
+  // Pages that are React components: { Component, props } (see src/pages/index.js).
+  // Documentation pages are DocsPage with the payload's `docs` data.
+  mainPage: null,
   standaloneHidden: true,
   standaloneClass: undefined,
   standaloneHtml: { __html: "" },
+  standalonePage: null,
   announcement: "",
 };
 let view = initialView;
@@ -129,19 +130,24 @@ function chromeFor(payload) {
 async function leave() {
   const disposers = state.disposers.splice(0).reverse();
   for (const dispose of disposers) { try { await dispose(); } catch (error) { console.warn("dispose failed", error); } }
-  update({ mainHtml: { __html: "" }, docs: null, standaloneHtml: { __html: "" } });
+  update({ mainHtml: { __html: "" }, mainPage: null, standaloneHtml: { __html: "" }, standalonePage: null });
   byId("menu-dialog").open && byId("menu-dialog").close();
 }
 
 async function mountModules(payload, path) {
   const context = { path, payload };
   const tasks = [];
-  if (payload.kind === "page") tasks.push(load("/js/pages.js"));
   if (MODULES[path]) tasks.push(MODULES[path]());
   for (const mod of await Promise.all(tasks)) {
     const dispose = await mod.mount(context);
     if (typeof dispose === "function") state.disposers.push(dispose);
   }
+}
+
+/** The React page for a payload, or null while the route is still payload HTML. */
+function pageFor(payload) {
+  if (payload.docs) return { Component: DocsPage, props: { page: { ...payload.docs, article: { __html: payload.docs.article } } } };
+  return PAGES[payload.path] ? { Component: PAGES[payload.path], props: {} } : null;
 }
 
 /** Render a location. Returns true when the route rendered (false when superseded by a newer navigation). */
@@ -158,17 +164,15 @@ export async function render(href, { scroll = "top", focus = false } = {}) {
   document.body.className = payload.bodyClass;
   setMeta(payload, path);
   const app = payload.kind === "app";
+  const page = pageFor(payload);
   update({
     ...chromeFor(payload),
     ...(app
-      ? { standaloneClass: payload.mainClass || "", standaloneHtml: { __html: payload.html } }
-      : payload.docs
-        ? { mainClass: payload.mainClass || "", docs: { ...payload.docs, article: { __html: payload.docs.article } } }
-        : { mainClass: payload.mainClass || "", mainHtml: { __html: payload.html } }),
+      ? { standaloneClass: payload.mainClass || "", ...(page ? { standalonePage: page } : { standaloneHtml: { __html: payload.html } }) }
+      : { mainClass: payload.mainClass || "", ...(page ? { mainPage: page } : { mainHtml: { __html: payload.html } }) }),
   });
   finishStyles();
   state.path = path;
-  if (payload.kind === "app") { const mail = byId("st-gate-mail"); if (mail) mail.href = "mailto:?subject=" + encodeURIComponent("Open the Verse Playground on a laptop") + "&body=" + encodeURIComponent("Open this link on a laptop or desktop: " + location.origin + path); }
   await mountModules(payload, path);
   if (scroll === "top") { if (url.hash && byId(decodeURIComponent(url.hash.slice(1)))) byId(decodeURIComponent(url.hash.slice(1))).scrollIntoView(); else window.scrollTo(0, 0); }
   else if (typeof scroll === "number") window.scrollTo(0, scroll);

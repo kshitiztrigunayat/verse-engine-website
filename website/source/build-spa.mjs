@@ -65,6 +65,9 @@ function splitDocs(html,route){
   return docs;
 }
 
+// ---------- routes whose page is a React component (keys of PAGES in src/pages/index.js) ----------
+const REACT_PAGES=new Set([...read(path.join(project,'src/pages/index.js')).matchAll(/^\s+"(\/[^"]*)":/gm)].map(m=>m[1]));
+
 // ---------- shell pieces (shared chrome) from the About page ----------
 const aboutHtml=read(path.join(stage,'about/index.html'));
 const pick=(re,html,label)=>{const m=html.match(re);if(!m)throw new Error('shell piece not found: '+label);return m[0]};
@@ -120,7 +123,8 @@ for(const file of walk(stage).filter(f=>f.endsWith('.html'))){
   html=html.replace(/(\s(?:src|href|poster|data-src)=")(?!\/|#|[a-z][a-z0-9+.-]*:|\.)/gi,'$1/').replace(/url\((['"]?)assets\//g,'url($1/assets/');   // routes live at any depth: use root-absolute URLs
   const used=new Set(shellUsed);
   html=addIds(html,used);
-  const content=kind==='page'&&html.startsWith('<section class="documentation"')?{docs:splitDocs(html,route)}:{html};
+  // React pages (src/pages/index.js) render their own markup: their payload only carries the meta.
+  const content=kind==='page'&&html.startsWith('<section class="documentation"')?{docs:splitDocs(html,route)}:REACT_PAGES.has(route)?{}:{html};
   const payload={path:route,kind,chrome,title,description,bodyClass,mainClass,navCurrent,noindex:NOINDEX.has(route),...(route==='/'?{jsonld}:{}),...content};
   fs.writeFileSync(path.join(dist,'content',fileFor(route===  '/404'?'/404':route)+'.json'),JSON.stringify(payload));
   if(kind!=='notfound')routes.push({path:route,kind,noindex:NOINDEX.has(route),title});

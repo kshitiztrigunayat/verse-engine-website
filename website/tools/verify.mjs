@@ -18,6 +18,10 @@ if(!exists(manifestFile))err('content/manifest.json is missing');
 const manifest=exists(manifestFile)?JSON.parse(read(manifestFile)):[];
 const routes=new Set(manifest.map(r=>r.path));
 const fileFor=route=>route==='/'?'index':route.slice(1).replaceAll('/','__');
+// React pages: src/pages/index.js maps a route to its component file; check that file's ids and links.
+const pagesIndex=read(path.join(project,'src/pages/index.js'));
+const pageFiles=new Map([...pagesIndex.matchAll(/^import (\w+) from "\.\/([^"]+)";/gm)].map(m=>[m[1],path.join(project,'src/pages',m[2])]));
+const reactPages=new Map([...pagesIndex.matchAll(/^\s+"(\/[^"]*)": (\w+),/gm)].map(m=>[m[1],read(pageFiles.get(m[2]))]));
 const REQUIRED=['path','kind','chrome','title','description','bodyClass'];
 const payloads=new Map();
 for(const {path:route} of manifest){
@@ -25,7 +29,7 @@ for(const {path:route} of manifest){
   if(!exists(f)){err('missing payload for '+route);continue}
   let p;try{p=JSON.parse(read(f))}catch{err('invalid JSON: '+f);continue}
   for(const k of REQUIRED)if(p[k]===undefined)err(`${route}: payload lacks "${k}"`);
-  if(p.html===undefined&&p.docs===undefined)err(`${route}: payload lacks "html" (or "docs")`);
+  if(p.html===undefined&&p.docs===undefined&&!reactPages.has(route))err(`${route}: payload lacks "html" (or "docs")`);
   payloads.set(route,p);
 }
 if(!exists(path.join(dist,'content/404.json')))err('content/404.json is missing');
@@ -51,7 +55,7 @@ for(const m of shell.matchAll(/(?:href|src)="([^"]+)"/g))resolveRef(m[1],path.jo
 // Docs pages: the layout is src/pages/docs/DocsPage.jsx + nav.json; the payload holds the article, source link and "on this page" links.
 const docsLayout=read(path.join(project,'src/pages/docs/DocsPage.jsx')),docsNav=JSON.parse(read(path.join(project,'src/pages/docs/nav.json')));
 const docsNavHtml=[0,1].map(i=>docsNav.map(g=>`<section id="${g.ids[i]}">`+g.items.map(n=>`<a href="${n.href}" id="${n.ids[i]}">`).join('')).join('')).join('');
-const htmlOf=p=>p.html??[docsLayout.match(/\sid="[^"]+"/g).join(' '),docsNavHtml,p.docs.article,`<a href="${p.docs.source}">`,...p.docs.toc.map(t=>`<a href="${t.href}" id="${t.id}">`)].join('');
+const htmlOf=p=>p.html??(reactPages.has(p.path)?reactPages.get(p.path):null)??[docsLayout.match(/\sid="[^"]+"/g).join(' '),docsNavHtml,p.docs.article,`<a href="${p.docs.source}">`,...p.docs.toc.map(t=>`<a href="${t.href}" id="${t.id}">`)].join('');
 for(const [route,p] of payloads){
   p.html=htmlOf(p);
   const ids=[...p.html.matchAll(/\sid="([^"]+)"/g)].map(m=>m[1]);

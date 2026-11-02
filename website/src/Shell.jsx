@@ -8,10 +8,12 @@ import Header from "./components/Header.jsx";
 import Footer from "./components/Footer.jsx";
 import MobileMenu, { openMenu } from "./components/MobileMenu.jsx";
 import Announcer from "./components/Announcer.jsx";
-import DocsPage from "./pages/docs/DocsPage.jsx";
 
 // Shown when JavaScript is off (also kept in index.html, which is what such visitors get).
 const NOSCRIPT = { __html: '<p style="padding:24px;font-family:sans-serif">Verse Engine needs JavaScript to display this site.</p>' };
+
+// A route's content: its React page component, or (not converted yet) its payload HTML.
+const content = (page, html) => (page ? { children: <page.Component {...page.props} /> } : { dangerouslySetInnerHTML: html });
 
 export default function Shell({ view }) {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -23,14 +25,13 @@ export default function Shell({ view }) {
       {"\n"}
       <Header view={view} menuOpen={menuOpen} menuButtonRef={menuButtonRef} onOpenMenu={() => openMenu(dialogRef, setMenuOpen)} />
       {"\n"}
-      {/* Docs pages are React components; other pages are still their payload HTML. */}
-      <main id="app-main" tabIndex="-1" className={view.mainClass} hidden={view.mainHidden} {...(view.docs ? { children: <DocsPage page={view.docs} /> } : { dangerouslySetInnerHTML: view.mainHtml })} />
+      <main id="app-main" tabIndex="-1" className={view.mainClass} hidden={view.mainHidden} {...content(view.mainPage, view.mainHtml)} />
       {"\n"}
       <Footer hidden={view.footerHidden} />
       {"\n"}
       <MobileMenu dialogRef={dialogRef} menuButtonRef={menuButtonRef} setMenuOpen={setMenuOpen} />
       {"\n"}
-      <div id="app-standalone" className={view.standaloneClass} hidden={view.standaloneHidden} dangerouslySetInnerHTML={view.standaloneHtml} />
+      <div id="app-standalone" className={view.standaloneClass} hidden={view.standaloneHidden} {...content(view.standalonePage, view.standaloneHtml)} />
       {"\n"}
       <Announcer text={view.announcement} />
       {"\n"}
