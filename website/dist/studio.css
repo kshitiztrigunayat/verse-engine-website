@@ -330,3 +330,5 @@ h1,h2,h3{font-family:Degular,sans-serif;font-weight:600}
 .si-card .field input{border-radius:8px}.si-submit{border-radius:8px}
 .pill{border-radius:6px}
 @media (max-width:800px){.st-nav:not(.st-help) a{border-radius:8px;font-size:14px;min-height:40px}.st-nav:not(.st-help) a[aria-current=page]{background:var(--brand-blue);color:#fff}.st-nav:not(.st-help) a[aria-current=page] svg{color:#fff}}
+
+@media(max-width:380px){.st-top-actions{gap:12px;flex-wrap:wrap;justify-content:flex-end}.st-top-actions .st-link{white-space:normal}}

@@ -55,3 +55,9 @@ Source provenance: public product content captured on 29–30 October 2026 from 
 ## First developer review
 
 Read `docs/architecture.md`, then `docs/design-and-motion.md`. Use `docs/integrations-and-release.md` to validate production destinations before launch. The runtime manifest and QA report establish the package baseline; screenshot references illustrate prior visual checks and are not interactive specifications.
+
+## Production release additions
+
+- `npm run build` (in `website/`) now runs `source/finalize-seo.mjs` after the page generator. It gives each page a unique meta description, canonical, Open Graph and Twitter tags, marks `/studio`, `/signin` and the 404 as `noindex`, and rewrites the origin in canonicals, `robots.txt` and `sitemap.xml`.
+- **Before launch**, set the real domain: `SITE_ORIGIN=https://your-domain npm run build`. The default is still the design-site staging origin.
+- Both `vercel.json` files now send security headers and cache `/assets` and `/vendor` for a week and CSS/JS/JSON with revalidation.

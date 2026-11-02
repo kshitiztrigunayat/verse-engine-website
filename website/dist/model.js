@@ -43,7 +43,7 @@ export async function createExperience(host){
  function update(pose,time,pointer,paused=false){
   const progress=Math.max(0,Math.min(5,pose.progress??0)),i=Math.min(4,Math.floor(progress)),f=ease(progress-i);
   const mobileScale=[1.5,1.8,2.0,1.4,2.0,1.45];
-  const radius=Math.exp(THREE.MathUtils.lerp(Math.log(radii[i]),Math.log(radii[i+1]),f))*(mobile?THREE.MathUtils.lerp(mobileScale[i],mobileScale[i+1],f):1);
+  const radius=Math.exp(THREE.MathUtils.lerp(Math.log(radii[i]),Math.log(radii[i+1]),f))*(mobile?THREE.MathUtils.lerp(mobileScale[i],mobileScale[i+1],f):innerWidth<=900?1.32:1);
   for(let k=0;k<3;k++){target.setComponent(k,THREE.MathUtils.lerp(targets[i][k],targets[i+1][k],f));direction.setComponent(k,THREE.MathUtils.lerp(directions[i][k],directions[i+1][k],f));}
   if(!paused){direction.x+=pointer.x*.07+Math.sin(time*.18)*.004;direction.y+=pointer.y*.025;}
   const focus=pose.focus??0;

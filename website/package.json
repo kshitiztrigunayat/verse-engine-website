@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "start": "node preview-server.mjs",
-    "build": "node source/build-production-pages.mjs",
+    "build": "node source/build-production-pages.mjs && node source/finalize-seo.mjs",
     "check": "node tools/verify.mjs"
   },
   "engines": { "node": ">=22" }
