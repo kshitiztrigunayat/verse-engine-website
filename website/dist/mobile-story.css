@@ -18,3 +18,16 @@
  .story-panel:not(.hero-panel) h2,.stream-panel h2,.link-panel h2,.reality-panel h2{font-size:clamp(34px,10vw,44px)!important}
  .story-panel:not(.hero-panel) .panel-copy>p:not(.chapter-label){font-size:12px!important;margin-top:10px!important}
 }
+/* Persistent CTA: lives in the stage so it stays through all five chapters. */
+.story-cta{display:none}
+@media(max-width:600px){
+ .story-cta{display:inline-flex;position:absolute;z-index:7;left:24px;right:24px;bottom:92px;justify-content:space-between;min-height:46px;box-shadow:0 0 0 2px #fff}
+ .hero-panel .panel-copy>.button,.hero-panel .button{visibility:hidden!important}
+ .scroll-invitation{display:none!important}
+ .resolve-panel .button{visibility:hidden!important}
+}
+
+/* Remove the large VERSE background text from the hero */
+.ghost-type{display:none!important}
+
+.button.action.story-cta{background:var(--cta-bg,#3d75f3)!important;border-color:var(--cta-bg,#3d75f3)!important;color:var(--cta-ink,#fff)!important}
