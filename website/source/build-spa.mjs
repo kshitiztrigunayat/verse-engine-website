@@ -37,6 +37,34 @@ function addIds(html,used){
   });
 }
 
+// ---------- documentation pages: data for the React docs layout (src/pages/docs/DocsPage.jsx) ----------
+// Every /docs page has the same layout (search boxes, chapter nav, article, source line, "on this page").
+// Its payload keeps only what differs per page: { active, article, source, toc }. The chapter nav is the
+// same on every page and is written once to src/pages/docs/nav.json. docsMarkup() is the same layout as
+// DocsPage.jsx, as a string: each page is rebuilt from its data and must match the generated HTML exactly.
+const docsNavFile=path.join(project,'src/pages/docs/nav.json');
+let docsNav=null;
+const navMarkup=(nav,i,active)=>`<div class="docs-nav-content">${nav.map(g=>`<section id="${g.ids[i]}"><h2>${esc(g.title)}</h2>${g.items.map(n=>`<a data-doc-item data-doc-title="${esc(n.docTitle)}" href="${esc(n.href)}"${n.href===active?' aria-current="page"':''} id="${n.ids[i]}">${esc(n.title)}</a>`).join('')}</section>`).join('')}<p class="docs-no-results" hidden>No matching guides.</p></div>`;
+const searchMarkup=place=>`<label class="docs-search" for="doc-search-${place}"><span class="sr-only">Search documentation</span><input id="doc-search-${place}" type="search" placeholder="Search documentation" data-doc-search autocomplete="off"><kbd aria-hidden="true">⌘ K</kbd></label>`;
+const docsMarkup=(d,nav)=>`<section class="documentation" id="sec-documentation"><div class="docs-mobile">${searchMarkup('mobile')}<details id="dtl-item"><summary id="sum-browse-documentation">Browse documentation <span aria-hidden="true">+</span></summary><nav aria-label="Documentation chapters" id="nav-documentation-chapters">${navMarkup(nav,0,d.active)}</nav></details></div><aside class="docs-sidebar" id="asd-docs-sidebar">${searchMarkup('desktop')}<nav aria-label="Documentation chapters" id="nav-documentation-chapters-2">${navMarkup(nav,1,d.active)}</nav></aside><div class="doc-body"><article class="doc-article" id="art-doc-article">${d.article}</article><div class="doc-source">Published documentation from <a href="${esc(d.source)}" id="lnk-verse-by-ctruh">Verse by Ctruh</a></div></div>${d.toc.length?`<aside class="docs-toc" id="asd-docs-toc"><p>ON THIS PAGE</p>${d.toc.map(t=>`<a href="${esc(t.href)}" id="${t.id}">${esc(t.text)}</a>`).join('')}</aside>`:''}</section>`;
+function splitDocs(html,route){
+  const fail=what=>{throw new Error(`docs page ${route}: ${what}`)};
+  const navs=[...html.matchAll(/<div class="docs-nav-content">([\s\S]*?)<p class="docs-no-results" hidden>No matching guides\.<\/p><\/div>/g)].map(m=>[...m[1].matchAll(/<section id="([^"]+)"><h2>([\s\S]*?)<\/h2>([\s\S]*?)<\/section>/g)].map(g=>({id:g[1],title:unesc(g[2]),items:[...g[3].matchAll(/<a data-doc-item data-doc-title="([^"]*)" href="([^"]*)"( aria-current="page")? id="([^"]+)">([\s\S]*?)<\/a>/g)].map(a=>({docTitle:unesc(a[1]),href:unesc(a[2]),current:!!a[3],id:a[4],title:unesc(a[5])}))})));
+  if(navs.length!==2)fail('expected two chapter navs');
+  const [mobile,desktop]=navs;
+  const nav=mobile.map((g,gi)=>({title:g.title,ids:[g.id,desktop[gi]?.id],items:g.items.map((n,ni)=>({href:n.href,title:n.title,docTitle:n.docTitle,ids:[n.id,desktop[gi]?.items[ni]?.id]}))}));
+  const active=mobile.flatMap(g=>g.items).find(n=>n.current)?.href??null;
+  const article=(html.match(/<article class="doc-article" id="art-doc-article">([\s\S]*)<\/article><div class="doc-source">/)||fail('article'))[1];
+  const source=unesc((html.match(/<div class="doc-source">Published documentation from <a href="([^"]*)" id="lnk-verse-by-ctruh">Verse by Ctruh<\/a><\/div>/)||fail('source line'))[1]);
+  const tocHtml=(html.match(/<aside class="docs-toc" id="asd-docs-toc"><p>ON THIS PAGE<\/p>([\s\S]*?)<\/aside>/)||[,''])[1];
+  const toc=[...tocHtml.matchAll(/<a href="([^"]*)" id="([^"]+)">([\s\S]*?)<\/a>/g)].map(t=>({href:unesc(t[1]),id:t[2],text:unesc(t[3])}));
+  const docs={active,article,source,toc};
+  if(unesc(docsMarkup(docs,nav))!==unesc(html))fail('layout does not match DocsPage (rebuilt HTML differs)');
+  if(docsNav&&JSON.stringify(docsNav)!==JSON.stringify(nav))fail('chapter nav differs from the other docs pages');
+  docsNav=nav;
+  return docs;
+}
+
 // ---------- shell pieces (shared chrome) from the About page ----------
 const aboutHtml=read(path.join(stage,'about/index.html'));
 const pick=(re,html,label)=>{const m=html.match(re);if(!m)throw new Error('shell piece not found: '+label);return m[0]};
@@ -92,7 +120,8 @@ for(const file of walk(stage).filter(f=>f.endsWith('.html'))){
   html=html.replace(/(\s(?:src|href|poster|data-src)=")(?!\/|#|[a-z][a-z0-9+.-]*:|\.)/gi,'$1/').replace(/url\((['"]?)assets\//g,'url($1/assets/');   // routes live at any depth: use root-absolute URLs
   const used=new Set(shellUsed);
   html=addIds(html,used);
-  const payload={path:route,kind,chrome,title,description,bodyClass,mainClass,navCurrent,noindex:NOINDEX.has(route),...(route==='/'?{jsonld}:{}),html};
+  const content=kind==='page'&&html.startsWith('<section class="documentation"')?{docs:splitDocs(html,route)}:{html};
+  const payload={path:route,kind,chrome,title,description,bodyClass,mainClass,navCurrent,noindex:NOINDEX.has(route),...(route==='/'?{jsonld}:{}),...content};
   fs.writeFileSync(path.join(dist,'content',fileFor(route===  '/404'?'/404':route)+'.json'),JSON.stringify(payload));
   if(kind!=='notfound')routes.push({path:route,kind,noindex:NOINDEX.has(route),title});
 }
@@ -104,6 +133,10 @@ shell=shell.replace('<!--@header-->',shellHeader).replace('<!--@menu-->',shellMe
 // The shell is now the React component src/Shell.jsx (keep it in sync with templates/shell.html);
 // write the generated shell for reference only, outside public/.
 fs.writeFileSync(path.join(project,'.build-shell.html'),shell);
+
+// ---------- docs chapter nav (shared by every docs page) ----------
+if(!docsNav)throw new Error('no documentation pages found');
+fs.mkdirSync(path.dirname(docsNavFile),{recursive:true});fs.writeFileSync(docsNavFile,JSON.stringify(docsNav,null,2)+'\n');
 
 // ---------- static data + discovery files ----------
 for(const f of ['pricing-data.json','code-samples.json'])fs.copyFileSync(path.join(stage,f),path.join(dist,f));

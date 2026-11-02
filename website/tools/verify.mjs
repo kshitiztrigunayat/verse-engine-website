@@ -18,13 +18,14 @@ if(!exists(manifestFile))err('content/manifest.json is missing');
 const manifest=exists(manifestFile)?JSON.parse(read(manifestFile)):[];
 const routes=new Set(manifest.map(r=>r.path));
 const fileFor=route=>route==='/'?'index':route.slice(1).replaceAll('/','__');
-const REQUIRED=['path','kind','chrome','title','description','bodyClass','html'];
+const REQUIRED=['path','kind','chrome','title','description','bodyClass'];
 const payloads=new Map();
 for(const {path:route} of manifest){
   const f=path.join(dist,'content',fileFor(route)+'.json');
   if(!exists(f)){err('missing payload for '+route);continue}
   let p;try{p=JSON.parse(read(f))}catch{err('invalid JSON: '+f);continue}
   for(const k of REQUIRED)if(p[k]===undefined)err(`${route}: payload lacks "${k}"`);
+  if(p.html===undefined&&p.docs===undefined)err(`${route}: payload lacks "html" (or "docs")`);
   payloads.set(route,p);
 }
 if(!exists(path.join(dist,'content/404.json')))err('content/404.json is missing');
@@ -47,7 +48,12 @@ const shellIds=[...shell.matchAll(/\sid="([^"]+)"/g)].map(m=>m[1]);
 const dup=ids=>ids.filter((id,i)=>ids.indexOf(id)!==i);
 for(const d of dup(shellIds))err('duplicate id in shell: '+d);
 for(const m of shell.matchAll(/(?:href|src)="([^"]+)"/g))resolveRef(m[1],path.join(dist,'index.html'));
+// Docs pages: the layout is src/pages/docs/DocsPage.jsx + nav.json; the payload holds the article, source link and "on this page" links.
+const docsLayout=read(path.join(project,'src/pages/docs/DocsPage.jsx')),docsNav=JSON.parse(read(path.join(project,'src/pages/docs/nav.json')));
+const docsNavHtml=[0,1].map(i=>docsNav.map(g=>`<section id="${g.ids[i]}">`+g.items.map(n=>`<a href="${n.href}" id="${n.ids[i]}">`).join('')).join('')).join('');
+const htmlOf=p=>p.html??[docsLayout.match(/\sid="[^"]+"/g).join(' '),docsNavHtml,p.docs.article,`<a href="${p.docs.source}">`,...p.docs.toc.map(t=>`<a href="${t.href}" id="${t.id}">`)].join('');
 for(const [route,p] of payloads){
+  p.html=htmlOf(p);
   const ids=[...p.html.matchAll(/\sid="([^"]+)"/g)].map(m=>m[1]);
   for(const d of dup([...shellIds,...ids]))err(`duplicate id on ${route}: ${d}`);
   for(const m of p.html.matchAll(/(?:href|src)="([^"]+)"/g))resolveRef(m[1],`content:${route}`);
@@ -58,7 +64,8 @@ for(const f of walk(dist)){
   if(ext==='.css')for(const m of read(f).matchAll(/url\(\s*['"]?([^'")\s]+)['"]?\s*\)/g))resolveRef(m[1],f);
   if(ext==='.js'||ext==='.mjs'){
     const t=read(f);
-    for(const m of t.matchAll(/(?:from\s*|import\s*\(\s*)['"]([^'"]+)['"]/g))resolveRef(m[1],f);
+    // Vite's bundle (_app/) is checked by Vite itself; its minified text can look like an import.
+    if(!f.includes(path.sep+'_app'+path.sep))for(const m of t.matchAll(/(?:from\s*|import\s*\(\s*)['"]([^'"]+)['"]/g))resolveRef(m[1],f);
     const r=spawnSync(process.execPath,['--check',f],{encoding:'utf8'});if(r.status!==0)err(r.stderr);
   }
   if(ext==='.json'){try{JSON.parse(read(f))}catch{err('Invalid JSON: '+path.relative(dist,f))}}

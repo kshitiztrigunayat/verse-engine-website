@@ -41,6 +41,9 @@ export const initialView = {
   // re-applies dangerouslySetInnerHTML whenever it gets a new object, which would
   // wipe what the behaviour modules did to the page after it was inserted.
   mainHtml: { __html: "" },
+  // Documentation pages are rendered by React (src/pages/docs/DocsPage.jsx) from the payload's
+  // `docs` data instead of HTML; the article HTML is again a { __html } object made once per route.
+  docs: null,
   standaloneHidden: true,
   standaloneClass: undefined,
   standaloneHtml: { __html: "" },
@@ -126,7 +129,7 @@ function chromeFor(payload) {
 async function leave() {
   const disposers = state.disposers.splice(0).reverse();
   for (const dispose of disposers) { try { await dispose(); } catch (error) { console.warn("dispose failed", error); } }
-  update({ mainHtml: { __html: "" }, standaloneHtml: { __html: "" } });
+  update({ mainHtml: { __html: "" }, docs: null, standaloneHtml: { __html: "" } });
   byId("menu-dialog").open && byId("menu-dialog").close();
 }
 
@@ -159,7 +162,9 @@ export async function render(href, { scroll = "top", focus = false } = {}) {
     ...chromeFor(payload),
     ...(app
       ? { standaloneClass: payload.mainClass || "", standaloneHtml: { __html: payload.html } }
-      : { mainClass: payload.mainClass || "", mainHtml: { __html: payload.html } }),
+      : payload.docs
+        ? { mainClass: payload.mainClass || "", docs: { ...payload.docs, article: { __html: payload.docs.article } } }
+        : { mainClass: payload.mainClass || "", mainHtml: { __html: payload.html } }),
   });
   finishStyles();
   state.path = path;
