@@ -68,9 +68,8 @@ export default function Landing() {
                 </span>
               </h1>
               <p className="hero-description">
-                Your biggest ideas deserve to go places.
-                <br />
-                Turn any 3D scene into a link anyone can open.
+                Verse Engine by Ctruh is the browser-native 3D engine.
+                Turn any 3D file, scan or Blender, Unity or Unreal project into one link that opens in a browser, on phones, laptops and headsets.
               </p>
               <a className="button action" href="/studio" id="lnk-explore-verse-engine-2">
                 <span>Explore Verse Engine</span>
