@@ -13,6 +13,9 @@
   "engines": {
     "node": ">=22"
   },
+  "config": {
+    "siteUrl": "https://verse.ctruh.com"
+  },
   "dependencies": {
     "gsap": "3.13.0",
     "lenis": "1.3.11",

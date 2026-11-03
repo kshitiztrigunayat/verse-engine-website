@@ -9,7 +9,8 @@ const here=path.dirname(fileURLToPath(import.meta.url)), project=path.resolve(he
 // Output goes to public/, which Vite serves and copies into dist/ unchanged.
 const stage=process.env.VERSE_DIST, dist=path.join(project,'public');
 if(!stage)throw new Error('VERSE_DIST (stage directory) is required');
-const ORIGIN=(process.env.SITE_ORIGIN||'https://verse-engine-ctruh-design.rajat83.chatgpt.site').replace(/\/+$/,'');
+// The site's address for sitemap.xml and robots.txt: package.json config.siteUrl (SITE_ORIGIN overrides it).
+const ORIGIN=(process.env.SITE_ORIGIN||JSON.parse(fs.readFileSync(path.join(project,'package.json'),'utf8')).config.siteUrl).replace(/\/+$/,'');
 const NOINDEX=new Set(['/studio','/signin','/404']);
 const read=f=>fs.readFileSync(f,'utf8');
 const walk=d=>fs.readdirSync(d,{withFileTypes:true}).flatMap(e=>e.isDirectory()?walk(path.join(d,e.name)):[path.join(d,e.name)]);
