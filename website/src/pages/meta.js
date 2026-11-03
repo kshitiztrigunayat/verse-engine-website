@@ -113,7 +113,7 @@ export const META = {
     kind: "app",
     chrome: "none",
     title: "Sign in | Verse Engine by Ctruh",
-    description: "Sign in to open the Verse Playground. Prototype sign-in: any details continue.",
+    description: "Sign in to Verse Engine by Ctruh to upload, publish and share 3D scenes.",
     bodyClass: "studio-page signin-page",
     mainClass: "",
     navCurrent: "",
