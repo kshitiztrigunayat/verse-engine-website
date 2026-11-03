@@ -4,6 +4,33 @@
   "buildCommand": "cd website && npm run build",
   "outputDirectory": "website/dist",
   "cleanUrls": false,
+  "redirects": [
+    {
+      "source": "/plug-ins",
+      "destination": "/plugins",
+      "permanent": true
+    },
+    {
+      "source": "/engine",
+      "destination": "/docs/what-is-verse-engine",
+      "permanent": true
+    },
+    {
+      "source": "/bench",
+      "destination": "/docs/guides/spatial-bench",
+      "permanent": true
+    },
+    {
+      "source": "/developers/playground",
+      "destination": "/studio",
+      "permanent": true
+    },
+    {
+      "source": "/developers/adoption",
+      "destination": "/developers",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     {
       "source": "/((?!.*\\.).*)",
