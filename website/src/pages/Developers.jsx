@@ -182,7 +182,7 @@ export default function Developers() {
             <span className="step-number">02</span>
             <h3>Upload your first scene</h3>
             <p>POST a file, then wait for the job to finish.</p>
-            <a className="text-link" href="/docs/api" id="lnk-set-up-webhooks">{"Set up webhooks "}</a>
+            <a className="text-link" href="/docs/scenes-api" id="lnk-set-up-webhooks">{"Set up webhooks "}</a>
           </li>
           <li>
             <span className="step-number">03</span>

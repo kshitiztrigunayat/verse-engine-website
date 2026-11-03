@@ -98,6 +98,8 @@ const shellMenu=addIds(named(menu,[
   ['<a class="site-button" ','<a id="btn-menu-explore" class="site-button" '],
   ['<a class="menu-challenge"','<a id="btn-menu-challenge" class="menu-challenge"']]),shellUsed);
 const shellFooter=addIds(named(footer,[['<footer class="page-footer">','<footer id="site-footer" class="page-footer">']]),shellUsed);
+// Duplicate docs URLs and the page each one redirects to (same list as the redirects in vercel.json).
+const DUPLICATE_DOCS={'/docs/api':'/docs/scenes-api','/docs/authentication':'/docs/api-quickstart','/docs/blender':'/docs/guides/publish-from-blender','/docs/concepts':'/docs/how-streaming-works','/docs/webhooks':'/docs/developers','/docs/fixing-doors-and-windows':'/docs/guides/instant-home','/docs/floor-plan-to-3d-home':'/docs/guides/floor-plan-to-3d','/docs/upload-your-first-scene':'/docs/getting-started','/docs/materials-and-lighting':'/docs/guides/fidelity-mode','/docs/unity':'/docs/guides/publish-from-unity','/docs/unreal':'/docs/guides/publish-from-unreal','/docs/start-a-live-tour':'/docs/guides/tour-together','/docs/supported-file-types':'/docs/guides/what-you-can-upload','/docs':'/docs/what-is-verse-engine'};
 const fileFor=route=>route==='/'?'index':route.slice(1).replaceAll('/','__');
 
 for(const file of walk(stage).filter(f=>f.endsWith('.html'))){
@@ -123,6 +125,7 @@ for(const file of walk(stage).filter(f=>f.endsWith('.html'))){
   }
   const navCurrent=(h.match(/<a class="nav-link" href="([^"]*)" aria-current="page"/)||[,''])[1];
   html=html.replace(/(\s(?:src|href|poster|data-src)=")(?!\/|#|[a-z][a-z0-9+.-]*:|\.)/gi,'$1/').replace(/url\((['"]?)assets\//g,'url($1/assets/');   // routes live at any depth: use root-absolute URLs
+  html=html.replace(/href="(\/docs(?:\/[a-z0-9-]+)?)\/?(?=["#?])/g,(link,from)=>DUPLICATE_DOCS[from]?'href="'+DUPLICATE_DOCS[from]:link);   // links to a duplicate docs URL go to the page we keep
   const used=new Set(shellUsed);
   html=addIds(html,used);
   if(REACT_PAGES.has(route)){const m=META[route];if(m.kind!=='notfound')routes.push({path:route,kind:m.kind,noindex:m.noindex,title:m.title});continue}

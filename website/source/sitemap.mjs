@@ -11,13 +11,13 @@ export const notInSitemap = new Set([
   '/docs', // copy of /docs/what-is-verse-engine
   '/docs/upload-your-first-scene', // copy of /docs/getting-started
   '/docs/supported-file-types', // copy of /docs/guides/what-you-can-upload
-  '/docs/how-streaming-works', // copy of /docs/concepts
+  '/docs/concepts', // copy of /docs/how-streaming-works
   '/docs/materials-and-lighting', // copy of /docs/guides/fidelity-mode
   '/docs/floor-plan-to-3d-home', // copy of /docs/guides/floor-plan-to-3d
   '/docs/fixing-doors-and-windows', // copy of /docs/guides/instant-home
   '/docs/start-a-live-tour', // copy of /docs/guides/tour-together
   '/docs/authentication', // copy of /docs/api-quickstart
-  '/docs/scenes-api', // copy of /docs/api
+  '/docs/api', // copy of /docs/scenes-api
   '/docs/webhooks', // copy of /docs/developers
   '/docs/blender', // copy of /docs/guides/publish-from-blender
   '/docs/unity', // copy of /docs/guides/publish-from-unity

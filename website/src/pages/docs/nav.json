@@ -43,7 +43,7 @@
         ]
       },
       {
-        "href": "/docs/concepts",
+        "href": "/docs/how-streaming-works",
         "title": "Concepts",
         "docTitle": "concepts",
         "ids": [
@@ -799,7 +799,7 @@
         ]
       },
       {
-        "href": "/docs/api",
+        "href": "/docs/scenes-api",
         "title": "Verse API reference",
         "docTitle": "verse api reference",
         "ids": [
