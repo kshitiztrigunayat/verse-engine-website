@@ -31,6 +31,10 @@ html.intro-on body:before{content:"";position:fixed;inset:0;background:#fff;z-in
 try{if(!matchMedia("(prefers-reduced-motion: reduce)").matches&&!/motion-off|poster/.test(location.search))document.documentElement.classList.add("intro-on")}catch(e){}
 setTimeout(function(){document.documentElement.classList.remove("intro-on")},4500);
 </script>
+<script id="script-docs-hash">
+/* /docs only: old production docs links (/docs/#/...) go to the new page paths. */
+(function(){if(!/^\/docs\/?$/.test(location.pathname))return;var h=location.hash;if(h.indexOf('#/')===0){var p=h.slice(2).split('?')[0];var map={'examples':'/samples','guides/publish-from-substance-painter':'/plugins'};location.replace(map[p]||('/docs/'+p));}})();
+</script>
 <script id="script-main" type="module" src="/src/main.jsx"></script>
 </head>
 <body id="app-body">
