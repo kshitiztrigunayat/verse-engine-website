@@ -19,8 +19,8 @@ Serve the site over HTTP; opening `index.html` with `file://` will not work.
 
 | Location | Purpose |
 | --- | --- |
-| `website/src/` | The app: `main.jsx` (entry), `router.js`, `Shell.jsx` and `components/` (header, footer, menu), `pages/` (one React component per page; `pages/index.js` lists them), `pages/docs/` (documentation layout and chapter list), `pages/studio/` (Playground frame) |
-| `website/public/` | Served unchanged at the same paths: `css/` (site styles; the router adds each page's stylesheets), `js/` (`studio.js`: the Playground views; `transition.js`: intro and page transition; `landing/`: the home-page GSAP and Three.js animation; `core.js`), `content/` (generated route payloads: meta, and the documentation data), `assets/` (images, fonts, models), `vendor/` (Three.js, GSAP, Lenis), `pricing-data.json`, `code-samples.json`, `sitemap.xml`, `robots.txt` |
+| `website/src/` | The app: `main.jsx` (entry), `router.js`, `Shell.jsx` and `components/` (header, footer, menu), `pages/` (one React component per page; `pages/index.js` lists them), `pages/docs/` (documentation layout and chapter list), `pages/studio/` (Playground: views, data, 3D preview) |
+| `website/public/` | Served unchanged at the same paths: `css/` (site styles; the router adds each page's stylesheets), `js/` (`transition.js`: intro and page transition; `landing/`: the home-page GSAP and Three.js animation; `core.js`), `content/` (generated route payloads: meta, and the documentation data), `assets/` (images, fonts, models), `vendor/` (Three.js, GSAP, Lenis), `pricing-data.json`, `code-samples.json`, `sitemap.xml`, `robots.txt` |
 | `website/dist/` | Build output of `npm run build`; generated, not committed |
 | `website/source/` | Content build (`npm run content`): templates, page generators, public content snapshots and 88 documentation Markdown files |
 | `website/preview-server.mjs` | Local preview server for `dist/`, bound to 127.0.0.1:4173; not a production server |
@@ -52,7 +52,7 @@ The landing page keeps the approved sequence: particle-world story; possibilitie
 
 ## Current implementation status
 
-The site was converted from HTML fragments and plain JavaScript modules to React components; the converted site was checked against the previous build on every route at desktop and phone widths (page structure, head, console messages, screenshots) and through scripted interactions, with the same results. The animation stays in GSAP and Three.js (`public/js/landing/`, `public/js/transition.js`), and the Playground views are still drawn by `public/js/studio.js`. The existing hosted website has not been changed by this work.
+The site was converted from HTML fragments and plain JavaScript modules to React components; the converted site was checked against the previous build on every route at desktop and phone widths (page structure, head, console messages, screenshots) and through scripted interactions, with the same results. The animation stays in GSAP and Three.js (`public/js/landing/`, `public/js/transition.js`). The existing hosted website has not been changed by this work.
 
 Source provenance: public product content captured on 29–30 October 2026 from the owner's supplied Vercel prototype and `verse.ctruh.com`. External endpoints are recorded in `reference/external-links.json`.
 

@@ -24,7 +24,6 @@ const STYLES = {
 };
 const MODULES = {
   "/": () => load("/js/landing/index.js"),
-  "/studio": () => load("/js/studio.js"),
 };
 const THEME_COLOR = { landing: "#f5f6f7" };
 const origin = () => byId("meta-site-origin").content.replace(/\/+$/, "");
