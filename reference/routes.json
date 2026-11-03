@@ -560,6 +560,16 @@
     "payload": "content/pricing.json"
   },
   {
+    "route": "/privacy",
+    "kind": "legal",
+    "payload": "content/privacy.json"
+  },
+  {
+    "route": "/refunds",
+    "kind": "legal",
+    "payload": "content/refunds.json"
+  },
+  {
     "route": "/samples",
     "kind": "page",
     "payload": "content/samples.json"
@@ -573,5 +583,10 @@
     "route": "/studio",
     "kind": "app",
     "payload": "content/studio.json"
+  },
+  {
+    "route": "/terms",
+    "kind": "legal",
+    "payload": "content/terms.json"
   }
 ]
