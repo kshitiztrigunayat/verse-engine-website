@@ -953,8 +953,9 @@ export default function Landing() {
         <div className="footer-bottom">
           <span>© 2026 Ctruh Technologies Pvt. Ltd.</span>
           <div>
-            <a href="https://verse.ctruh.com/privacy" id="lnk-privacy-policy">Privacy Policy</a>
-            <a href="https://verse.ctruh.com/terms" id="lnk-terms-of-service">Terms of Service</a>
+            <a href="/privacy" id="lnk-privacy-policy">Privacy Policy</a>
+            <a href="/terms" id="lnk-terms-of-service">Terms of Service</a>
+            <a href="/refunds" id="lnk-refunds">Refunds</a>
           </div>
           <a href="#" className="back-top" id="lnk-back-to-the-beginning">Back to the beginning ↑</a>
         </div>

@@ -131,6 +131,8 @@ for(const file of walk(stage).filter(f=>f.endsWith('.html'))){
   fs.writeFileSync(path.join(dist,'content',fileFor(route===  '/404'?'/404':route)+'.json'),JSON.stringify(payload));
   if(kind!=='notfound')routes.push({path:route,kind,noindex:NOINDEX.has(route),title});
 }
+// Pages that exist only as React components (no generated HTML), e.g. the legal pages.
+for(const [route,m] of Object.entries(META))if(m.kind!=='notfound'&&!routes.some(r=>r.path===route))routes.push({path:route,kind:m.kind,noindex:m.noindex,title:m.title});
 routes.sort((a,b)=>a.path.localeCompare(b.path));
 
 // ---------- shell ----------

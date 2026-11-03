@@ -19,6 +19,7 @@ const STYLES = {
   challenge: ["/css/site.css", "/css/challenge.css"],
   app: ["/css/studio.css"],
   notfound: ["/css/site.css"],
+  legal: ["/css/site.css", "/css/legal.css"],
 };
 const MODULES = {
   "/": () => import("./animations/landing/index.js"),

@@ -1,6 +1,6 @@
 // Each page's meta: what the router sets on <head> and <body> for the route, and how the
 // shell looks around it. Edit a page's title or description here.
-//   kind:       landing | page | app | notfound (decides the page's stylesheets)
+//   kind:       landing | page | legal | app | notfound (decides the page's stylesheets)
 //   chrome:     full (header and footer) | header (header only) | none
 //   bodyClass, mainClass: classes for <body> and <main>
 //   navCurrent: header link shown as the current section ("" for none)
@@ -138,5 +138,35 @@ export const META = {
     mainClass: "not-found",
     navCurrent: "",
     noindex: true,
+  },
+  "/privacy": {
+    kind: "legal",
+    chrome: "full",
+    title: "Privacy Policy | Verse Engine by Ctruh",
+    description: "Privacy policy for Verse by Ctruh: accounts, uploads, analytics, WhatsApp, payments.",
+    bodyClass: "site-page",
+    mainClass: "legal-page",
+    navCurrent: "",
+    noindex: false,
+  },
+  "/terms": {
+    kind: "legal",
+    chrome: "full",
+    title: "Terms of Service | Verse Engine by Ctruh",
+    description: "Terms of service for Verse by Ctruh.",
+    bodyClass: "site-page",
+    mainClass: "legal-page",
+    navCurrent: "",
+    noindex: false,
+  },
+  "/refunds": {
+    kind: "legal",
+    chrome: "full",
+    title: "Refund Policy | Verse Engine by Ctruh",
+    description: "Refund policy for Verse subscriptions.",
+    bodyClass: "site-page",
+    mainClass: "legal-page",
+    navCurrent: "",
+    noindex: false,
   },
 };

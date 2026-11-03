@@ -1,0 +1,19 @@
+/* Legal pages (/privacy, /terms, /refunds): the text styles of the production pages on verse.ctruh.com
+   (Figtree and IBM Plex Mono, 820px column), inside this site's header and footer. */
+@import url("https://fonts.googleapis.com/css2?family=Figtree:wght@400..700&family=IBM+Plex+Mono:wght@400;500&display=swap");
+.site-page .legal-page{--brand-text:#0058C2;--faint:#5A6478;--soft:#475165;--ink:#0F172A;--line:#E3E7EE;--mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;--display:Figtree,"Figtree Fallback",-apple-system,"Segoe UI",Roboto,sans-serif;width:min(820px,100% - 32px);margin:0 auto;padding-bottom:80px;font:400 15.5px/1.65 var(--display);color:var(--ink)}
+.site-page .legal-page *{box-sizing:border-box;margin:0}
+.site-page .legal-page a{color:var(--brand-text);text-decoration:underline}
+.site-page .legal-page .mono{font:500 10.5px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--brand-text)}
+.site-page .legal-page h1{font:600 clamp(30px,5vw,44px)/1.06 var(--display);letter-spacing:-.032em;margin:14px 0 8px;text-wrap:balance;color:var(--ink)}
+.site-page .legal-page .meta{color:var(--faint);font-size:13.5px}
+.site-page .legal-page h2{font:600 19px/1.06 var(--display);letter-spacing:-.032em;margin:34px 0 8px;text-wrap:balance;color:var(--ink)}
+.site-page .legal-page p,.site-page .legal-page li{color:var(--soft)}
+.site-page .legal-page ul{padding-left:20px;margin-top:8px}
+.site-page .legal-page li+li{margin-top:6px}
+.site-page .legal-page strong{color:var(--ink);font-weight:600}
+.site-page .legal-page .tbl{overflow-x:auto}
+.site-page .legal-page table{width:100%;border-collapse:collapse;margin-top:10px;font-size:14px}
+.site-page .legal-page th,.site-page .legal-page td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top;color:var(--soft)}
+.site-page .legal-page th{color:var(--ink);font-weight:600}
+.site-page .legal-page code{font-family:var(--mono)}

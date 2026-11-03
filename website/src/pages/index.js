@@ -13,6 +13,9 @@ import PluginBlender from "./plugins/PluginBlender.jsx";
 import PluginUnity from "./plugins/PluginUnity.jsx";
 import PluginUnreal from "./plugins/PluginUnreal.jsx";
 import Studio from "./studio/Studio.jsx";
+import Privacy from "./legal/Privacy.jsx";
+import Terms from "./legal/Terms.jsx";
+import Refunds from "./legal/Refunds.jsx";
 
 export const PAGES = {
   "/": Landing,
@@ -27,5 +30,8 @@ export const PAGES = {
   "/challenge": Challenge,
   "/signin": Signin,
   "/studio": Studio,
+  "/privacy": Privacy,
+  "/terms": Terms,
+  "/refunds": Refunds,
   "/404": NotFound,
 };
