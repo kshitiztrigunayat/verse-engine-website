@@ -29,6 +29,76 @@
       "source": "/developers/adoption",
       "destination": "/developers",
       "permanent": true
+    },
+    {
+      "source": "/docs/api",
+      "destination": "/docs/scenes-api",
+      "permanent": true
+    },
+    {
+      "source": "/docs/authentication",
+      "destination": "/docs/api-quickstart",
+      "permanent": true
+    },
+    {
+      "source": "/docs/blender",
+      "destination": "/docs/guides/publish-from-blender",
+      "permanent": true
+    },
+    {
+      "source": "/docs/concepts",
+      "destination": "/docs/how-streaming-works",
+      "permanent": true
+    },
+    {
+      "source": "/docs/webhooks",
+      "destination": "/docs/developers",
+      "permanent": true
+    },
+    {
+      "source": "/docs/fixing-doors-and-windows",
+      "destination": "/docs/guides/instant-home",
+      "permanent": true
+    },
+    {
+      "source": "/docs/floor-plan-to-3d-home",
+      "destination": "/docs/guides/floor-plan-to-3d",
+      "permanent": true
+    },
+    {
+      "source": "/docs/upload-your-first-scene",
+      "destination": "/docs/getting-started",
+      "permanent": true
+    },
+    {
+      "source": "/docs/materials-and-lighting",
+      "destination": "/docs/guides/fidelity-mode",
+      "permanent": true
+    },
+    {
+      "source": "/docs/unity",
+      "destination": "/docs/guides/publish-from-unity",
+      "permanent": true
+    },
+    {
+      "source": "/docs/unreal",
+      "destination": "/docs/guides/publish-from-unreal",
+      "permanent": true
+    },
+    {
+      "source": "/docs/start-a-live-tour",
+      "destination": "/docs/guides/tour-together",
+      "permanent": true
+    },
+    {
+      "source": "/docs/supported-file-types",
+      "destination": "/docs/guides/what-you-can-upload",
+      "permanent": true
+    },
+    {
+      "source": "/docs",
+      "destination": "/docs/what-is-verse-engine",
+      "permanent": true
     }
   ],
   "rewrites": [
