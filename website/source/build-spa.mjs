@@ -148,7 +148,8 @@ for(const f of ['pricing-data.json','code-samples.json'])fs.copyFileSync(path.jo
 fs.writeFileSync(path.join(dist,'content/manifest.json'),JSON.stringify(routes.map(({path:p,kind,noindex})=>({path:p,kind,noindex}))));
 const urls=routes.filter(r=>!r.noindex).map(r=>`<url><loc>${ORIGIN}${r.path==='/'?'/':r.path}</loc></url>`).join('');
 fs.writeFileSync(path.join(dist,'sitemap.xml'),`<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${urls}</urlset>`);
-fs.writeFileSync(path.join(dist,'robots.txt'),`User-agent: *\nAllow: /\nSitemap: ${ORIGIN}/sitemap.xml\n`);
+// API paths and the embed page are kept out of search results.
+fs.writeFileSync(path.join(dist,'robots.txt'),`User-agent: *\nAllow: /\nDisallow: /ingest/\nDisallow: /v1/\nDisallow: /embed.html\n\nSitemap: ${ORIGIN}/sitemap.xml\n`);
 
 // ---------- route inventory for the handoff package ----------
 const referenceDir=path.resolve(project,'../reference');
