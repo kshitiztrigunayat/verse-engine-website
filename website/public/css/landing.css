@@ -138,3 +138,6 @@ html,body{overflow-x:clip}.point-story .orbit,.point-story .stream-line,.point-s
 .ghost-type{display:none!important}
 
 .button.action.story-cta{background:var(--cta-bg,#3d75f3)!important;border-color:var(--cta-bg,#3d75f3)!important;color:var(--cta-ink,#fff)!important}
+/* Hero H1: the kicker line is now part of the H1 (it was a <p> above it); these keep the same look. */
+.hero-panel h1>.hero-kicker{font-family:Metropolis,Arial,sans-serif;font-weight:400;line-height:1.6;letter-spacing:normal;color:#455163;white-space:normal;margin-left:5px}
+@media(max-width:600px){.hero-panel h1>.hero-kicker{margin-left:2px}}

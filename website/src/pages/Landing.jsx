@@ -56,14 +56,16 @@ export default function Landing() {
           {"\n"}
           <article className="story-panel hero-panel" id="chapter-0" data-chapter="0">
             <div className="panel-copy">
-              <p className="hero-kicker">
-                <span />
-                The browser-native 3D engine
-              </p>
               <h1>
-                <span>Beyond</span>
-                <br />
-                <span>the screen.</span>
+                <span className="hero-kicker">
+                  <span />
+                  Verse Engine by Ctruh, the browser-native 3D engine
+                </span>
+                <span className="hero-display">
+                  <span>Beyond</span>
+                  <br />
+                  <span>the screen.</span>
+                </span>
               </h1>
               <p className="hero-description">
                 Your biggest ideas deserve to go places.
