@@ -2,12 +2,9 @@
 // keys to walk, scroll to zoom. Unchanged from public/js/studio.js; `cleanups` collects what to undo.
 import { seeded } from "./data.js";
 
-// Three.js is served from public/vendor. The full URL makes the dev server serve it as it is.
-const importVendor = (path) => import(/* @vite-ignore */ location.origin + path);
-
 export async function mountViewer(el, kind, cleanups) {
   let THREE;
-  try { THREE = await importVendor('/vendor/three.module.js'); } catch { el.insertAdjacentHTML('beforeend', '<div class="fallback">The 3D preview needs WebGL. The scene is still saved.</div>'); return; }
+  try { THREE = await import('three'); } catch { el.insertAdjacentHTML('beforeend', '<div class="fallback">The 3D preview needs WebGL. The scene is still saved.</div>'); return; }
   if (!el.isConnected) return;
   let renderer;
   try { renderer = new THREE.WebGLRenderer({ antialias: true }); } catch { el.insertAdjacentHTML('beforeend', '<div class="fallback">The 3D preview needs WebGL. The scene is still saved.</div>'); return; }

@@ -5,12 +5,7 @@ import { flushSync } from "react-dom";
 import "./tailwind.css";
 import App from "./App.jsx";
 import { startRouter, navigate } from "./router.js";
-
-// Behaviour modules stay in public/js, unchanged; load them at runtime.
-// The full URL makes the dev server serve these files as they are (it refuses to run files
-// from public/ through its module pipeline); in the build it is the same file.
-const load = (src) => import(/* @vite-ignore */ location.origin + src);
-const { playIntro, transitionTo } = await load("/js/transition.js");
+import { playIntro, transitionTo } from "./animations/transition.js";
 
 const NON_PAGE = /\.(zip|tgz|rbz|pdf|json|xml|txt|mp4|png|jpe?g|webp|svg|glb|otf|woff2?)$/i;
 const DOCS_NAV = "#nav-docs, .docs-sidebar, .docs-mobile, .docs-nav-content";

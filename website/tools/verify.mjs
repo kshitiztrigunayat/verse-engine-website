@@ -22,9 +22,14 @@ const fileFor=route=>route==='/'?'index':route.slice(1).replaceAll('/','__');
 const pagesIndex=read(path.join(project,'src/pages/index.js'));
 const pageFiles=new Map([...pagesIndex.matchAll(/^import (\w+) from "\.\/([^"]+)";/gm)].map(m=>[m[1],path.join(project,'src/pages',m[2])]));
 const reactPages=new Map([...pagesIndex.matchAll(/^\s+"(\/[^"]*)": (\w+),/gm)].map(m=>[m[1],read(pageFiles.get(m[2]))]));
+// React pages' meta (title, description, ...) is src/pages/meta.js; other routes have a payload.
+const {META}=await import(new URL('../src/pages/meta.js',import.meta.url));
+for(const r of Object.keys(META))if(!reactPages.has(r))err(`src/pages/meta.js: ${r} has no page in src/pages/index.js`);
+for(const r of reactPages.keys())if(!META[r])err(`src/pages/index.js: ${r} has no meta in src/pages/meta.js`);
 const REQUIRED=['path','kind','chrome','title','description','bodyClass'];
 const payloads=new Map();
-for(const {path:route} of manifest){
+for(const {path:route} of [...manifest,{path:'/404'}]){
+  if(META[route]){const p={path:route,...META[route]};for(const k of REQUIRED)if(p[k]===undefined)err(`${route}: meta lacks "${k}"`);payloads.set(route,p);continue}
   const f=path.join(dist,'content',fileFor(route)+'.json');
   if(!exists(f)){err('missing payload for '+route);continue}
   let p;try{p=JSON.parse(read(f))}catch{err('invalid JSON: '+f);continue}
@@ -32,7 +37,6 @@ for(const {path:route} of manifest){
   if(p.html===undefined&&p.docs===undefined&&!reactPages.has(route))err(`${route}: payload lacks "html" (or "docs")`);
   payloads.set(route,p);
 }
-if(!exists(path.join(dist,'content/404.json')))err('content/404.json is missing');
 
 // --- links, ids, resources ---
 let checkedReferences=0;

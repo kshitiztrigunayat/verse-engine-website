@@ -2,15 +2,15 @@ import {createPluginShowcase} from './plugins.js';
 import {createShowcase} from './showcase.js';
 import {createDeviceMorph} from './device-morph.js';
 import {createEnhancements} from './enhancements.js';
-import Lenis from '/vendor/lenis.mjs';
-import {loadScript} from '../core.js';
+import Lenis from 'lenis';
+import {gsap} from 'gsap';
+import {ScrollTrigger} from 'gsap/ScrollTrigger';
 /** Mount the landing story into the current document. Returns a dispose function. */
 export async function mount(){
-await loadScript('/vendor/gsap.min.js');await loadScript('/vendor/ScrollTrigger.min.js');
 const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)],html=document.documentElement;
 const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches||new URLSearchParams(location.search).has('motion-off');
 html.classList.add('js');if(reduced)html.classList.add('reduced-motion');const fallbackTimer=setTimeout(()=>{if(!html.classList.contains('story-ready')&&!html.classList.contains('gl-ready'))html.classList.add('static-story','no-gl')},5000);
-const gsap=window.gsap,ST=window.ScrollTrigger;gsap.registerPlugin(ST);
+const ST=ScrollTrigger;gsap.registerPlugin(ST);
 const cleanups=[],driver={p:0},pointer={x:0,y:0},aim={x:0,y:0};let experience=null,storyTrigger=null,lenis=null,paused=false,chapter=-1,mode='web',visible=true;
 function clamp(a,b,x){return Math.min(b,Math.max(a,x))}function smooth(a,b,x){let t=clamp(0,1,(x-a)/(b-a));return t*t*(3-2*t)}function mix(a,b,t){return a+(b-a)*t}
 const menu=$('#menu-dialog');const onMenu=e=>e.detail.open?lenis?.stop():lenis?.start();document.addEventListener('verse:menu',onMenu);cleanups.push(()=>document.removeEventListener('verse:menu',onMenu));

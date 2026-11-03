@@ -66,7 +66,9 @@ function splitDocs(html,route){
 }
 
 // ---------- routes whose page is a React component (keys of PAGES in src/pages/index.js) ----------
-const REACT_PAGES=new Set([...read(path.join(project,'src/pages/index.js')).matchAll(/^\s+"(\/[^"]*)":/gm)].map(m=>m[1]));
+// React pages have their meta in src/pages/meta.js (title, description, ...); they get no payload.
+const {META}=await import(new URL('../src/pages/meta.js',import.meta.url));
+const REACT_PAGES=new Set(Object.keys(META));
 
 // ---------- shell pieces (shared chrome) from the About page ----------
 const aboutHtml=read(path.join(stage,'about/index.html'));
@@ -95,8 +97,6 @@ const shellMenu=addIds(named(menu,[
   ['<a class="menu-challenge"','<a id="btn-menu-challenge" class="menu-challenge"']]),shellUsed);
 const shellFooter=addIds(named(footer,[['<footer class="page-footer">','<footer id="site-footer" class="page-footer">']]),shellUsed);
 const fileFor=route=>route==='/'?'index':route.slice(1).replaceAll('/','__');
-const landingHead=read(path.join(stage,'index.html'));
-const jsonld=(landingHead.match(/<script type="application\/ld\+json">[\s\S]*?<\/script>/)||[''])[0];
 
 for(const file of walk(stage).filter(f=>f.endsWith('.html'))){
   const rel=path.relative(stage,file).replaceAll('\\','/');
@@ -123,9 +123,9 @@ for(const file of walk(stage).filter(f=>f.endsWith('.html'))){
   html=html.replace(/(\s(?:src|href|poster|data-src)=")(?!\/|#|[a-z][a-z0-9+.-]*:|\.)/gi,'$1/').replace(/url\((['"]?)assets\//g,'url($1/assets/');   // routes live at any depth: use root-absolute URLs
   const used=new Set(shellUsed);
   html=addIds(html,used);
-  // React pages (src/pages/index.js) render their own markup: their payload only carries the meta.
-  const content=kind==='page'&&html.startsWith('<section class="documentation"')?{docs:splitDocs(html,route)}:REACT_PAGES.has(route)?{}:{html};
-  const payload={path:route,kind,chrome,title,description,bodyClass,mainClass,navCurrent,noindex:NOINDEX.has(route),...(route==='/'?{jsonld}:{}),...content};
+  if(REACT_PAGES.has(route)){const m=META[route];if(m.kind!=='notfound')routes.push({path:route,kind:m.kind,noindex:m.noindex,title:m.title});continue}
+  const content=kind==='page'&&html.startsWith('<section class="documentation"')?{docs:splitDocs(html,route)}:{html};
+  const payload={path:route,kind,chrome,title,description,bodyClass,mainClass,navCurrent,noindex:NOINDEX.has(route),...content};
   fs.writeFileSync(path.join(dist,'content',fileFor(route===  '/404'?'/404':route)+'.json'),JSON.stringify(payload));
   if(kind!=='notfound')routes.push({path:route,kind,noindex:NOINDEX.has(route),title});
 }

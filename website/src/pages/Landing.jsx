@@ -1,4 +1,4 @@
-// Home page (/). The scroll story, 3D model and other animations are public/js/landing/ (GSAP, Three.js), mounted on this markup by the router.
+// Home page (/). The scroll story, 3D model and other animations are src/animations/landing/ (GSAP, Three.js), mounted on this markup by the router.
 export default function Landing() {
   return (
     <>

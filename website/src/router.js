@@ -1,19 +1,17 @@
 // Client-side router, ported 1:1 from the original public/js/router.js.
-// One HTML document; each route is a JSON payload in /content/ holding its meta
-// and HTML fragment. The shell (header, footer, main, ...) is rendered by React
-// (Shell.jsx); this module decides what it shows, in the same order as before.
-// Some routes still have a behaviour module (in public/js) that exports
-// mount(context) -> dispose; those modules are unchanged.
+// One HTML document. Every page is a React component (src/pages/index.js) with its meta
+// (title, description, body class, ...) in src/pages/meta.js; documentation pages get
+// theirs, with the article, from a JSON payload in /content/ (built from source/).
+// The shell (header, footer, main, ...) is React too (Shell.jsx); this module decides
+// what it shows, in the same order as before. The home page also has a behaviour module
+// (the GSAP + Three.js animation) that exports mount(context) -> dispose.
 import { flushSync } from "react-dom";
 import { PAGES } from "./pages/index.js";
+import { META } from "./pages/meta.js";
 import DocsPage from "./pages/docs/DocsPage.jsx";
 
 const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
 const byId = (id) => document.getElementById(id);
-// The behaviour modules are served from public/ as they were; load them at runtime.
-// The full URL makes the dev server serve these files as they are (it refuses to run files
-// from public/ through its module pipeline); in the build it is the same file.
-const load = (src) => import(/* @vite-ignore */ location.origin + src);
 
 const STYLES = {
   landing: ["/css/landing.css", "/css/site.css"],
@@ -23,7 +21,7 @@ const STYLES = {
   notfound: ["/css/site.css"],
 };
 const MODULES = {
-  "/": () => load("/js/landing/index.js"),
+  "/": () => import("./animations/landing/index.js"),
 };
 const THEME_COLOR = { landing: "#f5f6f7" };
 const origin = () => byId("meta-site-origin").content.replace(/\/+$/, "");
@@ -73,6 +71,7 @@ const knownRoutes = () => manifest ??= fetch("/content/manifest.json").then((r) 
 async function loadPayload(path) {
   const known = await knownRoutes();
   if (known && path !== "/404" && !known.has(path)) return null;
+  if (META[path]) return { path, ...META[path] };
   if (!state.payloads.has(path)) {
     state.payloads.set(path, fetch(payloadUrl(path)).then((r) => {
       if (!r.ok) throw new Error("missing");
@@ -112,7 +111,11 @@ function setMeta(payload, path) {
   byId("meta-robots").content = payload.noindex || payload.kind === "notfound" ? "noindex,follow" : "index,follow,max-image-preview:large";
   byId("meta-theme-color").content = THEME_COLOR[payload.kind] || "#ffffff";
   byId("script-jsonld")?.remove();
-  if (payload.jsonld) document.head.insertAdjacentHTML("beforeend", payload.jsonld.replace("<script ", '<script id="script-jsonld" '));
+  if (payload.jsonld) {
+    const script = document.createElement("script");
+    script.id = "script-jsonld"; script.type = "application/ld+json"; script.textContent = JSON.stringify(payload.jsonld);
+    document.head.appendChild(script);
+  }
 }
 
 /** Shell visibility and current nav link for a route (was setChrome). */
