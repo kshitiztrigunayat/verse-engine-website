@@ -34,8 +34,8 @@ export const META = {
   "/developers": {
     kind: "page",
     chrome: "full",
-    title: "Developers | Verse Engine by Ctruh",
-    description: "Upload, publish, embed and track 3D scenes with a REST API — or skip the backend and drop in one script tag.",
+    title: "Developers: API, SDK and MCP | Verse Engine by Ctruh",
+    description: "Embed 3D scenes with one script tag or web component, upload through the REST API, get webhooks, and connect AI agents with the Verse MCP server.",
     bodyClass: "site-page",
     mainClass: "",
     navCurrent: "/developers",
@@ -44,8 +44,8 @@ export const META = {
   "/pricing": {
     kind: "page",
     chrome: "full",
-    title: "Pricing | Verse Engine by Ctruh",
-    description: "Start free: every new account gets a 14-day trial with Pro features. Upgrade during the trial for 25% off your first 3 months on monthly plans, or 20% off…",
+    title: "Pricing and Plans | Verse Engine by Ctruh",
+    description: "Compare Verse Engine by Ctruh plans: start free, then upgrade for more storage, bandwidth, API calls and private links. Viewers never pay.",
     bodyClass: "site-page",
     mainClass: "",
     navCurrent: "/pricing",
@@ -54,8 +54,8 @@ export const META = {
   "/samples": {
     kind: "page",
     chrome: "full",
-    title: "Samples | Verse Engine by Ctruh",
-    description: "Links and embeds anywhere. Verse for Real Estate, Verse for Commerce, Verse Play for games, and the Verse API, SDK and MCP for developers and AI agents.",
+    title: "3D Examples and Samples | Verse Engine by Ctruh",
+    description: "Open real Verse Engine by Ctruh scenes in your browser: apartments, interiors, products and web game worlds, each shared as one link.",
     bodyClass: "site-page",
     mainClass: "",
     navCurrent: "/samples",
@@ -64,8 +64,8 @@ export const META = {
   "/plugins": {
     kind: "page",
     chrome: "full",
-    title: "Plug-ins | Verse Engine by Ctruh",
-    description: "Press one button in your editor and get a link anyone can open in a browser. A Blender project goes live in about 45 seconds, Unreal in 70, Unity in 101.",
+    title: "Blender, Unity & Unreal Plug-ins | Verse Engine by Ctruh",
+    description: "Publish scenes to a shareable 3D link straight from Blender, Unity or Unreal Engine. Beta plug-ins cover SketchUp, Revit, Rhino, 3ds Max and more.",
     bodyClass: "site-page",
     mainClass: "",
     navCurrent: "/plugins",
