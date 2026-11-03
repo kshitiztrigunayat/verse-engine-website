@@ -200,6 +200,7 @@ export default function Studio() {
   return (
       <>
         <a className="skip" href="#studio-main" id="lnk-skip-to-content">Skip to content</a>
+        <h1 className="visually-hidden">Verse Engine Playground</h1>
         <div className="st-shell">
           <aside className="st-side" aria-label="Playground" id="asd-playground">
             <a className="brand" href="/" aria-label="Verse Engine home" id="lnk-verse-engine-home-2">
