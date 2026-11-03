@@ -5,14 +5,16 @@
 //   bodyClass, mainClass: classes for <body> and <main>
 //   navCurrent: header link shown as the current section ("" for none)
 //   noindex:    keep the page out of search results
+//   ogDescription: og:description when it should differ from description (home page)
 //   jsonld:     structured data for search engines (home page)
 // Documentation pages get theirs from source/ (npm run content).
 export const META = {
   "/": {
     kind: "landing",
     chrome: "header",
-    title: "Verse Engine by Ctruh | Beyond the screen",
-    description: "From an intricate 3D model to one simple link. Experience Verse Engine by Ctruh through a cinematic journey from creation to Web 3D, AR and XR.",
+    title: "Verse Engine by Ctruh | Browser-Native 3D Engine",
+    description: "Verse Engine by Ctruh turns 3D files, scans and Blender, Unity or Unreal projects into one link that opens in any modern browser. No app needed. Start free.",
+    ogDescription: "Turn any 3D scene into one link anyone can open in a browser. No app needed.",
     bodyClass: "point-story",
     mainClass: "",
     navCurrent: "",

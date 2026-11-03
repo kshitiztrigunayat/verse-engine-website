@@ -108,7 +108,7 @@ function setMeta(payload, path) {
   byId("link-canonical").href = url;
   byId("meta-og-url").content = url;
   byId("meta-og-title").content = payload.title;
-  byId("meta-og-description").content = payload.description;
+  byId("meta-og-description").content = payload.ogDescription || payload.description;
   byId("meta-robots").content = payload.noindex || payload.kind === "notfound" ? "noindex,follow" : "index,follow,max-image-preview:large";
   byId("meta-theme-color").content = THEME_COLOR[payload.kind] || "#ffffff";
   byId("script-jsonld")?.remove();
