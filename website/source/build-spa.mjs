@@ -5,6 +5,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
+import {sitemapXml} from './sitemap.mjs';
 const here=path.dirname(fileURLToPath(import.meta.url)), project=path.resolve(here,'..');
 // Output goes to public/, which Vite serves and copies into dist/ unchanged.
 const stage=process.env.VERSE_DIST, dist=path.join(project,'public');
@@ -146,8 +147,8 @@ fs.mkdirSync(path.dirname(docsNavFile),{recursive:true});fs.writeFileSync(docsNa
 // ---------- static data + discovery files ----------
 for(const f of ['pricing-data.json','code-samples.json'])fs.copyFileSync(path.join(stage,f),path.join(dist,f));
 fs.writeFileSync(path.join(dist,'content/manifest.json'),JSON.stringify(routes.map(({path:p,kind,noindex})=>({path:p,kind,noindex}))));
-const urls=routes.filter(r=>!r.noindex).map(r=>`<url><loc>${ORIGIN}${r.path==='/'?'/':r.path}</loc></url>`).join('');
-fs.writeFileSync(path.join(dist,'sitemap.xml'),`<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${urls}</urlset>`);
+// Public pages with the date each last changed (see sitemap.mjs).
+fs.writeFileSync(path.join(dist,'sitemap.xml'),sitemapXml({project,origin:ORIGIN,routes}));
 // API paths and the embed page are kept out of search results.
 fs.writeFileSync(path.join(dist,'robots.txt'),`User-agent: *\nAllow: /\nDisallow: /ingest/\nDisallow: /v1/\nDisallow: /embed.html\n\nSitemap: ${ORIGIN}/sitemap.xml\n`);
 
