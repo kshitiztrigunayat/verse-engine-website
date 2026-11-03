@@ -6,6 +6,8 @@ export default defineConfig({
   plugins: [react(), tailwindcss()],
   // public/ holds the site as it was: css, js behaviour modules, content
   // payloads, assets and vendor libraries, served unchanged at the same paths.
+  // Only index.html is an app entry (source/templates/*.html are content-build templates).
+  optimizeDeps: { entries: ["index.html"] },
   build: {
     outDir: "dist",
     emptyOutDir: true,

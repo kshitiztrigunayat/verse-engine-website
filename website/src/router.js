@@ -11,7 +11,9 @@ import DocsPage from "./pages/docs/DocsPage.jsx";
 const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
 const byId = (id) => document.getElementById(id);
 // The behaviour modules are served from public/ as they were; load them at runtime.
-const load = (src) => import(/* @vite-ignore */ src);
+// The full URL makes the dev server serve these files as they are (it refuses to run files
+// from public/ through its module pipeline); in the build it is the same file.
+const load = (src) => import(/* @vite-ignore */ location.origin + src);
 
 const STYLES = {
   landing: ["/css/landing.css", "/css/site.css"],

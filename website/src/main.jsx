@@ -7,7 +7,9 @@ import App from "./App.jsx";
 import { startRouter, navigate } from "./router.js";
 
 // Behaviour modules stay in public/js, unchanged; load them at runtime.
-const load = (src) => import(/* @vite-ignore */ src);
+// The full URL makes the dev server serve these files as they are (it refuses to run files
+// from public/ through its module pipeline); in the build it is the same file.
+const load = (src) => import(/* @vite-ignore */ location.origin + src);
 const { playIntro, transitionTo } = await load("/js/transition.js");
 
 const NON_PAGE = /\.(zip|tgz|rbz|pdf|json|xml|txt|mp4|png|jpe?g|webp|svg|glb|otf|woff2?)$/i;
