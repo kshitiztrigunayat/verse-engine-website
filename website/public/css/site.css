@@ -165,5 +165,5 @@ dialog.menu-dialog.growth-menu{padding:0 24px 32px;overflow-y:auto}
 @media(max-width:850px){.site-page .page-hero .page-title{font-size:78px}}
 @media(max-width:650px){.site-page .page-hero .page-title{font-size:clamp(52px,13.5vw,78px);line-height:.98;letter-spacing:-.035em}}
 @media(max-width:370px){.site-page .page-hero .page-title{font-size:50px}}
-/* About page: "Building the spatial internet." tagline, a paragraph under the H1. */
 .site-page .page-hero .tagline{color:var(--ink);font-weight:600}
+.site-page .engine-principles a{color:var(--brand-blue);text-decoration:underline;text-underline-offset:3px;cursor:pointer}
