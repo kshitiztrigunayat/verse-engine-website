@@ -23,6 +23,13 @@
     },
     {
       "data": {
+        "page": "browser-3d-vs-pixel-streaming"
+      },
+      "href": "#/browser-3d-vs-pixel-streaming",
+      "title": "Browser 3D vs Pixel Streaming"
+    },
+    {
+      "data": {
         "page": "guides/sign-in"
       },
       "href": "#/guides/sign-in",

@@ -60,6 +60,8 @@ behind. Consequences you will notice:
 Gaussian splats stream the same way at the chunk level (`.vsp`: full and
 coarse subsets per chunk, chosen by projected size).
 
+[Browser-native 3D vs. cloud pixel streaming](browser-3d-vs-pixel-streaming.md)
+
 ## Tiers: what each device gets
 
 The viewer classifies the device once at boot and the whole stack adapts:

@@ -197,6 +197,9 @@ export default function About() {
             <span>Blender project to link</span>
           </div>
           <p className="benchmark-note">Desktop browser benchmarks. Results vary with scene, device and connection.</p>
+          <p className="benchmark-link">
+            <a className="inline-link" href="/docs/browser-3d-vs-pixel-streaming">Browser 3D vs. cloud pixel streaming</a>
+          </p>
         </section>
       </div>
     </>
