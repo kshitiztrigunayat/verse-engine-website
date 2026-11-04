@@ -75,6 +75,11 @@
     "payload": "content/docs__blog__verse-engine-2-7-whats-new.json"
   },
   {
+    "route": "/docs/browser-3d-vs-pixel-streaming",
+    "kind": "page",
+    "payload": "content/docs__browser-3d-vs-pixel-streaming.json"
+  },
+  {
     "route": "/docs/browser-support",
     "kind": "page",
     "payload": "content/docs__browser-support.json"
