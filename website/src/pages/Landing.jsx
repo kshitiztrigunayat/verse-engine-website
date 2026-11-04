@@ -101,9 +101,9 @@ export default function Landing() {
             <div className="panel-copy">
               <p className="chapter-label">01 / The detail</p>
               <h2>
-                Keep every
+                Keep every last {" "}
                 <br />
-                last detail.
+                detail.
               </h2>
               <p>
                 A product. A place. An entire world.
@@ -132,11 +132,9 @@ export default function Landing() {
             <div className="panel-copy">
               <p className="chapter-label">02 / The transformation</p>
               <h2>
-                Heavy files.
+                Heavy files.{" "}
                 <br />
-                Weightless
-                <br />
-                delivery.
+                Weightless delivery.
               </h2>
               <p>
                 Prepared once. Streamed on demand.
@@ -165,7 +163,7 @@ export default function Landing() {
             <div className="panel-copy">
               <p className="chapter-label">03 / The connection</p>
               <h2>
-                A whole world.
+                A whole world.{" "}
                 <br />
                 In one link.
               </h2>
@@ -193,7 +191,7 @@ export default function Landing() {
             <div className="panel-copy">
               <p className="chapter-label">04 / The experience</p>
               <h2>
-                One scene.
+                One scene.{" "}
                 <br />
                 Every reality.
               </h2>
@@ -219,7 +217,7 @@ export default function Landing() {
             <div className="panel-copy">
               <p className="chapter-label">05 / Your next dimension</p>
               <h2>
-                The next world
+                The next world{" "}
                 <br />
                 starts with you.
               </h2>
