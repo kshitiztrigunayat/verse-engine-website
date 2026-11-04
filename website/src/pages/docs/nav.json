@@ -1,0 +1,866 @@
+[
+  {
+    "title": "Start here",
+    "ids": [
+      "sec-item",
+      "sec-item-7"
+    ],
+    "items": [
+      {
+        "href": "/docs/what-is-verse-engine",
+        "title": "What is Verse Engine?",
+        "docTitle": "what is verse engine?",
+        "ids": [
+          "lnk-what-is-verse-engine",
+          "lnk-what-is-verse-engine-2"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Reference & concepts",
+    "ids": [
+      "sec-item-2",
+      "sec-item-8"
+    ],
+    "items": [
+      {
+        "href": "/docs/getting-started",
+        "title": "Getting started",
+        "docTitle": "getting started",
+        "ids": [
+          "lnk-getting-started",
+          "lnk-getting-started-2"
+        ]
+      },
+      {
+        "href": "/docs/how-we-measure",
+        "title": "How we measure",
+        "docTitle": "how we measure",
+        "ids": [
+          "lnk-how-we-measure",
+          "lnk-how-we-measure-2"
+        ]
+      },
+      {
+        "href": "/docs/how-streaming-works",
+        "title": "Concepts",
+        "docTitle": "concepts",
+        "ids": [
+          "lnk-concepts",
+          "lnk-concepts-2"
+        ]
+      },
+      {
+        "href": "/docs/browser-3d-vs-pixel-streaming",
+        "title": "Browser 3D vs Pixel Streaming",
+        "docTitle": "browser 3d vs pixel streaming",
+        "ids": [
+          "lnk-browser-3d-vs-pixel-streaming",
+          "lnk-browser-3d-vs-pixel-streaming-2"
+        ]
+      },
+      {
+        "href": "/docs/help",
+        "title": "Help & troubleshooting",
+        "docTitle": "help & troubleshooting",
+        "ids": [
+          "lnk-help-troubleshooting",
+          "lnk-help-troubleshooting-2"
+        ]
+      },
+      {
+        "href": "/docs/changelog",
+        "title": "Changelog",
+        "docTitle": "changelog",
+        "ids": [
+          "lnk-changelog",
+          "lnk-changelog-2"
+        ]
+      },
+      {
+        "href": "/docs/experience-format",
+        "title": "Experience manifests",
+        "docTitle": "experience manifests",
+        "ids": [
+          "lnk-experience-manifests",
+          "lnk-experience-manifests-2"
+        ]
+      },
+      {
+        "href": "/docs/exporter-smoke-tests",
+        "title": "Plug-in smoke tests",
+        "docTitle": "plug-in smoke tests",
+        "ids": [
+          "lnk-plug-in-smoke-tests",
+          "lnk-plug-in-smoke-tests-2"
+        ]
+      },
+      {
+        "href": "/docs/telemetry",
+        "title": "Telemetry",
+        "docTitle": "telemetry",
+        "ids": [
+          "lnk-telemetry",
+          "lnk-telemetry-2"
+        ]
+      },
+      {
+        "href": "/docs/scan-import",
+        "title": "Import a scan",
+        "docTitle": "import a scan",
+        "ids": [
+          "lnk-import-a-scan",
+          "lnk-import-a-scan-2"
+        ]
+      },
+      {
+        "href": "/docs/browser-support",
+        "title": "Browser support",
+        "docTitle": "browser support",
+        "ids": [
+          "lnk-browser-support",
+          "lnk-browser-support-2"
+        ]
+      },
+      {
+        "href": "/docs/glossary",
+        "title": "Glossary",
+        "docTitle": "glossary",
+        "ids": [
+          "lnk-glossary",
+          "lnk-glossary-2"
+        ]
+      },
+      {
+        "href": "/docs/attributions",
+        "title": "Demo scene credits",
+        "docTitle": "demo scene credits",
+        "ids": [
+          "lnk-demo-scene-credits",
+          "lnk-demo-scene-credits-2"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "How-to guides",
+    "ids": [
+      "sec-item-3",
+      "sec-item-9"
+    ],
+    "items": [
+      {
+        "href": "/docs/guides/sign-in",
+        "title": "Sign in with a one-time code",
+        "docTitle": "sign in with a one-time code",
+        "ids": [
+          "lnk-sign-in-with-a-one-time-code",
+          "lnk-sign-in-with-a-one-time-code-2"
+        ]
+      },
+      {
+        "href": "/docs/guides/plans-and-pricing",
+        "title": "Plans and pricing",
+        "docTitle": "plans and pricing",
+        "ids": [
+          "lnk-plans-and-pricing",
+          "lnk-plans-and-pricing-2"
+        ]
+      },
+      {
+        "href": "/docs/guides/take-the-tour",
+        "title": "Take the guided tour",
+        "docTitle": "take the guided tour",
+        "ids": [
+          "lnk-take-the-guided-tour",
+          "lnk-take-the-guided-tour-2"
+        ]
+      },
+      {
+        "href": "/docs/guides/what-you-can-upload",
+        "title": "What you can upload",
+        "docTitle": "what you can upload",
+        "ids": [
+          "lnk-what-you-can-upload",
+          "lnk-what-you-can-upload-2"
+        ]
+      },
+      {
+        "href": "/docs/guides/fidelity-mode",
+        "title": "Fidelity mode (products render exactly as exported)",
+        "docTitle": "fidelity mode (products render exactly as exported)",
+        "ids": [
+          "lnk-fidelity-mode-products-render-exactly-as",
+          "lnk-fidelity-mode-products-render-exactly-as-2"
+        ]
+      },
+      {
+        "href": "/docs/guides/publish-from-blender",
+        "title": "Publish from Blender",
+        "docTitle": "publish from blender",
+        "ids": [
+          "lnk-publish-from-blender",
+          "lnk-publish-from-blender-2"
+        ]
+      },
+      {
+        "href": "/docs/guides/bake-for-me",
+        "title": "Bake for me (cloud lightmapping)",
+        "docTitle": "bake for me (cloud lightmapping)",
+        "ids": [
+          "lnk-bake-for-me-cloud-lightmapping",
+          "lnk-bake-for-me-cloud-lightmapping-2"
+        ]
+      },
+      {
+        "href": "/docs/guides/view-in-ar",
+        "title": "See it in your room (View in AR)",
+        "docTitle": "see it in your room (view in ar)",
+        "ids": [
+          "lnk-see-it-in-your-room-view-in-ar",
+          "lnk-see-it-in-your-room-view-in-ar-2"
+        ]
+      },
+      {
+        "href": "/docs/guides/tour-together",
+        "title": "Tour together, live",
+        "docTitle": "tour together, live",
+        "ids": [
+          "lnk-tour-together-live",
+          "lnk-tour-together-live-2"
+        ]
+      },
+      {
+        "href": "/docs/guides/make-it-look-good",
+        "title": "Make it look good (Auto look)",
+        "docTitle": "make it look good (auto look)",
+        "ids": [
+          "lnk-make-it-look-good-auto-look",
+          "lnk-make-it-look-good-auto-look-2"
+        ]
+      },
+      {
+        "href": "/docs/guides/restyle",
+        "title": "Restyle a space, live",
+        "docTitle": "restyle a space, live",
+        "ids": [
+          "lnk-restyle-a-space-live",
+          "lnk-restyle-a-space-live-2"
+        ]
+      },
+      {
+        "href": "/docs/guides/exteriors",
+        "title": "Exteriors: sky, weather, fog, ground",
+        "docTitle": "exteriors: sky, weather, fog, ground",
+        "ids": [
+          "lnk-exteriors-sky-weather-fog-ground",
+          "lnk-exteriors-sky-weather-fog-ground-2"
+        ]
+      },
+      {
+        "href": "/docs/guides/publish-from-unity",
+        "title": "Verse plug-ins: publish from Unity",
+        "docTitle": "verse plug-ins: publish from unity",
+        "ids": [
+          "lnk-verse-plug-ins-publish-from-unity",
+          "lnk-verse-plug-ins-publish-from-unity-2"
+        ]
+      },
+      {
+        "href": "/docs/guides/publish-from-unreal",
+        "title": "Verse plug-ins: publish from Unreal",
+        "docTitle": "verse plug-ins: publish from unreal",
+        "ids": [
+          "lnk-verse-plug-ins-publish-from-unreal",
+          "lnk-verse-plug-ins-publish-from-unreal-2"
+        ]
+      },
+      {
+        "href": "/docs/guides/publish-from-sketchup",
+        "title": "Publish from SketchUp (beta)",
+        "docTitle": "publish from sketchup (beta)",
+        "ids": [
+          "lnk-publish-from-sketchup-beta",
+          "lnk-publish-from-sketchup-beta-2"
+        ]
+      },
+      {
+        "href": "/docs/guides/publish-from-revit",
+        "title": "Publish from Revit (beta)",
+        "docTitle": "publish from revit (beta)",
+        "ids": [
+          "lnk-publish-from-revit-beta",
+          "lnk-publish-from-revit-beta-2"
+        ]
+      },
+      {
+        "href": "/docs/guides/publish-from-rhino",
+        "title": "Publish from Rhino (beta)",
+        "docTitle": "publish from rhino (beta)",
+        "ids": [
+          "lnk-publish-from-rhino-beta",
+          "lnk-publish-from-rhino-beta-2"
+        ]
+      },
+      {
+        "href": "/docs/guides/publish-from-3dsmax",
+        "title": "Publish from 3ds Max (beta)",
+        "docTitle": "publish from 3ds max (beta)",
+        "ids": [
+          "lnk-publish-from-3ds-max-beta",
+          "lnk-publish-from-3ds-max-beta-2"
+        ]
+      },
+      {
+        "href": "/docs/guides/publish-from-archicad",
+        "title": "Publish from Archicad (beta)",
+        "docTitle": "publish from archicad (beta)",
+        "ids": [
+          "lnk-publish-from-archicad-beta",
+          "lnk-publish-from-archicad-beta-2"
+        ]
+      },
+      {
+        "href": "/docs/guides/publish-from-maya",
+        "title": "Publish from Maya (beta)",
+        "docTitle": "publish from maya (beta)",
+        "ids": [
+          "lnk-publish-from-maya-beta",
+          "lnk-publish-from-maya-beta-2"
+        ]
+      },
+      {
+        "href": "/docs/guides/publish-from-cinema4d",
+        "title": "Publish from Cinema 4D (beta)",
+        "docTitle": "publish from cinema 4d (beta)",
+        "ids": [
+          "lnk-publish-from-cinema-4d-beta",
+          "lnk-publish-from-cinema-4d-beta-2"
+        ]
+      },
+      {
+        "href": "/docs/guides/publish-from-houdini",
+        "title": "Publish from Houdini (beta)",
+        "docTitle": "publish from houdini (beta)",
+        "ids": [
+          "lnk-publish-from-houdini-beta",
+          "lnk-publish-from-houdini-beta-2"
+        ]
+      },
+      {
+        "href": "/docs/guides/publish-from-solidworks",
+        "title": "Publish from SolidWorks (beta)",
+        "docTitle": "publish from solidworks (beta)",
+        "ids": [
+          "lnk-publish-from-solidworks-beta",
+          "lnk-publish-from-solidworks-beta-2"
+        ]
+      },
+      {
+        "href": "/docs/guides/publish-from-spline",
+        "title": "Publish from Spline, and Figma (beta)",
+        "docTitle": "publish from spline, and figma (beta)",
+        "ids": [
+          "lnk-publish-from-spline-and-figma-beta",
+          "lnk-publish-from-spline-and-figma-beta-2"
+        ]
+      },
+      {
+        "href": "/docs/guides/camera-paths",
+        "title": "Camera paths and default walkthroughs",
+        "docTitle": "camera paths and default walkthroughs",
+        "ids": [
+          "lnk-camera-paths-and-default-walkthroughs",
+          "lnk-camera-paths-and-default-walkthroughs-2"
+        ]
+      },
+      {
+        "href": "/docs/guides/hotspots-and-doors",
+        "title": "Hotspots and doors",
+        "docTitle": "hotspots and doors",
+        "ids": [
+          "lnk-hotspots-and-doors",
+          "lnk-hotspots-and-doors-2"
+        ]
+      },
+      {
+        "href": "/docs/guides/film-a-room",
+        "title": "Verse Capture: film a room (beta)",
+        "docTitle": "verse capture: film a room (beta)",
+        "ids": [
+          "lnk-verse-capture-film-a-room-beta",
+          "lnk-verse-capture-film-a-room-beta-2"
+        ]
+      },
+      {
+        "href": "/docs/guides/host-a-web-game",
+        "title": "Verse Play: host a web game",
+        "docTitle": "verse play: host a web game",
+        "ids": [
+          "lnk-verse-play-host-a-web-game",
+          "lnk-verse-play-host-a-web-game-2"
+        ]
+      },
+      {
+        "href": "/docs/guides/spatial-bench",
+        "title": "Spatial Bench",
+        "docTitle": "spatial bench",
+        "ids": [
+          "lnk-spatial-bench",
+          "lnk-spatial-bench-2"
+        ]
+      },
+      {
+        "href": "/docs/guides/light-and-dark-theme",
+        "title": "Light and dark theme",
+        "docTitle": "light and dark theme",
+        "ids": [
+          "lnk-light-and-dark-theme",
+          "lnk-light-and-dark-theme-2"
+        ]
+      },
+      {
+        "href": "/docs/guides/share-privately",
+        "title": "Share privately with tokens",
+        "docTitle": "share privately with tokens",
+        "ids": [
+          "lnk-share-privately-with-tokens",
+          "lnk-share-privately-with-tokens-2"
+        ]
+      },
+      {
+        "href": "/docs/guides/analytics",
+        "title": "Show your clients who looked",
+        "docTitle": "show your clients who looked",
+        "ids": [
+          "lnk-show-your-clients-who-looked",
+          "lnk-show-your-clients-who-looked-2"
+        ]
+      },
+      {
+        "href": "/docs/guides/embed-anywhere",
+        "title": "Embed anywhere: WordPress, Shopify, Webflow",
+        "docTitle": "embed anywhere: wordpress, shopify, webflow",
+        "ids": [
+          "lnk-embed-anywhere-wordpress-shopify-webflow",
+          "lnk-embed-anywhere-wordpress-shopify-webflow-2"
+        ]
+      },
+      {
+        "href": "/docs/guides/commerce",
+        "title": "Verse for Commerce: 3D on product pages (WooCommerce, Magento, BigCommerce, Salesforce)",
+        "docTitle": "verse for commerce: 3d on product pages (woocommerce, magento, bigcommerce, salesforce)",
+        "ids": [
+          "lnk-verse-for-commerce-3d-on-product-pages-w",
+          "lnk-verse-for-commerce-3d-on-product-pages-w-2"
+        ]
+      },
+      {
+        "href": "/docs/guides/embed-the-viewer",
+        "title": "Verse links and embeds: embed the viewer",
+        "docTitle": "verse links and embeds: embed the viewer",
+        "ids": [
+          "lnk-verse-links-and-embeds-embed-the-viewer",
+          "lnk-verse-links-and-embeds-embed-the-viewer-2"
+        ]
+      },
+      {
+        "href": "/docs/guides/export-video",
+        "title": "Export a flythrough video",
+        "docTitle": "export a flythrough video",
+        "ids": [
+          "lnk-export-a-flythrough-video",
+          "lnk-export-a-flythrough-video-2"
+        ]
+      },
+      {
+        "href": "/docs/guides/collect-review-comments",
+        "title": "Collect client review comments",
+        "docTitle": "collect client review comments",
+        "ids": [
+          "lnk-collect-client-review-comments",
+          "lnk-collect-client-review-comments-2"
+        ]
+      },
+      {
+        "href": "/docs/guides/author-a-guided-tour",
+        "title": "Author a guided tour",
+        "docTitle": "author a guided tour",
+        "ids": [
+          "lnk-author-a-guided-tour",
+          "lnk-author-a-guided-tour-2"
+        ]
+      },
+      {
+        "href": "/docs/guides/video-and-audio",
+        "title": "Video on surfaces, sound in the room",
+        "docTitle": "video on surfaces, sound in the room",
+        "ids": [
+          "lnk-video-on-surfaces-sound-in-the-room",
+          "lnk-video-on-surfaces-sound-in-the-room-2"
+        ]
+      },
+      {
+        "href": "/docs/guides/publish-from-ifc",
+        "title": "Publish from IFC or USD",
+        "docTitle": "publish from ifc or usd",
+        "ids": [
+          "lnk-publish-from-ifc-or-usd",
+          "lnk-publish-from-ifc-or-usd-2"
+        ]
+      },
+      {
+        "href": "/docs/guides/upload-fbx-obj",
+        "title": "Upload FBX and OBJ",
+        "docTitle": "upload fbx and obj",
+        "ids": [
+          "lnk-upload-fbx-and-obj",
+          "lnk-upload-fbx-and-obj-2"
+        ]
+      },
+      {
+        "href": "/docs/guides/build-a-configurator",
+        "title": "Build a configurator",
+        "docTitle": "build a configurator",
+        "ids": [
+          "lnk-build-a-configurator",
+          "lnk-build-a-configurator-2"
+        ]
+      },
+      {
+        "href": "/docs/guides/present-a-scene",
+        "title": "Present a scene to a room",
+        "docTitle": "present a scene to a room",
+        "ids": [
+          "lnk-present-a-scene-to-a-room",
+          "lnk-present-a-scene-to-a-room-2"
+        ]
+      },
+      {
+        "href": "/docs/guides/verse-prepare",
+        "title": "verse-prepare: the local compression step",
+        "docTitle": "verse-prepare: the local compression step",
+        "ids": [
+          "lnk-verse-prepare-the-local-compression-step",
+          "lnk-verse-prepare-the-local-compression-step-2"
+        ]
+      },
+      {
+        "href": "/docs/guides/tune-quality",
+        "title": "Tune quality knobs",
+        "docTitle": "tune quality knobs",
+        "ids": [
+          "lnk-tune-quality-knobs",
+          "lnk-tune-quality-knobs-2"
+        ]
+      },
+      {
+        "href": "/docs/guides/run-your-own-server",
+        "title": "Run your own server",
+        "docTitle": "run your own server",
+        "ids": [
+          "lnk-run-your-own-server",
+          "lnk-run-your-own-server-2"
+        ]
+      },
+      {
+        "href": "/docs/guides/monitor-production",
+        "title": "Monitor production",
+        "docTitle": "monitor production",
+        "ids": [
+          "lnk-monitor-production",
+          "lnk-monitor-production-2"
+        ]
+      },
+      {
+        "href": "/docs/guides/ask-verse",
+        "title": "Ask Verse, the site assistant",
+        "docTitle": "ask verse, the site assistant",
+        "ids": [
+          "lnk-ask-verse-the-site-assistant",
+          "lnk-ask-verse-the-site-assistant-2"
+        ]
+      },
+      {
+        "href": "/docs/guides/floor-plan-to-3d",
+        "title": "Verse Home: floor plan to 3D home",
+        "docTitle": "verse home: floor plan to 3d home",
+        "ids": [
+          "lnk-verse-home-floor-plan-to-3d-home",
+          "lnk-verse-home-floor-plan-to-3d-home-2"
+        ]
+      },
+      {
+        "href": "/docs/guides/instant-home",
+        "title": "Verse Home: plan to a home buyers walk, restyle and tour",
+        "docTitle": "verse home: plan to a home buyers walk, restyle and tour",
+        "ids": [
+          "lnk-verse-home-plan-to-a-home-buyers-walk-re",
+          "lnk-verse-home-plan-to-a-home-buyers-walk-re-2"
+        ]
+      },
+      {
+        "href": "/docs/guides/web-component",
+        "title": "<verse-viewer>: one tag, any page",
+        "docTitle": "<verse-viewer>: one tag, any page",
+        "ids": [
+          "lnk-one-tag-any-page",
+          "lnk-one-tag-any-page-2"
+        ]
+      },
+      {
+        "href": "/docs/guides/designer-tools",
+        "title": "Designer tools: Framer, Webflow, Figma",
+        "docTitle": "designer tools: framer, webflow, figma",
+        "ids": [
+          "lnk-designer-tools-framer-webflow-figma",
+          "lnk-designer-tools-framer-webflow-figma-2"
+        ]
+      },
+      {
+        "href": "/docs/guides/react-and-vue",
+        "title": "React and Vue wrappers",
+        "docTitle": "react and vue wrappers",
+        "ids": [
+          "lnk-react-and-vue-wrappers",
+          "lnk-react-and-vue-wrappers-2"
+        ]
+      },
+      {
+        "href": "/docs/guides/rest-client",
+        "title": "REST client round trip",
+        "docTitle": "rest client round trip",
+        "ids": [
+          "lnk-rest-client-round-trip",
+          "lnk-rest-client-round-trip-2"
+        ]
+      },
+      {
+        "href": "/docs/guides/sell-with-woocommerce",
+        "title": "Sell with WooCommerce",
+        "docTitle": "sell with woocommerce",
+        "ids": [
+          "lnk-sell-with-woocommerce",
+          "lnk-sell-with-woocommerce-2"
+        ]
+      },
+      {
+        "href": "/docs/guides/sell-with-bigcommerce",
+        "title": "Sell with BigCommerce",
+        "docTitle": "sell with bigcommerce",
+        "ids": [
+          "lnk-sell-with-bigcommerce",
+          "lnk-sell-with-bigcommerce-2"
+        ]
+      },
+      {
+        "href": "/docs/guides/sell-with-magento",
+        "title": "Sell with Magento / Adobe Commerce",
+        "docTitle": "sell with magento / adobe commerce",
+        "ids": [
+          "lnk-sell-with-magento-adobe-commerce",
+          "lnk-sell-with-magento-adobe-commerce-2"
+        ]
+      },
+      {
+        "href": "/docs/guides/embed-in-wix",
+        "title": "Embed in Wix",
+        "docTitle": "embed in wix",
+        "ids": [
+          "lnk-embed-in-wix",
+          "lnk-embed-in-wix-2"
+        ]
+      },
+      {
+        "href": "/docs/guides/embed-in-squarespace",
+        "title": "Embed in Squarespace",
+        "docTitle": "embed in squarespace",
+        "ids": [
+          "lnk-embed-in-squarespace",
+          "lnk-embed-in-squarespace-2"
+        ]
+      },
+      {
+        "href": "/docs/guides/embed-in-framer",
+        "title": "Embed in Framer",
+        "docTitle": "embed in framer",
+        "ids": [
+          "lnk-embed-in-framer",
+          "lnk-embed-in-framer-2"
+        ]
+      },
+      {
+        "href": "/docs/guides/embed-in-ghost-and-hubspot",
+        "title": "Embed in Ghost and HubSpot",
+        "docTitle": "embed in ghost and hubspot",
+        "ids": [
+          "lnk-embed-in-ghost-and-hubspot",
+          "lnk-embed-in-ghost-and-hubspot-2"
+        ]
+      },
+      {
+        "href": "/docs/guides/automate-with-zapier",
+        "title": "Automate with Zapier",
+        "docTitle": "automate with zapier",
+        "ids": [
+          "lnk-automate-with-zapier",
+          "lnk-automate-with-zapier-2"
+        ]
+      },
+      {
+        "href": "/docs/guides/automate-with-make",
+        "title": "Automate with Make",
+        "docTitle": "automate with make",
+        "ids": [
+          "lnk-automate-with-make",
+          "lnk-automate-with-make-2"
+        ]
+      },
+      {
+        "href": "/docs/guides/automate-with-n8n",
+        "title": "Automate with n8n",
+        "docTitle": "automate with n8n",
+        "ids": [
+          "lnk-automate-with-n8n",
+          "lnk-automate-with-n8n-2"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Blog & updates",
+    "ids": [
+      "sec-item-4",
+      "sec-item-10"
+    ],
+    "items": [
+      {
+        "href": "/docs/blog/index",
+        "title": "All posts",
+        "docTitle": "all posts",
+        "ids": [
+          "lnk-all-posts",
+          "lnk-all-posts-2"
+        ]
+      },
+      {
+        "href": "/docs/blog/how-verse-streams-a-building",
+        "title": "How Verse streams a building",
+        "docTitle": "how verse streams a building",
+        "ids": [
+          "lnk-how-verse-streams-a-building",
+          "lnk-how-verse-streams-a-building-2"
+        ]
+      },
+      {
+        "href": "/docs/blog/verse-engine-2-7-whats-new",
+        "title": "2.7: what's new for you",
+        "docTitle": "2.7: what's new for you",
+        "ids": [
+          "lnk-2-7-what-s-new-for-you",
+          "lnk-2-7-what-s-new-for-you-2"
+        ]
+      },
+      {
+        "href": "/docs/blog/2-0-release-notes-for-humans",
+        "title": "2.0 release notes for humans",
+        "docTitle": "2.0 release notes for humans",
+        "ids": [
+          "lnk-2-0-release-notes-for-humans",
+          "lnk-2-0-release-notes-for-humans-2"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Integrations",
+    "ids": [
+      "sec-item-5",
+      "sec-item-11"
+    ],
+    "items": [
+      {
+        "href": "/docs/integrations",
+        "title": "Integrations: every platform at a glance",
+        "docTitle": "integrations: every platform at a glance",
+        "ids": [
+          "lnk-integrations-every-platform-at-a-glance",
+          "lnk-integrations-every-platform-at-a-glance-2"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "API & SDK",
+    "ids": [
+      "sec-item-6",
+      "sec-item-12"
+    ],
+    "items": [
+      {
+        "href": "/docs/developers",
+        "title": "Verse API, SDK and MCP: embed, SDK, webhooks",
+        "docTitle": "verse api, sdk and mcp: embed, sdk, webhooks",
+        "ids": [
+          "lnk-verse-api-sdk-and-mcp-embed-sdk-webhooks",
+          "lnk-verse-api-sdk-and-mcp-embed-sdk-webhooks-2"
+        ]
+      },
+      {
+        "href": "/docs/scenes-api",
+        "title": "Verse API reference",
+        "docTitle": "verse api reference",
+        "ids": [
+          "lnk-verse-api-reference",
+          "lnk-verse-api-reference-2"
+        ]
+      },
+      {
+        "href": "/docs/api-quickstart",
+        "title": "API quickstart",
+        "docTitle": "api quickstart",
+        "ids": [
+          "lnk-api-quickstart",
+          "lnk-api-quickstart-2"
+        ]
+      },
+      {
+        "href": "/docs/api-changelog",
+        "title": "API changelog",
+        "docTitle": "api changelog",
+        "ids": [
+          "lnk-api-changelog",
+          "lnk-api-changelog-2"
+        ]
+      },
+      {
+        "href": "/docs/embed-sdk",
+        "title": "Embed SDK reference",
+        "docTitle": "embed sdk reference",
+        "ids": [
+          "lnk-embed-sdk-reference",
+          "lnk-embed-sdk-reference-2"
+        ]
+      },
+      {
+        "href": "/docs/sdk",
+        "title": "Verse SDK: JS / TS (@ctruhtech/verse-sdk)",
+        "docTitle": "verse sdk: js / ts (@ctruhtech/verse-sdk)",
+        "ids": [
+          "lnk-verse-sdk-js-ts-ctruhtech-verse-sdk",
+          "lnk-verse-sdk-js-ts-ctruhtech-verse-sdk-2"
+        ]
+      },
+      {
+        "href": "/docs/mcp",
+        "title": "Verse MCP server for AI agents",
+        "docTitle": "verse mcp server for ai agents",
+        "ids": [
+          "lnk-verse-mcp-server-for-ai-agents",
+          "lnk-verse-mcp-server-for-ai-agents-2"
+        ]
+      }
+    ]
+  }
+]

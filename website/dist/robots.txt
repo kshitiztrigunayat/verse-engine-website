@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://verse-engine-ctruh-design.rajat83.chatgpt.site/sitemap.xml

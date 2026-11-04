@@ -4,3 +4,7 @@ node_modules/
 .env
 .env.*
 .build/
+
+# React build output and generated reference shell
+website/dist/
+website/.build-shell.html

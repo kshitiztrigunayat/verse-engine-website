@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /ingest/
+Disallow: /v1/
+Disallow: /embed.html
+
+Sitemap: https://verse.ctruh.com/sitemap.xml

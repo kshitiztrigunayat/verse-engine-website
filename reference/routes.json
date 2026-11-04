@@ -75,6 +75,11 @@
     "payload": "content/docs__blog__verse-engine-2-7-whats-new.json"
   },
   {
+    "route": "/docs/browser-3d-vs-pixel-streaming",
+    "kind": "page",
+    "payload": "content/docs__browser-3d-vs-pixel-streaming.json"
+  },
+  {
     "route": "/docs/browser-support",
     "kind": "page",
     "payload": "content/docs__browser-support.json"
@@ -560,6 +565,16 @@
     "payload": "content/pricing.json"
   },
   {
+    "route": "/privacy",
+    "kind": "legal",
+    "payload": "content/privacy.json"
+  },
+  {
+    "route": "/refunds",
+    "kind": "legal",
+    "payload": "content/refunds.json"
+  },
+  {
     "route": "/samples",
     "kind": "page",
     "payload": "content/samples.json"
@@ -573,5 +588,10 @@
     "route": "/studio",
     "kind": "app",
     "payload": "content/studio.json"
+  },
+  {
+    "route": "/terms",
+    "kind": "legal",
+    "payload": "content/terms.json"
   }
 ]

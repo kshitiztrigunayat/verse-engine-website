@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta id="meta-theme-color" name="theme-color" content="#ffffff">
+<meta id="meta-site-origin" name="site-origin" content="%SITE_URL%">
+<title id="doc-title">Verse Engine by Ctruh | Browser-Native 3D Engine</title>
+<meta id="meta-description" name="description" content="Verse Engine by Ctruh turns 3D files, scans and Blender, Unity or Unreal projects into one link that opens in any modern browser. No app needed. Start free.">
+<meta id="meta-robots" name="robots" content="index,follow,max-image-preview:large">
+<link id="link-canonical" rel="canonical" href="%SITE_URL%/">
+<meta id="meta-og-site" property="og:site_name" content="Verse Engine by Ctruh">
+<meta id="meta-og-type" property="og:type" content="website">
+<meta id="meta-og-locale" property="og:locale" content="en_US">
+<meta id="meta-og-title" property="og:title" content="Verse Engine by Ctruh | Browser-Native 3D Engine">
+<meta id="meta-og-description" property="og:description" content="Turn any 3D scene into one link anyone can open in a browser. No app needed.">
+<meta id="meta-og-url" property="og:url" content="%SITE_URL%/">
+<meta id="meta-og-image" property="og:image" content="%SITE_URL%/assets/og/verse-engine-by-ctruh-1200x630.jpg">
+<meta id="meta-og-image-alt" property="og:image:alt" content="Verse Engine by Ctruh: a 3D scene opened from one link in a browser">
+<meta id="meta-twitter-card" name="twitter:card" content="summary_large_image">
+<script id="script-jsonld" type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.ctruh.com/#organization",
+      "name": "Ctruh",
+      "legalName": "CTRUH Technologies Private Limited",
+      "url": "https://www.ctruh.com/",
+      "logo": "https://verse.ctruh.com/assets/brand/ctruh-logo-512.png",
+      "email": "hello@ctruh.com",
+      "sameAs": [
+        "https://www.linkedin.com/company/ctruh/",
+        "https://www.youtube.com/@Ctruh",
+        "https://www.instagram.com/ctruh.official/"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://verse.ctruh.com/#website",
+      "name": "Verse Engine by Ctruh",
+      "url": "https://verse.ctruh.com/",
+      "publisher": {
+        "@id": "https://www.ctruh.com/#organization"
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://verse.ctruh.com/#software",
+      "name": "Verse Engine by Ctruh",
+      "applicationCategory": "DeveloperApplication",
+      "applicationSubCategory": "Browser-native 3D engine",
+      "operatingSystem": "Web browser (WebGPU or WebGL2)",
+      "url": "https://verse.ctruh.com/",
+      "description": "Verse Engine by Ctruh turns 3D files, scans, floor plans and Blender, Unity or Unreal projects into one link that opens in a modern web browser.",
+      "publisher": {
+        "@id": "https://www.ctruh.com/#organization"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "description": "Free plan",
+        "url": "https://verse.ctruh.com/pricing"
+      }
+    }
+  ]
+}
+</script>
+<link id="link-icon" rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link id="link-font-display" rel="preload" href="/assets/degular-semibold.otf" as="font" type="font/otf" crossorigin>
+<link id="link-font-body" rel="preload" href="/assets/metropolis-regular.woff2" as="font" type="font/woff2" crossorigin>
+<style id="style-boot">
+html{background:#fff}
+[hidden]{display:none!important}
+html:not(.app-ready) body{visibility:hidden}
+html.intro-on body:before{content:"";position:fixed;inset:0;background:#fff;z-index:9998;visibility:visible}
+</style>
+<script id="script-boot">
+/* Runs before first paint: arm the cover for the intro animation. Skipped for reduced motion, ?motion-off and ?poster. */
+try{if(!matchMedia("(prefers-reduced-motion: reduce)").matches&&!/motion-off|poster/.test(location.search))document.documentElement.classList.add("intro-on")}catch(e){}
+setTimeout(function(){document.documentElement.classList.remove("intro-on")},4500);
+</script>
+<script id="script-docs-hash">
+/* /docs only (and /docs/what-is-verse-engine, where /docs redirects): old production docs links (/docs/#/...) go to the new page paths. */
+(function(){if(!/^\/docs(\/what-is-verse-engine)?\/?$/.test(location.pathname))return;var h=location.hash;if(h.indexOf('#/')===0){var p=h.slice(2).split('?')[0];var map={'examples':'/samples','guides/publish-from-substance-painter':'/plugins'};location.replace(map[p]||('/docs/'+p));}})();
+</script>
+<script id="script-main" type="module" src="/src/main.jsx"></script>
+</head>
+<body id="app-body">
+<noscript><p style="padding:24px;font-family:sans-serif">Verse Engine needs JavaScript to display this site.</p></noscript>
+</body>
+</html>

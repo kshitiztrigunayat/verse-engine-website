@@ -5,10 +5,13 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
+import {sitemapXml} from './sitemap.mjs';
 const here=path.dirname(fileURLToPath(import.meta.url)), project=path.resolve(here,'..');
-const stage=process.env.VERSE_DIST, dist=path.join(project,'dist');
+// Output goes to public/, which Vite serves and copies into dist/ unchanged.
+const stage=process.env.VERSE_DIST, dist=path.join(project,'public');
 if(!stage)throw new Error('VERSE_DIST (stage directory) is required');
-const ORIGIN=(process.env.SITE_ORIGIN||'https://verse-engine-ctruh-design.rajat83.chatgpt.site').replace(/\/+$/,'');
+// The site's address for sitemap.xml and robots.txt: package.json config.siteUrl (SITE_ORIGIN overrides it).
+const ORIGIN=(process.env.SITE_ORIGIN||JSON.parse(fs.readFileSync(path.join(project,'package.json'),'utf8')).config.siteUrl).replace(/\/+$/,'');
 const NOINDEX=new Set(['/studio','/signin','/404']);
 const read=f=>fs.readFileSync(f,'utf8');
 const walk=d=>fs.readdirSync(d,{withFileTypes:true}).flatMap(e=>e.isDirectory()?walk(path.join(d,e.name)):[path.join(d,e.name)]);
@@ -36,6 +39,39 @@ function addIds(html,used){
   });
 }
 
+// ---------- documentation pages: data for the React docs layout (src/pages/docs/DocsPage.jsx) ----------
+// Every /docs page has the same layout (search boxes, chapter nav, article, source line, "on this page").
+// Its payload keeps only what differs per page: { active, article, source, toc }. The chapter nav is the
+// same on every page and is written once to src/pages/docs/nav.json. docsMarkup() is the same layout as
+// DocsPage.jsx, as a string: each page is rebuilt from its data and must match the generated HTML exactly.
+const docsNavFile=path.join(project,'src/pages/docs/nav.json');
+let docsNav=null;
+const navMarkup=(nav,i,active)=>`<div class="docs-nav-content">${nav.map(g=>`<section id="${g.ids[i]}"><h2>${esc(g.title)}</h2>${g.items.map(n=>`<a data-doc-item data-doc-title="${esc(n.docTitle)}" href="${esc(n.href)}"${n.href===active?' aria-current="page"':''} id="${n.ids[i]}">${esc(n.title)}</a>`).join('')}</section>`).join('')}<p class="docs-no-results" hidden>No matching guides.</p></div>`;
+const searchMarkup=place=>`<label class="docs-search" for="doc-search-${place}"><span class="sr-only">Search documentation</span><input id="doc-search-${place}" type="search" placeholder="Search documentation" data-doc-search autocomplete="off"><kbd aria-hidden="true">⌘ K</kbd></label>`;
+const docsMarkup=(d,nav)=>`<section class="documentation" id="sec-documentation"><div class="docs-mobile">${searchMarkup('mobile')}<details id="dtl-item"><summary id="sum-browse-documentation">Browse documentation <span aria-hidden="true">+</span></summary><nav aria-label="Documentation chapters" id="nav-documentation-chapters">${navMarkup(nav,0,d.active)}</nav></details></div><aside class="docs-sidebar" id="asd-docs-sidebar">${searchMarkup('desktop')}<nav aria-label="Documentation chapters" id="nav-documentation-chapters-2">${navMarkup(nav,1,d.active)}</nav></aside><div class="doc-body"><article class="doc-article" id="art-doc-article">${d.article}</article><div class="doc-source">Published documentation from <a href="${esc(d.source)}" id="lnk-verse-by-ctruh">Verse by Ctruh</a></div></div>${d.toc.length?`<aside class="docs-toc" id="asd-docs-toc"><p>ON THIS PAGE</p>${d.toc.map(t=>`<a href="${esc(t.href)}" id="${t.id}">${esc(t.text)}</a>`).join('')}</aside>`:''}</section>`;
+function splitDocs(html,route){
+  const fail=what=>{throw new Error(`docs page ${route}: ${what}`)};
+  const navs=[...html.matchAll(/<div class="docs-nav-content">([\s\S]*?)<p class="docs-no-results" hidden>No matching guides\.<\/p><\/div>/g)].map(m=>[...m[1].matchAll(/<section id="([^"]+)"><h2>([\s\S]*?)<\/h2>([\s\S]*?)<\/section>/g)].map(g=>({id:g[1],title:unesc(g[2]),items:[...g[3].matchAll(/<a data-doc-item data-doc-title="([^"]*)" href="([^"]*)"( aria-current="page")? id="([^"]+)">([\s\S]*?)<\/a>/g)].map(a=>({docTitle:unesc(a[1]),href:unesc(a[2]),current:!!a[3],id:a[4],title:unesc(a[5])}))})));
+  if(navs.length!==2)fail('expected two chapter navs');
+  const [mobile,desktop]=navs;
+  const nav=mobile.map((g,gi)=>({title:g.title,ids:[g.id,desktop[gi]?.id],items:g.items.map((n,ni)=>({href:n.href,title:n.title,docTitle:n.docTitle,ids:[n.id,desktop[gi]?.items[ni]?.id]}))}));
+  const active=mobile.flatMap(g=>g.items).find(n=>n.current)?.href??null;
+  const article=(html.match(/<article class="doc-article" id="art-doc-article">([\s\S]*)<\/article><div class="doc-source">/)||fail('article'))[1];
+  const source=unesc((html.match(/<div class="doc-source">Published documentation from <a href="([^"]*)" id="lnk-verse-by-ctruh">Verse by Ctruh<\/a><\/div>/)||fail('source line'))[1]);
+  const tocHtml=(html.match(/<aside class="docs-toc" id="asd-docs-toc"><p>ON THIS PAGE<\/p>([\s\S]*?)<\/aside>/)||[,''])[1];
+  const toc=[...tocHtml.matchAll(/<a href="([^"]*)" id="([^"]+)">([\s\S]*?)<\/a>/g)].map(t=>({href:unesc(t[1]),id:t[2],text:unesc(t[3])}));
+  const docs={active,article,source,toc};
+  if(unesc(docsMarkup(docs,nav))!==unesc(html))fail('layout does not match DocsPage (rebuilt HTML differs)');
+  if(docsNav&&JSON.stringify(docsNav)!==JSON.stringify(nav))fail('chapter nav differs from the other docs pages');
+  docsNav=nav;
+  return docs;
+}
+
+// ---------- routes whose page is a React component (keys of PAGES in src/pages/index.js) ----------
+// React pages have their meta in src/pages/meta.js (title, description, ...); they get no payload.
+const {META}=await import(new URL('../src/pages/meta.js',import.meta.url));
+const REACT_PAGES=new Set(Object.keys(META));
+
 // ---------- shell pieces (shared chrome) from the About page ----------
 const aboutHtml=read(path.join(stage,'about/index.html'));
 const pick=(re,html,label)=>{const m=html.match(re);if(!m)throw new Error('shell piece not found: '+label);return m[0]};
@@ -62,9 +98,11 @@ const shellMenu=addIds(named(menu,[
   ['<a class="site-button" ','<a id="btn-menu-explore" class="site-button" '],
   ['<a class="menu-challenge"','<a id="btn-menu-challenge" class="menu-challenge"']]),shellUsed);
 const shellFooter=addIds(named(footer,[['<footer class="page-footer">','<footer id="site-footer" class="page-footer">']]),shellUsed);
+// Duplicate docs URLs and the page each one redirects to (same list as the redirects in vercel.json).
+const DUPLICATE_DOCS={'/docs/api':'/docs/scenes-api','/docs/authentication':'/docs/api-quickstart','/docs/blender':'/docs/guides/publish-from-blender','/docs/concepts':'/docs/how-streaming-works','/docs/webhooks':'/docs/developers','/docs/fixing-doors-and-windows':'/docs/guides/instant-home','/docs/floor-plan-to-3d-home':'/docs/guides/floor-plan-to-3d','/docs/upload-your-first-scene':'/docs/getting-started','/docs/materials-and-lighting':'/docs/guides/fidelity-mode','/docs/unity':'/docs/guides/publish-from-unity','/docs/unreal':'/docs/guides/publish-from-unreal','/docs/start-a-live-tour':'/docs/guides/tour-together','/docs/supported-file-types':'/docs/guides/what-you-can-upload','/docs':'/docs/what-is-verse-engine'};
+// Blog posts: headline (the H1), datePublished and author from the post's frontmatter, for the TechArticle structured data.
+function blogArticle(route){const m=route.match(/^\/docs\/(blog\/(?!index$)[^/]+)$/);if(!m)return null;const md=fs.readFileSync(path.join(project,'source/production-markdown',m[1]+'.md'),'utf8');const fm=Object.fromEntries([...((md.match(/^---\n([\s\S]*?)\n---/)||[])[1]||'').matchAll(/^(\w+):[ \t]*(.*)$/gm)].map(x=>[x[1],x[2].trim()]));return {headline:(md.match(/^# (.+)$/m)||[])[1],datePublished:fm.datePublished||'',author:fm.author||''};}
 const fileFor=route=>route==='/'?'index':route.slice(1).replaceAll('/','__');
-const landingHead=read(path.join(stage,'index.html'));
-const jsonld=(landingHead.match(/<script type="application\/ld\+json">[\s\S]*?<\/script>/)||[''])[0];
 
 for(const file of walk(stage).filter(f=>f.endsWith('.html'))){
   const rel=path.relative(stage,file).replaceAll('\\','/');
@@ -89,25 +127,38 @@ for(const file of walk(stage).filter(f=>f.endsWith('.html'))){
   }
   const navCurrent=(h.match(/<a class="nav-link" href="([^"]*)" aria-current="page"/)||[,''])[1];
   html=html.replace(/(\s(?:src|href|poster|data-src)=")(?!\/|#|[a-z][a-z0-9+.-]*:|\.)/gi,'$1/').replace(/url\((['"]?)assets\//g,'url($1/assets/');   // routes live at any depth: use root-absolute URLs
+  html=html.replace(/href="(\/docs(?:\/[a-z0-9-]+)?)\/?(?=["#?])/g,(link,from)=>DUPLICATE_DOCS[from]?'href="'+DUPLICATE_DOCS[from]:link);   // links to a duplicate docs URL go to the page we keep
   const used=new Set(shellUsed);
   html=addIds(html,used);
-  const payload={path:route,kind,chrome,title,description,bodyClass,mainClass,navCurrent,noindex:NOINDEX.has(route),...(route==='/'?{jsonld}:{}),html};
+  if(REACT_PAGES.has(route)){const m=META[route];if(m.kind!=='notfound')routes.push({path:route,kind:m.kind,noindex:m.noindex,title:m.title});continue}
+  const content=kind==='page'&&html.startsWith('<section class="documentation"')?{docs:splitDocs(html,route)}:{html};
+  const article=blogArticle(route);
+  const payload={path:route,kind,chrome,title,description,bodyClass,mainClass,navCurrent,noindex:NOINDEX.has(route),...content,...(article&&{article})};
   fs.writeFileSync(path.join(dist,'content',fileFor(route===  '/404'?'/404':route)+'.json'),JSON.stringify(payload));
   if(kind!=='notfound')routes.push({path:route,kind,noindex:NOINDEX.has(route),title});
 }
+// Pages that exist only as React components (no generated HTML), e.g. the legal pages.
+for(const [route,m] of Object.entries(META))if(m.kind!=='notfound'&&!routes.some(r=>r.path===route))routes.push({path:route,kind:m.kind,noindex:m.noindex,title:m.title});
 routes.sort((a,b)=>a.path.localeCompare(b.path));
 
 // ---------- shell ----------
 let shell=read(path.join(here,'templates/shell.html'));
 shell=shell.replace('<!--@header-->',shellHeader).replace('<!--@menu-->',shellMenu).replace('<!--@footer-->',shellFooter).replaceAll('@ORIGIN@',ORIGIN);
-fs.writeFileSync(path.join(dist,'index.html'),shell);
+// The shell is now the React component src/Shell.jsx (keep it in sync with templates/shell.html);
+// write the generated shell for reference only, outside public/.
+fs.writeFileSync(path.join(project,'.build-shell.html'),shell);
+
+// ---------- docs chapter nav (shared by every docs page) ----------
+if(!docsNav)throw new Error('no documentation pages found');
+fs.mkdirSync(path.dirname(docsNavFile),{recursive:true});fs.writeFileSync(docsNavFile,JSON.stringify(docsNav,null,2)+'\n');
 
 // ---------- static data + discovery files ----------
 for(const f of ['pricing-data.json','code-samples.json'])fs.copyFileSync(path.join(stage,f),path.join(dist,f));
 fs.writeFileSync(path.join(dist,'content/manifest.json'),JSON.stringify(routes.map(({path:p,kind,noindex})=>({path:p,kind,noindex}))));
-const urls=routes.filter(r=>!r.noindex).map(r=>`<url><loc>${ORIGIN}${r.path==='/'?'/':r.path}</loc></url>`).join('');
-fs.writeFileSync(path.join(dist,'sitemap.xml'),`<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${urls}</urlset>`);
-fs.writeFileSync(path.join(dist,'robots.txt'),`User-agent: *\nAllow: /\nSitemap: ${ORIGIN}/sitemap.xml\n`);
+// Public pages with the date each last changed (see sitemap.mjs).
+fs.writeFileSync(path.join(dist,'sitemap.xml'),sitemapXml({project,origin:ORIGIN,routes}));
+// API paths and the embed page are kept out of search results.
+fs.writeFileSync(path.join(dist,'robots.txt'),`User-agent: *\nAllow: /\nDisallow: /ingest/\nDisallow: /v1/\nDisallow: /embed.html\n\nSitemap: ${ORIGIN}/sitemap.xml\n`);
 
 // ---------- route inventory for the handoff package ----------
 const referenceDir=path.resolve(project,'../reference');
