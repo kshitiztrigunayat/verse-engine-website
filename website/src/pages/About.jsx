@@ -74,6 +74,15 @@ export default function About() {
             Ctruh is a deep-tech company building 3D, XR and AI infrastructure for the spatial internet, with teams in Bengaluru and San Francisco. Verse Engine by Ctruh is our browser-native 3D engine: it lets anyone share a 3D world as a link.
           </p>
         </section>
+        <section className="ctruh-products content-width section-space" id="sec-ctruh-products">
+          <h2>How Verse Engine by Ctruh fits with other Ctruh products</h2>
+          <ul>
+            <li><strong>Ctruh</strong>: the company. Builds 3D, XR and AI infrastructure.</li>
+            <li><strong>Verse Engine by Ctruh</strong>: the browser-native 3D engine that prepares, streams and shows 3D scenes as a link.</li>
+            <li><strong>VersaAI</strong>: Ctruh&apos;s AI that creates 3D models from photos and video.</li>
+            <li><strong>Ctruh Studio</strong>: Ctruh&apos;s no-code builder for immersive experiences.</li>
+          </ul>
+        </section>
         <section className="company-facts content-width section-space" id="sec-company-facts">
           <article id="art-item">
             <p className="eyebrow">WHERE WE BUILD</p>
