@@ -137,7 +137,7 @@ export default function About() {
               <span className="step-number">01</span>
               <h2>Modern browsers, every screen</h2>
               <p>
-                Runs on phones, laptops and headsets, using WebGPU where available and WebGL2 otherwise. <a href="/docs/browser-support">See browser support</a>
+                Runs on phones, laptops and headsets, using WebGPU where available and WebGL2 otherwise. <a className="inline-link" href="/docs/browser-support">See browser support</a>
               </p>
             </article>
             <article id="art-item-5">

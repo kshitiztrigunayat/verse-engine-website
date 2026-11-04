@@ -848,7 +848,9 @@ export default function Landing() {
               Do viewers need to install anything?
               <span>+</span>
             </summary>
-            <p>No. Scenes open through a link in a standard browser, without a separate app or plug-in.</p>
+            <p>
+              No. Scenes open through a link in a standard <a className="inline-link" href="/docs/browser-support">browser</a>, without a separate app or plug-in.
+            </p>
           </details>
           <details id="dtl-item-2">
             <summary id="sum-can-i-use-my-existing-tools">
@@ -856,7 +858,7 @@ export default function Landing() {
               <span>+</span>
             </summary>
             <p>
-              Publish from Blender, Unity, and Unreal Engine, or upload a scene. More than 20 file types and files up to 20 GB are supported.
+              Publish from Blender, Unity, and Unreal Engine, or upload a scene. More than <a className="inline-link" href="/docs/guides/what-you-can-upload">20 file types</a> and files up to 20 GB are supported.
             </p>
           </details>
           <details id="dtl-item-3">
@@ -872,7 +874,25 @@ export default function Landing() {
               <span>+</span>
             </summary>
             <p>
-              The same scene link supports Web 3D, augmented reality, and extended reality. Viewing modes depend on device compatibility.
+              The same scene link supports Web 3D, <a className="inline-link" href="/docs/guides/view-in-ar">augmented reality</a>, and extended reality. Viewing modes depend on device compatibility.
+            </p>
+          </details>
+          <details id="dtl-item-5">
+            <summary id="sum-how-much-does-it-cost">
+              How much does it cost?
+              <span>+</span>
+            </summary>
+            <p>
+              You can start free, and viewers never pay. Paid plans add storage, bandwidth, private links and analytics. <a className="inline-link" href="/pricing">See pricing</a>
+            </p>
+          </details>
+          <details id="dtl-item-6">
+            <summary id="sum-is-verse-engine-by-ctruh-a-game-engine">
+              Is Verse Engine by Ctruh a game engine?
+              <span>+</span>
+            </summary>
+            <p>
+              Not in the way Unity or Unreal are. Verse Engine by Ctruh delivers a finished 3D scene to the browser as a link. You can still create in Unity, Unreal or Blender and publish with our <a className="inline-link" href="/plugins">plug-ins</a>.
             </p>
           </details>
         </div>
