@@ -8,6 +8,17 @@
 //   ogDescription: og:description when it should differ from description (home page)
 //   jsonld:     structured data for search engines (home page)
 // Documentation pages get theirs from source/ (npm run content).
+// Breadcrumb structured data for a documentation page (/docs/...): Docs > this page.
+// Used by the router (in the browser) and by vite.config.js (in each page's server HTML).
+export const docsBreadcrumb = (path, title, origin) => ({
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Docs", item: origin + "/docs/what-is-verse-engine" },
+    { "@type": "ListItem", position: 2, name: title.replace(/ \| Verse Engine by Ctruh$/, ""), item: origin + path },
+  ],
+});
+
 export const META = {
   "/": {
     kind: "landing",
