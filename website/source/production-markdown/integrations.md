@@ -1,5 +1,6 @@
 ---
 description: Integrations: every platform at a glance in the Verse Engine by Ctruh docs: what it is, how to use it, and where it fits in your 3D workflow.
+title: Integrations | Verse Engine by Ctruh
 ---
 # Integrations
 

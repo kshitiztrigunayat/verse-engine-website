@@ -109,7 +109,7 @@ for(const file of walk(stage).filter(f=>f.endsWith('.html'))){
   const rel=path.relative(stage,file).replaceAll('\\','/');
   const route=rel==='404.html'?'/404':'/'+rel.replace(/index\.html$/,'').replace(/\/$/,'');
   const h=read(file);
-  const title=unesc((h.match(/<title>([^<]*)<\/title>/)||[,'Verse Engine'])[1]);
+  let title=unesc((h.match(/<title>([^<]*)<\/title>/)||[,'Verse Engine'])[1]);
   let description=unesc((h.match(/<meta name="description" content="([^"]*)"/)||[,''])[1]);
   const bodyClass=(h.match(/<body class="([^"]*)"/)||[,''])[1];
   const isApp=/studio-page/.test(bodyClass);
@@ -133,7 +133,7 @@ for(const file of walk(stage).filter(f=>f.endsWith('.html'))){
   html=addIds(html,used);
   if(REACT_PAGES.has(route)){const m=META[route];if(m.kind!=='notfound')routes.push({path:route,kind:m.kind,noindex:m.noindex,title:m.title});continue}
   const content=kind==='page'&&html.startsWith('<section class="documentation"')?{docs:splitDocs(html,route)}:{html};
-  if(content.docs){const d=docDescription(content.docs.source.replace(/^.*#\//,''));if(d)description=d;}   // docs: description from frontmatter
+  if(content.docs){const key=content.docs.source.replace(/^.*#\//,''),d=docDescription(key),t=frontmatter(key).title;if(d)description=d;if(t)title=t;}   // docs: description (and a shorter title, if set) from frontmatter
   const article=blogArticle(route);
   const payload={path:route,kind,chrome,title,description,bodyClass,mainClass,navCurrent,noindex:NOINDEX.has(route),...content,...(article&&{article})};
   fs.writeFileSync(path.join(dist,'content',fileFor(route===  '/404'?'/404':route)+'.json'),JSON.stringify(payload));

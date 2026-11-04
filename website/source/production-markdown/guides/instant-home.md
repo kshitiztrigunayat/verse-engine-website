@@ -1,5 +1,6 @@
 ---
 description: Verse Home: plan to a home buyers walk, restyle and tour in the Verse Engine by Ctruh docs: what it is, how to use it, and where it fits in your 3D workflow.
+title: Verse Home | Verse Engine by Ctruh
 ---
 # Verse Home: a brochure plan to a home buyers walk, restyle and tour together
 

@@ -1,5 +1,6 @@
 ---
 description: Verse SDK: JS / TS (@ctruhtech/verse-sdk) in the Verse Engine by Ctruh docs: what it is, how to use it, and where it fits in your 3D workflow.
+title: Verse SDK: JS / TS | Verse Engine by Ctruh
 ---
 # @ctruhtech/verse-sdk — JavaScript / TypeScript client
 

@@ -1,5 +1,6 @@
 ---
 description: Embed anywhere: WordPress, Shopify, Webflow: add a Verse Engine by Ctruh 3D scene to your website. Copy-paste steps and settings.
+title: Embed anywhere | Verse Engine by Ctruh
 ---
 # Embed anywhere: WordPress, Shopify, Webflow, any page
 

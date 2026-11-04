@@ -1,5 +1,6 @@
 ---
 description: Verse for Commerce in the Verse Engine by Ctruh docs: what it is, how to use it, and where it fits in your 3D workflow.
+title: Verse for Commerce | Verse Engine by Ctruh
 ---
 # 3D on product pages: WooCommerce, Magento, BigCommerce, Salesforce
 

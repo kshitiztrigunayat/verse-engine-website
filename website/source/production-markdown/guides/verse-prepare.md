@@ -1,5 +1,6 @@
 ---
 description: verse-prepare: the local compression step in the Verse Engine by Ctruh docs: what it is, how to use it, and where it fits in your 3D workflow.
+title: verse-prepare | Verse Engine by Ctruh
 ---
 # verse-prepare — the local compression step
 

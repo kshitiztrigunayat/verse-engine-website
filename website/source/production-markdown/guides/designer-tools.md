@@ -1,5 +1,6 @@
 ---
 description: Designer tools: Framer, Webflow, Figma in the Verse Engine by Ctruh docs: what it is, how to use it, and where it fits in your 3D workflow.
+title: Designer tools | Verse Engine by Ctruh
 ---
 # Designer tools: Framer, Webflow, Figma
 
