@@ -952,7 +952,7 @@ export default function Landing() {
           </nav>
         </div>
         <div className="footer-bottom">
-          <span>© 2026 Ctruh Technologies Pvt. Ltd.</span>
+          <span>© 2026 CTRUH Technologies Private Limited. Verse Engine by Ctruh is a product of Ctruh.</span>
           <div>
             <a href="/privacy" id="lnk-privacy-policy">Privacy Policy</a>
             <a href="/terms" id="lnk-terms-of-service">Terms of Service</a>
