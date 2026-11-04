@@ -48,12 +48,13 @@ export default function About() {
         <header className="page-hero content-width" id="hdr-page-hero">
           <p className="eyebrow">ABOUT CTRUH</p>
           <h1>
-            Building the
+            About Ctruh and
             <br />
-            <span>spatial internet.</span>
+            <span>Verse Engine by Ctruh</span>
           </h1>
+          <p className="hero-description tagline">Building the spatial internet.</p>
           <p className="hero-description">
-            Ctruh Technologies makes 3D, XR and AI infrastructure so anyone can create and share immersive worlds.
+            Ctruh is a deep-tech company building 3D, XR and AI infrastructure for the spatial internet, with teams in Bengaluru and San Francisco. Verse Engine by Ctruh is our browser-native 3D engine: it lets anyone share a 3D world as a link.
           </p>
         </header>
         <figure className="about-panorama" id="fig-about-panorama">
@@ -70,7 +71,7 @@ export default function About() {
             </h2>
           </div>
           <p>
-            Ctruh builds 3D, XR and AI infrastructure for the spatial internet. Verse Engine is how anyone shares a 3D world as a link, built by a team in Bengaluru and San Francisco.
+            Ctruh is a deep-tech company building 3D, XR and AI infrastructure for the spatial internet, with teams in Bengaluru and San Francisco. Verse Engine by Ctruh is our browser-native 3D engine: it lets anyone share a 3D world as a link.
           </p>
         </section>
         <section className="company-facts content-width section-space" id="sec-company-facts">
@@ -108,11 +109,11 @@ export default function About() {
       <div id="about-engine" role="tabpanel" aria-labelledby="about-verse" tabIndex="0" hidden={tab !== "verse-engine"}>
         <header className="page-hero content-width" id="hdr-page-hero-2">
           <p className="eyebrow">ABOUT VERSE ENGINE</p>
-          <h1>
+          <h2 className="page-title">
             Our own engine,
             <br />
             <span>built for the browser.</span>
-          </h1>
+          </h2>
           <p className="hero-description">Verse Engine streams huge 3D scenes to any device, with no app store and no cloud GPU.</p>
           <div className="page-actions">
             <a className="site-button" href="/studio" id="lnk-explore-verse-engine-2">
