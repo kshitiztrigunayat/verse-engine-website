@@ -4,7 +4,7 @@ import tailwindcss from "@tailwindcss/vite";
 import fs from "node:fs";
 import path from "node:path";
 import pkg from "./package.json" with { type: "json" };
-import { META, docsBreadcrumb } from "./src/pages/meta.js";
+import { META, docsJsonLd } from "./src/pages/meta.js";
 
 // The site's public address, set once in package.json ("config": { "siteUrl" }). index.html uses
 // %SITE_URL% for the canonical link, og:url, og:image and the site-origin tag the router builds them from.
@@ -38,7 +38,7 @@ const pageSocialTags = {
         ["name", "twitter:card", "summary_large_image"],
       ]) html = setTag(html, attr, key, value);
       if (route.startsWith("/docs/")) {
-        const jsonld = JSON.stringify(docsBreadcrumb(route, page.title, siteUrl)).replaceAll("<", "\\u003c");
+        const jsonld = JSON.stringify(docsJsonLd(route, page, siteUrl)).replaceAll("<", "\\u003c");
         html = html.replace("</head>", () => `<script id="script-jsonld" type="application/ld+json">${jsonld}</script>\n</head>`);
       }
       fs.mkdirSync(path.join(dir, route), { recursive: true });

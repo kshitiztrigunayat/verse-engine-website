@@ -7,7 +7,7 @@
 // (the GSAP + Three.js animation) that exports mount(context) -> dispose.
 import { flushSync } from "react-dom";
 import { PAGES } from "./pages/index.js";
-import { META, docsBreadcrumb } from "./pages/meta.js";
+import { META, docsJsonLd } from "./pages/meta.js";
 import DocsPage from "./pages/docs/DocsPage.jsx";
 
 const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
@@ -112,7 +112,7 @@ function setMeta(payload, path) {
   byId("meta-robots").content = payload.noindex || payload.kind === "notfound" ? "noindex,follow" : "index,follow,max-image-preview:large";
   byId("meta-theme-color").content = THEME_COLOR[payload.kind] || "#ffffff";
   byId("script-jsonld")?.remove();
-  const jsonld = payload.jsonld || (path.startsWith("/docs/") ? docsBreadcrumb(path, payload.title, origin()) : null);
+  const jsonld = payload.jsonld || (path.startsWith("/docs/") ? docsJsonLd(path, payload, origin()) : null);
   if (jsonld) {
     const script = document.createElement("script");
     script.id = "script-jsonld"; script.type = "application/ld+json"; script.textContent = JSON.stringify(jsonld);

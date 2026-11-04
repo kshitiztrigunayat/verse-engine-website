@@ -1,3 +1,7 @@
+---
+datePublished: 2026-10-01
+author:Ctruh
+---
 # Verse Engine 2.0 — release notes for humans
 
 Verse Engine 2.0 is out, and the [changelog](../changelog.md) is long.

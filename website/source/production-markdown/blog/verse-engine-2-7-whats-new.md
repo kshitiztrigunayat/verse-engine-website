@@ -1,3 +1,7 @@
+---
+datePublished: 2026-10-10
+author:Ctruh
+---
 # Verse Engine 2.7: what's new for you
 
 Verse Engine 2.7 is live. The [changelog](../changelog.md) lists every

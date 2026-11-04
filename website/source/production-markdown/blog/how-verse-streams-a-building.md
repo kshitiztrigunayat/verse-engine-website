@@ -1,3 +1,7 @@
+---
+datePublished: 2026-10-01
+author:Ctruh
+---
 # How Verse streams a 3-million-triangle building into your browser in seconds
 
 Open a link, and a whole apartment appears in your browser a few seconds

@@ -19,6 +19,23 @@ export const docsBreadcrumb = (path, title, origin) => ({
   ],
 });
 
+// Structured data for a documentation page: the breadcrumb, plus a TechArticle for blog posts
+// (page.article: headline, datePublished and author from the post's frontmatter).
+export function docsJsonLd(path, page, origin) {
+  const breadcrumb = docsBreadcrumb(path, page.title, origin);
+  const a = page.article;
+  if (!a) return breadcrumb;
+  const article = {
+    "@type": "TechArticle",
+    headline: a.headline,
+    datePublished: a.datePublished,
+    ...(a.author && { author: { "@type": "Person", name: a.author } }),
+    publisher: { "@id": "https://www.ctruh.com/#organization" },
+  };
+  const { "@context": context, ...crumbs } = breadcrumb;
+  return { "@context": context, "@graph": [article, crumbs] };
+}
+
 export const META = {
   "/": {
     kind: "landing",
