@@ -47,7 +47,54 @@ export const META = {
     mainClass: "",
     navCurrent: "",
     noindex: false,
-    jsonld: {"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Verse Engine", "applicationCategory": "DesignApplication", "operatingSystem": "Web browser", "description": "Browser-native 3D, AR and XR scene publishing by Ctruh", "creator": {"@type": "Organization", "name": "Ctruh Technologies"}},
+    jsonld: {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://www.ctruh.com/#organization",
+          "name": "Ctruh",
+          "legalName": "CTRUH Technologies Private Limited",
+          "url": "https://www.ctruh.com/",
+          "logo": "https://verse.ctruh.com/assets/brand/ctruh-logo-512.png",
+          "email": "hello@ctruh.com",
+          "sameAs": [
+            "https://www.linkedin.com/company/ctruh/",
+            "https://www.youtube.com/@Ctruh",
+            "https://www.instagram.com/ctruh.official/"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://verse.ctruh.com/#website",
+          "name": "Verse Engine by Ctruh",
+          "url": "https://verse.ctruh.com/",
+          "publisher": {
+            "@id": "https://www.ctruh.com/#organization"
+          }
+        },
+        {
+          "@type": "SoftwareApplication",
+          "@id": "https://verse.ctruh.com/#software",
+          "name": "Verse Engine by Ctruh",
+          "applicationCategory": "DeveloperApplication",
+          "applicationSubCategory": "Browser-native 3D engine",
+          "operatingSystem": "Web browser (WebGPU or WebGL2)",
+          "url": "https://verse.ctruh.com/",
+          "description": "Verse Engine by Ctruh turns 3D files, scans, floor plans and Blender, Unity or Unreal projects into one link that opens in a modern web browser.",
+          "publisher": {
+            "@id": "https://www.ctruh.com/#organization"
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD",
+            "description": "Free plan",
+            "url": "https://verse.ctruh.com/pricing"
+          }
+        }
+      ]
+    },
   },
   "/about": {
     kind: "page",

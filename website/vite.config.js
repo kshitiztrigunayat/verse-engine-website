@@ -37,6 +37,7 @@ const pageSocialTags = {
         ["property", "og:image", siteUrl + "/assets/og/verse-engine-by-ctruh-1200x630.jpg"],
         ["name", "twitter:card", "summary_large_image"],
       ]) html = setTag(html, attr, key, value);
+      if (route !== "/") html = html.replace(/<script id="script-jsonld"[\s\S]*?<\/script>\n?/, ""); // home page only
       if (route.startsWith("/docs/")) {
         const jsonld = JSON.stringify(docsJsonLd(route, page, siteUrl)).replaceAll("<", "\\u003c");
         html = html.replace("</head>", () => `<script id="script-jsonld" type="application/ld+json">${jsonld}</script>\n</head>`);
