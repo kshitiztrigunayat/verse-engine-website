@@ -1,3 +1,6 @@
+---
+description: Camera paths and default walkthroughs in the Verse Engine by Ctruh docs: what it is, how to use it, and where it fits in your 3D workflow.
+---
 # Camera paths: record a walkthrough
 
 A camera path is a smooth track through your scene. Record one in a minute, share it as a link, or turn

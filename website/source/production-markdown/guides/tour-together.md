@@ -1,3 +1,6 @@
+---
+description: Tour together, live in the Verse Engine by Ctruh docs: what it is, how to use it, and where it fits in your 3D workflow.
+---
 # Tour together, live
 
 Walk a buyer through a home from wherever they are. You open the scene,

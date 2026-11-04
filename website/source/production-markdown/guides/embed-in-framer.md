@@ -1,3 +1,6 @@
+---
+description: Embed in Framer: add a Verse Engine by Ctruh 3D scene to your website. Copy-paste steps and settings.
+---
 # Embed in Framer
 
 A Framer code component, **VerseViewer**, that frames a Verse scene with real property controls: scene link, shape, load on view or tap, poster, background, analytics. Or paste the plain HTML into an Embed element. The poster paints first; the 3D loads when the visitor scrolls to it.

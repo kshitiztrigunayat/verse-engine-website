@@ -1,3 +1,6 @@
+---
+description: Automate with n8n in the Verse Engine by Ctruh docs: what it is, how to use it, and where it fits in your 3D workflow.
+---
 # Automate Verse with n8n
 
 **Status:** the `n8n-nodes-verse` package type-checks and builds, its

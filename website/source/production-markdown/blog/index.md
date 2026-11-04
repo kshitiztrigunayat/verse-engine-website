@@ -1,3 +1,6 @@
+---
+description: The Verse Engine by Ctruh blog: release notes, product updates and articles on how the engine streams large 3D scenes.
+---
 # Verse Engine blog
 
 Plain-language posts about what Verse Engine does, how it does it, and

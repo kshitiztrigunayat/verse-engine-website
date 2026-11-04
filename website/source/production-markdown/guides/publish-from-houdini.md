@@ -1,3 +1,6 @@
+---
+description: Publish a scene from Houdini to a shareable link with Verse Engine by Ctruh. Step-by-step guide to install, publish and share.
+---
 # Publish from Houdini
 
 > **Status: 4.0.0-beta.1 — built and unit-tested, needs a real Houdini

@@ -1,3 +1,6 @@
+---
+description: Video on surfaces, sound in the room in the Verse Engine by Ctruh docs: what it is, how to use it, and where it fits in your 3D workflow.
+---
 # Video on surfaces, sound in the room
 
 A TV that plays in the lounge, a looping brand film on the lobby wall, a

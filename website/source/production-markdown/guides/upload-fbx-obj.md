@@ -1,3 +1,6 @@
+---
+description: Upload FBX and OBJ in the Verse Engine by Ctruh docs: what it is, how to use it, and where it fits in your 3D workflow.
+---
 # Upload FBX and OBJ
 
 Upload the FBX or OBJ your tool already exports — 3ds Max, Maya, Revit,

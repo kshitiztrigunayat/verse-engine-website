@@ -1,3 +1,6 @@
+---
+description: Publish a scene from SolidWorks to a shareable link with Verse Engine by Ctruh. Step-by-step guide to install, publish and share.
+---
 # Publish from SolidWorks (product CAD)
 
 > **Status: 4.0.0-beta.1 — skeleton; the logic is unit-tested, the add-in

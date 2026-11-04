@@ -1,6 +1,7 @@
 ---
 datePublished: 2026-10-01
 author:Ctruh
+description: How Verse streams a building: an article from the Verse Engine by Ctruh team.
 ---
 # How Verse streams a 3-million-triangle building into your browser in seconds
 

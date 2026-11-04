@@ -100,7 +100,7 @@ export const META = {
     kind: "page",
     chrome: "full",
     title: "About | Verse Engine by Ctruh",
-    description: "Ctruh Technologies makes 3D, XR and AI infrastructure so anyone can create and share immersive worlds.",
+    description: "Ctruh builds 3D, XR and AI infrastructure. Learn how Verse Engine by Ctruh, our browser-native 3D engine, fits with VersaAI and Ctruh Studio.",
     bodyClass: "site-page",
     mainClass: "",
     navCurrent: "/about",

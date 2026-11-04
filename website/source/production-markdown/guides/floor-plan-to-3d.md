@@ -1,3 +1,6 @@
+---
+description: Verse Home: floor plan to 3D home in the Verse Engine by Ctruh docs: what it is, how to use it, and where it fits in your 3D workflow.
+---
 # Floor plan to 3D home
 
 Upload the floor plan from a project brochure and get a furnished 3D home

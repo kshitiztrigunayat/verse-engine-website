@@ -1,3 +1,6 @@
+---
+description: Share privately with tokens in the Verse Engine by Ctruh docs: what it is, how to use it, and where it fits in your 3D workflow.
+---
 # Share privately with tokens
 
 By default a published scene is **unlisted**: anyone with the URL can open

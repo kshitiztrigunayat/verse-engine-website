@@ -1,3 +1,6 @@
+---
+description:
+---
 # Browser-native 3D vs. cloud pixel streaming
 
 ## How cloud pixel streaming works

@@ -1,3 +1,6 @@
+---
+description: Changelog in the Verse Engine by Ctruh docs: what it is, how to use it, and where it fits in your 3D workflow.
+---
 # What's new in Verse
 
 A plain-language record of what has changed in Verse, newest first. Each release says when it went live. For changes to the API, see the [API changelog](#/api-changelog).

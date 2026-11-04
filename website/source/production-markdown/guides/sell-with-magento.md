@@ -1,3 +1,6 @@
+---
+description: Sell with Magento / Adobe Commerce in the Verse Engine by Ctruh docs: what it is, how to use it, and where it fits in your 3D workflow.
+---
 # Sell with Magento / Adobe Commerce: a 3D view on every product
 
 A small Magento 2 module, `Ctruh_VerseViewer`, adds a **Verse scene link** attribute to products and shows the scene on the product page under the image gallery. The poster paints first; the 3D loads when the shopper scrolls to it.

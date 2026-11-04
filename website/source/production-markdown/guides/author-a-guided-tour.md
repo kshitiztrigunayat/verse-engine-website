@@ -1,3 +1,6 @@
+---
+description: Author a guided tour in the Verse Engine by Ctruh docs: what it is, how to use it, and where it fits in your 3D workflow.
+---
 # Author a guided tour
 
 Turn a scene link into a presentation: numbered hotspots a buyer can tap

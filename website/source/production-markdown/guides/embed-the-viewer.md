@@ -1,3 +1,6 @@
+---
+description: Verse links and embeds: embed the viewer: add a Verse Engine by Ctruh 3D scene to your website. Copy-paste steps and settings.
+---
 # Embed the viewer
 
 The whole engine drops into any web page with one script tag. It runs in

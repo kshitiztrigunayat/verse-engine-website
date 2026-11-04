@@ -1,3 +1,6 @@
+---
+description: Embed in Wix: add a Verse Engine by Ctruh 3D scene to your website. Copy-paste steps and settings.
+---
 # Embed in Wix
 
 Put a Verse scene on a Wix page with an **Embed HTML** element, or one scene per listing with Velo and a collection field. The poster paints first; the 3D loads when the visitor scrolls to it.

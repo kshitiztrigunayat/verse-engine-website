@@ -1,3 +1,6 @@
+---
+description: Publish a scene from SketchUp to a shareable link with Verse Engine by Ctruh. Step-by-step guide to install, publish and share.
+---
 # Publish from SketchUp
 
 > **Status: 4.0.0-beta.1 — upload core tested, needs a real SketchUp install.**

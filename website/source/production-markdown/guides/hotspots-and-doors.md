@@ -1,3 +1,6 @@
+---
+description: Hotspots and doors in the Verse Engine by Ctruh docs: what it is, how to use it, and where it fits in your 3D workflow.
+---
 # Hotspots and doors
 
 Make a scene respond. Pin a price card to a room, let buyers open the front door, switch the lights, or

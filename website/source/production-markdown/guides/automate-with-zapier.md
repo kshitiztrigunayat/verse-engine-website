@@ -1,3 +1,6 @@
+---
+description: Automate with Zapier in the Verse Engine by Ctruh docs: what it is, how to use it, and where it fits in your 3D workflow.
+---
 # Automate Verse with Zapier
 
 **Status:** the app is validated against the Zapier platform schema and

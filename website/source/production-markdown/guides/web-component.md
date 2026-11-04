@@ -1,3 +1,6 @@
+---
+description: <verse-viewer>: one tag, any page in the Verse Engine by Ctruh docs: what it is, how to use it, and where it fits in your 3D workflow.
+---
 # `<verse-viewer>`: one tag, any page
 
 Put a Verse scene on any page that renders HTML with one tag. The poster paints at once; the 3D engine loads when the card scrolls into view, on tap, or straight away. No headers to set on your site: the engine runs on the Verse origin, inside the card.

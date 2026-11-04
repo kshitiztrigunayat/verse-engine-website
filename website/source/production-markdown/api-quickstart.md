@@ -1,3 +1,6 @@
+---
+description: API quickstart in the Verse Engine by Ctruh docs: what it is, how to use it, and where it fits in your 3D workflow.
+---
 # Verse API — Quickstart
 
 Everything Verse does is a plain HTTP API — the playground, the embed SDK, and the

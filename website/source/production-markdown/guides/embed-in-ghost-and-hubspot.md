@@ -1,3 +1,6 @@
+---
+description: Embed in Ghost and HubSpot: add a Verse Engine by Ctruh 3D scene to your website. Copy-paste steps and settings.
+---
 # Embed in Ghost and HubSpot
 
 Both take the plain HTML from [Studio](/studio) → the scene → **Embed**. Ghost also embeds the bare link; HubSpot gets a custom module with fields. The poster paints first; the 3D loads when the visitor scrolls to it.

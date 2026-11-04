@@ -1,3 +1,6 @@
+---
+description: Verse MCP server for AI agents in the Verse Engine by Ctruh docs: what it is, how to use it, and where it fits in your 3D workflow.
+---
 <!-- release-6: UNRELEASED. The package is prepared but not published; do not announce until docs/handover/mcp-publish.md has been run. -->
 
 # Verse for AI agents (MCP)

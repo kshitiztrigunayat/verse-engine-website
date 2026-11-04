@@ -1,3 +1,6 @@
+---
+description: Sign in with a one-time code in the Verse Engine by Ctruh docs: what it is, how to use it, and where it fits in your 3D workflow.
+---
 # Sign in with a one-time code
 
 Verse signs you in with a six-digit code sent to your email, or to your

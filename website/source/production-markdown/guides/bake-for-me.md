@@ -1,3 +1,6 @@
+---
+description:
+---
 # Bake for me — cloud lightmapping for live-lit scenes
 
 Verse streams best when a scene is **baked**: every surface carries its

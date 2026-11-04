@@ -1,3 +1,6 @@
+---
+description: Telemetry in the Verse Engine by Ctruh docs: what it is, how to use it, and where it fits in your 3D workflow.
+---
 # Telemetry schema (v0)
 
 *Normative source: `web/playground/telemetry.js` (client), the

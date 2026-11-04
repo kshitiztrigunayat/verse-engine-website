@@ -1,3 +1,6 @@
+---
+description: How we measure in the Verse Engine by Ctruh docs: what it is, how to use it, and where it fits in your 3D workflow.
+---
 # How we measure
 
 The four numbers on the home page, and what each one means. Each is measured on a real scene, stated with the

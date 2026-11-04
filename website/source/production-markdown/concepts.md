@@ -1,3 +1,6 @@
+---
+description: Concepts in the Verse Engine by Ctruh docs: what it is, how to use it, and where it fits in your 3D workflow.
+---
 # Concepts
 
 Five ideas explain everything else in these docs: scenes are **compiled**,

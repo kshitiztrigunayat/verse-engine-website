@@ -1,3 +1,6 @@
+---
+description: Verse for Commerce in the Verse Engine by Ctruh docs: what it is, how to use it, and where it fits in your 3D workflow.
+---
 # 3D on product pages: WooCommerce, Magento, BigCommerce, Salesforce
 
 Put the Verse 3D viewer in your product gallery. Each product gets one Verse link, and each variant can have its own. When a shopper picks a colour or a finish, the viewer switches to that variant's scene. The product image is shown first, and the 3D loads when the shopper scrolls to it, so product pages stay fast.

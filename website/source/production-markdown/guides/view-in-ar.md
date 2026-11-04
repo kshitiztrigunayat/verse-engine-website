@@ -1,3 +1,6 @@
+---
+description: See it in your room (View in AR) in the Verse Engine by Ctruh docs: what it is, how to use it, and where it fits in your 3D workflow.
+---
 # See it in your room — View in AR on a phone
 
 *A product-scale scene (a chair, a lamp, a watch, a chess set) can be placed

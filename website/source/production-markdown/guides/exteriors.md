@@ -1,3 +1,6 @@
+---
+description: Exteriors: sky, weather, fog, ground in the Verse Engine by Ctruh docs: what it is, how to use it, and where it fits in your 3D workflow.
+---
 # Exteriors — sky, weather, fog and ground
 
 *A villa, a tower, a street: an exterior needs a sky over it, ground under

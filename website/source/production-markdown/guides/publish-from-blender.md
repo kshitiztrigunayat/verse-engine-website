@@ -1,3 +1,6 @@
+---
+description: Publish a scene from Blender to a shareable link with Verse Engine by Ctruh. Step-by-step guide to install, publish and share.
+---
 # Publish from Blender
 
 > **Status: verified on Blender 5.0.1 (Apple silicon), 2026-10-13** — installed

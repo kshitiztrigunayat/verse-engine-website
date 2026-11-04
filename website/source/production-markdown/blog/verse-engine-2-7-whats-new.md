@@ -1,6 +1,7 @@
 ---
 datePublished: 2026-10-10
 author:Ctruh
+description: 2.7: what's new for you: an article from the Verse Engine by Ctruh team.
 ---
 # Verse Engine 2.7: what's new for you
 

@@ -1,3 +1,6 @@
+---
+description: Make it look good (Auto look) in the Verse Engine by Ctruh docs: what it is, how to use it, and where it fits in your 3D workflow.
+---
 # Make it look good
 
 *You uploaded a GLB and nothing looks good: it is dark, flat, the first

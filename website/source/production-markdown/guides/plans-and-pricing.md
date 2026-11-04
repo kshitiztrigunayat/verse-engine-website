@@ -1,3 +1,6 @@
+---
+description: Plans and pricing in the Verse Engine by Ctruh docs: what it is, how to use it, and where it fits in your 3D workflow.
+---
 # Plans and pricing
 
 Start free. Every new account gets a **14-day trial with Pro features**, then moves to Free unless you

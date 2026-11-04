@@ -1,5 +1,6 @@
 {
   "/docs/what-is-verse-engine": {
+    "description": "Verse Engine by Ctruh is a browser-native 3D engine that turns 3D files, scans and floor plans into one link. Learn how it works and how to start.",
     "buttons": [
       {
         "disabled": false,

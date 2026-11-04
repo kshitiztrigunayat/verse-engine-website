@@ -1,6 +1,7 @@
 ---
 datePublished: 2026-10-01
 author:Ctruh
+description: 2.0 release notes for humans: an article from the Verse Engine by Ctruh team.
 ---
 # Verse Engine 2.0 — release notes for humans
 

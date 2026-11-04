@@ -1,3 +1,6 @@
+---
+description: Fidelity mode (products render exactly as exported) in the Verse Engine by Ctruh docs: what it is, how to use it, and where it fits in your 3D workflow.
+---
 # Fidelity mode
 
 A single product renders exactly as exported. A city streams. Fidelity

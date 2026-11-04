@@ -1,3 +1,6 @@
+---
+description: Sell with BigCommerce in the Verse Engine by Ctruh docs: what it is, how to use it, and where it fits in your 3D workflow.
+---
 # Sell with BigCommerce: a 3D view on every product
 
 Three ways to put Verse scenes on a BigCommerce store, from paste-and-go to one scene per product in the theme. The poster paints first; the 3D loads when the shopper scrolls to it.

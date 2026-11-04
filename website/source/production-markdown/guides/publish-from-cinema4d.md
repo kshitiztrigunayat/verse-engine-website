@@ -1,3 +1,6 @@
+---
+description: Publish a scene from Cinema 4D to a shareable link with Verse Engine by Ctruh. Step-by-step guide to install, publish and share.
+---
 # Publish from Cinema 4D
 
 > **Status: 4.0.0-beta.1 — built and unit-tested, needs a real Cinema 4D
