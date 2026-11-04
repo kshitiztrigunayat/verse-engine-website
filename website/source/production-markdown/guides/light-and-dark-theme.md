@@ -1,3 +1,6 @@
+---
+description: Light and dark theme in the Verse Engine by Ctruh docs: what it is, how to use it, and where it fits in your 3D workflow.
+---
 # Light and dark theme
 
 Verse follows your device by default: a light interface when your system is light, dark when it is dark.

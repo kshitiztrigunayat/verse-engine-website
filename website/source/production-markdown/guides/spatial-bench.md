@@ -1,3 +1,6 @@
+---
+description: Spatial Bench in the Verse Engine by Ctruh docs: what it is, how to use it, and where it fits in your 3D workflow.
+---
 # Spatial Bench
 
 [Spatial Bench](https://verse.ctruh.com/bench) runs four tests in a real Verse viewer on **your own

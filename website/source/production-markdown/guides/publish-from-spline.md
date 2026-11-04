@@ -1,3 +1,7 @@
+---
+description: Publish a scene from Spline, and Figma to a shareable link with Verse Engine by Ctruh. Step-by-step guide to install, publish and share.
+title: Publish from Spline | Verse Engine by Ctruh
+---
 # Publish from Spline (and put the link in Figma)
 
 > **Status: 4.0.0-beta.1 — the Spline path works today through the existing

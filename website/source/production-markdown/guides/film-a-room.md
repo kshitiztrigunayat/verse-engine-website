@@ -1,3 +1,6 @@
+---
+description: Verse Capture: film a room in the Verse Engine by Ctruh docs: what it is, how to use it, and where it fits in your 3D workflow.
+---
 # Film a room (beta)
 
 Film a room with your phone and get a walkable 3D space you can share as a link. A 30-second video

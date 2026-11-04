@@ -1,3 +1,6 @@
+---
+description: Export a flythrough video in the Verse Engine by Ctruh docs: what it is, how to use it, and where it fits in your 3D workflow.
+---
 # Export a flythrough video
 
 Every streamed scene can become a client-ready MP4 or WebM — recorded from

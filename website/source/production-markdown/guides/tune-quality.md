@@ -1,3 +1,6 @@
+---
+description: Tune quality knobs in the Verse Engine by Ctruh docs: what it is, how to use it, and where it fits in your 3D workflow.
+---
 # Tune quality knobs
 
 Every quality decision in the viewer has a URL knob. Append them to any

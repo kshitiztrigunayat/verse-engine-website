@@ -1,3 +1,6 @@
+---
+description: Build a configurator in the Verse Engine by Ctruh docs: what it is, how to use it, and where it fits in your 3D workflow.
+---
 # Build a configurator
 
 Let a buyer choose the fabric, the legs and the size — on the real scene,

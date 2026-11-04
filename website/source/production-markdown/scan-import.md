@@ -1,3 +1,6 @@
+---
+description: Import a scan in the Verse Engine by Ctruh docs: what it is, how to use it, and where it fits in your 3D workflow.
+---
 # Import a scan
 
 Bring the capture you already have — from a phone or tablet with LiDAR, a

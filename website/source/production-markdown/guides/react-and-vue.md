@@ -1,3 +1,6 @@
+---
+description: React and Vue wrappers in the Verse Engine by Ctruh docs: what it is, how to use it, and where it fits in your 3D workflow.
+---
 # React and Vue: `<VerseViewer>`
 
 Typed wrappers over the [`<verse-viewer>`](web-component.md) web component for React 17+ and Vue 3. Props mirror the element's attributes, the viewer's events become callbacks (React) or component events (Vue), and a ref gives you the embed SDK API. Both are safe on the server: Next.js (app and pages routers), Remix, Gatsby, Nuxt 3.

@@ -1,3 +1,6 @@
+---
+description: Browser support in the Verse Engine by Ctruh docs: what it is, how to use it, and where it fits in your 3D workflow.
+---
 # Browser Support Matrix
 
 *Customer-readable. Which browsers get which experience, decided by

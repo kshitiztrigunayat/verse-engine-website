@@ -1,3 +1,6 @@
+---
+description: Ask Verse, the site assistant in the Verse Engine by Ctruh docs: what it is, how to use it, and where it fits in your 3D workflow.
+---
 # Ask Verse, the site assistant
 
 **Ask Verse** is the button at the bottom-right of the product page, the

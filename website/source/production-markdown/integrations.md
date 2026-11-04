@@ -1,3 +1,7 @@
+---
+description: Integrations: every platform at a glance in the Verse Engine by Ctruh docs: what it is, how to use it, and where it fits in your 3D workflow.
+title: Integrations | Verse Engine by Ctruh
+---
 # Integrations
 
 Every way to get a scene into Verse or a Verse scene onto a page, in one table: the platform, how the integration works, and how far it has been proven.

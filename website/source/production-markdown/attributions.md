@@ -1,3 +1,6 @@
+---
+description: Demo scene credits in the Verse Engine by Ctruh docs: what it is, how to use it, and where it fits in your 3D workflow.
+---
 # Demo scene credits
 
 The public demo scenes on the product page, in the docs' live examples and

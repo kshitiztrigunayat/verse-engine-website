@@ -1,3 +1,6 @@
+---
+description: Embed in Squarespace: add a Verse Engine by Ctruh 3D scene to your website. Copy-paste steps and settings.
+---
 # Embed in Squarespace
 
 Put a Verse scene on a Squarespace page with a **Code** block. The poster paints first; the 3D loads when the visitor scrolls to it.

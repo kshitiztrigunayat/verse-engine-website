@@ -1,3 +1,7 @@
+---
+description: Verse API, SDK and MCP: embed, SDK, webhooks in the Verse Engine by Ctruh docs: what it is, how to use it, and where it fits in your 3D workflow.
+title: Verse API, SDK and MCP | Verse Engine by Ctruh
+---
 # Developers: embed, automate, get notified
 
 Everything a developer needs to put Verse scenes in their own product, in

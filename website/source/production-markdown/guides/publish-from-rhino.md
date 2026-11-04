@@ -1,3 +1,6 @@
+---
+description: Publish a scene from Rhino to a shareable link with Verse Engine by Ctruh. Step-by-step guide to install, publish and share.
+---
 # Publish from Rhino
 
 > **Status: 4.0.0-beta.1 — upload core tested, plug-in builds, needs a real

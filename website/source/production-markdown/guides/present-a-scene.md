@@ -1,3 +1,6 @@
+---
+description: Present a scene to a room in the Verse Engine by Ctruh docs: what it is, how to use it, and where it fits in your 3D workflow.
+---
 # Present a scene to a room
 
 Walk clients through a flat, a showroom or a product together: everyone

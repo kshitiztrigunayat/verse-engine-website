@@ -1,3 +1,6 @@
+---
+description: Publish a scene from Unreal to a shareable link with Verse Engine by Ctruh. Step-by-step guide to install, publish and share.
+---
 # Publish from Unreal
 
 > **Status: verified on Unreal Engine 5.8.3 (Apple silicon), 2026-10-13.**

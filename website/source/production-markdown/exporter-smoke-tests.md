@@ -1,3 +1,6 @@
+---
+description: Plug-in smoke tests in the Verse Engine by Ctruh docs: what it is, how to use it, and where it fits in your 3D workflow.
+---
 # Exporter smoke tests — runs in the real editors
 
 All three "Publish to Verse" plug-ins have been run in the real editors.

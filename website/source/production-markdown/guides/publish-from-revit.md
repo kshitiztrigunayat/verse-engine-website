@@ -1,3 +1,6 @@
+---
+description: Publish a scene from Revit to a shareable link with Verse Engine by Ctruh. Step-by-step guide to install, publish and share.
+---
 # Publish from Revit
 
 > **Status: 4.0.0-beta.1 — builds against the Revit 2024 and 2025 API, needs

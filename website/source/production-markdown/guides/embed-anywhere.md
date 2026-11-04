@@ -1,3 +1,7 @@
+---
+description: Embed anywhere: WordPress, Shopify, Webflow: add a Verse Engine by Ctruh 3D scene to your website. Copy-paste steps and settings.
+title: Embed anywhere | Verse Engine by Ctruh
+---
 # Embed anywhere: WordPress, Shopify, Webflow, any page
 
 Put a Verse scene on a listing page, a product page or a blog post. Paste the link, or copy the code from Studio. The embed shows the scene's poster straight away, and the 3D viewer loads when a visitor scrolls to it. Pages stay fast, and a visitor who never scrolls that far downloads nothing of the engine.

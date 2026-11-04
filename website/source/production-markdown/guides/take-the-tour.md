@@ -1,3 +1,6 @@
+---
+description: Take the guided tour in the Verse Engine by Ctruh docs: what it is, how to use it, and where it fits in your 3D workflow.
+---
 # Take the guided tour
 
 Every page of Verse has a guided tour: the product page, the app, Studio

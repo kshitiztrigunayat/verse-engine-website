@@ -1,3 +1,6 @@
+---
+description: Experience manifests in the Verse Engine by Ctruh docs: what it is, how to use it, and where it fits in your 3D workflow.
+---
 # Experience manifests (`.verse.json`)
 
 An experience is one JSON file that turns a folder of assets into a walkthrough URL: a base scene, extra GLBs placed into it, lighting, ambience, and the hotspots a buyer jumps between. The playground runs one with `?experience=<url>`; the embed SDK with `viewer.load("x.verse.json")`. All URLs resolve against the manifest and must be same-origin (the Verse origin never feeds foreign bytes to the parsers).

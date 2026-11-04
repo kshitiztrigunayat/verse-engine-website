@@ -1,3 +1,6 @@
+---
+description: Publish a scene from IFC or USD to a shareable link with Verse Engine by Ctruh. Step-by-step guide to install, publish and share.
+---
 # Publish from IFC or USD
 
 Upload the building model or the USD scene you already have and get a

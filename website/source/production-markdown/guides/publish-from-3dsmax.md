@@ -1,3 +1,6 @@
+---
+description: Publish a scene from 3ds Max to a shareable link with Verse Engine by Ctruh. Step-by-step guide to install, publish and share.
+---
 # Publish from 3ds Max
 
 > **Status: 4.0.0-beta.1 — upload core tested, needs a real 3ds Max

@@ -1,3 +1,6 @@
+---
+description: Sell with WooCommerce in the Verse Engine by Ctruh docs: what it is, how to use it, and where it fits in your 3D workflow.
+---
 # Sell with WooCommerce: a 3D view on every product
 
 Give each WooCommerce product its Verse scene. Shoppers get a **3D view** tab on the product page, or the 3D in place of the image gallery. The poster paints first; the 3D loads when the shopper scrolls to it.

@@ -1,3 +1,6 @@
+---
+description: Getting started in the Verse Engine by Ctruh docs: what it is, how to use it, and where it fits in your 3D workflow.
+---
 # Getting started — five minutes to a streaming 3D scene
 
 Verse Engine turns a GLB into a URL that streams in the browser — a

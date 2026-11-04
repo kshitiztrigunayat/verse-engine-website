@@ -1,3 +1,6 @@
+---
+description: Publish a scene from Maya to a shareable link with Verse Engine by Ctruh. Step-by-step guide to install, publish and share.
+---
 # Publish from Maya
 
 > **Status: 4.0.0-beta.1 — built and unit-tested, needs a real Maya

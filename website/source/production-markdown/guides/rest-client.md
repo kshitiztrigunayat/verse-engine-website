@@ -1,3 +1,6 @@
+---
+description: REST client round trip in the Verse Engine by Ctruh docs: what it is, how to use it, and where it fits in your 3D workflow.
+---
 # The REST client round trip: file in, link out, numbers back
 
 Everything an integration does with Verse is five calls: get a token, hand over a file (or a URL the server fetches), wait for the compile, make a share link, read the analytics. A webhook replaces the waiting. This guide walks the round trip with `@ctruhtech/verse-sdk` and with plain `curl`, so it maps onto any language.

@@ -1,3 +1,6 @@
+---
+description: What you can upload in the Verse Engine by Ctruh docs: what it is, how to use it, and where it fits in your 3D workflow.
+---
 # What you can upload
 
 Everything on this page is also shown in the app's upload screen, which reads

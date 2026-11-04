@@ -1,3 +1,6 @@
+---
+description: Publish a scene from Unity to a shareable link with Verse Engine by Ctruh. Step-by-step guide to install, publish and share.
+---
 # Publish from Unity
 
 > **Status: verified on Unity 6000.6.5f1 (Apple silicon), 2026-10-13.** A real

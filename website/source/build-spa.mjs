@@ -6,6 +6,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {sitemapXml} from './sitemap.mjs';
+import {frontmatter,docDescription} from './doc-meta.mjs';
 const here=path.dirname(fileURLToPath(import.meta.url)), project=path.resolve(here,'..');
 // Output goes to public/, which Vite serves and copies into dist/ unchanged.
 const stage=process.env.VERSE_DIST, dist=path.join(project,'public');
@@ -101,14 +102,14 @@ const shellFooter=addIds(named(footer,[['<footer class="page-footer">','<footer 
 // Duplicate docs URLs and the page each one redirects to (same list as the redirects in vercel.json).
 const DUPLICATE_DOCS={'/docs/api':'/docs/scenes-api','/docs/authentication':'/docs/api-quickstart','/docs/blender':'/docs/guides/publish-from-blender','/docs/concepts':'/docs/how-streaming-works','/docs/webhooks':'/docs/developers','/docs/fixing-doors-and-windows':'/docs/guides/instant-home','/docs/floor-plan-to-3d-home':'/docs/guides/floor-plan-to-3d','/docs/upload-your-first-scene':'/docs/getting-started','/docs/materials-and-lighting':'/docs/guides/fidelity-mode','/docs/unity':'/docs/guides/publish-from-unity','/docs/unreal':'/docs/guides/publish-from-unreal','/docs/start-a-live-tour':'/docs/guides/tour-together','/docs/supported-file-types':'/docs/guides/what-you-can-upload','/docs':'/docs/what-is-verse-engine'};
 // Blog posts: headline (the H1), datePublished and author from the post's frontmatter, for the TechArticle structured data.
-function blogArticle(route){const m=route.match(/^\/docs\/(blog\/(?!index$)[^/]+)$/);if(!m)return null;const md=fs.readFileSync(path.join(project,'source/production-markdown',m[1]+'.md'),'utf8');const fm=Object.fromEntries([...((md.match(/^---\n([\s\S]*?)\n---/)||[])[1]||'').matchAll(/^(\w+):[ \t]*(.*)$/gm)].map(x=>[x[1],x[2].trim()]));return {headline:(md.match(/^# (.+)$/m)||[])[1],datePublished:fm.datePublished||'',author:fm.author||''};}
+function blogArticle(route){const m=route.match(/^\/docs\/(blog\/(?!index$)[^/]+)$/);if(!m)return null;const md=fs.readFileSync(path.join(project,'source/production-markdown',m[1]+'.md'),'utf8'),fm=frontmatter(m[1]);return {headline:(md.match(/^# (.+)$/m)||[])[1],datePublished:fm.datePublished||'',author:fm.author||''};}
 const fileFor=route=>route==='/'?'index':route.slice(1).replaceAll('/','__');
 
 for(const file of walk(stage).filter(f=>f.endsWith('.html'))){
   const rel=path.relative(stage,file).replaceAll('\\','/');
   const route=rel==='404.html'?'/404':'/'+rel.replace(/index\.html$/,'').replace(/\/$/,'');
   const h=read(file);
-  const title=unesc((h.match(/<title>([^<]*)<\/title>/)||[,'Verse Engine'])[1]);
+  let title=unesc((h.match(/<title>([^<]*)<\/title>/)||[,'Verse Engine'])[1]);
   let description=unesc((h.match(/<meta name="description" content="([^"]*)"/)||[,''])[1]);
   const bodyClass=(h.match(/<body class="([^"]*)"/)||[,''])[1];
   const isApp=/studio-page/.test(bodyClass);
@@ -132,6 +133,7 @@ for(const file of walk(stage).filter(f=>f.endsWith('.html'))){
   html=addIds(html,used);
   if(REACT_PAGES.has(route)){const m=META[route];if(m.kind!=='notfound')routes.push({path:route,kind:m.kind,noindex:m.noindex,title:m.title});continue}
   const content=kind==='page'&&html.startsWith('<section class="documentation"')?{docs:splitDocs(html,route)}:{html};
+  if(content.docs){const key=content.docs.source.replace(/^.*#\//,''),d=docDescription(key),t=frontmatter(key).title;if(d)description=d;if(t)title=t;}   // docs: description (and a shorter title, if set) from frontmatter
   const article=blogArticle(route);
   const payload={path:route,kind,chrome,title,description,bodyClass,mainClass,navCurrent,noindex:NOINDEX.has(route),...content,...(article&&{article})};
   fs.writeFileSync(path.join(dist,'content',fileFor(route===  '/404'?'/404':route)+'.json'),JSON.stringify(payload));
@@ -158,7 +160,7 @@ fs.writeFileSync(path.join(dist,'content/manifest.json'),JSON.stringify(routes.m
 // Public pages with the date each last changed (see sitemap.mjs).
 fs.writeFileSync(path.join(dist,'sitemap.xml'),sitemapXml({project,origin:ORIGIN,routes}));
 // API paths and the embed page are kept out of search results.
-fs.writeFileSync(path.join(dist,'robots.txt'),`User-agent: *\nAllow: /\nDisallow: /ingest/\nDisallow: /v1/\nDisallow: /embed.html\n\nSitemap: ${ORIGIN}/sitemap.xml\n`);
+fs.writeFileSync(path.join(dist,'robots.txt'),`User-agent: GPTBot\nDisallow: /\nUser-agent: ClaudeBot\nDisallow: /\nUser-agent: Google-Extended\nDisallow: /\nUser-agent: CCBot\nDisallow: /\n\nUser-agent: *\nAllow: /\nDisallow: /ingest/\nDisallow: /v1/\nDisallow: /embed.html\n\nSitemap: ${ORIGIN}/sitemap.xml\n`);
 
 // ---------- route inventory for the handoff package ----------
 const referenceDir=path.resolve(project,'../reference');

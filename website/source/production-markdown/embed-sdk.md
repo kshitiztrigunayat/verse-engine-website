@@ -1,3 +1,6 @@
+---
+description: Embed SDK reference: add a Verse Engine by Ctruh 3D scene to your website. Copy-paste steps and settings.
+---
 # Embed SDK reference
 
 The Verse Embed SDK is one script, `embed.js`, served from the Verse origin.

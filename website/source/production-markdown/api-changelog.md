@@ -1,3 +1,6 @@
+---
+description: API changelog in the Verse Engine by Ctruh docs: what it is, how to use it, and where it fits in your 3D workflow.
+---
 # API changelog
 
 Every change to the ingest API, the viewer's URL knobs and the embed SDK,

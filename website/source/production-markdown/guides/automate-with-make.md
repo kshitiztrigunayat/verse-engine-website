@@ -1,3 +1,6 @@
+---
+description: Automate with Make in the Verse Engine by Ctruh docs: what it is, how to use it, and where it fits in your 3D workflow.
+---
 # Automate Verse with Make
 
 **Status:** the app definition is validated structurally (every module,

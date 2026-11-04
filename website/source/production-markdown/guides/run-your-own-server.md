@@ -1,3 +1,6 @@
+---
+description: Run your own server in the Verse Engine by Ctruh docs: what it is, how to use it, and where it fits in your 3D workflow.
+---
 # Run your own server
 
 Verse ships as **one container**: the playground, the embed SDK, the docs

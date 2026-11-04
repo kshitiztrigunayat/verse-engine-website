@@ -1,3 +1,6 @@
+---
+description: Monitor production in the Verse Engine by Ctruh docs: what it is, how to use it, and where it fits in your 3D workflow.
+---
 # Monitor production
 
 Four signals tell you whether a Verse deployment is healthy, and every one

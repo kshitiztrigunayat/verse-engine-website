@@ -1,3 +1,6 @@
+---
+description: Collect client review comments in the Verse Engine by Ctruh docs: what it is, how to use it, and where it fits in your 3D workflow.
+---
 # Collect client review comments
 
 A share link doubles as a review round. Your client opens it, clicks any

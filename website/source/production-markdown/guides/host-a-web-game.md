@@ -1,3 +1,6 @@
+---
+description: Verse Play: host a web game in the Verse Engine by Ctruh docs: what it is, how to use it, and where it fits in your 3D workflow.
+---
 # Host a web game
 
 Upload a finished HTML5 game as a `.zip` and get a link people can play in the browser, an
