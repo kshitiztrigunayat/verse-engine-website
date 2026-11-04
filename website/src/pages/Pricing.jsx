@@ -133,7 +133,7 @@ export default function Pricing() {
                 <li>1 Verse Home and 1 film a month</li>
                 <li>20 renders a month</li>
                 <li>Uploads up to 500 MB</li>
-                <li>“Made with Verse by Ctruh” badge on your scenes</li>
+                <li>“Made with Verse Engine by Ctruh” badge on your scenes</li>
                 <li>Community support</li>
               </ul>
             </article>
