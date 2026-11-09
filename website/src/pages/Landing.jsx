@@ -1,4 +1,6 @@
 // Home page (/). The scroll story, 3D model and other animations are src/animations/landing/ (GSAP, Three.js), mounted on this markup by the router.
+// The sections after the story (Lyon, proof, benchmarks, old way, create, try it live, engine, cost, developers, pricing) are wired up by src/animations/landing/sections.js
+// and styled by public/css/landing-sections.css.
 export default function Landing() {
   return (
     <>
@@ -12,9 +14,9 @@ export default function Landing() {
           <div className="orbit orbit-two" aria-hidden="true" />
           <div className="stage-three" id="stage-three" aria-hidden="true" />
           <div className="scene-scale" id="scene-scale" aria-hidden="true">01 / OBJECT</div>
-          <img className="headset-poster" src="/assets/point-world-poster.svg" alt="Vertex point-cloud study of an object, table and furnished space" width="1000" height="800" fetchPriority="high" />
+          <img className="headset-poster" alt="Vertex point-cloud study of an object, table and furnished space" width="1000" height="800" fetchPriority="high" src="/assets/point-world-poster.svg" />
           <div className="geometry-number" aria-hidden="true">
-            1.8
+            10.3
             <span>B</span>
           </div>
           <div className="stream-line" aria-hidden="true" />
@@ -25,7 +27,7 @@ export default function Landing() {
                 <path data-outline="ar" d="M260 40C260 23 274 14 290 14H430C446 14 460 23 460 40V382C460 399 446 408 430 408H290C274 408 260 399 260 382Z" />
                 <path data-outline="xr" d="M105 133C119 81 236 76 360 76S601 81 615 133L641 280C650 337 622 374 564 379L460 384C427 385 408 364 394 341C378 314 342 314 326 341C312 364 293 385 260 384L156 379C98 374 70 337 79 280Z" />
               </defs>
-              <path className="device-outline" stroke="currentColor" strokeWidth="2.5" vectorEffect="non-scaling-stroke" />
+              <path className="device-outline" stroke="currentColor" strokeWidth="2.5" vectorEffect="non-scaling-stroke" d="M80.00,80.00L82.95,67.12L91.51,57.06L103.51,51.44L116.72,50.00L130.05,50.00L143.38,50.00L156.71,50.00L170.04,50.00L183.37,50.00L196.70,50.00L210.04,50.00L223.37,50.00L236.70,50.00L250.03,50.00L263.36,50.00L276.69,50.00L290.03,50.00L303.36,50.00L316.69,50.00L330.02,50.00L343.35,50.00L356.68,50.00L370.02,50.00L383.35,50.00L396.68,50.00L410.01,50.00L423.34,50.00L436.67,50.00L450.01,50.00L463.34,50.00L476.67,50.00L490.00,50.00L503.33,50.00L516.66,50.00L529.99,50.00L543.33,50.00L556.66,50.00L569.99,50.00L583.32,50.00L596.65,50.00L609.98,50.26L622.79,53.70L633.39,61.61L639.29,73.42L640.00,86.70L640.00,100.03L640.00,113.36L640.00,126.69L640.00,140.03L640.00,153.36L640.00,166.69L640.00,180.02L640.00,193.35L640.00,206.68L640.00,220.02L640.00,233.35L640.00,246.68L640.00,260.01L640.00,273.34L640.00,286.67L640.00,300.01L640.00,313.34L640.00,326.67L640.00,340.00L637.05,352.88L628.49,362.94L616.49,368.56L603.28,370.00L589.95,370.00L576.62,370.00L563.29,370.00L549.96,370.00L536.63,370.00L523.30,370.00L509.96,370.00L496.63,370.00L483.30,370.00L469.97,370.00L456.64,370.00L443.31,370.00L429.97,370.00L416.64,370.00L403.31,370.00L389.98,370.00L376.65,370.00L363.32,370.00L349.98,370.00L336.65,370.00L323.32,370.00L309.99,370.00L296.66,370.00L283.33,370.00L269.99,370.00L256.66,370.00L243.33,370.00L230.00,370.00L216.67,370.00L203.34,370.00L190.01,370.00L176.67,370.00L163.34,370.00L150.01,370.00L136.68,370.00L123.35,370.00L110.02,369.74L97.21,366.30L86.61,358.39L80.71,346.58L80.00,333.30L80.00,319.97L80.00,306.64L80.00,293.31L80.00,279.97L80.00,266.64L80.00,253.31L80.00,239.98L80.00,226.65L80.00,213.32L80.00,199.98L80.00,186.65L80.00,173.32L80.00,159.99L80.00,146.66L80.00,133.33L80.00,119.99L80.00,106.66L80.00,93.33Z" />
               <g data-chrome="web">
                 <path d="M81 97H639" stroke="currentColor" opacity=".4" />
                 <circle cx="111" cy="74" r="3" fill="currentColor" />
@@ -59,20 +61,19 @@ export default function Landing() {
               <h1>
                 <span className="hero-kicker">
                   <span />
-                  Verse Engine by Ctruh, the browser-native 3D engine
+                  Verse Engine by Ctruh · the streaming layer for 3D
                 </span>
                 <span className="hero-display">
-                  <span>Beyond</span>
+                  <span>Any 3D.</span>
                   <br />
-                  <span>the screen.</span>
+                  <span>One link.</span>
                 </span>
               </h1>
               <p className="hero-description">
-                Verse Engine by Ctruh is the browser-native 3D engine.
-                Turn any 3D file, scan or Blender, Unity or Unreal project into one link that opens in a browser, on phones, laptops and headsets.
+                From a product to a whole city. Turn any 3D file, scan, floor plan or Blender, Unity or Unreal project into one link that opens in the browser on phones, laptops and headsets. No app. No download.
               </p>
               <a className="button action" href="/studio" id="lnk-explore-verse-engine-2">
-                <span>Explore Verse Engine</span>
+                <span>Try it free</span>
               </a>
               <div className="hero-aside">
                 <span>Free to start.</span>
@@ -86,7 +87,7 @@ export default function Landing() {
                 <br />
                 <strong>Infinite possibilities.</strong>
               </p>
-              <small>Object → interior → neighbourhood</small>
+              <small>Product → interior → city</small>
             </div>
             <a className="scroll-invitation" href="#chapter-1" data-jump="1" id="lnk-scroll-to-cross-the-boundary">
               <span className="scroll-track">
@@ -101,22 +102,22 @@ export default function Landing() {
             <div className="panel-copy">
               <p className="chapter-label">01 / The detail</p>
               <h2>
-                Keep every last {" "}
+                {"Keep every last  "}
                 <br />
                 detail.
               </h2>
               <p>
-                A product. A place. An entire world.
+                A product. A place. A real city.
                 <br />
-                Your scene should travel with all of it.
+                Your scene travels with all of it.
               </p>
               <div className="inline-stat">
-                <strong>1.8B</strong>
-                <span>triangles in one scene</span>
+                <strong>10.3B</strong>
+                <span>unique triangles in one file</span>
               </div>
               <small className="benchmark-note">
-                {"Desktop browser benchmark. "}
-                <a href="/docs/how-we-measure" id="lnk-source">Source</a>
+                {"Lyon, Chrome on a laptop. "}
+                <a href="#benchmarks" id="lnk-source">Benchmarks</a>
                 <br />
                 Results vary by scene and device.
               </small>
@@ -132,22 +133,22 @@ export default function Landing() {
             <div className="panel-copy">
               <p className="chapter-label">02 / The transformation</p>
               <h2>
-                Heavy files.{" "}
+                {"Heavy files. "}
                 <br />
                 Weightless delivery.
               </h2>
               <p>
-                Prepared once. Streamed on demand.
+                One 556 GB file stays on the server.
                 <br />
-                Less waiting between an idea and a “wow”.
+                Your screen gets only what it can see.
               </p>
               <div className="inline-stat">
-                <strong>0.9s</strong>
-                <span>to the first picture</span>
+                <strong>0.05%</strong>
+                <span>of the file draws the whole city</span>
               </div>
               <small className="benchmark-note">
-                {"Desktop browser benchmark. "}
-                <a href="/docs/how-we-measure" id="lnk-source-2">Source</a>
+                {"A detailed interior shows its first picture in 0.9 s. "}
+                <a href="#lyon" id="lnk-source-2">See the city</a>
                 <br />
                 Results vary by scene and connection.
               </small>
@@ -163,12 +164,12 @@ export default function Landing() {
             <div className="panel-copy">
               <p className="chapter-label">03 / The connection</p>
               <h2>
-                A whole world.{" "}
+                {"A whole world. "}
                 <br />
                 In one link.
               </h2>
               <p>
-                Send it. Embed it. Make it yours.
+                Send it on WhatsApp. Embed it. Make it private.
                 <br />
                 Update the scene without changing the link.
               </p>
@@ -191,7 +192,7 @@ export default function Landing() {
             <div className="panel-copy">
               <p className="chapter-label">04 / The experience</p>
               <h2>
-                One scene.{" "}
+                {"One scene. "}
                 <br />
                 Every reality.
               </h2>
@@ -202,12 +203,8 @@ export default function Landing() {
               </p>
               <div className="reality-tabs" role="tablist" aria-label="Experience types">
                 <button role="tab" aria-selected="true" id="mode-web" aria-controls="mode-description" data-mode="web">Web 3D</button>
-                <button role="tab" aria-selected="false" id="mode-ar" aria-controls="mode-description" data-mode="ar" tabIndex="-1">
-                  AR
-                </button>
-                <button role="tab" aria-selected="false" id="mode-xr" aria-controls="mode-description" data-mode="xr" tabIndex="-1">
-                  XR
-                </button>
+                <button role="tab" aria-selected="false" id="mode-ar" aria-controls="mode-description" data-mode="ar" tabIndex="-1">AR</button>
+                <button role="tab" aria-selected="false" id="mode-xr" aria-controls="mode-description" data-mode="xr" tabIndex="-1">XR</button>
               </div>
               <div id="mode-description" role="tabpanel" aria-labelledby="mode-web">No installs. No downloads. Just a link.</div>
             </div>
@@ -217,24 +214,24 @@ export default function Landing() {
             <div className="panel-copy">
               <p className="chapter-label">05 / Your next dimension</p>
               <h2>
-                The next world{" "}
+                {"The next world "}
                 <br />
                 starts with you.
               </h2>
               <p>
-                Keep the tools you love.
+                Free to start. Viewers never pay.
                 <br />
-                Take your work somewhere new.
+                Live on 16 November 2026.
               </p>
               <a className="button action" href="/studio" id="lnk-explore-verse-engine-3">
-                <span>Explore Verse Engine</span>
+                <span>Try it free</span>
               </a>
-              <a className="under-link" href="#possibilities" id="lnk-explore-the-possibilities">Explore the possibilities ↓</a>
+              <a className="under-link" href="#lyon" id="lnk-explore-the-possibilities">See the 10.3B-triangle city ↓</a>
             </div>
           </article>
           {"\n"}
           <a className="button action story-cta" href="/studio" id="lnk-explore-verse-engine-4">
-            <span>Explore Verse Engine</span>
+            <span>Try it free</span>
           </a>
           <div className="story-rail">
             <div className="rail-index">
@@ -273,6 +270,571 @@ export default function Landing() {
         </div>
       </section>
       {"\n"}
+      <section className="mx-lyon" id="lyon" aria-labelledby="lyon-heading">
+        {"\n"}
+        <div className="mx-inner">
+          {"\n"}
+          <header className="mx-head">
+            {"\n"}
+            <div>
+              {"\n"}
+              <span className="section-number">THE 10.3 BILLION TRIANGLE MOMENT</span>
+              {"\n"}
+              <h2 id="lyon-heading">
+                A real city.
+                <br />
+                <span>One file. One link.</span>
+              </h2>
+              {"\n"}
+            </div>
+            {"\n"}
+            <p>
+              Lyon, France: 10.3 billion unique triangles of textured city in one 556 GB file, opened from a link in Chrome on a laptop and walkable at street level.
+            </p>
+            {"\n"}
+          </header>
+          {"\n"}
+          <div className="mx-lyon-stage" data-lyon="">
+            {"\n"}
+            <div className="mx-lyon-views">
+              {"\n"}
+              <img className="on" src="/media/city-hero.webp" alt="Lyon from above, streamed by Verse Engine in Chrome" width="2400" height="1290" />
+              {"\n"}
+              <img src="/media/city-fourviere.webp" alt="Fourvière, looking across Lyon" width="1600" height="900" loading="lazy" />
+              {"\n"}
+              <img src="/media/city-terreaux.webp" alt="Place des Terreaux at street level" width="1600" height="900" loading="lazy" />
+              {"\n"}
+            </div>
+            {"\n"}
+            <div className="mx-lyon-hud">
+              {"\n"}
+              <span className="mx-live">
+                <i />
+                LIVE · CHROME · NO APP
+              </span>
+              {"\n"}
+              <span className="mx-lyon-url">
+                verse.ctruh.com/s/
+                <strong>lyon</strong>
+              </span>
+              {"\n"}
+            </div>
+            {"\n"}
+            <div className="mx-lyon-panel">
+              {"\n"}
+              <div className="mx-lyon-read">
+                {"\n"}
+                <strong data-lyon-fig="">
+                  10.3
+                  <span>B</span>
+                </strong>
+                {"\n"}
+                <small data-lyon-note="">unique triangles, from a single 556 GB file</small>
+                {"\n"}
+              </div>
+              {"\n"}
+              <div className="mx-lyon-tabs" role="tablist" aria-label="Lyon views">
+                {"\n"}
+                <button role="tab" aria-selected="true" data-view="0">City overview</button>
+                {"\n"}
+                <button role="tab" aria-selected="false" data-view="1">Fourvière</button>
+                {"\n"}
+                <button role="tab" aria-selected="false" data-view="2">Street level</button>
+                {"\n"}
+              </div>
+              {"\n"}
+            </div>
+            {"\n"}
+          </div>
+          {"\n"}
+          <div className="mx-lyon-grid">
+            {"\n"}
+            <figure className="mx-squares-card">
+              {"\n"}
+              <div className="mx-squares" data-squares="" role="img" aria-label="2,000 squares stand for the 556 GB file; one lit square is what it takes to show the whole city" />
+              {"\n"}
+              <figcaption>
+                {"\n"}
+                <span>
+                  <b>2,000 squares</b>
+                  {" = the 556 GB file"}
+                </span>
+                {"\n"}
+                <span>
+                  <b className="lit">1 lit square</b>
+                  {" = the whole city on screen"}
+                </span>
+                {"\n"}
+              </figcaption>
+              {"\n"}
+            </figure>
+            {"\n"}
+            <div className="mx-lyon-copy">
+              {"\n"}
+              <span className="section-number">WHY IT OPENS AT ALL</span>
+              {"\n"}
+              <h3>
+                The file stays put.
+                <br />
+                <span>The view comes to you.</span>
+              </h3>
+              {"\n"}
+              <p>
+                {"Instead of sending the whole file, Verse streams only the part you are looking at, in the detail your screen can show. Showing all of Lyon takes about "}
+                <strong data-count="0.05" data-dec="2">0.05</strong>
+                % of the file. The rest streams as you move.
+              </p>
+              {"\n"}
+              <ul className="mx-stops">
+                {"\n"}
+                <li>
+                  <b>Browser engines</b>
+                  {" hold the whole scene in memory: tens of millions of triangles at most."}
+                </li>
+                {"\n"}
+                <li>
+                  <b>City platforms</b>
+                  {" stream millions of tiles from a tiling pipeline, not from your file."}
+                </li>
+                {"\n"}
+                <li>
+                  <b>Cloud streaming</b>
+                  {" runs a GPU server per viewer, billed by the minute."}
+                </li>
+                {"\n"}
+                <li>
+                  <b>Native apps</b>
+                  {" ask every viewer to install something first."}
+                </li>
+                {"\n"}
+              </ul>
+              {"\n"}
+              <p className="mx-claim">We know of no other engine that streams a real, non-repeating scene of this size from a single file.</p>
+              {"\n"}
+            </div>
+            {"\n"}
+          </div>
+          {"\n"}
+          <p className="mx-credit">Stills from a screen recording of the engine running live. City data: Métropole de Lyon, 2023 photomesh, Licence Ouverte 2.0.</p>
+          {"\n"}
+        </div>
+        {"\n"}
+      </section>
+      {"\n"}
+      <section className="mx-proof section-pad" id="proof" aria-labelledby="proof-heading">
+        {"\n"}
+        <header className="mx-head">
+          {"\n"}
+          <div>
+            {"\n"}
+            <span className="section-number">PROOF, NOT PROMISES</span>
+            {"\n"}
+            <h2 id="proof-heading">
+              Measured.
+              <br />
+              <span>Not rendered for a trailer.</span>
+            </h2>
+            {"\n"}
+          </div>
+          {"\n"}
+          <p>Every number on this page comes from the engine running in a browser. Hover or tap a number to see how it was measured.</p>
+          {"\n"}
+        </header>
+        {"\n"}
+        <div className="mx-proof-grid">
+          {"\n"}
+          <button className="mx-stat" type="button">
+            <strong>
+              <span data-count="10.3" data-dec="1">10.3</span>
+              B
+            </strong>
+            <em>unique triangles from one file</em>
+            <small>Lyon: one 556 GB photomesh, opened from a link in Chrome on a laptop.</small>
+          </button>
+          {"\n"}
+          <button className="mx-stat" type="button">
+            <strong>
+              <span data-count="0.9" data-dec="1">0.9</span>
+              {" s"}
+            </strong>
+            <em>to the first picture</em>
+            <small>A detailed interior over the internet. It then sharpens wherever you look.</small>
+          </button>
+          {"\n"}
+          <button className="mx-stat" type="button">
+            <strong>
+              <span data-count="1" data-dec="0">1</span>
+              {" MB"}
+            </strong>
+            <em>before the first pixel</em>
+            <small>Only the first view's worth of data arrives before anything is drawn.</small>
+          </button>
+          {"\n"}
+          <button className="mx-stat" type="button">
+            <strong>
+              <span data-count="29" data-dec="0">29</span>
+              {" s"}
+            </strong>
+            <em>to complete on mobile data</em>
+            <small>A large interior on an everyday phone over a typical mobile connection.</small>
+          </button>
+          {"\n"}
+          <button className="mx-stat" type="button">
+            <strong>
+              {"ΔE "}
+              <span data-count="0.3" data-dec="1">0.3</span>
+            </strong>
+            <em>colour gap, phone to desktop</em>
+            <small>Below the difference the eye can see, so a product looks the same on every screen.</small>
+          </button>
+          {"\n"}
+          <button className="mx-stat" type="button">
+            <strong>
+              <span data-count="24" data-dec="0">24</span>
+              {" h"}
+            </strong>
+            <em>at 120 fps, no crash</em>
+            <small>A continuous stability run in a desktop browser.</small>
+          </button>
+          {"\n"}
+          <button className="mx-stat" type="button">
+            <strong>
+              ~$
+              <span data-count="0" data-dec="0">0</span>
+            </strong>
+            <em>server GPU per view</em>
+            <small>The viewer's own device draws the scene. No GPU server sits behind each viewer.</small>
+          </button>
+          {"\n"}
+          <button className="mx-stat" type="button">
+            <strong>
+              <span data-count="45" data-dec="0">45</span>
+              {" s"}
+            </strong>
+            <em>Blender project to link</em>
+            <small>One Publish button. Unreal takes about 70 s and Unity about 101 s.</small>
+          </button>
+          {"\n"}
+        </div>
+        {"\n"}
+        <p className="mx-credit">
+          {"Desktop browser benchmarks unless noted. Results vary with scene, device and connection. "}
+          <a className="inline-link" href="/docs/how-we-measure">How we measure ↗</a>
+        </p>
+        {"\n"}
+      </section>
+      {"\n"}
+      <section className="mx-bench section-pad" id="benchmarks" aria-labelledby="bench-heading">
+        {"\n"}
+        <header className="mx-head">
+          {"\n"}
+          <div>
+            {"\n"}
+            <span className="section-number">BENCHMARKS</span>
+            {"\n"}
+            <h2 id="bench-heading">
+              Same city.
+              <br />
+              <span>Same laptop.</span>
+            </h2>
+            {"\n"}
+          </div>
+          {"\n"}
+          <p>Verse Engine, CesiumJS and Google 3D Tiles on the city of Lyon. Measured, and including the row we did not win.</p>
+          {"\n"}
+        </header>
+        {"\n"}
+        <div className="mx-bench-board" data-bench="">
+          {"\n"}
+          <div className="mx-bench-tabs" role="tablist" aria-label="Benchmark measures">
+            {"\n"}
+            <button role="tab" aria-selected="true" data-m="0">Street detail</button>
+            {"\n"}
+            <button role="tab" aria-selected="false" data-m="1">Triangles on screen</button>
+            {"\n"}
+            <button role="tab" aria-selected="false" data-m="2">Frame time</button>
+            {"\n"}
+            <button role="tab" aria-selected="false" data-m="3">First picture</button>
+            {"\n"}
+          </div>
+          {"\n"}
+          <div className="mx-bench-chart">
+            {"\n"}
+            <p className="mx-bench-q" data-bench-q="">Seconds until street detail appears after arriving. Lower is better.</p>
+            {"\n"}
+            <div className="mx-bars" data-bars="">
+              {"\n"}
+              <div className="mx-bar us">
+                <span className="mx-bar-name">Verse Engine</span>
+                <div className="mx-bar-track">
+                  <i />
+                </div>
+                <b>8.5 s</b>
+              </div>
+              {"\n"}
+              <div className="mx-bar">
+                <span className="mx-bar-name">CesiumJS</span>
+                <div className="mx-bar-track">
+                  <i />
+                </div>
+                <b>11–26 s</b>
+              </div>
+              {"\n"}
+              <div className="mx-bar">
+                <span className="mx-bar-name">Google 3D Tiles</span>
+                <div className="mx-bar-track">
+                  <i />
+                </div>
+                <b>13.7 s</b>
+              </div>
+              {"\n"}
+            </div>
+            {"\n"}
+            <p className="mx-bench-verdict" data-bench-verdict="">
+              <strong>Verse is fastest to street detail</strong>
+              {", streaming straight from one 556 GB file."}
+            </p>
+            {"\n"}
+          </div>
+          {"\n"}
+        </div>
+        {"\n"}
+        <details className="mx-bench-table">
+          {"\n"}
+          <summary>See the full table</summary>
+          {"\n"}
+          <div className="mx-table-box">
+            {"\n"}
+            <table>
+              {"\n"}
+              <thead>
+                <tr>
+                  <th scope="col">Measure</th>
+                  <th scope="col" className="us">Verse Engine</th>
+                  <th scope="col">CesiumJS</th>
+                  <th scope="col">Google 3D Tiles</th>
+                </tr>
+              </thead>
+              {"\n"}
+              <tbody>
+                {"\n"}
+                <tr>
+                  <th scope="row">Opens your own 10B-triangle file</th>
+                  <td className="us">Yes, one file</td>
+                  <td>Only after a tiling pipeline</td>
+                  <td>No, Google's capture only</td>
+                </tr>
+                {"\n"}
+                <tr>
+                  <th scope="row">Files to host for this city</th>
+                  <td className="us">1</td>
+                  <td>6.1 million</td>
+                  <td>Hosted by Google</td>
+                </tr>
+                {"\n"}
+                <tr>
+                  <th scope="row">Triangles on screen, city overview</th>
+                  <td className="us">5.9 M</td>
+                  <td>0.52 M</td>
+                  <td>Not compared</td>
+                </tr>
+                {"\n"}
+                <tr>
+                  <th scope="row">Street detail after arriving</th>
+                  <td className="us">about 8.5 s</td>
+                  <td>11–26 s</td>
+                  <td>13.7 s</td>
+                </tr>
+                {"\n"}
+                <tr>
+                  <th scope="row">Frame time while walking (95% under)</th>
+                  <td className="us">14–15 ms</td>
+                  <td>10–20 ms</td>
+                  <td>24.9 ms</td>
+                </tr>
+                {"\n"}
+                <tr>
+                  <th scope="row">First picture</th>
+                  <td className="us">1.7 s best case</td>
+                  <td>7.5–11.6 s</td>
+                  <td className="win">1.34 s</td>
+                </tr>
+                {"\n"}
+              </tbody>
+              {"\n"}
+            </table>
+            {"\n"}
+          </div>
+          {"\n"}
+        </details>
+        {"\n"}
+        <p className="mx-credit">
+          Apple M5 Pro, Chrome, served from a CDN, 4–5 November 2026. CesiumJS 1.146 ran the city's own published 3D Tiles, its strongest setup. Google's tiles are Google's own capture of Lyon. On Windows with an RTX 5060, Verse ran Lyon at about 45–60 fps.
+        </p>
+        {"\n"}
+      </section>
+      {"\n"}
+      <section className="mx-race section-pad" id="old-way" aria-labelledby="race-heading">
+        {"\n"}
+        <header className="mx-head">
+          {"\n"}
+          <div>
+            {"\n"}
+            <span className="section-number">THE OLD WAY VS ONE LINK</span>
+            {"\n"}
+            <h2 id="race-heading">
+              Sharing 3D used to be a project.
+              <br />
+              <span>Now it's a link.</span>
+            </h2>
+            {"\n"}
+          </div>
+          {"\n"}
+          <p>Every other route makes you give something up: detail, money, time, or the viewer who would not install an app.</p>
+          {"\n"}
+        </header>
+        {"\n"}
+        <div className="mx-race-board" data-race="">
+          {"\n"}
+          <div className="mx-lane old">
+            {"\n"}
+            <div className="mx-lane-head">
+              <strong>Today</strong>
+              <span data-race-old-status="">Waiting to start</span>
+            </div>
+            {"\n"}
+            <ol>
+              {"\n"}
+              <li>
+                <b>Cut the model down</b>
+                <i>lose detail</i>
+              </li>
+              {"\n"}
+              <li>
+                <b>Bake and compress</b>
+                <i>hours of rework</i>
+              </li>
+              {"\n"}
+              <li>
+                <b>Build a viewer or an app</b>
+                <i>a dev project</i>
+              </li>
+              {"\n"}
+              <li>
+                <b>Rent GPUs to stream it</b>
+                <i>billed per minute</i>
+              </li>
+              {"\n"}
+              <li>
+                <b>Ask viewers to install</b>
+                <i>most never do</i>
+              </li>
+              {"\n"}
+            </ol>
+            {"\n"}
+            <div className="mx-lane-bar">
+              <i />
+            </div>
+            {"\n"}
+          </div>
+          {"\n"}
+          <div className="mx-lane new">
+            {"\n"}
+            <div className="mx-lane-head">
+              <strong>Verse Engine</strong>
+              <span data-race-new-status="">Waiting to start</span>
+            </div>
+            {"\n"}
+            <ol>
+              {"\n"}
+              <li>
+                <b>Upload the full file</b>
+                <i>every triangle kept</i>
+              </li>
+              {"\n"}
+              <li>
+                <b>Share one link</b>
+                <i>45 s from Blender</i>
+              </li>
+              {"\n"}
+              <li>
+                <b>Anyone opens it</b>
+                <i>any browser, no app</i>
+              </li>
+              {"\n"}
+            </ol>
+            {"\n"}
+            <div className="mx-lane-bar">
+              <i />
+            </div>
+            {"\n"}
+          </div>
+          {"\n"}
+          <button className="mx-race-replay" type="button" data-race-replay="">↻ Run it again</button>
+          {"\n"}
+        </div>
+        {"\n"}
+        <div className="mx-matrix-box">
+          {"\n"}
+          <table className="mx-matrix">
+            {"\n"}
+            <thead>
+              <tr>
+                <th scope="col" />
+                <th scope="col">Browser engines</th>
+                <th scope="col">City platforms</th>
+                <th scope="col">Cloud streaming</th>
+                <th scope="col">Native apps</th>
+                <th scope="col" className="us">Verse Engine</th>
+              </tr>
+            </thead>
+            {"\n"}
+            <tbody>
+              {"\n"}
+              <tr>
+                <th scope="row">Opens in a browser, no install</th>
+                <td className="y">Yes</td>
+                <td className="y">Yes</td>
+                <td className="y">Yes</td>
+                <td className="n">No</td>
+                <td className="us">Yes</td>
+              </tr>
+              {"\n"}
+              <tr>
+                <th scope="row">Billions of triangles</th>
+                <td className="n">Tens of millions</td>
+                <td className="y">Tiles only</td>
+                <td className="y">Yes</td>
+                <td className="y">Yes</td>
+                <td className="us">10.3B, one file</td>
+              </tr>
+              {"\n"}
+              <tr>
+                <th scope="row">Streams your own file as is</th>
+                <td className="y">Small files</td>
+                <td className="n">Tiling pipeline first</td>
+                <td className="y">Yes</td>
+                <td className="n">Rebuild per app</td>
+                <td className="us">Yes</td>
+              </tr>
+              {"\n"}
+              <tr>
+                <th scope="row">Cost per viewer</th>
+                <td className="y">Low</td>
+                <td className="y">Low</td>
+                <td className="n">GPU per viewer</td>
+                <td className="y">Low</td>
+                <td className="us">~$0 GPU</td>
+              </tr>
+              {"\n"}
+            </tbody>
+            {"\n"}
+          </table>
+          {"\n"}
+        </div>
+        {"\n"}
+      </section>
+      {"\n"}
       <section className="workflow-section section-pad" id="how-to-start" aria-labelledby="workflow-heading">
         {"\n"}
         <div className="workflow-intro">
@@ -295,13 +857,13 @@ export default function Landing() {
             </header>
             <div className="workflow-content">
               <p>
-                A 2 GB Blender scene. A laser scan of an office. A phone photo of a floor plan. Throw it at Verse Engine — or hit Publish to Verse Engine without leaving Blender, Unity or Unreal.
+                A huge Blender scene. A laser scan of an office. A phone photo of a floor plan. Throw it at Verse Engine, or hit Publish without leaving Blender, Unity or Unreal. You sign in by approving it in your browser.
               </p>
               <div className="workflow-visual upload-visual" role="img" aria-label="Supported scene formats">
                 <div className="upload-target">
                   <span className="upload-icon">↑</span>
                   <strong>Drag anything 3D here</strong>
-                  <p>{".glb   .fbx   .usdz   .ifc   floor-plan.pdf"}</p>
+                  <p>.glb   .fbx   .usdz   .ifc   floor-plan.pdf</p>
                   <small>20+ TYPES</small>
                 </div>
                 <div className="upload-file">
@@ -321,7 +883,7 @@ export default function Landing() {
             </header>
             <div className="workflow-content">
               <p>
-                Like a film prepared for streaming, your scene is sliced for every kind of device and signed so viewers know it’s genuine. It happens one time — nobody ever waits twice.
+                Like a film prepared for streaming, your scene is sliced for every kind of device and signed so viewers know it’s genuine. It happens one time, and if a step fails the upload recovers on its own.
               </p>
               <div className="workflow-visual prepare-visual">
                 <div className="prepare-file">
@@ -358,7 +920,7 @@ export default function Landing() {
             </header>
             <div className="workflow-content">
               <p>
-                Paste it into WhatsApp, a pitch deck or your website. Lock it to private, collect comments, export a video — and change the scene later without changing the link.
+                Paste it into WhatsApp, a pitch deck or your website. Viewers get only what they can see, so it opens fast on an everyday device. Lock it to private, collect comments, export a video, and see who opened it.
               </p>
               <div className="workflow-visual share-visual">
                 <div className="scene-share">
@@ -380,12 +942,94 @@ export default function Landing() {
           {"\n"}
         </div>
       </section>
+      <section className="mx-create section-pad" id="create" aria-labelledby="create-heading">
+        {"\n"}
+        <header className="mx-head">
+          {"\n"}
+          <div>
+            {"\n"}
+            <span className="section-number">CREATE</span>
+            {"\n"}
+            <h2 id="create-heading">
+              Four ways
+              <br />
+              <span>to make a space.</span>
+            </h2>
+            {"\n"}
+          </div>
+          {"\n"}
+          <p>Start from a floor plan, a room, an idea or the tool you already use. Every route ends in the same place: one Verse link.</p>
+          {"\n"}
+        </header>
+        {"\n"}
+        <div className="mx-create-body" data-create="">
+          {"\n"}
+          <div className="mx-create-list" role="tablist" aria-label="Ways to create">
+            {"\n"}
+            <button role="tab" aria-selected="true" data-route="0">
+              <span className="mx-badge live">Available</span>
+              <strong>Ctruh Homes</strong>
+              <small>A floor plan becomes a walkable, furnished home in about a minute. Restyle it in a sentence.</small>
+              <i />
+            </button>
+            {"\n"}
+            <button role="tab" aria-selected="false" data-route="1">
+              <span className="mx-badge live">Available</span>
+              <strong>Verse plug-ins</strong>
+              <small>One Publish button in Blender, Unity and Unreal, or drop any of 20+ file types into the app.</small>
+              <i />
+            </button>
+            {"\n"}
+            <button role="tab" aria-selected="false" data-route="2">
+              <span className="mx-badge beta">Private beta</span>
+              <strong>Ctruh Capture</strong>
+              <small>Walk around a room with a camera and get a walkable space back as a link.</small>
+              <i />
+            </button>
+            {"\n"}
+            <button role="tab" aria-selected="false" data-route="3">
+              <span className="mx-badge soon">Coming soon</span>
+              <strong>Ctruh Worlds</strong>
+              <small>Describe a place or share a photo and get a 3D world to explore, on our own open models.</small>
+              <i />
+            </button>
+            {"\n"}
+          </div>
+          {"\n"}
+          <figure className="mx-create-stage">
+            {"\n"}
+            <img className="on" src="/assets/sample-0.webp" alt="A furnished apartment generated from a floor plan" width="720" height="450" />
+            {"\n"}
+            <img src="/assets/industrial-environment.webp" alt="A factory scene published from a design tool" width="1942" height="809" loading="lazy" />
+            {"\n"}
+            <img src="/assets/sofa-environment.webp" alt="A living room captured from a walk-through video" width="1448" height="1086" loading="lazy" />
+            {"\n"}
+            <img src="/assets/coastal-world.webp" alt="A coastal world generated from a sentence" width="1536" height="1024" loading="lazy" />
+            {"\n"}
+            <figcaption>
+              {"\n"}
+              <span className="mx-route-in" data-route-in="">floor-plan.pdf</span>
+              {"\n"}
+              <span className="mx-route-arrow">→</span>
+              {"\n"}
+              <span className="mx-route-out" data-route-out="">Walkable home · ~1 min</span>
+              {"\n"}
+            </figcaption>
+            {"\n"}
+            <span className="mx-route-tag" data-route-tag="">Real Verse sample</span>
+            {"\n"}
+          </figure>
+          {"\n"}
+        </div>
+        {"\n"}
+      </section>
+      {"\n"}
       <section className="possibility-gallery" id="possibilities" aria-labelledby="gallery-heading">
         <div className="gallery-stage">
           {"\n"}
           <header className="gallery-heading" id="hdr-gallery-heading">
             <div>
-              <span className="section-number">01 / OPEN POSSIBILITIES</span>
+              <span className="section-number">USE CASES / OPEN POSSIBILITIES</span>
               <h2 id="gallery-heading">
                 Made for the people who
                 <br />
@@ -394,17 +1038,17 @@ export default function Landing() {
               </h2>
             </div>
             <p>
-              From a single product to an entire digital twin.
+              The same scene serves a buyer, a client, a shopper,
               <br />
-              Build immersive scenes that belong everywhere.
+              a player or an AI agent.
             </p>
           </header>
-          {"\n\n"}
+          {"\n"}
           <div className="gallery-viewport">
             <div className="gallery-track" id="gallery-track">
-              <a className="possibility-card" href="https://verse.ctruh.com/view?vpk=ingest/showflat-2026-0c5cab173679.vpk" data-gallery-index="0" aria-label="Walk the apartment" id="lnk-walk-the-apartment">
+              <a className="possibility-card" href="https://verse.ctruh.com/view?vpk=ingest/demo-showflat-v2.vpk" data-gallery-index="0" aria-label="Walk the apartment" id="lnk-walk-the-apartment" aria-current="true">
                 <div className="gallery-picture">
-                  <img src="/assets/sample-0.webp" alt="A furnished living room and dining area, rendered live in the browser" width="720" height="450" loading="lazy" />
+                  <img alt="A furnished living room and dining area, rendered live in the browser" width="720" height="450" loading="lazy" src="/assets/sample-0.webp" />
                   <span className="gallery-scrim" />
                 </div>
                 <span className="gallery-card-index">01</span>
@@ -414,9 +1058,9 @@ export default function Landing() {
                   <strong>Walk the apartment</strong>
                 </div>
               </a>
-              <a className="possibility-card long-title" href="/docs/guides/publish-from-ifc" data-gallery-index="1" aria-label="Open the interior" id="lnk-open-the-interior">
+              <a className="possibility-card long-title" href="https://verse.ctruh.com/view?vpk=ingest/demo-reception-v2.vpk" data-gallery-index="1" aria-label="Open the interior" id="lnk-open-the-interior">
                 <div className="gallery-picture">
-                  <img src="/assets/sample-1.webp" alt="A designed reception interior with lounge seating and floor-to-ceiling glazing" width="720" height="450" loading="lazy" />
+                  <img alt="A designed reception interior with lounge seating and floor-to-ceiling glazing" width="720" height="450" loading="lazy" src="/assets/sample-1.webp" />
                   <span className="gallery-scrim" />
                 </div>
                 <span className="gallery-card-index">02</span>
@@ -426,13 +1070,13 @@ export default function Landing() {
                   interior designers
                 </h3>
                 <div className="gallery-card-bottom">
-                  <span>EDITOR GUIDE</span>
+                  <span>REAL VERSE SAMPLE</span>
                   <strong>Open the interior</strong>
                 </div>
               </a>
               <a className="possibility-card" href="https://verse.ctruh.com/view?vpk=ingest/demo-antique-camera.vpk" data-gallery-index="2" aria-label="See a product" id="lnk-see-a-product">
                 <div className="gallery-picture">
-                  <img src="/assets/sample-2.webp" alt="An antique bellows camera on a wooden tripod, lit like a product shot" width="720" height="450" loading="lazy" />
+                  <img alt="An antique bellows camera on a wooden tripod, lit like a product shot" width="720" height="450" loading="lazy" src="/assets/sample-2.webp" />
                   <span className="gallery-scrim" />
                 </div>
                 <span className="gallery-card-index">03</span>
@@ -442,21 +1086,21 @@ export default function Landing() {
                   <strong>See a product</strong>
                 </div>
               </a>
-              <a className="possibility-card" href="/docs/guides/publish-from-unreal" data-gallery-index="3" aria-label="Explore a world" id="lnk-explore-a-world">
+              <a className="possibility-card" href="https://verse.ctruh.com/view?vpk=ingest/demo-bistro-v2.vpk" data-gallery-index="3" aria-label="Explore a world" id="lnk-explore-a-world">
                 <div className="gallery-picture">
-                  <img src="/assets/sample-3.webp" alt="A large game-world street scene with buildings, trees and a market square (Amazon Lumberyard Bistro, CC BY 4.0)" width="720" height="450" loading="lazy" />
+                  <img alt="A large game-world street scene with buildings, trees and a market square (Amazon Lumberyard Bistro, CC BY 4.0)" width="720" height="450" loading="lazy" src="/assets/sample-3.webp" />
                   <span className="gallery-scrim" />
                 </div>
                 <span className="gallery-card-index">04</span>
                 <h3>Verse Play</h3>
                 <div className="gallery-card-bottom">
-                  <span>EDITOR GUIDE</span>
+                  <span>REAL VERSE SAMPLE</span>
                   <strong>Explore a world</strong>
                 </div>
               </a>
               <a className="possibility-card" href="/developers" data-gallery-index="4" aria-label="Build with Verse" id="lnk-build-with-verse">
                 <div className="gallery-picture">
-                  <img src="/assets/sample-4.webp" alt="A photo-scanned marble bust, streamed at full detail" width="720" height="450" loading="lazy" />
+                  <img alt="A photo-scanned marble bust, streamed at full detail" width="720" height="450" loading="lazy" src="/assets/sample-4.webp" />
                   <span className="gallery-scrim" />
                 </div>
                 <span className="gallery-card-index">05</span>
@@ -483,13 +1127,286 @@ export default function Landing() {
               </div>
             </div>
             <div className="gallery-arrows">
-              <button data-gallery-prev="" aria-label="Previous possibility" id="btn-previous-possibility">←</button>
+              <button data-gallery-prev="" aria-label="Previous possibility" id="btn-previous-possibility" disabled>←</button>
               <button data-gallery-next="" aria-label="Next possibility" id="btn-next-possibility">→</button>
             </div>
           </div>
           {"\n"}
         </div>
       </section>
+      <section className="mx-tryit section-pad" id="try-live" aria-labelledby="try-heading">
+        {"\n"}
+        <header className="mx-head">
+          {"\n"}
+          <div>
+            {"\n"}
+            <span className="section-number">DON'T TAKE OUR WORD FOR IT</span>
+            {"\n"}
+            <h2 id="try-heading">
+              Open one.
+              <br />
+              <span>Right now, on your phone.</span>
+            </h2>
+            {"\n"}
+          </div>
+          {"\n"}
+          <p>These are real Verse scenes, streamed by the real engine. Not videos. Open one here, or scan the code to try it on the phone in your hand.</p>
+          {"\n"}
+        </header>
+        {"\n"}
+        <div className="mx-try" data-try="">
+          {"\n"}
+          <div className="mx-try-list" role="tablist" aria-label="Live scenes">
+            {"\n"}
+            <button role="tab" aria-selected="true" data-scene="https://verse.ctruh.com/view?vpk=ingest/demo-showflat-v2.vpk" data-img="/assets/sample-0.webp">
+              <span>01</span>
+              <strong>Show flat</strong>
+              <small>Real estate · walk the apartment</small>
+            </button>
+            {"\n"}
+            <button role="tab" aria-selected="false" data-scene="https://verse.ctruh.com/view?vpk=ingest/demo-reception-v2.vpk" data-img="/assets/sample-1.webp">
+              <span>02</span>
+              <strong>Reception interior</strong>
+              <small>Architecture · glass, light and stone</small>
+            </button>
+            {"\n"}
+            <button role="tab" aria-selected="false" data-scene="https://verse.ctruh.com/view?vpk=ingest/demo-antique-camera.vpk" data-img="/assets/sample-2.webp">
+              <span>03</span>
+              <strong>Antique camera</strong>
+              <small>Commerce · a product, in AR on your phone</small>
+            </button>
+            {"\n"}
+            <button role="tab" aria-selected="false" data-scene="https://verse.ctruh.com/view?vpk=ingest/demo-bistro-v2.vpk" data-img="/assets/sample-3.webp">
+              <span>04</span>
+              <strong>Bistro street</strong>
+              <small>Games · a full scene in a browser tab</small>
+            </button>
+            {"\n"}
+            <button role="tab" aria-selected="false" data-scene="https://verse.ctruh.com/view?vpk=ingest/demo-chess-set.vpk" data-img="">
+              <span>05</span>
+              <strong>Chess set</strong>
+              <small>Materials · polished wood and lacquer</small>
+            </button>
+            {"\n"}
+          </div>
+          {"\n"}
+          <div className="mx-try-stage">
+            {"\n"}
+            <img data-try-img="" src="/assets/sample-0.webp" alt="Preview of the selected live scene" width="720" height="450" />
+            {"\n"}
+            <div className="mx-try-card">
+              {"\n"}
+              <div className="mx-qr" data-qr="" aria-label="QR code that opens the selected scene on your phone" role="img" />
+              {"\n"}
+              <div className="mx-try-copy">
+                {"\n"}
+                <strong>Scan to open on your phone</strong>
+                {"\n"}
+                <span>No app. No sign-up. The link opens straight into the scene.</span>
+                {"\n"}
+                <a className="button action" data-try-open="" href="https://verse.ctruh.com/view?vpk=ingest/demo-showflat-v2.vpk" target="_blank" rel="noopener">
+                  <span>Open it here ↗</span>
+                </a>
+                {"\n"}
+              </div>
+              {"\n"}
+            </div>
+            {"\n"}
+            <span className="mx-try-url" data-try-url="">verse.ctruh.com/view?vpk=ingest/demo-showflat-v2.vpk</span>
+            {"\n"}
+          </div>
+          {"\n"}
+        </div>
+        {"\n"}
+      </section>
+      {"\n"}
+      <section className="mx-engine section-pad" id="engine" aria-labelledby="engine-heading">
+        {"\n"}
+        <header className="mx-head">
+          {"\n"}
+          <div>
+            {"\n"}
+            <span className="section-number">INSIDE THE ENGINE</span>
+            {"\n"}
+            <h2 id="engine-heading">
+              Deep tech underneath.
+              <br />
+              <span>One link on top.</span>
+            </h2>
+            {"\n"}
+          </div>
+          {"\n"}
+          <p>
+            We did not wrap someone else's renderer. To open a real city from a link, a deep-tech team in Bengaluru and San Francisco wrote all three layers itself. The core technology is patented.
+          </p>
+          {"\n"}
+        </header>
+        {"\n"}
+        <div className="mx-layers" data-layers="">
+          {"\n"}
+          <article className="mx-layer">
+            <span>LAYER 03</span>
+            <h3>The streaming layer</h3>
+            <p>Decides what to send, when, and in how much detail, as the camera moves.</p>
+          </article>
+          {"\n"}
+          <article className="mx-layer">
+            <span>LAYER 02</span>
+            <h3>The file format</h3>
+            <p>One file, built to be read a piece at a time, whether it holds a chair or a city.</p>
+          </article>
+          {"\n"}
+          <article className="mx-layer">
+            <span>LAYER 01</span>
+            <h3>The renderer</h3>
+            <p>Draws every scene on the viewer's own device, with no cloud GPU behind it.</p>
+          </article>
+          {"\n"}
+        </div>
+        {"\n"}
+        <div className="mx-tech" data-tech="">
+          {"\n"}
+          <div className="mx-tech-list" role="tablist" aria-label="Nine techniques">
+            {"\n"}
+            <button role="tab" aria-selected="true" data-t="0">
+              <span>01</span>
+              Virtualized geometry streaming
+            </button>
+            {"\n"}
+            <button role="tab" aria-selected="false" data-t="1">
+              <span>02</span>
+              Safe paged memory
+            </button>
+            {"\n"}
+            <button role="tab" aria-selected="false" data-t="2">
+              <span>03</span>
+              GPU feed controller
+            </button>
+            {"\n"}
+            <button role="tab" aria-selected="false" data-t="3">
+              <span>04</span>
+              Adaptive engine router
+            </button>
+            {"\n"}
+            <button role="tab" aria-selected="false" data-t="4">
+              <span>05</span>
+              Streamed textures
+            </button>
+            {"\n"}
+            <button role="tab" aria-selected="false" data-t="5">
+              <span>06</span>
+              Device-adaptive rendering
+            </button>
+            {"\n"}
+            <button role="tab" aria-selected="false" data-t="6">
+              <span>07</span>
+              Faithful material capture
+            </button>
+            {"\n"}
+            <button role="tab" aria-selected="false" data-t="7">
+              <span>08</span>
+              Signed scenes
+            </button>
+            {"\n"}
+            <button role="tab" aria-selected="false" data-t="8">
+              <span>09</span>
+              Instant Home
+            </button>
+            {"\n"}
+          </div>
+          {"\n"}
+          <div className="mx-tech-view" role="tabpanel" aria-live="polite">
+            {"\n"}
+            <span className="mx-tech-n" data-tech-n="">01</span>
+            {"\n"}
+            <h3 data-tech-title="">Virtualized geometry streaming</h3>
+            {"\n"}
+            <p data-tech-copy="">Only what the camera sees, at the detail the screen can show. The rest waits until you move.</p>
+            {"\n"}
+            <canvas className="mx-tech-canvas" data-tech-canvas="" aria-hidden="true" />
+            {"\n"}
+          </div>
+          {"\n"}
+        </div>
+        {"\n"}
+      </section>
+      {"\n"}
+      <section className="mx-cost section-pad" id="cost" aria-labelledby="cost-heading">
+        {"\n"}
+        <header className="mx-head">
+          {"\n"}
+          <div>
+            {"\n"}
+            <span className="section-number">WHY VIEWERS NEVER PAY</span>
+            {"\n"}
+            <h2 id="cost-heading">
+              The viewer's device draws it.
+              <br />
+              <span>So delivery costs almost nothing.</span>
+            </h2>
+            {"\n"}
+          </div>
+          {"\n"}
+          <p>
+            Cloud streaming runs a GPU server for every person watching. Verse sends the scene to the device in their hand. Drag to see what that means at your scale.
+          </p>
+          {"\n"}
+        </header>
+        {"\n"}
+        <div className="mx-calc" data-calc="">
+          {"\n"}
+          <div className="mx-calc-input">
+            {"\n"}
+            <label htmlFor="calc-hours">Viewer-hours a month</label>
+            {"\n"}
+            <output data-calc-hours="">10,000</output>
+            {"\n"}
+            <input id="calc-hours" type="range" min="0" max="300" step="1" defaultValue="100" data-calc-range="" />
+            {"\n"}
+            <div className="mx-calc-scale">
+              <span>1K</span>
+              <span>10K</span>
+              <span>100K</span>
+              <span>1M</span>
+            </div>
+            {"\n"}
+            <p>A viewer-hour is one person exploring a scene for an hour. 10,000 is about 2,000 buyers spending five minutes each, every day of the month.</p>
+            {"\n"}
+          </div>
+          {"\n"}
+          <div className="mx-calc-out">
+            {"\n"}
+            <div className="mx-calc-row us">
+              <span>Verse Engine</span>
+              <div className="mx-calc-track">
+                <i data-calc-bar-us="" />
+              </div>
+              <strong data-calc-us="">≤ $2,520</strong>
+            </div>
+            {"\n"}
+            <div className="mx-calc-row">
+              <span>Cloud GPU streaming</span>
+              <div className="mx-calc-track">
+                <i data-calc-bar-gpu="" />
+              </div>
+              <strong data-calc-gpu="">$4,980–$60,000</strong>
+            </div>
+            {"\n"}
+            <div className="mx-calc-save">
+              <small>Cheaper to deliver, at least</small>
+              <strong data-calc-save="">$2,460 / month</strong>
+            </div>
+            {"\n"}
+          </div>
+          {"\n"}
+        </div>
+        {"\n"}
+        <p className="mx-credit">
+          Delivery cost to serve the scene: Verse at most about $252 per thousand viewer-hours; cloud GPU streaming $498–$6,000. Your plan price is separate, and starts free.
+        </p>
+        {"\n"}
+      </section>
+      {"\n"}
       <section className="challenge-section challenge-editorial" id="challenge" aria-labelledby="challenge-heading">
         <header className="challenge-editorial-head" id="hdr-challenge-editorial-head">
           <div>
@@ -505,14 +1422,16 @@ export default function Landing() {
             </h2>
           </div>
           <div className="challenge-invitation">
-            <p>Send your heaviest file—if Verse Engine fails to stream it, you win.</p>
+            <p>
+              A real 10.3-billion-triangle city already opens from a link. Think yours is bigger? Send your heaviest file. If Verse Engine fails to stream it, you win.
+            </p>
             <a className="button action" href="/challenge" id="lnk-take-the-challenge">
               <span>Take the Challenge</span>
             </a>
           </div>
         </header>
         <p className="technical-note">
-          Performance figures are desktop browser benchmarks. Results vary with scene, device and connection. The point-cloud and architectural scenes are illustrative concept visualizations.
+          Performance figures are desktop browser benchmarks. Results vary with scene, device and connection. The point-cloud story above is an illustrative visualization; Lyon and the use-case samples are real Verse scenes.
         </p>
       </section>
       {"\n"}
@@ -527,7 +1446,7 @@ export default function Landing() {
             </h2>
           </div>
           <div className="plugin-intro">
-            <p>No export dance. One button inside the editor you already live in.</p>
+            <p>No export dance. One button inside the editor you already live in, on Mac and Windows. Substance 3D Painter is in beta.</p>
             <a className="button action" href="/plugins" id="lnk-see-all-plug-ins">
               <span>See all plug-ins</span>
             </a>
@@ -824,17 +1743,177 @@ export default function Landing() {
           </figure>
         </div>
         <div className="plugin-upcoming">
-          <span>4.0 beta available</span>
+          <span>Coming soon</span>
           <p>
-            {"SketchUp, Revit, Rhino, 3ds Max, Archicad, Maya and more. "}
+            {"Revit, SketchUp, Rhino, 3ds Max, Archicad, Maya, Cinema 4D, Houdini and more. BIM models arrive through IFC today. "}
             <a href="/plugins#aec" id="lnk-explore-beta-plug-ins">Explore beta plug-ins</a>
           </p>
         </div>
       </section>
       {"\n"}
+      <section className="mx-dev section-pad" id="developers" aria-labelledby="dev-heading">
+        {"\n"}
+        <header className="mx-head">
+          {"\n"}
+          <div>
+            {"\n"}
+            <span className="section-number">FOR BUILDERS</span>
+            {"\n"}
+            <h2 id="dev-heading">
+              One upload in.
+              <br />
+              <span>A link, an embed or a tool call out.</span>
+            </h2>
+            {"\n"}
+          </div>
+          {"\n"}
+          <p>Drop one tag on any page, or automate everything with the REST API and SDK: upload, publish, embed, track. Free includes 5,000 API calls a month.</p>
+          {"\n"}
+        </header>
+        {"\n"}
+        <div className="mx-dev-body" data-dev="">
+          {"\n"}
+          <div className="mx-console">
+            {"\n"}
+            <div className="mx-console-top">
+              {"\n"}
+              <div className="mx-console-tabs" role="tablist" aria-label="Code samples">
+                {"\n"}
+                <button role="tab" aria-selected="true" data-code="embed">Embed</button>
+                {"\n"}
+                <button role="tab" aria-selected="false" data-code="rest">REST</button>
+                {"\n"}
+                <button role="tab" aria-selected="false" data-code="mcp">
+                  {"MCP "}
+                  <em>EARLY</em>
+                </button>
+                {"\n"}
+              </div>
+              {"\n"}
+              <button className="mx-copy" type="button" data-copy-code="">Copy</button>
+              {"\n"}
+            </div>
+            {"\n"}
+            <pre data-pane="embed"><code><span className="c">{"<!-- the whole embed -->"}</span>{"\n"}<span className="k">{"<script"}</span>{" src\x3d"}<span className="s">{"\"https://verse.ctruh.com/embed.js\""}</span>{"\n        data-scene="}<span className="s">{"\"your-scene\""}</span><span className="k">{"></script>"}</span>{"\n\n"}<span className="c">{"<!-- or as a component -->"}</span>{"\n"}<span className="k">{"<verse-viewer"}</span>{" scene="}<span className="s">{"\"your-scene\""}</span><span className="k">{"></verse-viewer>"}</span></code></pre>
+            {"\n"}
+            <pre data-pane="rest" hidden><code><span className="c">{"# Upload any 3D file. Get a streamable scene back."}</span>{"\ncurl -X POST https://verse.ctruh.com/v1/ingest \\\n  -H "}<span className="s">{"\"Authorization: Bearer $VERSE_API_KEY\""}</span>{" \\\n  --data-binary @scene.glb\n\n"}<span className="c">{"# → { \"job\": \"…\" }  poll it, or get a webhook when it's live"}</span></code></pre>
+            {"\n"}
+            <pre data-pane="mcp" hidden><code><span className="c">{"# Connect the Verse MCP server to your AI assistant, then ask:"}</span>{"\n\n"}<span className="s">{"\"Publish warehouse.fbx to Verse as a private link.\""}</span>{"\n\n"}<span className="c">{"# The assistant uploads the file and hands back"}</span>{"\n"}<span className="c">{"# a published, signed link."}</span></code></pre>
+            {"\n"}
+          </div>
+          {"\n"}
+          <ul className="mx-dev-list">
+            {"\n"}
+            <li>
+              <strong>{"REST API & SDK"}</strong>
+              <span>Upload, publish, private links and analytics, with React and Vue wrappers and signed webhooks.</span>
+            </li>
+            {"\n"}
+            <li>
+              <strong>Embeds</strong>
+              <span>{"One <verse-viewer> tag on any site, plus ready-made embeds for Shopify, Webflow, WordPress, Wix and Squarespace."}</span>
+            </li>
+            {"\n"}
+            <li>
+              <strong>MCP server</strong>
+              <span>AI assistants can upload a 3D file and hand back a published link.</span>
+            </li>
+            {"\n"}
+            <li>
+              <a className="under-link" href="/developers">Read the docs →</a>
+            </li>
+            {"\n"}
+          </ul>
+          {"\n"}
+        </div>
+        {"\n"}
+      </section>
+      {"\n"}
+      <section className="mx-pricing section-pad" id="pricing" aria-labelledby="pricing-heading">
+        {"\n"}
+        <header className="mx-head">
+          {"\n"}
+          <div>
+            {"\n"}
+            <span className="section-number">PRICING</span>
+            {"\n"}
+            <h2 id="pricing-heading">
+              Free to start.
+              <br />
+              <span>Viewers never pay.</span>
+            </h2>
+            {"\n"}
+          </div>
+          {"\n"}
+          <p>Every published scene opens for everyone. Every new account gets a 14-day trial with Pro features, and you sign in with a one-time code.</p>
+          {"\n"}
+        </header>
+        {"\n"}
+        <div className="mx-plans">
+          {"\n"}
+          <article className="mx-plan">
+            <h3>Free</h3>
+            <strong>$0</strong>
+            <p>Try Verse on your own models.</p>
+          </article>
+          {"\n"}
+          <article className="mx-plan">
+            <h3>Starter</h3>
+            <strong>
+              $29
+              <small>/mo</small>
+            </strong>
+            <p>For the agent or designer sharing a few spaces a month.</p>
+          </article>
+          {"\n"}
+          <article className="mx-plan pick">
+            <h3>
+              {"Pro "}
+              <em>Most picked</em>
+            </h3>
+            <strong>
+              $99
+              <small>/mo</small>
+            </strong>
+            <p>For the professional who shows spaces every week.</p>
+          </article>
+          {"\n"}
+          <article className="mx-plan">
+            <h3>Scale</h3>
+            <strong>
+              $499
+              <small>/mo</small>
+            </strong>
+            <p>For teams and developers running Verse every day.</p>
+          </article>
+          {"\n"}
+          <article className="mx-plan dark">
+            <h3>Enterprise</h3>
+            <strong>
+              <small>{"from "}</small>
+              $2,000
+              <small>/mo</small>
+            </strong>
+            <p>SSO, white-label and an SLA. A specialist calls back within 30 minutes during business hours.</p>
+          </article>
+          {"\n"}
+        </div>
+        {"\n"}
+        <div className="mx-pricing-foot">
+          {"\n"}
+          <a className="button action" href="/pricing">
+            <span>Compare plans</span>
+          </a>
+          {"\n"}
+          <a className="under-link" href="https://www.ctruh.com/about/company/contact-us">Talk to us</a>
+          {"\n"}
+        </div>
+        {"\n"}
+      </section>
+      {"\n"}
       <section className="faq-section section-pad" id="sec-faq-section">
         <div>
-          <span className="section-number">03 / A little clarity</span>
+          <span className="section-number">A little clarity</span>
           <h2>
             A few things
             <br />
@@ -843,56 +1922,83 @@ export default function Landing() {
           <a className="under-link" href="/docs/what-is-verse-engine" id="lnk-read-the-documentation">Read the documentation</a>
         </div>
         <div className="faq-list">
-          <details id="dtl-item">
-            <summary id="sum-do-viewers-need-to-install-anything">
-              Do viewers need to install anything?
+          <details open>
+            <summary>
+              What is Verse Engine?
+              <span>−</span>
+            </summary>
+            <p>
+              Ctruh's own browser-native 3D engine and the streaming layer for 3D. Upload a 3D file, send a floor plan or publish from Blender, Unity or Unreal, and get a link that opens in a modern browser on everyday devices.
+            </p>
+          </details>
+          <details>
+            <summary>
+              Do viewers need an app, a plug-in or a powerful device?
               <span>+</span>
             </summary>
             <p>
-              No. Scenes open through a link in a standard <a className="inline-link" href="/docs/browser-support">browser</a>, without a separate app or plug-in.
+              No. A Verse link opens in a modern browser on Windows, macOS, Linux, Android and iOS. The viewer's own device draws the scene, and it only receives what it can see. Viewers never pay.
             </p>
           </details>
-          <details id="dtl-item-2">
-            <summary id="sum-can-i-use-my-existing-tools">
-              Can I use my existing tools?
+          <details>
+            <summary>
+              Is Verse only for cities?
               <span>+</span>
             </summary>
             <p>
-              Publish from Blender, Unity, and Unreal Engine, or upload a scene. More than <a className="inline-link" href="/docs/guides/what-you-can-upload">20 file types</a> and files up to 20 GB are supported.
+              No. A product, a building, a factory and a game world all run on the same engine. Lyon is the proof of scale; everything smaller opens the same way.
             </p>
           </details>
-          <details id="dtl-item-3">
-            <summary id="sum-can-a-scene-change-after-i-share-it">
-              Can a scene change after I share it?
+          <details>
+            <summary>
+              What was Lyon measured on?
               <span>+</span>
             </summary>
-            <p>Yes. Update the scene without changing its link. Links can be private and embedded on your website.</p>
+            <p>
+              Chrome on laptops. Across our test laptops the first picture took 2–8 s. The benchmark table was measured on an Apple M5 Pro, and on Windows with an RTX 5060 Lyon ran at about 45–60 fps.
+            </p>
           </details>
-          <details id="dtl-item-4">
-            <summary id="sum-what-about-ar-and-xr">
+          <details>
+            <summary>
+              Which files and tools can I bring?
+              <span>+</span>
+            </summary>
+            <p>
+              20+ formats, including glTF, FBX, OBJ, USDZ, CAD, BIM through IFC, scans and splats. Blender, Unity and Unreal publish with one click, and Substance 3D Painter is in beta.
+            </p>
+          </details>
+          <details>
+            <summary>
               What about AR and XR?
               <span>+</span>
             </summary>
             <p>
-              The same scene link supports Web 3D, <a className="inline-link" href="/docs/guides/view-in-ar">augmented reality</a>, and extended reality. Viewing modes depend on device compatibility.
+              The same scene link supports Web 3D, augmented reality and extended reality. On a phone, View in AR places a product in the room; on desktop, a QR code opens it there.
             </p>
           </details>
-          <details id="dtl-item-5">
-            <summary id="sum-how-much-does-it-cost">
+          <details>
+            <summary>
+              Can a scene change after I share it?
+              <span>+</span>
+            </summary>
+            <p>Yes. Update the scene without changing its link. Links can be private, revocable and embedded on your website, and every scene is signed.</p>
+          </details>
+          <details>
+            <summary>
+              How is it different from a 3D library?
+              <span>+</span>
+            </summary>
+            <p>
+              A library gives you parts to assemble: loading, streaming, compression, hosting, sharing and analytics are yours to build. Verse ships them as one product, so a scene goes from file to link without a build project.
+            </p>
+          </details>
+          <details>
+            <summary>
               How much does it cost?
               <span>+</span>
             </summary>
             <p>
-              You can start free, and viewers never pay. Paid plans add storage, bandwidth, private links and analytics. <a className="inline-link" href="/pricing">See pricing</a>
-            </p>
-          </details>
-          <details id="dtl-item-6">
-            <summary id="sum-is-verse-engine-by-ctruh-a-game-engine">
-              Is Verse Engine by Ctruh a game engine?
-              <span>+</span>
-            </summary>
-            <p>
-              Not in the way Unity or Unreal are. Verse Engine by Ctruh delivers a finished 3D scene to the browser as a link. You can still create in Unity, Unreal or Blender and publish with our <a className="inline-link" href="/plugins">plug-ins</a>.
+              Free to start, then Starter at $29, Pro at $99 and Scale at $499 a month, with Enterprise from $2,000 a month. Every new account gets a 14-day Pro trial. Viewers never pay.
             </p>
           </details>
         </div>
@@ -909,15 +2015,21 @@ export default function Landing() {
             </h2>
             <div className="footer-cta-actions">
               <a className="button action" href="/studio" id="lnk-explore-verse-engine-5">
-                <span>Explore Verse Engine</span>
+                <span>Try it free</span>
               </a>
-              <a className="under-link" href="/pricing" id="lnk-see-pricing">See pricing</a>
+              <a className="under-link" href="#pricing" id="lnk-see-pricing">See pricing</a>
             </div>
           </header>
-          <a className="footer-landscape" href="/studio" aria-label="Explore Verse Engine" id="lnk-explore-verse-engine-6">
-            <img src="/assets/coastal-world.webp" alt="An illuminated architectural environment opening onto the ocean" width="1536" height="1024" loading="lazy" />
-          </a>
-          <p className="footer-scene-caption">Real estate · Concept environment</p>
+          <figure className="footer-landscape footer-film" data-film="" id="fig-verse-film">
+            <video muted loop playsInline preload="none" poster="/media/verse-film-poster.webp" width="1920" height="1080" aria-label="Verse Engine launch film (no sound): the 10-billion-triangle city of Lyon, opened in a browser">
+              <source src="/media/verse-film-720.mp4" type="video/mp4" media="(max-width: 800px)" />
+              <source src="/media/verse-film-1080.mp4" type="video/mp4" />
+            </video>
+            <div className="film-controls">
+              <button type="button" data-film-play="" id="btn-film-play">Play</button>
+            </div>
+          </figure>
+          <p className="footer-scene-caption">Lyon · 10.3 billion triangles · one link</p>
         </section>
         <div className="footer-directory">
           <div className="footer-identity">
@@ -932,6 +2044,8 @@ export default function Landing() {
             <a href="#story" data-jump="0" id="lnk-the-engine-4">The engine</a>
             <a href="#possibilities" id="lnk-possibilities">Possibilities</a>
             <a href="#how-to-start" id="lnk-your-workflow">Your workflow</a>
+            <a href="#lyon">The city</a>
+            <a href="#benchmarks">Benchmarks</a>
             <a href="#challenge" id="lnk-take-the-challenge-2">Take the Challenge</a>
           </nav>
           <nav aria-label="Verse Engine resources" id="nav-verse-engine-resources">
