@@ -14,7 +14,7 @@ const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
 const byId = (id) => document.getElementById(id);
 
 const STYLES = {
-  landing: ["/css/landing.css", "/css/site.css"],
+  landing: ["/css/landing.css", "/css/site.css", "/css/landing-sections.css"],
   page: ["/css/site.css"],
   challenge: ["/css/site.css", "/css/challenge.css"],
   app: ["/css/studio.css"],
@@ -22,7 +22,7 @@ const STYLES = {
   legal: ["/css/site.css", "/css/legal.css"],
 };
 const MODULES = {
-  "/": () => import("./animations/landing/index.js"),
+  "/": [() => import("./animations/landing/index.js"), () => import("./animations/landing/sections.js")],
 };
 const THEME_COLOR = { landing: "#f5f6f7" };
 const origin = () => byId("meta-site-origin").content.replace(/\/+$/, "");
@@ -143,7 +143,7 @@ async function leave() {
 async function mountModules(payload, path) {
   const context = { path, payload };
   const tasks = [];
-  if (MODULES[path]) tasks.push(MODULES[path]());
+  for (const load of [MODULES[path] ?? []].flat()) tasks.push(load());
   for (const mod of await Promise.all(tasks)) {
     const dispose = await mod.mount(context);
     if (typeof dispose === "function") state.disposers.push(dispose);
