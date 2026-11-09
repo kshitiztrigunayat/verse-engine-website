@@ -7,3 +7,8 @@
 @import "tailwindcss/theme.css" layer(theme) prefix(tw) source(none);
 @import "tailwindcss/utilities.css" layer(utilities) source(none);
 @source "./";
+
+/* No visible scrollbars anywhere on the site (page, docs sidebars, code blocks, sideways galleries).
+   Scrolling itself is unchanged: wheel, trackpad, touch and keyboard all still work. */
+html, body, * { scrollbar-width: none; }
+html::-webkit-scrollbar, body::-webkit-scrollbar, *::-webkit-scrollbar { display: none; width: 0; height: 0; }

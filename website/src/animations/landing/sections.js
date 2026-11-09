@@ -3,6 +3,7 @@
 // proof wall count-up, old way vs one link race, try it live (QR code), cost calculator and the launch countdown.
 // mount() -> dispose, like the other route modules (see router.js), so timers, observers and listeners stop on navigation.
 import qrcode from "qrcode-generator";
+import { lyonViews, createRoutes, techniques, benchMeasures } from "../../pages/landing/data.ts";
 
 export function mount() {
   const $ = (s, r = document) => r.querySelector(s);
@@ -42,15 +43,10 @@ export function mount() {
   if (lyon) {
     const imgs = $$(".mx-lyon-views img", lyon);
     const fig = $("[data-lyon-fig]", lyon), note = $("[data-lyon-note]", lyon);
-    const views = [
-      ["10.3", "B", "unique triangles, from a single 556 GB file"],
-      ["0.05", "%", "of the file is enough to draw the whole city"],
-      ["8.5", "s", "until street detail appears after arriving"],
-    ];
     tabs($$("[data-view]", lyon), (i) => {
       imgs.forEach((im, k) => im.classList.toggle("on", k === i));
-      fig.replaceChildren(document.createTextNode(views[i][0]), Object.assign(document.createElement("span"), { textContent: views[i][1] }));
-      note.textContent = views[i][2];
+      fig.replaceChildren(document.createTextNode(lyonViews[i].fig), Object.assign(document.createElement("span"), { textContent: lyonViews[i].unit }));
+      note.textContent = lyonViews[i].note;
     });
   }
 
@@ -75,24 +71,18 @@ export function mount() {
   const create = $("[data-create]");
   if (create) {
     const imgs = $$(".mx-create-stage img", create);
-    const routes = [
-      ["floor-plan.pdf", "Walkable home · ~1 min", "Real Verse sample"],
-      ["factory_line.blend", "One Publish button · 45 s", "Concept visual"],
-      ["room-walkthrough.mov", "Walkable room · private beta", "Concept visual"],
-      ["“a terrace above the sea”", "Explorable world · coming soon", "Concept visual"],
-    ];
     const btns = $$("[data-route]", create);
     let cur = 0, timer;
     const show = (i) => {
       cur = i;
       imgs.forEach((im, k) => im.classList.toggle("on", k === i));
       btns.forEach((b, k) => { b.setAttribute("aria-selected", String(k === i)); const bar = b.querySelector("i"); bar.style.animation = "none"; void bar.offsetWidth; bar.style.animation = ""; });
-      $("[data-route-in]", create).textContent = routes[i][0];
-      $("[data-route-out]", create).textContent = routes[i][1];
-      $("[data-route-tag]", create).textContent = routes[i][2];
+      $("[data-route-in]", create).textContent = createRoutes[i].input;
+      $("[data-route-out]", create).textContent = createRoutes[i].output;
+      $("[data-route-tag]", create).textContent = createRoutes[i].tag;
     };
     tabs(btns, (i) => { show(i); create.classList.add("held"); stopEvery(timer); });
-    if (!reduced) inView(create, () => { timer = every(() => show((cur + 1) % 4), 5500); });
+    if (!reduced) inView(create, () => { timer = every(() => show((cur + 1) % createRoutes.length), 5500); });
     else create.classList.add("held");
   }
 
@@ -101,23 +91,12 @@ export function mount() {
   if (layers) inView(layers, () => layers.classList.add("open"), 0.4);
   const tech = $("[data-tech]");
   if (tech) {
-    const data = [
-      ["Virtualized geometry streaming", "Only what the camera sees, at the detail the screen can show. The rest waits until you move."],
-      ["Safe paged memory", "Billions of triangles page in and out without holes or cracks, inside what the device can hold."],
-      ["GPU feed controller", "A closed loop paces data to the graphics card, so streaming does not fight the frame you are looking at."],
-      ["Adaptive engine router", "Reads each file and picks the best path: asset, interior, township or city. You upload; it decides."],
-      ["Streamed textures", "Textures and materials arrive as you look, within each device's memory."],
-      ["Device-adaptive rendering", "WebGPU where it is available, WebGL2 elsewhere, tuned to each device. The link stays the same."],
-      ["Faithful material capture", "Glass, brushed metal, car paint and fabric sheen from Blender, Unity and Unreal arrive as they were designed."],
-      ["Signed scenes", "Every scene is signed, so it cannot be silently altered."],
-      ["Instant Home", "A floor plan becomes a walkable home in about a minute."],
-    ];
     let mode = 0;
     tabs($$("[data-t]", tech), (i) => {
       mode = i;
       $("[data-tech-n]", tech).textContent = String(i + 1).padStart(2, "0");
-      $("[data-tech-title]", tech).textContent = data[i][0];
-      $("[data-tech-copy]", tech).textContent = data[i][1];
+      $("[data-tech-title]", tech).textContent = techniques[i].title;
+      $("[data-tech-copy]", tech).textContent = techniques[i].text;
     });
     // A field of points; a sweeping view cone lights the ones it sees, denser near the centre.
     const cv = $("[data-tech-canvas]", tech), ctx = cv.getContext("2d");
@@ -153,25 +132,11 @@ export function mount() {
   // Benchmarks: bars drawn to one scale per measure
   const bench = $("[data-bench]");
   if (bench) {
-    const M = [
-      { q: "Seconds until street detail appears after arriving. Lower is better.", max: 28,
-        rows: [[8.5, 8.5, "8.5 s"], [11, 26, "11–26 s"], [13.7, 13.7, "13.7 s"]], win: 0,
-        v: "<strong>Verse is fastest to street detail</strong>, streaming straight from one 556 GB file." },
-      { q: "Millions of triangles drawn for the city overview. Higher is better.", max: 6.5,
-        rows: [[5.9, 5.9, "5.9 M"], [0.52, 0.52, "0.52 M"], null], win: 0,
-        v: "<strong>About 11× the detail on screen</strong> for the same view of Lyon." },
-      { q: "Frame time while walking, 95% of frames under. Lower is smoother.", max: 28,
-        rows: [[14, 15, "14–15 ms"], [10, 20, "10–20 ms"], [24.9, 24.9, "24.9 ms"]], win: 0,
-        v: "<strong>Verse holds a tight 14–15 ms band</strong> while CesiumJS swings between 10 and 20 ms." },
-      { q: "Seconds to the first picture. Lower is better.", max: 13,
-        rows: [[1.7, 1.7, "1.7 s"], [7.5, 11.6, "7.5–11.6 s"], [1.34, 1.34, "1.34 s"]], win: 2,
-        v: "<strong>Google leads on first picture, and we say so.</strong> Across our test laptops, Verse's first picture ranged 2–8 s." },
-    ];
     const bars = $$(".mx-bar", bench);
     const render = (i) => {
-      const m = M[i];
-      $("[data-bench-q]", bench).textContent = m.q;
-      $("[data-bench-verdict]", bench).innerHTML = m.v;
+      const m = benchMeasures[i];
+      $("[data-bench-q]", bench).textContent = m.question;
+      $("[data-bench-verdict]", bench).replaceChildren(Object.assign(document.createElement("strong"), { textContent: m.verdict.strong }), document.createTextNode(m.verdict.text));
       bars.forEach((bar, k) => {
         const row = m.rows[k], fill = bar.querySelector("i"), val = bar.querySelector("b");
         bar.classList.toggle("na", !row);

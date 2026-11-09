@@ -388,3 +388,10 @@
 @media (max-width: 600px) {
   .mx-lane-head { min-height: calc(30px + 12px + 11px); align-content: flex-start; }
 }
+
+/* Footer film on phones: the build's footer box is 360 px tall there (nearly square), which cut the sides off the
+   16:9 film and its titles. Below 700 px wide the box takes the film's 16:9 shape instead; wider screens keep the
+   build's box. */
+@media (max-width: 700px) {
+  .footer-landscape.footer-film { height: auto; aspect-ratio: 16 / 9; }
+}
