@@ -249,14 +249,14 @@ export function mount() {
   }
 
   // Launch film in the footer (silent): plays muted while it is on screen (unless reduced motion is on), loops, pauses
-  // off screen, with a Play/Pause button. The 720p file is used up to 800 px wide (see the <source> media queries).
+  // off screen. A play/pause icon in the centre of the film toggles it. The 720p file is used up to 800 px wide (see the <source> media queries).
   const film = $("[data-film]");
   if (film) {
     const v = film.querySelector("video"), play = $("[data-film-play]", film);
     let wanted = !reduced; // whether the film should play when it is on screen
     v.muted = true;
     const sync = () => {
-      play.textContent = v.paused ? "Play" : "Pause";
+      film.dataset.state = v.paused ? "paused" : "playing"; // CSS shows the play or pause icon
       play.setAttribute("aria-label", v.paused ? "Play the film" : "Pause the film");
     };
     on(play, "click", () => { wanted = v.paused; if (v.paused) v.play().catch(() => {}); else v.pause(); });

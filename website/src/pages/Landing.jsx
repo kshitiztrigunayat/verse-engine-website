@@ -971,9 +971,16 @@ export default function Landing() {
               <source src="/media/verse-film-720.mp4" type="video/mp4" media="(max-width: 800px)" />
               <source src="/media/verse-film-1080.mp4" type="video/mp4" />
             </video>
-            <div className="film-controls">
-              <button type="button" data-film-play="" id="btn-film-play">Play</button>
-            </div>
+            <button type="button" className="film-toggle" data-film-play="" id="btn-film-play" aria-label="Play the film">
+              <span className="film-icon" aria-hidden="true">
+                <svg className="film-icon-play" viewBox="0 0 24 24">
+                  <path d="M8 5.5v13l11-6.5Z" fill="currentColor" />
+                </svg>
+                <svg className="film-icon-pause" viewBox="0 0 24 24">
+                  <path d="M7 5h3.5v14H7ZM13.5 5H17v14h-3.5Z" fill="currentColor" />
+                </svg>
+              </span>
+            </button>
           </figure>
           <p className="footer-scene-caption">Lyon · 10.3 billion triangles · one link</p>
         </section>

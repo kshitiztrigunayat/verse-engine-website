@@ -368,13 +368,25 @@
 
 /* Launch film in the footer: in the same box as the build's footer photograph (.footer-landscape). */
 .footer-film video { width: 100%; height: 100%; object-fit: cover; display: block; }
-.film-controls { position: absolute; right: var(--gutter); bottom: 24px; display: flex; gap: 8px; z-index: 2; }
-.film-controls button { min-height: 40px; padding: 8px 16px; border: 0; border-radius: 99px; background: #ffffffe6; color: #1d1d1f; font: 600 13px/1 Metropolis, Arial, sans-serif; cursor: pointer; box-shadow: 0 6px 20px #02061733; }
-.film-controls button:hover { background: #fff; }
-.film-controls button:focus-visible { outline: 2px solid #0066cc; outline-offset: 2px; }
+/* Play/pause: the whole film is the click target; the round icon sits in the centre. Paused shows ▶. While playing
+   there is no icon; ❚❚ appears only on mouse hover (or keyboard focus). */
+.film-toggle { position: absolute; inset: 0; z-index: 2; display: grid; place-items: center; padding: 0; border: 0; background: transparent; cursor: pointer; }
+.film-icon { display: grid; place-items: center; width: 72px; height: 72px; border-radius: 50%; background: #020617a6; color: #fff; box-shadow: 0 10px 30px #02061740; -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); transition: opacity .25s, transform .25s; }
+.film-icon svg { width: 30px; height: 30px; }
+.film-icon-pause { display: none; }
+.footer-film[data-state="playing"] .film-icon-play { display: none; }
+.footer-film[data-state="playing"] .film-icon-pause { display: block; }
+.footer-film[data-state="playing"] .film-icon { opacity: 0; }
+.film-toggle:focus-visible .film-icon { opacity: 1; }
+/* Hover reveal only with a real mouse: on touch screens a tap leaves :hover stuck, which kept ❚❚ on the playing film. */
+@media (hover: hover) and (pointer: fine) {
+  .film-toggle:hover .film-icon { opacity: 1; transform: scale(1.06); }
+}
+.film-toggle:focus-visible { outline: none; }
+.film-toggle:focus-visible .film-icon { outline: 2px solid #fff; outline-offset: 3px; }
 @media (max-width: 600px) {
-  .film-controls { right: 12px; bottom: 12px; }
-  .film-controls button { min-height: 34px; padding: 6px 12px; font-size: 12px; }
+  .film-icon { width: 56px; height: 56px; }
+  .film-icon svg { width: 24px; height: 24px; }
 }
 
 /* Scroll jump: the three engine layers start overlapped (-14 px) and spread to a 12 px gap when they come into view,
