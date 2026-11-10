@@ -16,6 +16,10 @@ import Studio from "./studio/Studio.jsx";
 import Privacy from "./legal/Privacy.jsx";
 import Terms from "./legal/Terms.jsx";
 import Refunds from "./legal/Refunds.jsx";
+import Commerce from "./resources/Commerce.jsx";
+import ArchitectureRealEstate from "./resources/ArchitectureRealEstate.jsx";
+import AiInfrastructure from "./resources/AiInfrastructure.jsx";
+import LyonDemo from "./resources/LyonDemo.jsx";
 
 export const PAGES = {
   "/": Landing,
@@ -33,5 +37,9 @@ export const PAGES = {
   "/privacy": Privacy,
   "/terms": Terms,
   "/refunds": Refunds,
+  "/use-cases/3d-commerce": Commerce,
+  "/use-cases/architecture-real-estate": ArchitectureRealEstate,
+  "/ai-3d-infrastructure": AiInfrastructure,
+  "/demos/lyon": LyonDemo,
   "/404": NotFound,
 };

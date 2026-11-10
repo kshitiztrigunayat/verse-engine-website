@@ -168,3 +168,15 @@ dialog.menu-dialog.growth-menu{padding:0 24px 32px;overflow-y:auto}
 .site-page .page-hero .tagline{color:var(--ink);font-weight:600}
 a.inline-link{color:var(--brand-blue);text-decoration:underline;text-underline-offset:3px;cursor:pointer}
 .engine-benchmarks .benchmark-link{grid-column:1/-1;font-size:13px}
+
+/* Header: "Resources" dropdown (src/components/ResourcesNav.jsx) */
+.growth-header .nav-drop{position:relative;display:flex;align-items:center}
+.growth-header .nav-drop-toggle{display:flex;align-items:center;gap:4px;margin:0;border:0;background:none;color:inherit;font:inherit;letter-spacing:inherit;cursor:pointer}
+.growth-header .nav-drop-chev{width:14px;height:14px;transition:transform .2s ease}
+.growth-header .nav-drop.is-open .nav-drop-chev{transform:rotate(180deg)}
+.growth-header .nav-drop-toggle[data-current]{color:var(--brand-blue);opacity:1}
+.growth-header .nav-drop-menu{position:absolute;top:100%;left:-18px;z-index:50;min-width:260px;margin-top:6px;padding:8px;display:flex;flex-direction:column;background:#fff;border:1px solid var(--hairline);border-radius:14px;box-shadow:0 18px 40px #1d1d1f1f}
+.growth-header .nav-drop-menu:before{content:"";position:absolute;inset:-10px 0 auto;height:10px}
+.growth-header .nav-drop-menu a{display:block;padding:10px 12px;border-radius:9px;font:500 15px/1.35 Metropolis,sans-serif;color:var(--ink);white-space:nowrap;opacity:1}
+.growth-header .nav-drop-menu a:hover,.growth-header .nav-drop-menu a:focus-visible{background:var(--paper)}
+.growth-header .nav-drop-menu a[aria-current=page]{color:var(--brand-blue);font-weight:600}

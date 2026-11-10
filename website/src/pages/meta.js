@@ -1,13 +1,19 @@
 // Each page's meta: what the router sets on <head> and <body> for the route, and how the
 // shell looks around it. Edit a page's title or description here.
-//   kind:       landing | page | legal | app | notfound (decides the page's stylesheets)
+//   kind:       landing | page | legal | app | notfound | resources (decides the page's stylesheets)
 //   chrome:     full (header and footer) | header (header only) | none
 //   bodyClass, mainClass: classes for <body> and <main>
 //   navCurrent: header link shown as the current section ("" for none)
 //   noindex:    keep the page out of search results
 //   ogDescription: og:description when it should differ from description (home page)
-//   jsonld:     structured data for search engines (home page)
+//   jsonld:     structured data for search engines (home page, Resources pages)
 // Documentation pages get theirs from source/ (npm run content).
+import { resourcesJsonLd } from "./resources/schema.js";
+import { RESOURCE_PAGES, ROUTES } from "./resources/data.js";
+
+// Shared by the Resources pages (their structured data is added below META).
+const RESOURCE_PAGE = { bodyClass: "site-page", mainClass: "", noindex: false };
+
 // Breadcrumb structured data for a documentation page (/docs/...): Docs > this page.
 // Used by the router (in the browser) and by vite.config.js (in each page's server HTML).
 export const docsBreadcrumb = (path, title, origin) => ({
@@ -245,5 +251,44 @@ export const META = {
     mainClass: "legal-page",
     navCurrent: "",
     noindex: false,
+  },  // Resources pages (src/pages/resources/), listed under Resources in the header.
+  "/use-cases/3d-commerce": {
+    kind: "resources",
+    chrome: "full",
+    title: "Browser-Based 3D Product Visualization for E-commerce | Ctruh",
+    description: "Publish interactive 3D products that shoppers can orbit, zoom and view in AR from one link. Embed Verse Engine by Ctruh on Shopify, WordPress and more.",
+    ogDescription: "Let shoppers orbit, zoom and place a product in their room, in the browser. Embed it on your product page with one tag.",
+    navCurrent: "/use-cases/3d-commerce",
+    ...RESOURCE_PAGE,
+  },
+  "/use-cases/architecture-real-estate": {
+    kind: "resources",
+    chrome: "full",
+    title: "Browser-Based 3D for Architecture and Real Estate | Ctruh",
+    description: "Share walkable 3D apartments, BIM models, scans and floor-plan-to-3D homes from one browser link. No app for clients or buyers. Built on Verse Engine by Ctruh.",
+    ogDescription: "Floor plans, BIM models, scans and whole townships as walkable 3D, opened in the browser.",
+    navCurrent: "/use-cases/architecture-real-estate",
+    ...RESOURCE_PAGE,
+  },
+  "/ai-3d-infrastructure": {
+    kind: "resources",
+    chrome: "full",
+    title: "AI and 3D Infrastructure | How Ctruh Connects Creation to Deployment",
+    description: "How Ctruh connects AI-powered 3D creation (VersaAI) with browser-native 3D delivery (Verse Engine), from images, floor plans and scans to a streamable link.",
+    ogDescription: "VersaAI creates. Verse Engine prepares, streams and deploys. How Ctruh connects the two.",
+    navCurrent: "/ai-3d-infrastructure",
+    ...RESOURCE_PAGE,
+  },
+  "/demos/lyon": {
+    kind: "resources",
+    chrome: "full",
+    title: "Explore the Lyon 3D City Demo | Verse Engine by Ctruh",
+    description: "Open a 10.3-billion-triangle photomesh of Lyon from one link in your browser. See how Verse Engine streams a 556 GB city file and how it was measured.",
+    ogDescription: "A real city in one 556 GB file, streamed into Chrome on a laptop. Open it, and see how it was measured.",
+    navCurrent: "/demos/lyon",
+    ...RESOURCE_PAGE,
   },
 };
+
+// Structured data for the Resources pages, from their meta title and description.
+for (const key of Object.keys(RESOURCE_PAGES)) META[ROUTES[key].path].jsonld = resourcesJsonLd(key, META[ROUTES[key].path]);

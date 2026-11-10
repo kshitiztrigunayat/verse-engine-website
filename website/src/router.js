@@ -20,6 +20,7 @@ const STYLES = {
   app: ["/css/studio.css"],
   notfound: ["/css/site.css"],
   legal: ["/css/site.css", "/css/legal.css"],
+  resources: ["/css/site.css", "/css/resources.css"],
 };
 const MODULES = {
   "/": [() => import("./animations/landing/index.js"), () => import("./animations/landing/sections.js")],
