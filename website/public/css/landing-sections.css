@@ -368,6 +368,8 @@
 
 /* Launch film in the footer: in the same box as the build's footer photograph (.footer-landscape). */
 .footer-film video { width: 100%; height: 100%; object-fit: cover; display: block; }
+/* Padding on both sides of the film: the page's side margin (--gutter, up to 80 px); 20 px on phones (below). */
+.footer-landscape.footer-film { padding-inline: var(--gutter); }
 /* Play/pause: the whole film is the click target; the round icon sits in the centre. Paused shows ▶. While playing
    there is no icon; ❚❚ appears only on mouse hover (or keyboard focus). */
 .film-toggle { position: absolute; inset: 0; z-index: 2; display: grid; place-items: center; padding: 0; border: 0; background: transparent; cursor: pointer; }
@@ -405,5 +407,24 @@
    16:9 film and its titles. Below 700 px wide the box takes the film's 16:9 shape instead; wider screens keep the
    build's box. */
 @media (max-width: 700px) {
-  .footer-landscape.footer-film { height: auto; aspect-ratio: 16 / 9; }
+  .footer-landscape.footer-film { height: auto; padding-inline: 20px; }
+  .footer-film video { height: auto; aspect-ratio: 16 / 9; }
+}
+@media (max-width: 600px) {
+  .possibility-gallery .gallery-controls { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; row-gap: 14px; column-gap: 12px; }
+  .possibility-gallery .gallery-instruction { grid-column: 1 / -1; max-width: none; white-space: nowrap; line-height: 1.4; }
+}
+
+@media (max-width: 430px) {
+  .possibility-gallery .gallery-card-bottom { left: 20px; right: 16px; flex-wrap: nowrap; gap: 8px; white-space: nowrap; }
+  .possibility-gallery .gallery-card-bottom > span { font-size: 8px !important; letter-spacing: .06em; min-width: 0; overflow: hidden; text-overflow: ellipsis; }
+  .possibility-gallery .gallery-card-bottom > strong { font-size: 11px !important; letter-spacing: .02em; flex: none; }
+}
+.button.action.story-cta { padding-inline: 16px !important; white-space: nowrap; }
+
+/* Use-cases gallery on phones/tablets: side padding = page gutter (lines up with the heading); cards snap to that edge. */
+@media (max-width: 800px) {
+  .gallery-track { padding-inline: var(--gutter) !important; }
+  .possibility-card { scroll-snap-align: start; }
+  .gallery-viewport { scroll-padding-inline: var(--gutter); }
 }
