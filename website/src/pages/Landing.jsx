@@ -368,7 +368,7 @@ export default function Landing() {
                 <small data-lyon-note="">{lyonViews[0].note}</small>
               </div>
               <div className="mx-lyon-tabs" role="tablist" aria-label="Lyon views">
-                {lyonViews.map((v, i) => <button key={v.tab} {...tab(i)} data-view={i}>{v.tab}</button>)}
+                {lyonViews.map((v, i) => <button key={v.tab} id={v.id} {...tab(i)} data-view={i}>{v.tab}</button>)}
               </div>
             </div>
           </div>
@@ -415,7 +415,7 @@ export default function Landing() {
         <SectionHead heading={proofHeading} />
         <div className="mx-proof-grid">
           {proofStats.map((s) => (
-            <button key={s.label} className="mx-stat" type="button">
+            <button key={s.label} id={s.id} className="mx-stat" type="button">
               <strong>
                 {s.prefix || null}
                 <span data-count={s.count} data-dec={s.dec}>{s.count}</span>
@@ -436,7 +436,7 @@ export default function Landing() {
         <SectionHead heading={benchHeading} />
         <div className="mx-bench-board" data-bench="">
           <div className="mx-bench-tabs" role="tablist" aria-label="Benchmark measures">
-            {benchMeasures.map((m, i) => <button key={m.tab} {...tab(i)} data-m={i}>{m.tab}</button>)}
+            {benchMeasures.map((m, i) => <button key={m.tab} id={m.id} {...tab(i)} data-m={i}>{m.tab}</button>)}
           </div>
           <div className="mx-bench-chart">
             <p className="mx-bench-q" data-bench-q="">{firstMeasure.question}</p>
@@ -505,7 +505,7 @@ export default function Landing() {
               </div>
             </div>
           ))}
-          <button className="mx-race-replay" type="button" data-race-replay="">↻ Run it again</button>
+          <button className="mx-race-replay" type="button" data-race-replay="" id="btn-race-replay">↻ Run it again</button>
         </div>
         <div className="mx-matrix-box">
           <table className="mx-matrix">
@@ -564,7 +564,7 @@ export default function Landing() {
         <div className="mx-create-body" data-create="">
           <div className="mx-create-list" role="tablist" aria-label="Ways to create">
             {createRoutes.map((r, i) => (
-              <button key={r.title} {...tab(i)} data-route={i}>
+              <button key={r.title} id={r.id} {...tab(i)} data-route={i}>
                 <span className={`mx-badge ${r.badge.className}`}>{r.badge.label}</span>
                 <strong>{r.title}</strong>
                 <small>{r.text}</small>
@@ -644,7 +644,7 @@ export default function Landing() {
         <div className="mx-try" data-try="">
           <div className="mx-try-list" role="tablist" aria-label="Live scenes">
             {tryScenes.map((s, i) => (
-              <button key={s.scene} {...tab(i)} data-scene={s.scene} data-img={s.image}>
+              <button key={s.scene} id={s.id} {...tab(i)} data-scene={s.scene} data-img={s.image}>
                 <span>{nn(i)}</span>
                 <strong>{s.title}</strong>
                 <small>{s.text}</small>
@@ -682,7 +682,7 @@ export default function Landing() {
         <div className="mx-tech" data-tech="">
           <div className="mx-tech-list" role="tablist" aria-label="Nine techniques">
             {techniques.map((t, i) => (
-              <button key={t.title} {...tab(i)} data-t={i}>
+              <button key={t.title} id={t.id} {...tab(i)} data-t={i}>
                 <span>{nn(i)}</span>
                 {t.title}
               </button>
@@ -875,13 +875,13 @@ export default function Landing() {
             <div className="mx-console-top">
               <div className="mx-console-tabs" role="tablist" aria-label="Code samples">
                 {devTabs.map((t, i) => (
-                  <button key={t.code} {...tab(i)} data-code={t.code}>
+                  <button key={t.code} id={t.id} {...tab(i)} data-code={t.code}>
                     {t.label}
                     {t.badge && <em>{t.badge}</em>}
                   </button>
                 ))}
               </div>
-              <button className="mx-copy" type="button" data-copy-code="">Copy</button>
+              <button className="mx-copy" type="button" data-copy-code="" id="btn-dev-copy-code">Copy</button>
             </div>
             <pre data-pane="embed"><code><span className="c">{"<!-- the whole embed -->"}</span>{"\n"}<span className="k">{"<script"}</span>{" src\x3d"}<span className="s">{"\"https://verse.ctruh.com/embed.js\""}</span>{"\n        data-scene="}<span className="s">{"\"your-scene\""}</span><span className="k">{"></script>"}</span>{"\n\n"}<span className="c">{"<!-- or as a component -->"}</span>{"\n"}<span className="k">{"<verse-viewer"}</span>{" scene="}<span className="s">{"\"your-scene\""}</span><span className="k">{"></verse-viewer>"}</span></code></pre>
             <pre data-pane="rest" hidden><code><span className="c">{"# Upload any 3D file. Get a streamable scene back."}</span>{"\ncurl -X POST https://verse.ctruh.com/v1/ingest \\\n  -H "}<span className="s">{"\"Authorization: Bearer $VERSE_API_KEY\""}</span>{" \\\n  --data-binary @scene.glb\n\n"}<span className="c">{"# → { \"job\": \"…\" }  poll it, or get a webhook when it's live"}</span></code></pre>
