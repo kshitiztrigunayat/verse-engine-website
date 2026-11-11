@@ -86,6 +86,21 @@ export const RESOURCES_MENU = [
   { href: ROUTES.lyon.path, label: "Lyon demo", id: "lnk-lyon-demo", mobileId: "lnk-lyon-demo-2" },
 ];
 
+/** Links the site footer adds to its columns (SEO blueprint, Part A: header and footer link to the four
+    pages, how it works, developers, supported formats, pricing, docs and FAQ). Labels as in the
+    verse-seo-pages footer. Planned pages link to their home page section until they go live (ROUTES). */
+export const FOOTER_LINKS = {
+  explore: [
+    { href: href("commerce"), label: "3D commerce", id: "lnk-3d-commerce-3" },
+    { href: href("archRe"), label: "Architecture and real estate", id: "lnk-architecture-real-estate-3" },
+    { href: href("aiInfra"), label: "AI and 3D infrastructure", id: "lnk-ai-3d-infrastructure-3" },
+    { href: href("lyon"), label: "Lyon 3D city demo", id: "lnk-lyon-3d-city-demo" },
+    { href: href("howItWorks"), label: "How Verse Engine works", id: "lnk-how-verse-engine-works" },
+  ],
+  build: [{ href: href("formats"), label: "Supported formats", id: "lnk-supported-formats" }],
+  connect: [{ href: href("faq"), label: "FAQs", id: "lnk-faqs" }],
+};
+
 // ── Claims ──
 // Content that still needs confirmation carries its claim id (a `claim` field, or the claim() text
 // helper in utils.js). It is shown ONLY when its claim is confirmed: true; until then the page shows

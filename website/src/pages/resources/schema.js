@@ -1,13 +1,13 @@
 // Structured data (JSON-LD) for the Resources pages, used by src/pages/meta.js.
-// Entity @ids match the home page's, so search and answer engines resolve "Ctruh" and
-// "Verse Engine by Ctruh" to the same entities across the site.
+// Entity @ids as in the SEO blueprint (Part A, entity consistency): the same on every page, so search
+// and answer engines resolve "Ctruh", "Verse Engine by Ctruh" and "VersaAI" to the same entities.
 import { SITE, ORG, PRODUCT, ROUTES, RESOURCE_PAGES, VIDEO } from "./data.js";
 import { canonical, claimOk } from "./utils.js";
 
 const ID = {
   org: ORG.id,
   website: `${SITE}/#website`,
-  verse: `${SITE}/#software`,
+  verse: `${SITE}/#verse-engine`,
   versaai: "https://www.ctruh.com/#versaai",
 };
 const abs = (h) => (h.startsWith("http") ? h : SITE + h);
