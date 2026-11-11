@@ -27,7 +27,7 @@ const nn = (i) => String(i + 1).padStart(2, "0");
 /** Lines joined with <br />. */
 const Lines = ({ lines }) => lines.map((line, i) => <Fragment key={i}>{i > 0 && <br />}{line}</Fragment>);
 
-/** Section header used by the mx- sections: number, two-line heading (second line accented) and intro. */
+/** Section header used by the mx- sections: number, two-line heading (second line accented), intro and an optional link under it. */
 function SectionHead({ heading }) {
   return (
     <header className="mx-head">
@@ -39,7 +39,15 @@ function SectionHead({ heading }) {
           <span>{heading.accent}</span>
         </h2>
       </div>
-      <p>{heading.text}</p>
+      <p>
+        {heading.text}
+        {heading.link && (
+          <>
+            <br />
+            <a className="under-link" href={heading.link.href} id={heading.link.id}>{heading.link.label}</a>
+          </>
+        )}
+      </p>
     </header>
   );
 }

@@ -428,3 +428,8 @@
   .possibility-card { scroll-snap-align: start; }
   .gallery-viewport { scroll-padding-inline: var(--gutter); }
 }
+
+/* Lyon section: "How it was measured" link under the intro (SEO blueprint, Part B). The default
+   link blue is too dark on this navy background, so it takes the intro's colour, as other
+   under-links on dark panels do. */
+.mx-head > p .under-link { color: inherit; }

@@ -17,6 +17,8 @@ export interface SectionHeading {
   title: string;
   accent: string;
   text: string;
+  /** Optional text link shown under the intro text. */
+  link?: Link;
 }
 
 // ---------------------------------------------------------------- Scroll story
@@ -144,6 +146,8 @@ export const lyonHeading: SectionHeading = {
   title: "A real city.",
   accent: "One file. One link.",
   text: "Lyon, France: 10.3 billion unique triangles of textured city in one 556 GB file, opened from a link in Chrome on a laptop and walkable at street level.",
+  // SEO blueprint, Part B (Lyon "duplicate check"): link this section to the Lyon demo page.
+  link: { href: "/demos/lyon", label: "How it was measured", id: "lnk-how-it-was-measured" },
 };
 
 /** The three Lyon views: photo, tab label and the readout shown for it (sections.js switches them). */
