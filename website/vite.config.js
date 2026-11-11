@@ -14,7 +14,8 @@ const siteUrlInHtml = { name: "site-url", transformIndexHtml: (html) => html.rep
 // Link previews (WhatsApp, LinkedIn, Slack) do not run JavaScript, so each page's OG and Twitter tags must be in
 // its HTML. After the build, write dist/<page>/index.html (and update dist/index.html) with that page's tags.
 // A tag that is in index.html is updated; a missing one is added before </head>.
-// Pages with `staticHead` (meta.js) also get their own title, description, robots and canonical in that HTML.
+// Every page gets its own canonical in that HTML (SEO blueprint, Part D). Pages with `staticHead` (meta.js) also get
+// their own title, description and robots; other noindex pages (e.g. /signin) get their robots tag.
 const esc = (s) => String(s).replaceAll("&", "&amp;").replaceAll('"', "&quot;").replaceAll("<", "&lt;");
 function setTag(html, attr, key, value) {
   const tag = new RegExp(`<meta\\b[^>]*\\b${attr}="${key}"[^>]*>`);
@@ -44,24 +45,24 @@ const pageSocialTags = {
         const jsonld = JSON.stringify(docsJsonLd(route, page, siteUrl)).replaceAll("<", "\\u003c");
         html = html.replace("</head>", () => `<script id="script-jsonld" type="application/ld+json">${jsonld}</script>\n</head>`);
       }
-      if (page.staticHead) html = staticHead(html, route, page);
-      else if (page.noindex) html = html.replace(ROBOTS, (_, open, close) => open + "noindex,follow" + close); // e.g. /signin: out of the index before JavaScript runs
+      const head = [[CANONICAL, siteUrl + route]];
+      if (page.staticHead) head.push([TITLE, page.title], [DESCRIPTION, page.description]);
+      if (page.staticHead || page.noindex) head.push([ROBOTS, page.noindex ? "noindex,follow" : "index,follow,max-image-preview:large"]);
+      html = setHead(html, route, head);
       fs.mkdirSync(path.join(dir, route), { recursive: true });
       fs.writeFileSync(path.join(dir, route, "index.html"), html);
     }
   },
 };
 
+// The <head> tags the router sets in the browser; setHead writes them into a page's HTML.
+const TITLE = /(<title id="doc-title">)[^<]*(<\/title>)/;
+const DESCRIPTION = /(<meta id="meta-description" name="description" content=")[^"]*(")/;
 const ROBOTS = /(<meta id="meta-robots" name="robots" content=")[^"]*(")/;
-// The page's own title, description, robots and canonical (as the router sets them).
-function staticHead(html, route, page) {
-  for (const [re, value] of [
-    [/(<title id="doc-title">)[^<]*(<\/title>)/, page.title],
-    [/(<meta id="meta-description" name="description" content=")[^"]*(")/, page.description],
-    [ROBOTS, page.noindex ? "noindex,follow" : "index,follow,max-image-preview:large"],
-    [/(<link id="link-canonical" rel="canonical" href=")[^"]*(")/, siteUrl + route],
-  ]) {
-    if (!re.test(html)) throw new Error(`staticHead ${route}: ${re} not found in index.html`);
+const CANONICAL = /(<link id="link-canonical" rel="canonical" href=")[^"]*(")/;
+function setHead(html, route, tags) {
+  for (const [re, value] of tags) {
+    if (!re.test(html)) throw new Error(`${route}: ${re} not found in index.html`);
     html = html.replace(re, (_, open, close) => open + esc(value) + close);
   }
   return html;

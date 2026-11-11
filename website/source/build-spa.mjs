@@ -159,8 +159,8 @@ for(const f of ['pricing-data.json','code-samples.json'])fs.copyFileSync(path.jo
 fs.writeFileSync(path.join(dist,'content/manifest.json'),JSON.stringify(routes.map(({path:p,kind,noindex})=>({path:p,kind,noindex}))));
 // Public pages with the date each last changed (see sitemap.mjs).
 fs.writeFileSync(path.join(dist,'sitemap.xml'),sitemapXml({project,origin:ORIGIN,routes}));
-// API paths and the embed page are kept out of search results.
-fs.writeFileSync(path.join(dist,'robots.txt'),`User-agent: GPTBot\nDisallow: /\nUser-agent: ClaudeBot\nDisallow: /\nUser-agent: Google-Extended\nDisallow: /\nUser-agent: CCBot\nDisallow: /\n\nUser-agent: *\nAllow: /\nDisallow: /ingest/\nDisallow: /v1/\nDisallow: /embed.html\n\nSitemap: ${ORIGIN}/sitemap.xml\n`);
+// API paths, the embed page, sign-in and viewer/share links (/view, /s/) are kept out of search results.
+fs.writeFileSync(path.join(dist,'robots.txt'),`User-agent: *\nAllow: /\nDisallow: /ingest/\nDisallow: /v1/\nDisallow: /embed.html\nDisallow: /signin\nDisallow: /view\nDisallow: /s/\n\nSitemap: ${ORIGIN}/sitemap.xml\n`);
 
 // ---------- route inventory for the handoff package ----------
 const referenceDir=path.resolve(project,'../reference');
