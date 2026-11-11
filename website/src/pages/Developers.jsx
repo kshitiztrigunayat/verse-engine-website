@@ -61,11 +61,7 @@ export default function Developers() {
       <section className="developer-hero content-width" id="sec-developer-hero">
         <header id="hdr-item">
           <p className="eyebrow">FOR DEVELOPERS · REST API + EMBED SDK</p>
-          <h1>
-            Build Verse Engine
-            <br />
-            <span>into your product.</span>
-          </h1>
+          <h1>Build with Verse Engine</h1>
           <p>Upload, publish, embed and track 3D scenes with a REST API — or skip the backend and drop in one script tag.</p>
           <div className="page-actions">
             <a className="site-button" href="/studio#/plugins" id="lnk-get-an-api-key-2">

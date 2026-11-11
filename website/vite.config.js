@@ -45,18 +45,20 @@ const pageSocialTags = {
         html = html.replace("</head>", () => `<script id="script-jsonld" type="application/ld+json">${jsonld}</script>\n</head>`);
       }
       if (page.staticHead) html = staticHead(html, route, page);
+      else if (page.noindex) html = html.replace(ROBOTS, (_, open, close) => open + "noindex,follow" + close); // e.g. /signin: out of the index before JavaScript runs
       fs.mkdirSync(path.join(dir, route), { recursive: true });
       fs.writeFileSync(path.join(dir, route, "index.html"), html);
     }
   },
 };
 
+const ROBOTS = /(<meta id="meta-robots" name="robots" content=")[^"]*(")/;
 // The page's own title, description, robots and canonical (as the router sets them).
 function staticHead(html, route, page) {
   for (const [re, value] of [
     [/(<title id="doc-title">)[^<]*(<\/title>)/, page.title],
     [/(<meta id="meta-description" name="description" content=")[^"]*(")/, page.description],
-    [/(<meta id="meta-robots" name="robots" content=")[^"]*(")/, page.noindex ? "noindex,follow" : "index,follow,max-image-preview:large"],
+    [ROBOTS, page.noindex ? "noindex,follow" : "index,follow,max-image-preview:large"],
     [/(<link id="link-canonical" rel="canonical" href=")[^"]*(")/, siteUrl + route],
   ]) {
     if (!re.test(html)) throw new Error(`staticHead ${route}: ${re} not found in index.html`);

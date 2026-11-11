@@ -292,7 +292,7 @@ export const META = {
   "/ai-3d-infrastructure": {
     kind: "resources",
     chrome: "full",
-    title: "AI and 3D Infrastructure | How Ctruh Connects Creation to Deployment",
+    title: "AI and 3D Infrastructure: From Creation to Deployment | Ctruh",
     description: "How Ctruh connects AI-powered 3D creation (VersaAI) with browser-native 3D delivery (Verse Engine), from images, floor plans and scans to a streamable link.",
     ogDescription: "VersaAI creates. Verse Engine prepares, streams and deploys. How Ctruh connects the two.",
     ogTitle: "From AI-created 3D to a link anyone can open",

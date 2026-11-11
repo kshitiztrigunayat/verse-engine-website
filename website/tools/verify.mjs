@@ -1,5 +1,6 @@
 // Verifies the built single-page app in dist/. Run after `npm run build`.
 //   node tools/verify.mjs                     static checks
+//   node tools/verify.mjs --unique            only the unique titles/descriptions check (part of `npm run build`)
 //   node tools/verify.mjs --http=http://127.0.0.1:4173   also fetches every route from a running server
 import fs from 'node:fs';
 import path from 'node:path';
@@ -37,6 +38,14 @@ for(const {path:route} of [...manifest,{path:'/404'}]){
   if(p.html===undefined&&p.docs===undefined&&!reactPages.has(route))err(`${route}: payload lacks "html" (or "docs")`);
   payloads.set(route,p);
 }
+
+// --- unique titles and descriptions (SEO blueprint, Part C) ---
+// Indexable pages only: noindex pages and old addresses that vercel.json redirects (e.g. /docs/api) are left out.
+const redirected=new Set(JSON.parse(read(path.join(project,'vercel.json'))).redirects.map(r=>r.source));
+const indexable=manifest.filter(r=>!r.noindex&&!redirected.has(r.path)&&payloads.has(r.path)).map(r=>[r.path,payloads.get(r.path)]);
+for(const key of ['title','description']){const seen=new Map();for(const [route,p] of indexable){if(seen.has(p[key]))err(`same ${key} on ${seen.get(p[key])} and ${route}`);else seen.set(p[key],route)}}
+// `--unique` (run by `npm run build`): stop here, so only a duplicate (or a missing payload) fails the build.
+if(process.argv.includes('--unique')){console.log(errors.length?errors.join('\n'):'Titles and descriptions are unique.');process.exit(errors.length?1:0)}
 
 // --- links, ids, resources ---
 let checkedReferences=0;
