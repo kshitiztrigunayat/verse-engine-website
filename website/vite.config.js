@@ -4,7 +4,7 @@ import tailwindcss from "@tailwindcss/vite";
 import fs from "node:fs";
 import path from "node:path";
 import pkg from "./package.json" with { type: "json" };
-import { META, docsJsonLd } from "./src/pages/meta.js";
+import { META, OG_DEFAULT, docsJsonLd } from "./src/pages/meta.js";
 
 // The site's public address, set once in package.json ("config": { "siteUrl" }). index.html uses
 // %SITE_URL% for the canonical link, og:url, og:image and the site-origin tag the router builds them from.
@@ -14,6 +14,7 @@ const siteUrlInHtml = { name: "site-url", transformIndexHtml: (html) => html.rep
 // Link previews (WhatsApp, LinkedIn, Slack) do not run JavaScript, so each page's OG and Twitter tags must be in
 // its HTML. After the build, write dist/<page>/index.html (and update dist/index.html) with that page's tags.
 // A tag that is in index.html is updated; a missing one is added before </head>.
+// Pages with `staticHead` (meta.js) also get their own title, description, robots and canonical in that HTML.
 const esc = (s) => String(s).replaceAll("&", "&amp;").replaceAll('"', "&quot;").replaceAll("<", "&lt;");
 function setTag(html, attr, key, value) {
   const tag = new RegExp(`<meta\\b[^>]*\\b${attr}="${key}"[^>]*>`);
@@ -30,11 +31,12 @@ const pageSocialTags = {
       const page = META[route] ?? JSON.parse(fs.readFileSync(`public/content/${route.slice(1).replaceAll("/", "__")}.json`, "utf8"));
       let html = shell;
       for (const [attr, key, value] of [
-        ["property", "og:title", page.title],
+        ["property", "og:title", page.ogTitle || page.title],
         ["property", "og:description", page.ogDescription || page.description],
         ["property", "og:url", siteUrl + route],
         ["property", "og:site_name", "Verse Engine by Ctruh"],
-        ["property", "og:image", siteUrl + "/assets/og/verse-engine-by-ctruh-1200x630.jpg"],
+        ["property", "og:image", siteUrl + (page.ogImage || OG_DEFAULT.ogImage)],
+        ["property", "og:image:alt", page.ogImage ? "" : OG_DEFAULT.ogImageAlt], // the default description fits only the default image
         ["name", "twitter:card", "summary_large_image"],
       ]) html = setTag(html, attr, key, value);
       if (route !== "/") html = html.replace(/<script id="script-jsonld"[\s\S]*?<\/script>\n?/, ""); // home page only
@@ -42,11 +44,26 @@ const pageSocialTags = {
         const jsonld = JSON.stringify(docsJsonLd(route, page, siteUrl)).replaceAll("<", "\\u003c");
         html = html.replace("</head>", () => `<script id="script-jsonld" type="application/ld+json">${jsonld}</script>\n</head>`);
       }
+      if (page.staticHead) html = staticHead(html, route, page);
       fs.mkdirSync(path.join(dir, route), { recursive: true });
       fs.writeFileSync(path.join(dir, route, "index.html"), html);
     }
   },
 };
+
+// The page's own title, description, robots and canonical (as the router sets them).
+function staticHead(html, route, page) {
+  for (const [re, value] of [
+    [/(<title id="doc-title">)[^<]*(<\/title>)/, page.title],
+    [/(<meta id="meta-description" name="description" content=")[^"]*(")/, page.description],
+    [/(<meta id="meta-robots" name="robots" content=")[^"]*(")/, page.noindex ? "noindex,follow" : "index,follow,max-image-preview:large"],
+    [/(<link id="link-canonical" rel="canonical" href=")[^"]*(")/, siteUrl + route],
+  ]) {
+    if (!re.test(html)) throw new Error(`staticHead ${route}: ${re} not found in index.html`);
+    html = html.replace(re, (_, open, close) => open + esc(value) + close);
+  }
+  return html;
+}
 
 export default defineConfig({
   plugins: [react(), tailwindcss(), siteUrlInHtml, pageSocialTags],

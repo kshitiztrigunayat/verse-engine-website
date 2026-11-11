@@ -7,7 +7,7 @@
 // (the GSAP + Three.js animation) that exports mount(context) -> dispose.
 import { flushSync } from "react-dom";
 import { PAGES } from "./pages/index.js";
-import { META, docsJsonLd } from "./pages/meta.js";
+import { META, OG_DEFAULT, docsJsonLd } from "./pages/meta.js";
 import DocsPage from "./pages/docs/DocsPage.jsx";
 
 const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
@@ -108,8 +108,10 @@ function setMeta(payload, path) {
   const url = origin() + (path === "/" ? "/" : path);
   byId("link-canonical").href = url;
   byId("meta-og-url").content = url;
-  byId("meta-og-title").content = payload.title;
+  byId("meta-og-title").content = payload.ogTitle || payload.title;
   byId("meta-og-description").content = payload.ogDescription || payload.description;
+  byId("meta-og-image").content = origin() + (payload.ogImage || OG_DEFAULT.ogImage);
+  byId("meta-og-image-alt").content = payload.ogImage ? "" : OG_DEFAULT.ogImageAlt; // the default description fits only the default image
   byId("meta-robots").content = payload.noindex || payload.kind === "notfound" ? "noindex,follow" : "index,follow,max-image-preview:large";
   byId("meta-theme-color").content = THEME_COLOR[payload.kind] || "#ffffff";
   byId("script-jsonld")?.remove();

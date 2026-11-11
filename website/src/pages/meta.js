@@ -5,14 +5,22 @@
 //   bodyClass, mainClass: classes for <body> and <main>
 //   navCurrent: header link shown as the current section ("" for none)
 //   noindex:    keep the page out of search results
-//   ogDescription: og:description when it should differ from description (home page)
+//   ogDescription: og:description when it should differ from description
+//   ogTitle, ogImage: the page's social card (link previews); without them the title and
+//               OG_DEFAULT are used. A page with its own image gets an empty og:image:alt
+//               (OG_DEFAULT's describes the default image only)
+//   staticHead: also write title, description, robots and canonical into the page's HTML at
+//               build time (vite.config.js), as the SEO blueprint (Part C) asks
 //   jsonld:     structured data for search engines (home page, Resources pages)
 // Documentation pages get theirs from source/ (npm run content).
 import { resourcesJsonLd } from "./resources/schema.js";
 import { RESOURCE_PAGES, ROUTES } from "./resources/data.js";
 
+/** The site's default social card image and its description (as in index.html). */
+export const OG_DEFAULT = { ogImage: "/assets/og/verse-engine-by-ctruh-1200x630.jpg", ogImageAlt: "Verse Engine by Ctruh: a 3D scene opened from one link in a browser" };
+
 // Shared by the Resources pages (their structured data is added below META).
-const RESOURCE_PAGE = { bodyClass: "site-page", mainClass: "", noindex: false };
+const RESOURCE_PAGE = { bodyClass: "site-page", mainClass: "", noindex: false, staticHead: true };
 
 // Breadcrumb structured data for a documentation page (/docs/...): Docs > this page.
 // Used by the router (in the browser) and by vite.config.js (in each page's server HTML).
@@ -46,9 +54,12 @@ export const META = {
   "/": {
     kind: "landing",
     chrome: "header",
-    title: "Verse Engine by Ctruh | Browser-Native 3D Engine",
-    description: "Verse Engine by Ctruh turns 3D files, scans and Blender, Unity or Unreal projects into one link that opens in any modern browser. No app needed. Start free.",
-    ogDescription: "Turn any 3D scene into one link anyone can open in a browser. No app needed.",
+    title: "Verse Engine by Ctruh | Browser-Native 3D and XR Engine",
+    description: "Create, stream and deploy interactive 3D and XR experiences through the browser. Explore Verse Engine by Ctruh, built for browser-native 3D infrastructure.",
+    ogTitle: "Verse Engine by Ctruh: any 3D, one link",
+    ogDescription: "From a product to a whole city: turn any 3D file, scan, floor plan or editor project into one link that opens in the browser. No app.",
+    ogImage: "/assets/og/og-landing.jpg",
+    staticHead: true,
     bodyClass: "point-story",
     mainClass: "",
     navCurrent: "",
@@ -115,8 +126,12 @@ export const META = {
   "/developers": {
     kind: "page",
     chrome: "full",
-    title: "Developers: API, SDK and MCP | Verse Engine by Ctruh",
-    description: "Embed 3D scenes with one script tag or web component, upload through the REST API, get webhooks, and connect AI agents with the Verse MCP server.",
+    title: "Verse Engine Developers | 3D API, SDK, Embeds and MCP",
+    description: "Upload, publish and embed streamable 3D with the Verse Engine REST API and SDK, React and Vue wrappers, signed webhooks, a one-tag embed and an MCP server.",
+    ogTitle: "Verse Engine for developers: one upload in, a link or an embed out",
+    ogDescription: "REST API, SDK, React and Vue wrappers, signed webhooks, a one-tag embed and an MCP server for AI assistants.",
+    ogImage: "/assets/og/og-developers.jpg",
+    staticHead: true,
     bodyClass: "site-page",
     mainClass: "",
     navCurrent: "/developers",
@@ -258,6 +273,8 @@ export const META = {
     title: "Browser-Based 3D Product Visualization for E-commerce | Ctruh",
     description: "Publish interactive 3D products that shoppers can orbit, zoom and view in AR from one link. Embed Verse Engine by Ctruh on Shopify, WordPress and more.",
     ogDescription: "Let shoppers orbit, zoom and place a product in their room, in the browser. Embed it on your product page with one tag.",
+    ogTitle: "Interactive 3D product views, from one link",
+    ogImage: "/assets/og/og-3d-commerce.jpg",
     navCurrent: "/use-cases/3d-commerce",
     ...RESOURCE_PAGE,
   },
@@ -267,6 +284,8 @@ export const META = {
     title: "Browser-Based 3D for Architecture and Real Estate | Ctruh",
     description: "Share walkable 3D apartments, BIM models, scans and floor-plan-to-3D homes from one browser link. No app for clients or buyers. Built on Verse Engine by Ctruh.",
     ogDescription: "Floor plans, BIM models, scans and whole townships as walkable 3D, opened in the browser.",
+    ogTitle: "Walk the apartment before it is built, from one link",
+    ogImage: "/assets/og/og-architecture-real-estate.jpg",
     navCurrent: "/use-cases/architecture-real-estate",
     ...RESOURCE_PAGE,
   },
@@ -276,6 +295,8 @@ export const META = {
     title: "AI and 3D Infrastructure | How Ctruh Connects Creation to Deployment",
     description: "How Ctruh connects AI-powered 3D creation (VersaAI) with browser-native 3D delivery (Verse Engine), from images, floor plans and scans to a streamable link.",
     ogDescription: "VersaAI creates. Verse Engine prepares, streams and deploys. How Ctruh connects the two.",
+    ogTitle: "From AI-created 3D to a link anyone can open",
+    ogImage: "/assets/og/og-ai-3d-infrastructure.jpg",
     navCurrent: "/ai-3d-infrastructure",
     ...RESOURCE_PAGE,
   },
@@ -285,6 +306,8 @@ export const META = {
     title: "Explore the Lyon 3D City Demo | Verse Engine by Ctruh",
     description: "Open a 10.3-billion-triangle photomesh of Lyon from one link in your browser. See how Verse Engine streams a 556 GB city file and how it was measured.",
     ogDescription: "A real city in one 556 GB file, streamed into Chrome on a laptop. Open it, and see how it was measured.",
+    ogTitle: "Lyon: 10.3 billion triangles, opened from a link",
+    ogImage: "/assets/og/og-lyon.jpg",
     navCurrent: "/demos/lyon",
     ...RESOURCE_PAGE,
   },
