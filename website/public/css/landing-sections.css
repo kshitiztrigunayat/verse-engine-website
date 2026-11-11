@@ -362,7 +362,7 @@
 /* Launch countdown ("Live 16 Nov · …") in the hero kicker. The kicker's other span is the 7 px blue dot
    (.hero-kicker>span in landing.css), which squashed the pill into a blue oval and cut its text off on phones.
    Keep it a pill and let it drop onto its own line when the kicker is narrow. */
-.hero-panel h1 > .hero-kicker { display: block; }
+.hero-panel .hero-kicker { display: block; }
 .hero-kicker > span:first-child { display: inline-block; vertical-align: middle; margin: -2px 10px 0 0; }
 .hero-kicker > .mx-launch { display: inline-flex; vertical-align: middle; width: auto; height: auto; margin: 4px 0 4px 10px; border-radius: 99px; background: #0066cc14; box-shadow: none; }
 
@@ -433,3 +433,7 @@
    link blue is too dark on this navy background, so it takes the intro's colour, as other
    under-links on dark panels do. */
 .mx-head > p .under-link { color: inherit; }
+
+/* Footer: the one-sentence Verse Engine definition, as in every page's footer (SEO blueprint, Part F). */
+.footer-identity { flex-wrap: wrap; }
+.footer-definition { flex: 0 0 100%; padding-right: max(0px, calc(100% - 380px)); margin-top: 22px; font-size: 12px; line-height: 1.7; color: #59616e; } /* own line, at most 380px of text */

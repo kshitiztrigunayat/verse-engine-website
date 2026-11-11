@@ -41,6 +41,9 @@ const pageSocialTags = {
         ["property", "og:image", siteUrl + (page.ogImage || OG_DEFAULT.ogImage)],
         ["property", "og:image:alt", page.ogImage ? "" : OG_DEFAULT.ogImageAlt], // the default description fits only the default image
         ["name", "twitter:card", "summary_large_image"],
+        ["name", "twitter:title", page.ogTitle || page.title], // Twitter / X cards, as the SEO blueprint's own build (Part F)
+        ["name", "twitter:description", page.ogDescription || page.description],
+        ["name", "twitter:image", siteUrl + (page.ogImage || OG_DEFAULT.ogImage)],
       ]) html = setTag(html, attr, key, value);
       if (route !== "/") html = html.replace(/<script id="script-jsonld"[\s\S]*?<\/script>\n?/, ""); // home page only
       const jsonld = route.startsWith("/docs/") ? docsJsonLd(route, page, siteUrl) : page.prerender ? page.jsonld : null;

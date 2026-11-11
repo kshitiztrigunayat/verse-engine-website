@@ -94,7 +94,7 @@ export const META = {
         },
         {
           "@type": "SoftwareApplication",
-          "@id": "https://verse.ctruh.com/#software",
+          "@id": "https://verse.ctruh.com/#verse-engine",
           "name": "Verse Engine by Ctruh",
           "applicationCategory": "DeveloperApplication",
           "applicationSubCategory": "Browser-native 3D engine",

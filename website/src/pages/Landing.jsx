@@ -20,6 +20,7 @@ import {
   faqs,
   footerNav, socials, legalLinks,
 } from "./landing/data.ts";
+import { PRODUCT } from "./resources/data.js";
 
 /** "01", "02", … */
 const nn = (i) => String(i + 1).padStart(2, "0");
@@ -283,11 +284,11 @@ export default function Landing() {
           </div>
           <article className="story-panel hero-panel" id="chapter-0" data-chapter="0">
             <div className="panel-copy">
+              <span className="hero-kicker">
+                <span />
+                Verse Engine by Ctruh · the streaming layer for 3D
+              </span>
               <h1>
-                <span className="hero-kicker">
-                  <span />
-                  Verse Engine by Ctruh · the streaming layer for 3D
-                </span>
                 <span className="hero-display">
                   <span>Any 3D.</span>
                   <br />
@@ -999,6 +1000,7 @@ export default function Landing() {
               <span>BY CTRUH</span>
             </a>
             <a href="https://www.ctruh.com/" className="footer-parent" id="lnk-ctruh-2">Ctruh</a>
+            <p className="footer-definition">{PRODUCT.definition}</p>
           </div>
           {footerNav.map((group) => (
             <nav key={group.id} aria-label={group.label} id={group.id}>
