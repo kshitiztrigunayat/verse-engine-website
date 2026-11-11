@@ -1,10 +1,10 @@
 // App entry (was public/js/main.js): render the React shell (incl. the menu), then router,
 // link interception and the page transition, in the same order as before.
-import { createRoot } from "react-dom/client";
+import { createRoot, hydrateRoot } from "react-dom/client";
 import { flushSync } from "react-dom";
 import "./tailwind.css";
 import App from "./App.jsx";
-import { startRouter, navigate } from "./router.js";
+import { startRouter, navigate, prerenderedView } from "./router.js";
 import { playIntro, transitionTo } from "./animations/transition.js";
 
 const NON_PAGE = /\.(zip|tgz|rbz|pdf|json|xml|txt|mp4|png|jpe?g|webp|svg|glb|otf|woff2?)$/i;
@@ -23,9 +23,10 @@ function onLinkClick(event) {
   transitionTo(() => navigate(url.href));
 }
 
-// The shell is the whole <body> (as in the original single HTML document).
-const root = createRoot(document.body);
-flushSync(() => root.render(<App />));
+// The shell is the whole <body> (as in the original single HTML document). A prerendered page's HTML already
+// shows it, so React takes that markup over (hydrate) instead of rendering it again.
+if (await prerenderedView()) flushSync(() => hydrateRoot(document.body, <App />));
+else { const root = createRoot(document.body); flushSync(() => root.render(<App />)); }
 
 document.addEventListener("click", onLinkClick, true);
 await startRouter();

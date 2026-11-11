@@ -75,6 +75,6 @@ function runExit(go){
   raf=requestAnimationFrame(frame);
   setTimeout(()=>{if(mode==='exit'&&id===run){teardown();resolve()}},4000)})}
 /** First load animation. */
-export function playIntro(){if(reduced){uncover();return}runIntro(false)}
+export function playIntro(){if(reduced||html.classList.contains('prerendered')){uncover();return}runIntro(false)} // a prerendered page shows at once
 /** Navigate with the cover animation; `go` performs the actual route change and returns a promise. */
 export function transitionTo(go){return reduced?Promise.resolve(go()):runExit(go)}

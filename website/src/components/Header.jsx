@@ -12,7 +12,7 @@ export default function Header({ view, menuOpen, menuButtonRef, onOpenMenu }) {
         id="lnk-brand"
         className="brand"
         href="/"
-        aria-label="Verse Engine home"
+        aria-label="Verse Engine by Ctruh – Home"
       >
         <svg viewBox="0 0 38 40" fill="none" aria-hidden="true">
           <path
@@ -28,7 +28,7 @@ export default function Header({ view, menuOpen, menuButtonRef, onOpenMenu }) {
           <path d="m11 6 16 10" stroke="#0066cc" strokeWidth="2.4" />
         </svg>
         <span>
-          {"Verse Engine"}
+          {"Verse Engine "}
           <small>{"BY CTRUH"}</small>
         </span>
       </a>

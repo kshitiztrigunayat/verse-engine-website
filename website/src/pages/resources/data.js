@@ -84,21 +84,25 @@ export const RESOURCES_MENU = [
   { href: ROUTES.archRe.path, label: "Architecture and real estate", id: "lnk-architecture-real-estate", mobileId: "lnk-architecture-real-estate-2" },
   { href: ROUTES.aiInfra.path, label: "AI and 3D infrastructure", id: "lnk-ai-3d-infrastructure", mobileId: "lnk-ai-3d-infrastructure-2" },
   { href: ROUTES.lyon.path, label: "Lyon demo", id: "lnk-lyon-demo", mobileId: "lnk-lyon-demo-2" },
+  // SEO blueprint, Part A (header links); planned pages, so these go to their home page section until they exist.
+  { href: href("howItWorks"), label: "How Verse Engine works", id: "lnk-how-verse-engine-works-3", mobileId: "lnk-how-verse-engine-works-4" },
+  { href: href("formats"), label: "Supported formats", id: "lnk-supported-formats-3", mobileId: "lnk-supported-formats-4" },
+  { href: href("faq"), label: "FAQs", id: "lnk-faqs-3", mobileId: "lnk-faqs-4" },
 ];
 
-/** Links the site footer adds to its columns (SEO blueprint, Part A: header and footer link to the four
-    pages, how it works, developers, supported formats, pricing, docs and FAQ). Labels as in the
-    verse-seo-pages footer. Planned pages link to their home page section until they go live (ROUTES). */
+/** Links the footers add to their columns (SEO blueprint, Part A): the four pages, plus how it works,
+    supported formats and FAQ, which go to their home page section until those pages exist (ROUTES).
+    `id` for the site footer, `homeId` for the home page footer. Labels as in the verse-seo-pages footer. */
 export const FOOTER_LINKS = {
   explore: [
-    { href: href("commerce"), label: "3D commerce", id: "lnk-3d-commerce-3" },
-    { href: href("archRe"), label: "Architecture and real estate", id: "lnk-architecture-real-estate-3" },
-    { href: href("aiInfra"), label: "AI and 3D infrastructure", id: "lnk-ai-3d-infrastructure-3" },
-    { href: href("lyon"), label: "Lyon 3D city demo", id: "lnk-lyon-3d-city-demo" },
-    { href: href("howItWorks"), label: "How Verse Engine works", id: "lnk-how-verse-engine-works" },
+    { href: href("commerce"), label: "3D commerce", id: "lnk-3d-commerce-3", homeId: "lnk-3d-commerce-4" },
+    { href: href("archRe"), label: "Architecture and real estate", id: "lnk-architecture-real-estate-3", homeId: "lnk-architecture-real-estate-4" },
+    { href: href("aiInfra"), label: "AI and 3D infrastructure", id: "lnk-ai-3d-infrastructure-3", homeId: "lnk-ai-3d-infrastructure-4" },
+    { href: href("lyon"), label: "Lyon 3D city demo", id: "lnk-lyon-3d-city-demo", homeId: "lnk-lyon-3d-city-demo-2" },
+    { href: href("howItWorks"), label: "How Verse Engine works", id: "lnk-how-verse-engine-works", homeId: "lnk-how-verse-engine-works-2" },
   ],
-  build: [{ href: href("formats"), label: "Supported formats", id: "lnk-supported-formats" }],
-  connect: [{ href: href("faq"), label: "FAQs", id: "lnk-faqs" }],
+  build: [{ href: href("formats"), label: "Supported formats", id: "lnk-supported-formats", homeId: "lnk-supported-formats-2" }],
+  connect: [{ href: href("faq"), label: "FAQs", id: "lnk-faqs", homeId: "lnk-faqs-2" }],
 };
 
 // ── Claims ──

@@ -28,7 +28,7 @@ const MODULES = {
 const THEME_COLOR = { landing: "#f5f6f7" };
 const origin = () => byId("meta-site-origin").content.replace(/\/+$/, "");
 
-const state = { path: null, disposers: [], token: 0, payloads: new Map() };
+const state = { path: null, disposers: [], token: 0, payloads: new Map(), shown: null };
 
 // ---------- React view state (what the shell shows) ----------
 export const initialView = {
@@ -53,6 +53,8 @@ export const initialView = {
 };
 let view = initialView;
 let setView = null;
+/** The view the shell starts with (App.jsx): the empty shell, or the prerendered page (prerenderedView). */
+export const currentView = () => view;
 export function connectView(setter) {
   setView = setter;
   return () => { setView = null; };
@@ -153,10 +155,22 @@ async function mountModules(payload, path) {
   }
 }
 
-/** The React page for a payload, or null while the route is still payload HTML. */
-function pageFor(payload) {
+/** The React page for a payload (its code loaded), or null while the route is still payload HTML. */
+async function pageFor(payload) {
   if (payload.docs) return { Component: DocsPage, props: { page: { ...payload.docs, article: { __html: payload.docs.article } } } };
-  return PAGES[payload.path] ? { Component: PAGES[payload.path], props: {} } : null;
+  const load = PAGES[payload.path];
+  return load ? { Component: (await load()).default, props: {} } : null;
+}
+
+/** First load of a prerendered page (meta `prerender`): its HTML already shows the page (src/prerender.jsx), so
+    the shell starts with that view and React takes over the markup (main.jsx) instead of replacing it; the
+    first render() then leaves the page in place. Null for every other page. */
+export async function prerenderedView() {
+  const path = routeOf(location.pathname), payload = META[path];
+  if (!payload?.prerender || !document.documentElement.classList.contains("prerendered")) return null;
+  view = { ...view, ...chromeFor(payload), mainClass: payload.mainClass || "", mainPage: await pageFor({ path, ...payload }) };
+  state.shown = path;
+  return view;
 }
 
 /** Render a location. Returns true when the route rendered (false when superseded by a newer navigation). */
@@ -166,15 +180,16 @@ export async function render(href, { scroll = "top", focus = false } = {}) {
   let payload = await loadPayload(path);
   if (token !== state.token) return false;
   if (!payload) { payload = await loadPayload("/404"); }
-  const finishStyles = await applyStyles(payload.kind, path === "/challenge" ? "challenge" : payload.kind);
+  const [finishStyles, page] = await Promise.all([applyStyles(payload.kind, path === "/challenge" ? "challenge" : payload.kind), pageFor(payload)]);
   if (token !== state.token) return false;
-  await leave();
+  const shown = state.shown === path; // a prerendered page on first load: already on screen
+  state.shown = null;
+  if (!shown) await leave();
   if (token !== state.token) return false;
   document.body.className = payload.bodyClass;
   setMeta(payload, path);
   const app = payload.kind === "app";
-  const page = pageFor(payload);
-  update({
+  if (!shown) update({
     ...chromeFor(payload),
     ...(app
       ? { standaloneClass: payload.mainClass || "", ...(page ? { standalonePage: page } : { standaloneHtml: { __html: payload.html } }) }

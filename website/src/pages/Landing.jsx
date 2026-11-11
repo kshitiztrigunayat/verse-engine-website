@@ -20,7 +20,10 @@ import {
   faqs,
   footerNav, socials, legalLinks,
 } from "./landing/data.ts";
-import { PRODUCT } from "./resources/data.js";
+import { FOOTER_LINKS, PRODUCT } from "./resources/data.js";
+
+/** Footer columns that get FOOTER_LINKS (the same links as the site footer's EXPLORE, BUILD and CONNECT). */
+const FOOTER_COLUMN = { "nav-explore-verse-engine": "explore", "nav-verse-engine-resources": "build", "nav-about-ctruh": "connect" };
 
 /** "01", "02", … */
 const nn = (i) => String(i + 1).padStart(2, "0");
@@ -995,8 +998,8 @@ export default function Landing() {
         </section>
         <div className="footer-directory">
           <div className="footer-identity">
-            <a href="#" className="footer-wordmark" aria-label="Verse Engine home" id="lnk-verse-engine-home-2">
-              Verse Engine
+            <a href="#" className="footer-wordmark" aria-label="Verse Engine by Ctruh – Home" id="lnk-verse-engine-home-2">
+              Verse Engine{" "}
               <span>BY CTRUH</span>
             </a>
             <a href="https://www.ctruh.com/" className="footer-parent" id="lnk-ctruh-2">Ctruh</a>
@@ -1006,6 +1009,7 @@ export default function Landing() {
             <nav key={group.id} aria-label={group.label} id={group.id}>
               <h3>{group.title}</h3>
               {group.links.map((l) => <a key={l.label} href={l.href} data-jump={l.jump} id={l.id}>{l.label}</a>)}
+              {FOOTER_LINKS[FOOTER_COLUMN[group.id]]?.map((l) => <a key={l.homeId} href={l.href} id={l.homeId}>{l.label}</a>)}
               {group.socials && (
                 <div className="footer-socials">
                   {socials.map((s) => (

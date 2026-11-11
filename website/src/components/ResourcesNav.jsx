@@ -1,4 +1,5 @@
-// "Resources" in the header: a dropdown with Samples and the Resources pages (RESOURCES_MENU in pages/resources/data.js).
+// "Resources" in the header: a dropdown with Samples, the Resources pages and the planned pages' links
+// (RESOURCES_MENU in pages/resources/data.js).
 // The mobile menu (MobileMenu.jsx) lists the same links in a "Resources" group.
 import { useEffect, useRef, useState } from "react";
 import { RESOURCES_MENU } from "../pages/resources/data.js";

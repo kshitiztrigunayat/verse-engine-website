@@ -19,10 +19,9 @@ if(!exists(manifestFile))err('content/manifest.json is missing');
 const manifest=exists(manifestFile)?JSON.parse(read(manifestFile)):[];
 const routes=new Set(manifest.map(r=>r.path));
 const fileFor=route=>route==='/'?'index':route.slice(1).replaceAll('/','__');
-// React pages: src/pages/index.js maps a route to its component file; check that file's ids and links.
+// React pages: src/pages/index.js maps a route to a loader of its component file; check that file's ids and links.
 const pagesIndex=read(path.join(project,'src/pages/index.js'));
-const pageFiles=new Map([...pagesIndex.matchAll(/^import (\w+) from "\.\/([^"]+)";/gm)].map(m=>[m[1],path.join(project,'src/pages',m[2])]));
-const reactPages=new Map([...pagesIndex.matchAll(/^\s+"(\/[^"]*)": (\w+),/gm)].map(m=>[m[1],read(pageFiles.get(m[2]))]));
+const reactPages=new Map([...pagesIndex.matchAll(/^\s+"(\/[^"]*)": \(\) => import\("\.\/([^"]+)"\),/gm)].map(m=>[m[1],read(path.join(project,'src/pages',m[2]))]));
 // React pages' meta (title, description, ...) is src/pages/meta.js; other routes have a payload.
 const {META}=await import(new URL('../src/pages/meta.js',import.meta.url));
 for(const r of Object.keys(META))if(!reactPages.has(r))err(`src/pages/meta.js: ${r} has no page in src/pages/index.js`);

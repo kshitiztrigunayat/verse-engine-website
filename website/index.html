@@ -74,12 +74,13 @@
 <style id="style-boot">
 html{background:#fff}
 [hidden]{display:none!important}
-html:not(.app-ready) body{visibility:hidden}
+html:not(.app-ready):not(.prerendered) body{visibility:hidden}
 html.intro-on body:before{content:"";position:fixed;inset:0;background:#fff;z-index:9998;visibility:visible}
 </style>
 <script id="script-boot">
-/* Runs before first paint: arm the cover for the intro animation. Skipped for reduced motion, ?motion-off and ?poster. */
-try{if(!matchMedia("(prefers-reduced-motion: reduce)").matches&&!/motion-off|poster/.test(location.search))document.documentElement.classList.add("intro-on")}catch(e){}
+/* Runs before first paint: arm the cover for the intro animation. Skipped for reduced motion, ?motion-off, ?poster and
+   prerendered pages (class "prerendered" on <html>, vite.config.js), which show their content at once. */
+try{if(!document.documentElement.classList.contains("prerendered")&&!matchMedia("(prefers-reduced-motion: reduce)").matches&&!/motion-off|poster/.test(location.search))document.documentElement.classList.add("intro-on")}catch(e){}
 setTimeout(function(){document.documentElement.classList.remove("intro-on")},4500);
 </script>
 <script id="script-docs-hash">

@@ -1,45 +1,26 @@
 // Routes whose page is a React component (the payload then only carries the page's meta).
 // Documentation pages use src/pages/docs/DocsPage.jsx (see router.js).
-import About from "./About.jsx";
-import Challenge from "./Challenge.jsx";
-import Developers from "./Developers.jsx";
-import Landing from "./Landing.jsx";
-import NotFound from "./NotFound.jsx";
-import Pricing from "./Pricing.jsx";
-import Samples from "./Samples.jsx";
-import Signin from "./Signin.jsx";
-import Plugins from "./plugins/Plugins.jsx";
-import PluginBlender from "./plugins/PluginBlender.jsx";
-import PluginUnity from "./plugins/PluginUnity.jsx";
-import PluginUnreal from "./plugins/PluginUnreal.jsx";
-import Studio from "./studio/Studio.jsx";
-import Privacy from "./legal/Privacy.jsx";
-import Terms from "./legal/Terms.jsx";
-import Refunds from "./legal/Refunds.jsx";
-import Commerce from "./resources/Commerce.jsx";
-import ArchitectureRealEstate from "./resources/ArchitectureRealEstate.jsx";
-import AiInfrastructure from "./resources/AiInfrastructure.jsx";
-import LyonDemo from "./resources/LyonDemo.jsx";
-
+// Each page's code is loaded only when the page is shown (its own file in the build, SEO blueprint Part E:
+// smaller first download); the router and src/prerender.jsx await the loader.
 export const PAGES = {
-  "/": Landing,
-  "/about": About,
-  "/developers": Developers,
-  "/pricing": Pricing,
-  "/samples": Samples,
-  "/plugins": Plugins,
-  "/plugins/blender": PluginBlender,
-  "/plugins/unity": PluginUnity,
-  "/plugins/unreal": PluginUnreal,
-  "/challenge": Challenge,
-  "/signin": Signin,
-  "/studio": Studio,
-  "/privacy": Privacy,
-  "/terms": Terms,
-  "/refunds": Refunds,
-  "/use-cases/3d-commerce": Commerce,
-  "/use-cases/architecture-real-estate": ArchitectureRealEstate,
-  "/ai-3d-infrastructure": AiInfrastructure,
-  "/demos/lyon": LyonDemo,
-  "/404": NotFound,
+  "/": () => import("./Landing.jsx"),
+  "/about": () => import("./About.jsx"),
+  "/developers": () => import("./Developers.jsx"),
+  "/pricing": () => import("./Pricing.jsx"),
+  "/samples": () => import("./Samples.jsx"),
+  "/plugins": () => import("./plugins/Plugins.jsx"),
+  "/plugins/blender": () => import("./plugins/PluginBlender.jsx"),
+  "/plugins/unity": () => import("./plugins/PluginUnity.jsx"),
+  "/plugins/unreal": () => import("./plugins/PluginUnreal.jsx"),
+  "/challenge": () => import("./Challenge.jsx"),
+  "/signin": () => import("./Signin.jsx"),
+  "/studio": () => import("./studio/Studio.jsx"),
+  "/privacy": () => import("./legal/Privacy.jsx"),
+  "/terms": () => import("./legal/Terms.jsx"),
+  "/refunds": () => import("./legal/Refunds.jsx"),
+  "/use-cases/3d-commerce": () => import("./resources/Commerce.jsx"),
+  "/use-cases/architecture-real-estate": () => import("./resources/ArchitectureRealEstate.jsx"),
+  "/ai-3d-infrastructure": () => import("./resources/AiInfrastructure.jsx"),
+  "/demos/lyon": () => import("./resources/LyonDemo.jsx"),
+  "/404": () => import("./NotFound.jsx"),
 };

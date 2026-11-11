@@ -9,8 +9,6 @@
 //   ogTitle, ogImage: the page's social card (link previews); without them the title and
 //               OG_DEFAULT are used. A page with its own image gets an empty og:image:alt
 //               (OG_DEFAULT's describes the default image only)
-//   staticHead: also write title, description, robots and canonical into the page's HTML at
-//               build time (vite.config.js), as the SEO blueprint (Part C) asks
 //   prerender:  also build the page's content, stylesheets and structured data into its HTML, for
 //               crawlers and readers without JavaScript (vite.config.js, src/prerender.jsx; Part E)
 //   jsonld:     structured data for search engines (home page, Resources pages)
@@ -22,7 +20,7 @@ import { RESOURCE_PAGES, ROUTES } from "./resources/data.js";
 export const OG_DEFAULT = { ogImage: "/assets/og/verse-engine-by-ctruh-1200x630.jpg", ogImageAlt: "Verse Engine by Ctruh: a 3D scene opened from one link in a browser" };
 
 // Shared by the Resources pages (their structured data is added below META).
-const RESOURCE_PAGE = { bodyClass: "site-page", mainClass: "", noindex: false, staticHead: true, prerender: true };
+const RESOURCE_PAGE = { bodyClass: "site-page", mainClass: "", noindex: false, prerender: true };
 
 // Breadcrumb structured data for a documentation page (/docs/...): Docs > this page.
 // Used by the router (in the browser) and by vite.config.js (in each page's server HTML).
@@ -61,7 +59,6 @@ export const META = {
     ogTitle: "Verse Engine by Ctruh: any 3D, one link",
     ogDescription: "From a product to a whole city: turn any 3D file, scan, floor plan or editor project into one link that opens in the browser. No app.",
     ogImage: "/assets/og/og-landing.jpg",
-    staticHead: true,
     bodyClass: "point-story",
     mainClass: "",
     navCurrent: "",
@@ -133,7 +130,6 @@ export const META = {
     ogTitle: "Verse Engine for developers: one upload in, a link or an embed out",
     ogDescription: "REST API, SDK, React and Vue wrappers, signed webhooks, a one-tag embed and an MCP server for AI assistants.",
     ogImage: "/assets/og/og-developers.jpg",
-    staticHead: true,
     bodyClass: "site-page",
     mainClass: "",
     navCurrent: "/developers",

@@ -29,7 +29,7 @@ export default function Footer({ hidden }) {
           <a
             className="brand"
             href="/"
-            aria-label="Verse Engine home"
+            aria-label="Verse Engine by Ctruh – Home"
             id="lnk-verse-engine-home"
           >
             <svg viewBox="0 0 38 40" fill="none" aria-hidden="true">
@@ -46,7 +46,7 @@ export default function Footer({ hidden }) {
               <path d="m11 6 16 10" stroke="#0066cc" strokeWidth="2.4" />
             </svg>
             <span>
-              {"Verse Engine"}
+              {"Verse Engine "}
               <small>{"BY CTRUH"}</small>
             </span>
           </a>

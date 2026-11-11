@@ -48,14 +48,14 @@ export default function Signin() {
     <>
       <a className="skip" href="#signin-main" id="lnk-skip-to-content">Skip to content</a>
       <header className="st-top" id="hdr-st-top">
-        <a className="brand" href="/" aria-label="Verse Engine home" id="lnk-verse-engine-home-2">
+        <a className="brand" href="/" aria-label="Verse Engine by Ctruh – Home" id="lnk-verse-engine-home-2">
           <svg viewBox="0 0 38 40" fill="none" aria-hidden="true">
             <path d="m19 2 16 9v19l-16 9-16-9V11L19 2Z" stroke="currentColor" strokeWidth="1.7" />
             <path d="m3 11 16 10 16-10M19 21v18" stroke="currentColor" strokeWidth="1.7" />
             <path d="m11 6 16 10" stroke="#0066cc" strokeWidth="2.4" />
           </svg>
           <span>
-            Verse Engine
+            Verse Engine{" "}
             <small>BY CTRUH</small>
           </span>
         </a>
