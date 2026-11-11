@@ -1,4 +1,4 @@
-import { defineConfig } from "vite";
+import { createServer, defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 import fs from "node:fs";
@@ -15,7 +15,8 @@ const siteUrlInHtml = { name: "site-url", transformIndexHtml: (html) => html.rep
 // its HTML. After the build, write dist/<page>/index.html (and update dist/index.html) with that page's tags.
 // A tag that is in index.html is updated; a missing one is added before </head>.
 // Every page gets its own canonical in that HTML (SEO blueprint, Part D). Pages with `staticHead` (meta.js) also get
-// their own title, description and robots; other noindex pages (e.g. /signin) get their robots tag.
+// their own title, description and robots; other noindex pages (e.g. /signin) get their robots tag. Pages with
+// `prerender` also get their content, stylesheets and structured data (SEO blueprint, Part E).
 const esc = (s) => String(s).replaceAll("&", "&amp;").replaceAll('"', "&quot;").replaceAll("<", "&lt;");
 function setTag(html, attr, key, value) {
   const tag = new RegExp(`<meta\\b[^>]*\\b${attr}="${key}"[^>]*>`);
@@ -26,8 +27,9 @@ function setTag(html, attr, key, value) {
 const pageSocialTags = {
   name: "page-social-tags",
   apply: "build",
-  writeBundle({ dir }) {
+  async writeBundle({ dir }) {
     const shell = fs.readFileSync(path.join(dir, "index.html"), "utf8");
+    const prerender = await loadPrerender();
     for (const { path: route } of JSON.parse(fs.readFileSync("public/content/manifest.json", "utf8"))) {
       const page = META[route] ?? JSON.parse(fs.readFileSync(`public/content/${route.slice(1).replaceAll("/", "__")}.json`, "utf8"));
       let html = shell;
@@ -41,10 +43,9 @@ const pageSocialTags = {
         ["name", "twitter:card", "summary_large_image"],
       ]) html = setTag(html, attr, key, value);
       if (route !== "/") html = html.replace(/<script id="script-jsonld"[\s\S]*?<\/script>\n?/, ""); // home page only
-      if (route.startsWith("/docs/")) {
-        const jsonld = JSON.stringify(docsJsonLd(route, page, siteUrl)).replaceAll("<", "\\u003c");
-        html = html.replace("</head>", () => `<script id="script-jsonld" type="application/ld+json">${jsonld}</script>\n</head>`);
-      }
+      const jsonld = route.startsWith("/docs/") ? docsJsonLd(route, page, siteUrl) : page.prerender ? page.jsonld : null;
+      if (jsonld) html = html.replace("</head>", () => `<script id="script-jsonld" type="application/ld+json">${JSON.stringify(jsonld).replaceAll("<", "\\u003c")}</script>\n</head>`);
+      if (page.prerender) html = prerendered(html, page, prerender(route));
       const head = [[CANONICAL, siteUrl + route]];
       if (page.staticHead) head.push([TITLE, page.title], [DESCRIPTION, page.description]);
       if (page.staticHead || page.noindex) head.push([ROBOTS, page.noindex ? "noindex,follow" : "index,follow,max-image-preview:large"]);
@@ -54,6 +55,26 @@ const pageSocialTags = {
     }
   },
 };
+
+// A prerendered page: its stylesheets (and React's preloads, e.g. the hero image) in <head>, its content in <body>
+// in place of the "needs JavaScript" notice, and shown without JavaScript (index.html hides the page until the app
+// is ready). With JavaScript, React renders the page as before (main.jsx), replacing this markup.
+function prerendered(html, page, { body, styles }) {
+  const preloads = body.match(/^(?:<link [^>]*\/>)*/)[0];
+  const links = styles.map((href) => `<link rel="stylesheet" href="${href}" data-route-style id="css-${path.basename(href, ".css")}">`).join("\n");
+  const noJs = "<noscript><style>html:not(.app-ready) body{visibility:visible}</style></noscript>";
+  const notice = html.match(/<body id="app-body">\s*([\s\S]*?)\s*<\/body>/)[1]; // also rendered by Shell.jsx
+  return html
+    .replace("</head>", () => `${links}\n${preloads}${noJs}\n</head>`)
+    .replace(/<body id="app-body">[\s\S]*<\/body>/, () => `<body id="app-body" class="${esc(page.bodyClass)}">${body.slice(preloads.length).replace(notice, "")}</body>`); // the class the router sets
+}
+
+// src/prerender.jsx, loaded through Vite (JSX) only when a page needs it.
+async function loadPrerender() {
+  if (!Object.values(META).some((m) => m.prerender)) return null;
+  const server = await createServer({ configFile: false, root: process.cwd(), plugins: [react()], logLevel: "error", server: { middlewareMode: true, hmr: false }, appType: "custom", optimizeDeps: { noDiscovery: true } });
+  try { return (await server.ssrLoadModule("/src/prerender.jsx")).prerender; } finally { await server.close(); }
+}
 
 // The <head> tags the router sets in the browser; setHead writes them into a page's HTML.
 const TITLE = /(<title id="doc-title">)[^<]*(<\/title>)/;

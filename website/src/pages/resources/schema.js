@@ -1,7 +1,7 @@
 // Structured data (JSON-LD) for the Resources pages, used by src/pages/meta.js.
 // Entity @ids as in the SEO blueprint (Part A, entity consistency): the same on every page, so search
 // and answer engines resolve "Ctruh", "Verse Engine by Ctruh" and "VersaAI" to the same entities.
-import { SITE, ORG, PRODUCT, ROUTES, RESOURCE_PAGES, VIDEO } from "./data.js";
+import { SITE, ORG, PRODUCT, RESOURCE_PAGES, VIDEO } from "./data.js";
 import { canonical, claimOk } from "./utils.js";
 
 const ID = {
@@ -19,9 +19,9 @@ const organization = () => ({
 const website = () => ({ "@type": "WebSite", "@id": ID.website, url: `${SITE}/`, name: PRODUCT.name, publisher: { "@id": ID.org } });
 const verseEngine = () => ({
   "@type": "SoftwareApplication", "@id": ID.verse, name: PRODUCT.name, alternateName: PRODUCT.short,
-  url: PRODUCT.url, applicationCategory: "DeveloperApplication", operatingSystem: "Web browser (WebGPU or WebGL2)",
+  url: PRODUCT.url, applicationCategory: "DeveloperApplication", operatingSystem: "Any (modern web browser: Windows, macOS, Linux, Android, iOS)",
   description: PRODUCT.definition, publisher: { "@id": ID.org },
-  offers: { "@type": "Offer", price: "0", priceCurrency: "USD", description: "Free plan", url: `${SITE}/pricing` },
+  offers: { "@type": "Offer", price: "0", priceCurrency: "USD", description: "Free plan. Paid plans from $29 per month. Viewers never pay.", url: `${SITE}/pricing` },
 });
 const versaAI = () => ({
   "@type": "SoftwareApplication", "@id": ID.versaai, name: "VersaAI", applicationCategory: "DesignApplication",
@@ -41,14 +41,14 @@ function faqPage(key) {
   };
 }
 
-/** The JSON-LD graph for a Resources page (key as in RESOURCE_PAGES), from its meta title and description. */
-export function resourcesJsonLd(key, { title, description }) {
+/** The JSON-LD graph for a Resources page (key as in RESOURCE_PAGES), from its meta (title, description, social image). */
+export function resourcesJsonLd(key, { title, description, ogImage }) {
   const ai = key === "aiInfra";
   const page = {
     "@type": "WebPage", "@id": canonical(key) + "#webpage", url: canonical(key), name: title, description,
     isPartOf: { "@id": ID.website }, about: (ai ? [ID.verse, ID.versaai] : [ID.verse]).map((id) => ({ "@id": id })),
     ...(ai && { mentions: [{ "@id": ID.org }] }),
-    inLanguage: "en", publisher: { "@id": ID.org }, primaryImageOfPage: { "@type": "ImageObject", url: abs(ROUTES[key].image) },
+    inLanguage: "en", publisher: { "@id": ID.org }, primaryImageOfPage: { "@type": "ImageObject", url: abs(ogImage) },
   };
   const nodes = [page, breadcrumbs(RESOURCE_PAGES[key].crumbs), faqPage(key), verseEngine()];
   if (ai) nodes.push(versaAI());

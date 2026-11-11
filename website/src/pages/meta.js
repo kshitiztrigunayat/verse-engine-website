@@ -11,6 +11,8 @@
 //               (OG_DEFAULT's describes the default image only)
 //   staticHead: also write title, description, robots and canonical into the page's HTML at
 //               build time (vite.config.js), as the SEO blueprint (Part C) asks
+//   prerender:  also build the page's content, stylesheets and structured data into its HTML, for
+//               crawlers and readers without JavaScript (vite.config.js, src/prerender.jsx; Part E)
 //   jsonld:     structured data for search engines (home page, Resources pages)
 // Documentation pages get theirs from source/ (npm run content).
 import { resourcesJsonLd } from "./resources/schema.js";
@@ -20,7 +22,7 @@ import { RESOURCE_PAGES, ROUTES } from "./resources/data.js";
 export const OG_DEFAULT = { ogImage: "/assets/og/verse-engine-by-ctruh-1200x630.jpg", ogImageAlt: "Verse Engine by Ctruh: a 3D scene opened from one link in a browser" };
 
 // Shared by the Resources pages (their structured data is added below META).
-const RESOURCE_PAGE = { bodyClass: "site-page", mainClass: "", noindex: false, staticHead: true };
+const RESOURCE_PAGE = { bodyClass: "site-page", mainClass: "", noindex: false, staticHead: true, prerender: true };
 
 // Breadcrumb structured data for a documentation page (/docs/...): Docs > this page.
 // Used by the router (in the browser) and by vite.config.js (in each page's server HTML).

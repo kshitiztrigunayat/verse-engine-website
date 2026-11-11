@@ -50,14 +50,14 @@ export const EXISTING = {
 };
 
 /**
- * Routes the pages link to. "page": a Resources page (`image` is its main image, for structured data);
- * "live": an existing page of this site; "planned": no page yet, so links go to `fallback`.
+ * Routes the pages link to. "page": a Resources page; "live": an existing page of this site;
+ * "planned": no page yet, so links go to `fallback`.
  */
 export const ROUTES = {
-  commerce: { path: "/use-cases/3d-commerce", status: "page", image: "/assets/sample-2.webp" },
-  archRe: { path: "/use-cases/architecture-real-estate", status: "page", image: "/assets/sample-0.webp" },
-  aiInfra: { path: "/ai-3d-infrastructure", status: "page", image: "/assets/og/verse-engine-by-ctruh-1200x630.jpg" },
-  lyon: { path: "/demos/lyon", status: "page", image: "/media/city-hero.webp" },
+  commerce: { path: "/use-cases/3d-commerce", status: "page" },
+  archRe: { path: "/use-cases/architecture-real-estate", status: "page" },
+  aiInfra: { path: "/ai-3d-infrastructure", status: "page" },
+  lyon: { path: "/demos/lyon", status: "page" },
   developers: { path: "/developers", status: "live" },
   howItWorks: { path: "/how-it-works", status: "planned", fallback: "/#engine" },
   formats: { path: "/supported-formats", status: "planned", fallback: "/#how-to-start" },

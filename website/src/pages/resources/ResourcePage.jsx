@@ -1,7 +1,7 @@
 // Renders a Resources page (3D commerce, architecture and real estate, AI and 3D infrastructure,
 // Lyon demo) from its data in ./data.js. Styled by /css/resources.css in the site's light theme;
 // the site's header and footer come from the shell.
-import { Fragment, useState } from "react";
+import { Fragment, useEffect, useState } from "react";
 import { claimOk } from "./utils.js";
 
 const nn = (i) => String(i + 1).padStart(2, "0");
@@ -191,7 +191,37 @@ function CTA({ c }) {
   );
 }
 
+/* ───────────── Analytics (SEO blueprint, Part E) ─────────────
+   While a Resources page is shown: a click on an element with data-event, an opened FAQ, and scrolling past 25, 50,
+   75 and 90% of the page push to window.dataLayer (GTM / GA4 ready). */
+function useAnalytics() {
+  useEffect(() => {
+    const dataLayer = (window.dataLayer = window.dataLayer || []);
+    const push = (event, extra) => dataLayer.push({ event, page_path: location.pathname, ...extra });
+    const onClick = (e) => {
+      const el = e.target.closest?.("[data-event]");
+      if (!el) return;
+      // An FAQ (<details>): only when the reader opens it (click or keyboard on its question), not the one open on load.
+      if (el.tagName === "DETAILS") { if (e.target.closest("summary") && !el.open) push(el.dataset.event, { faq_question: el.dataset.faq }); return; }
+      const { event, ...rest } = el.dataset;
+      push(event, { ...rest, link_url: el.getAttribute("href") || undefined, link_text: el.textContent.trim().slice(0, 80) });
+    };
+    const seen = new Set();
+    const onScroll = () => {
+      const percent = (100 * (scrollY + innerHeight)) / document.documentElement.scrollHeight;
+      for (const mark of [25, 50, 75, 90]) if (percent >= mark && !seen.has(mark)) { seen.add(mark); push("scroll_depth", { percent: mark }); }
+    };
+    document.addEventListener("click", onClick, true);
+    addEventListener("scroll", onScroll, { passive: true });
+    return () => {
+      document.removeEventListener("click", onClick, true);
+      removeEventListener("scroll", onScroll);
+    };
+  }, []);
+}
+
 export default function ResourcePage({ page }) {
+  useAnalytics();
   return (
     <div className="rs">
       <nav aria-label="Breadcrumb" className="rs-crumbs content-width">

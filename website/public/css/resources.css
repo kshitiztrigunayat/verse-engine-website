@@ -35,7 +35,7 @@
 .rs-ticks li:before{position:absolute;left:0}
 
 /* buttons: .site-button, plus the outlined style of the header's "Take the Challenge" */
-.rs-sm{min-height:38px!important;padding:7px 16px!important;font-size:13px!important}
+.rs-sm{min-height:48px!important;padding:7px 16px!important;font-size:13px!important}
 .site-button.rs-outline{background:transparent!important;border:1.5px solid #3d75f3!important;color:#3d75f3!important}
 @media(hover:hover) and (pointer:fine){.site-button.rs-outline:hover{background:#3d75f3!important;color:#fff!important}}
 .rs-hero-actions,.rs-cta-actions{display:flex;flex-wrap:wrap;gap:12px}

@@ -13,7 +13,7 @@ import DocsPage from "./pages/docs/DocsPage.jsx";
 const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
 const byId = (id) => document.getElementById(id);
 
-const STYLES = {
+export const STYLES = {
   landing: ["/css/landing.css", "/css/site.css", "/css/landing-sections.css"],
   page: ["/css/site.css"],
   challenge: ["/css/site.css", "/css/challenge.css"],
@@ -123,8 +123,8 @@ function setMeta(payload, path) {
   }
 }
 
-/** Shell visibility and current nav link for a route (was setChrome). */
-function chromeFor(payload) {
+/** Shell visibility and current nav link for a route (was setChrome). Also used by src/prerender.jsx. */
+export function chromeFor(payload) {
   const app = payload.kind === "app";
   return {
     headerHidden: !(payload.chrome === "full" || payload.chrome === "header"),
