@@ -51,7 +51,7 @@ export function saveState(state) { try { localStorage.setItem(KEY, JSON.stringif
 export const emptyDraft = () => ({ type: "3d", file: null, name: "", sample: false, plan: null, quality: "balanced" });
 
 export const status = (s) => (s.readyAt > now() ? "processing" : "ready");
-export const sceneUrl = (id) => `${location.origin}/studio#/scene/${id}`;
+export const sceneUrl = (id) => `${location.origin}/studio/scene/${id}`;
 export const fmtDate = (d) => new Date(d + "T00:00:00Z").toLocaleDateString("en-GB", { day: "2-digit", month: "short", year: "numeric", timeZone: "UTC" });
 export const hms = (sec) => `${Math.floor(sec / 3600)}h ${String(Math.floor((sec % 3600) / 60)).padStart(2, "0")}m`;
 export const bytes = (n) => (n > 1e9 ? (n / 1e9).toFixed(1) + " GB" : n > 1e6 ? (n / 1e6).toFixed(1) + " MB" : Math.max(1, Math.round(n / 1e3)) + " KB");

@@ -68,7 +68,7 @@ export default function Footer({ hidden, intro }) {
           <a href="/docs/what-is-verse-engine" id="lnk-documentation-2">
             {"Documentation"}
           </a>
-          <a href="/studio#/plugins" id="lnk-get-an-api-key">
+          <a href="/studio/plugins" id="lnk-get-an-api-key">
             {"Get an API key"}
           </a>
           <a href="/signin" id="lnk-sign-in">

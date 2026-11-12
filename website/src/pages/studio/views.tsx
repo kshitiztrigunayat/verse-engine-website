@@ -17,7 +17,7 @@ export const LiveContext = createContext(null);
 
 /* ---------- shared bits ---------- */
 const PH = { scenes: "Search scenes", analytics: "Search scenes to analyze", webhooks: "Search webhooks", plugins: "Search plug-ins and keys", scene: "Search scenes" };
-const NewButton = () => <a className="btn" href="#/new">+ New scene</a>;
+const NewButton = () => <a className="btn" href="/studio/new">+ New scene</a>;
 
 function StudioHead({ S, title, sub, scope = "scenes", action = <NewButton /> }: { S: { qs: Record<string, string> }; title: string; sub?: string; scope?: keyof typeof PH; action?: ReactNode }) {
   return (
@@ -93,7 +93,7 @@ function Viewer({ kind }) {
 function SceneCard({ s }) {
   return (
     <article className="scene-card">
-      <a className="scene-thumb" href={`#/scene/${s.id}`} tabIndex={-1} aria-hidden="true">
+      <a className="scene-thumb" href={`/studio/scene/${s.id}`} tabIndex={-1} aria-hidden="true">
         <img src={THUMBS[s.kind] || THUMBS.room} alt="" loading="lazy" />
         <span className="badges">
           <Pill s={s} />
@@ -110,8 +110,8 @@ function SceneCard({ s }) {
       </div>
       <div className="scene-actions">
         <button className="btn ghost sm" data-action="copy-scene" data-id={s.id} id={`btn-scene-card-copy-link-${s.id}`}>Copy link</button>
-        <a className="btn ghost sm" href={`#/analytics/${s.id}`}>Analytics</a>
-        <a className="btn sm" href={`#/scene/${s.id}`}>Open</a>
+        <a className="btn ghost sm" href={`/studio/analytics/${s.id}`}>Analytics</a>
+        <a className="btn sm" href={`/studio/scene/${s.id}`}>Open</a>
       </div>
     </article>
   );
@@ -220,8 +220,8 @@ function viewScene(S, id) {
     <>
       <StudioHead S={S} title={s.title} sub={`${s.source} · ${status(s) === "ready" ? "Ready" : "Processing"}`} scope="scene" action={<button className="btn" data-action="copy-scene" data-id={s.id} id={`btn-scene-copy-link-${s.id}`}>Copy link</button>} />
       <div className="row" style={{ marginBottom: "20px" }}>
-        <a className="btn ghost" href="#/scenes">← Scenes</a>
-        <a className="btn ghost" href={`#/analytics/${s.id}`}>Analytics</a>
+        <a className="btn ghost" href="/studio/scenes">← Scenes</a>
+        <a className="btn ghost" href={`/studio/analytics/${s.id}`}>Analytics</a>
       </div>
       <div className="split">
         <div>
@@ -279,7 +279,7 @@ function viewAnalytics(S, id = undefined) {
           </div>
           <div className="row">
             <button className="btn ghost sm" data-action="copy-scene" data-id={s.id} id={`btn-analytics-copy-link-${s.id}`}>Copy link</button>
-            <a className="btn sm" href={`#/scene/${s.id}`}>Open</a>
+            <a className="btn sm" href={`/studio/scene/${s.id}`}>Open</a>
           </div>
         </div>
       </div>
@@ -466,7 +466,7 @@ function viewNew(S) {
   const { draft } = S, ok = !!draft.file;
   return (
     <>
-      <a className="under-link" href="#/scenes">← Back to Playground</a>
+      <a className="under-link" href="/studio/scenes">← Back to Playground</a>
       <div className="page-head" style={{ marginTop: "12px" }}>
         <div>
           <p className="eyebrow">NEW SCENE</p>
@@ -507,8 +507,8 @@ function viewNew(S) {
       <p className="note" style={{ marginTop: "8px" }}>Dashed formats are converted for you.</p>
       {NL}
       <div className="step-actions">
-        <a className="btn ghost" href="#/scenes" data-action="cancel">Cancel</a>
-        <a className="btn" href="#/new/review" aria-disabled={ok ? undefined : "true"} data-action={ok ? undefined : "need-file"}>Continue</a>
+        <a className="btn ghost" href="/studio/scenes" data-action="cancel">Cancel</a>
+        <a className="btn" href="/studio/new/review" aria-disabled={ok ? undefined : "true"} data-action={ok ? undefined : "need-file"}>Continue</a>
       </div>
     </>
   );
@@ -551,12 +551,12 @@ function LiveBar() { const { S } = useContext(LiveContext); const n = S.draft.pl
 const TIPS = { select: "Click a wall to remove it or bring it back.", door: "Click a wall to place a door. Click a door to remove it.", win: "Click a wall to place a window. Click a window to remove it.", gap: "Click a wall to turn it into an open archway, and again to close it." };
 function viewReview(S, redirect) {
   const { draft } = S;
-  if (!draft.file) return redirect("#/new");
+  if (!draft.file) return redirect("new");
   if (draft.type === "plan") {
     const p = draft.plan || (draft.plan = freshPlan());
     return (
       <>
-        <a className="under-link" href="#/new">← Back</a>
+        <a className="under-link" href="/studio/new">← Back</a>
         <div className="page-head" style={{ marginTop: "8px" }}>
           <div>
             <p className="eyebrow">{`NEW SCENE · ${draft.file.name}`}</p>
@@ -620,8 +620,8 @@ function viewReview(S, redirect) {
             </div>
             {NL4}
             <div className="review-actions">
-              <a className="btn ghost" href="#/new" style={{ flex: "0 0 auto" }}>Back</a>
-              <a className="btn" href="#/new/share" style={{ flex: "1" }}>Build 3D home</a>
+              <a className="btn ghost" href="/studio/new" style={{ flex: "0 0 auto" }}>Back</a>
+              <a className="btn" href="/studio/new/share" style={{ flex: "1" }}>Build 3D home</a>
             </div>
           </aside>
         </div>
@@ -631,7 +631,7 @@ function viewReview(S, redirect) {
   const ext = (draft.file.name.split(".").pop() || "").toUpperCase(), heavy = HEAVY.test(draft.file.name);
   return (
     <>
-      <a className="under-link" href="#/new">← Back</a>
+      <a className="under-link" href="/studio/new">← Back</a>
       <div className="page-head" style={{ marginTop: "12px" }}>
         <div>
           <p className="eyebrow">{`NEW SCENE · ${draft.file.name}`}</p>
@@ -669,8 +669,8 @@ function viewReview(S, redirect) {
       </div>
       {NL}
       <div className="step-actions">
-        <a className="btn ghost" href="#/new">Back</a>
-        <a className="btn" href="#/new/share" data-action="to-share">Continue</a>
+        <a className="btn ghost" href="/studio/new">Back</a>
+        <a className="btn" href="/studio/new/share" data-action="to-share">Continue</a>
       </div>
     </>
   );
@@ -678,12 +678,12 @@ function viewReview(S, redirect) {
 
 function viewShare(S, redirect) {
   const { draft, state } = S;
-  if (!draft.file) return redirect("#/new");
+  if (!draft.file) return redirect("new");
   if (!draft.tmp) draft.tmp = { id: "sc-" + state.next, title: draft.name || draft.file.name.replace(/\.[^.]+$/, "").replace(/[-_]+/g, " ") || "Untitled scene", source: draft.type === "plan" ? "Floor plan" : "Upload · " + (draft.file.name.split(".").pop() || "").toUpperCase(), kind: draft.type === "plan" ? "room" : /\.(e57|las|laz|xyz|ply|splat)$/i.test(draft.file.name) ? "scan" : "room", views: 0, sessions: 0, watch: 0, date: new Date().toISOString().slice(0, 10), privacy: "private", opts: { comments: true, branding: true, expires: false }, readyAt: HEAVY.test(draft.file.name) ? now() + 12000 : 0 };
   const s = draft.tmp;
   return (
     <>
-      <a className="under-link" href="#/new/review">← Back</a>
+      <a className="under-link" href="/studio/new/review">← Back</a>
       <div className="page-head" style={{ marginTop: "12px" }}>
         <div>
           <p className="eyebrow">NEW SCENE · PREVIEW AND SHARE</p>
@@ -716,14 +716,14 @@ function viewNotFound() {
           <p className="sub">That page doesn’t exist.</p>
         </div>
       </header>
-      <a className="btn" href="#/scenes">Back to scenes</a>
+      <a className="btn" href="/studio/scenes">Back to scenes</a>
     </>
   );
 }
 
-/** The view for the current #/ address, and which sidebar entry is current. */
-export function viewFor(S, hash, redirect) {
-  const [a, b] = (hash.replace(/^#\/?/, "") || "scenes").split("/");
+/** The view for the current Playground address (below /studio), and which sidebar entry is current. */
+export function viewFor(S, page, redirect) {
+  const [a, b] = (page || "scenes").split("/");
   if (a === "scenes") return { nav: a, view: viewScenes(S) };
   if (a === "scene") return { nav: "scenes", view: viewScene(S, b) };
   if (a === "analytics") return { nav: a, view: viewAnalytics(S, b) };

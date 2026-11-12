@@ -196,20 +196,35 @@ function NavigationBridge() {
         usr: { ...historyState?.usr, scrollY: window.scrollY },
       }, "");
     };
-    const onClick = (event: MouseEvent) => {
-      if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+    /** The link a plain left click opens in this app (not another site, tab, file or the same address), or null. */
+    const linkOf = (event: MouseEvent) => {
+      if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return null;
       const anchor = (event.target as Element | null)?.closest<HTMLAnchorElement>("a[href]");
-      if (!anchor || (anchor.target && anchor.target !== "_self") || anchor.hasAttribute("download")) return;
+      if (!anchor || (anchor.target && anchor.target !== "_self") || anchor.hasAttribute("download")) return null;
       let url: URL;
-      try { url = new URL(anchor.href, window.location.href); } catch { return; }
-      if (url.origin !== window.location.origin || NON_PAGE.test(url.pathname)) return;
-      if (url.pathname === window.location.pathname && url.search === window.location.search) return;
+      try { url = new URL(anchor.href, window.location.href); } catch { return null; }
+      if (url.origin !== window.location.origin || NON_PAGE.test(url.pathname)) return null;
+      if (url.pathname === window.location.pathname && url.search === window.location.search) return null;
+      return { anchor, url, samePage: routeOf(url.pathname) === routeOf(window.location.pathname) };
+    };
+    const onClick = (event: MouseEvent) => {
+      const link = linkOf(event);
+      if (!link || link.samePage) return;
       event.preventDefault();
       saveScrollPosition();
       focusNext = true;
-      const go = () => navigateRef.current(url.pathname + url.search + url.hash);
-      if (anchor.closest(DOCS_NAV)) go();
+      const go = () => navigateRef.current(link.url.pathname + link.url.search + link.url.hash);
+      if (link.anchor.closest(DOCS_NAV)) go();
       else transitionTo(go);
+    };
+    // Another address of the same page (the Playground's /studio/… pages): followed after the page's own click
+    // handlers (they can still cancel it), without the page transition; the page shows the new address itself.
+    const onSamePageClick = (event: MouseEvent) => {
+      const link = linkOf(event);
+      if (!link?.samePage) return;
+      event.preventDefault();
+      saveScrollPosition();
+      navigateRef.current(link.url.pathname + link.url.search + link.url.hash);
     };
     const onVerseNavigate = (event: Event) => {
       const { href, replace } = (event as CustomEvent<{ href: string; replace?: boolean }>).detail;
@@ -217,9 +232,11 @@ function NavigationBridge() {
       navigateRef.current(href, { replace: !!replace });
     };
     document.addEventListener("click", onClick, true);
+    document.addEventListener("click", onSamePageClick);
     document.addEventListener("verse:navigate", onVerseNavigate);
     return () => {
       document.removeEventListener("click", onClick, true);
+      document.removeEventListener("click", onSamePageClick);
       document.removeEventListener("verse:navigate", onVerseNavigate);
     };
   }, []);

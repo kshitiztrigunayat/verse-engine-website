@@ -23,7 +23,12 @@ export const STYLES: Record<string, string[]> = {
 export const stylesFor = (path: string, kind?: string) => STYLES[path === "/challenge" ? "challenge" : kind || "page"] || STYLES.page;
 
 /** A pathname as a route key: no trailing slash except the root. */
-export const routeOf = (pathname: string) => decodeURIComponent(pathname).replace(/\/+$/, "") || "/";
+// Pages with addresses of their own below them (the Playground: /studio/scenes, /studio/scene/<id>, …) are one route.
+const SUBPAGES = ["/studio"];
+export const routeOf = (pathname: string) => {
+  const path = decodeURIComponent(pathname).replace(/\/+$/, "") || "/";
+  return SUBPAGES.find((base) => path.startsWith(base + "/")) || path;
+};
 
 // React pages, loaded on demand (pages/index.ts) and kept once loaded.
 export const hasPage = (path: string) => path in PAGES;

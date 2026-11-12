@@ -1,13 +1,14 @@
 // Playground (/studio): a workspace that runs entirely in this browser (localStorage); nothing is
-// uploaded or published. Sign-in is a prototype (see Signin.tsx). Its pages are #/ addresses:
-// #/scenes, #/scene/<id>, #/analytics[/<id>], #/webhooks, #/plugins, #/new[/review|/share].
+// uploaded or published. Sign-in is a prototype (see Signin.tsx). Its pages are addresses below /studio:
+// /studio[/scenes], /studio/scene/<id>, /studio/analytics[/<id>], /studio/webhooks, /studio/plugins, /studio/new[/review|/share].
 // The 3D preview is Three.js (viewer.ts). (Was public/js/studio.js.)
 //
-// How it updates (same as before): moving to another #/ address, or a change that affects the page,
+// How it updates (same as before): moving to another Playground address, or a change that affects the page,
 // rebuilds the view (fresh elements, keeping scroll position and focus); a few things change in
 // place (the floor plan editor, the confirm counter, the drop zone highlight, the toast).
 import Logo from "../../components/Logo.tsx";
 import { Fragment, useEffect, useLayoutEffect, useRef, useState } from "react";
+import { useLocation } from "react-router-dom";
 import { flushSync } from "react-dom";
 import StudioGate from "./StudioGate.tsx";
 import { LiveContext, dialogs, viewFor } from "./views.tsx";
@@ -16,7 +17,10 @@ import { KEY, SESSION, WALLS0, dayLabel, emptyDraft, freshPlan, loadState, neare
 const TITLE = "Playground | Verse Engine by Ctruh";
 const $ = (s, r = document) => r.querySelector(s);
 const go = (href, options = {}) => document.dispatchEvent(new CustomEvent("verse:navigate", { detail: { href, ...options } }));
-const route0 = () => location.hash.replace(/^#\/?/, "").split("/")[0] || "scenes";
+/** The Playground page in the address: "/studio/scene/s1" -> "scene/s1" ("" for /studio itself). */
+const subpage = () => location.pathname.replace(/^\/studio\/?/, "");
+const open = (page, replace = false) => go("/studio/" + page, { replace });
+const route0 = () => subpage().split("/")[0] || "scenes";
 function readUser() { try { return JSON.parse(localStorage.getItem(SESSION)); } catch { return null; } }
 
 export default function Studio() {
@@ -26,8 +30,8 @@ export default function Studio() {
   if (!S.current && user) S.current = { state: loadState(), draft: emptyDraft(), qs: { scenes: "", analytics: "", webhooks: "", plugins: "" }, filter: "all", anRange: 30, anId: null, whSel: "wh1" };
   const seq = useRef(0), dialogSeq = useRef(0), toastTimer = useRef<ReturnType<typeof setTimeout> | 0>(0);
   const mainRef = useRef(null), dialogRef = useRef(null);
-  const redirect = (h) => { setTimeout(() => { location.hash = h; }, 0); return null; };
-  const build = () => ({ key: ++seq.current, ...viewFor(S.current, location.hash, redirect) });
+  const redirect = (page) => { setTimeout(() => open(page, true), 0); return null; };
+  const build = () => ({ key: ++seq.current, ...viewFor(S.current, subpage(), redirect) });
   const [screen, setScreen] = useState(() => (user ? build() : null));
   const [live, setLive] = useState({ tick: 0, planKey: 0 });
   const [dialog, setDialog] = useState(null);
@@ -64,14 +68,24 @@ export default function Studio() {
   const closeDialog = () => dialogRef.current.close();
 
   useLayoutEffect(() => {
-    if (!user) { go("/signin?next=" + encodeURIComponent("/studio" + location.hash), { replace: true }); return; }
+    if (!user) { go("/signin?next=" + encodeURIComponent(location.pathname), { replace: true }); return; }
     document.title = TITLE;
     window.scrollTo(0, 0);
   }, []);
 
+  // Another Playground address (a link, Back or Forward): show its view.
+  const { pathname } = useLocation();
+  const shownPath = useRef(pathname);
+  useLayoutEffect(() => {
+    if (!user || shownPath.current === pathname) return;
+    shownPath.current = pathname;
+    setScreen(build());
+    document.title = TITLE;
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
   useEffect(() => {
     if (!user) return;
-    addEventListener("hashchange", route);
     // A demo scene that was processing becomes ready: refresh the scenes list (unless the visitor is typing in it).
     const readyTimer = setInterval(() => {
       const { state } = S.current;
@@ -84,7 +98,7 @@ export default function Studio() {
     // Field changes that take effect when the field is committed (native "change").
     const main = mainRef.current;
     main.addEventListener("change", onChange);
-    return () => { removeEventListener("hashchange", route); clearInterval(readyTimer); main.removeEventListener("change", onChange); clearTimeout(toastTimer.current); };
+    return () => { clearInterval(readyTimer); main.removeEventListener("change", onChange); clearTimeout(toastTimer.current); };
   }, []);
 
   /* ---------- events ---------- */
@@ -106,7 +120,7 @@ export default function Studio() {
     else if (t.id === "scene-name") draft.name = t.value;
   }
   function onKeyDown(e) {
-    if (e.key === "Enter" && e.target.id === "q" && e.target.dataset.scope === "scene") { S.current.qs.scenes = e.target.value; S.current.filter = "all"; location.hash = "#/scenes"; }
+    if (e.key === "Enter" && e.target.id === "q" && e.target.dataset.scope === "scene") { S.current.qs.scenes = e.target.value; S.current.filter = "all"; open("scenes"); }
     if ((e.key === "Enter" || e.key === " ") && e.target.matches(".hit")) { e.preventDefault(); e.target.dispatchEvent(new MouseEvent("click", { bubbles: true, clientX: 0, clientY: 0 })); }
   }
   const onDrag = (ev) => (e) => {
@@ -152,7 +166,7 @@ export default function Studio() {
       case "reset-plan": draft.plan = freshPlan(); rerender(); break;
       case "privacy": { const s = activeScene(id); s.privacy = v; save(); rerender(); break; }
       case "revoke": { const s = activeScene(id); s.rev = (s.rev || 0) + 1; save(); toast("Previous link revoked (Playground links are local)"); break; }
-      case "save-scene": { const s = draft.tmp; state.scenes.unshift(s); state.next++; save(); st.draft = emptyDraft(); toast("Saved to your Playground"); location.hash = "#/scenes"; break; }
+      case "save-scene": { const s = draft.tmp; state.scenes.unshift(s); state.next++; save(); st.draft = emptyDraft(); toast("Saved to your Playground"); open("scenes"); break; }
       case "export": openDialog(dialogs.export(activeScene(id))); break;
       case "queue-export": closeDialog(); toast("Export queued (Playground simulation)"); break;
       case "embed": openDialog(dialogs.embed(activeScene(id))); break;
@@ -187,7 +201,7 @@ export default function Studio() {
       case "show-key": { const k = state.keys.find((x) => x.id === id); k.shown = !k.shown; save(); rerender(); break; }
       case "copy-key": copy(state.keys.find((x) => x.id === id).secret, "Key copied"); break;
       case "reset-all": openDialog(dialogs.reset()); break;
-      case "reset-ok": try { localStorage.removeItem(KEY); } catch { /* ignore */ } st.state = loadState(); st.draft = emptyDraft(); closeDialog(); if (location.hash === "#/scenes") route(); else location.hash = "#/scenes"; toast("Playground reset"); break;
+      case "reset-ok": try { localStorage.removeItem(KEY); } catch { /* ignore */ } st.state = loadState(); st.draft = emptyDraft(); closeDialog(); if (subpage() === "scenes") route(); else open("scenes"); toast("Playground reset"); break;
       case "del-key": state.keys = state.keys.filter((x) => x.id !== id); save(); rerender(); toast("Key revoked"); break;
     }
   }
@@ -207,9 +221,9 @@ export default function Studio() {
             <a className="brand" href="/" aria-label="Verse Engine by Ctruh – Home" id="lnk-verse-engine-home-2">
               <span><Logo className="h-9" /><small>PLAYGROUND</small></span>
             </a>
-            <a className="btn st-new" href="#/new" id="lnk-new-scene">+ New scene</a>
+            <a className="btn st-new" href="/studio/new" id="lnk-new-scene">+ New scene</a>
             <nav className="st-nav" aria-label="Playground sections" id="nav-playground-sections">
-              <a href="#/scenes" data-nav="scenes" id="lnk-scenes" aria-current={current("scenes")}>
+              <a href="/studio/scenes" data-nav="scenes" id="lnk-scenes" aria-current={current("scenes")}>
                 <svg viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                   <rect x="3" y="3" width="6" height="6" rx="1" />
                   <rect x="11" y="3" width="6" height="6" rx="1" />
@@ -218,19 +232,19 @@ export default function Studio() {
                 </svg>
                 <span>Scenes</span>
               </a>
-              <a href="#/analytics" data-nav="analytics" id="lnk-analytics" aria-current={current("analytics")}>
+              <a href="/studio/analytics" data-nav="analytics" id="lnk-analytics" aria-current={current("analytics")}>
                 <svg viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                   <path d="M3 17V9M8 17V4M13 17v-6M18 17H2" />
                 </svg>
                 <span>Analytics</span>
               </a>
-              <a href="#/webhooks" data-nav="webhooks" id="lnk-webhooks" aria-current={current("webhooks")}>
+              <a href="/studio/webhooks" data-nav="webhooks" id="lnk-webhooks" aria-current={current("webhooks")}>
                 <svg viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                   <path d="M10 3v6l4 2M3 10a7 7 0 1 0 2-5" />
                 </svg>
                 <span>Webhooks</span>
               </a>
-              <a href="#/plugins" data-nav="plugins" id="lnk-plug-ins-api" aria-current={current("plugins")}>
+              <a href="/studio/plugins" data-nav="plugins" id="lnk-plug-ins-api" aria-current={current("plugins")}>
                 <svg viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                   <path d="M7 3v4M13 3v4M5 7h10v3a5 5 0 0 1-10 0V7zM10 15v2" />
                 </svg>

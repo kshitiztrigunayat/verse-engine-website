@@ -64,7 +64,7 @@ export default function Developers() {
           <h1>Build with Verse Engine</h1>
           <p>Upload, publish, embed and track 3D scenes with a REST API — or skip the backend and drop in one script tag.</p>
           <div className="page-actions">
-            <a className="site-button" href="/studio#/plugins" id="lnk-get-an-api-key-2">
+            <a className="site-button" href="/studio/plugins" id="lnk-get-an-api-key-2">
               Get an API key
               <span aria-hidden="true" />
             </a>
