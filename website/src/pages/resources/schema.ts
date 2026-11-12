@@ -54,9 +54,9 @@ export function resourcesJsonLd(key: string, { title, description, ogImage }: { 
   if (ai) nodes.push(versaAI());
   if (key === "lyon") {
     page.about.push({ "@type": "Place", name: "Lyon, France" });
-    if (claimOk("lyon-video") && VIDEO.embedUrl) nodes.push({
+    if (claimOk("lyon-video") && (VIDEO.embedUrl || VIDEO.contentUrl)) nodes.push({
       "@type": "VideoObject", name: VIDEO.title, description: VIDEO.description, thumbnailUrl: abs(VIDEO.thumbnailUrl),
-      uploadDate: VIDEO.uploadDate, duration: VIDEO.duration, embedUrl: VIDEO.embedUrl, contentUrl: VIDEO.contentUrl || undefined,
+      uploadDate: VIDEO.uploadDate, duration: VIDEO.duration, embedUrl: VIDEO.embedUrl || undefined, contentUrl: VIDEO.contentUrl ? abs(VIDEO.contentUrl) : undefined,
       publisher: { "@id": ID.org },
     });
   }

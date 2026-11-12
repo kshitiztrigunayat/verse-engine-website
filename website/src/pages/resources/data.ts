@@ -194,7 +194,7 @@ export const CLAIMS = {
   "lyon-video": {
     tag: "MARKETING CONFIRMATION REQUIRED", owner: "Marketing",
     question: "Upload the screen-recorded Lyon walkthrough (YouTube or self-hosted MP4), and provide its URL, duration, upload date, thumbnail and transcript.",
-    confirmed: false,
+    confirmed: true,
   },
   "versaai-inputs": {
     tag: "PRODUCT CONFIRMATION REQUIRED", owner: "Product",
@@ -722,10 +722,10 @@ const m5 = "Apple M5 Pro, Chrome, CDN, 4–5 Nov 2026";
 export const VIDEO = {
   title: "Lyon in a browser: 10.3 billion triangles streamed by Verse Engine",
   description: "A screen recording of Verse Engine by Ctruh opening a 10.3-billion-triangle photomesh of Lyon, France, from a single 556 GB file, in Chrome on a laptop: from the city overview to Fourvière and down to street level. No app, no pre-rendered video. City data: Métropole de Lyon, 2023 photomesh, Licence Ouverte 2.0.",
-  // Fill in once uploaded: embedUrl, contentUrl, uploadDate (YYYY-MM-DD), duration (ISO 8601, e.g. PT1M30S).
-  // Team note: embed the recording in the video section (YouTube nocookie iframe or <video> with captions, 16:9,
-  // lazy-loaded behind a poster) and replace the transcript below with the verbatim one once the video is final.
-  embedUrl: "", contentUrl: "", uploadDate: "", duration: "", thumbnailUrl: cityHero,
+  // Self-hosted: the same film as the home page footer (/media, added 9 Nov 2026), muted (no sound).
+  // smallUrl is the 720p copy for screens up to 800 px.
+  embedUrl: "", contentUrl: "/media/verse-film-1080.mp4", smallUrl: "/media/verse-film-720.mp4",
+  uploadDate: "2026-11-09", duration: "PT1M", thumbnailUrl: "/media/verse-film-poster.webp",
 };
 
 const LYON = {
@@ -774,16 +774,9 @@ const LYON = {
     {
       id: "video", eyebrow: "Screen recording", title: "Watch the Lyon demo", claim: "lyon-video",
       blocks: [
+        { type: "video", src: VIDEO.contentUrl, smallSrc: VIDEO.smallUrl, poster: VIDEO.thumbnailUrl, label: VIDEO.title },
         { type: "h3", text: VIDEO.title },
         { type: "p", text: VIDEO.description },
-        { type: "details", className: "rs-transcript", summary: "Video transcript", items: [
-          [strong("0:00 · The link."), " A Verse link is opened in Chrome on a laptop. No app or plug-in is installed."],
-          [strong("Overview."), " The whole city appears. On screen: \"10.3 billion triangles, one 556 GB file.\""],
-          [strong("Why it opens."), " Narration: Verse sends only what the camera sees; the full city view uses about 0.05% of the file."],
-          [strong("Fourvière."), " The camera moves to the hill and basilica; texture and geometry sharpen as detail streams in."],
-          [strong("Street level."), " The camera drops to the street and walks. On screen: frame time while walking."],
-          [strong("Close."), " \"Any 3D. One link. Verse Engine by Ctruh.\" Credit: Métropole de Lyon, 2023 photomesh, Licence Ouverte 2.0."],
-        ] },
       ],
     },
     {

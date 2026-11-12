@@ -102,6 +102,14 @@ const BLOCKS = {
   figure: (b) => <Figure {...b} />,
   table: (b) => <Table {...b} />,
   demo: (b) => <LiveDemo {...b} />,
+  video: (b) => (
+    <figure className="rs-demo">
+      <video controls muted playsInline preload="none" poster={b.poster} width="1920" height="1080" aria-label={b.label}>
+        <source src={b.smallSrc} type="video/mp4" media="(max-width: 800px)" />
+        <source src={b.src} type="video/mp4" />
+      </video>
+    </figure>
+  ),
   flow: (b) => (
     <ol className="rs-flow" aria-label={b.label}>
       {b.stages.map((s) => (
