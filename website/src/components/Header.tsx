@@ -20,9 +20,9 @@ export default function Header({ view, menuOpen, menuButtonRef, onOpenMenu }) {
       <nav id="nav-main" className="desktop-nav" aria-label="Main navigation">
         <a
           className="nav-link"
-          href="/#story"
+          href="/story"
           id="lnk-the-engine"
-          aria-current={view.navCurrent === "/#story" ? "page" : undefined}
+          aria-current={view.navCurrent === "/story" ? "page" : undefined}
         >
           {"The engine"}
         </a>

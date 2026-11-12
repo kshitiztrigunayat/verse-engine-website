@@ -11,7 +11,7 @@ import { META, OG_DEFAULT, docsJsonLd } from "./pages/meta.ts";
 import DocsPage from "./pages/docs/DocsPage.tsx";
 import NotFound from "./pages/NotFound.tsx";
 import { playIntro, transitionTo } from "./animations/transition.ts";
-import { hasPage, loadPage, loadedPage, routeOf, shellView, stylesFor } from "./routes.ts";
+import { hasPage, loadPage, loadedPage, routeOf, sectionOf, shellView, stylesFor } from "./routes.ts";
 import type { RoutePayload } from "./routes.ts";
 
 const NON_PAGE = /\.(zip|tgz|rbz|pdf|json|xml|txt|mp4|png|jpe?g|webp|svg|glb|otf|woff2?)$/i;
@@ -183,6 +183,21 @@ function RouteEffects({ payload, pathname, ready }: { payload: RoutePayload | nu
   return null;
 }
 
+/** Scrolls to a section, and again each time the page's height changes while it settles (the home page's pinned
+    story and the sections below it grow after the page shows), until the visitor scrolls or presses a key (3 s at most). */
+function scrollToSection(id: string) {
+  const inputs = ["wheel", "touchstart", "keydown", "pointerdown"];
+  const settle = new ResizeObserver(() => document.getElementById(id)?.scrollIntoView()); // also runs once at the start
+  const stop = () => {
+    settle.disconnect();
+    clearTimeout(timer);
+    inputs.forEach((type) => removeEventListener(type, stop));
+  };
+  const timer = setTimeout(stop, 3000);
+  inputs.forEach((type) => addEventListener(type, stop, { passive: true }));
+  settle.observe(document.body);
+}
+
 function NavigationBridge() {
   const navigate = useNavigate();
   const location = useLocation();
@@ -267,8 +282,10 @@ function AppRoutes() {
 
   useEffect(() => {
     if (!payload || !ready) return;
-    if (location.hash) {
-      requestAnimationFrame(() => document.getElementById(decodeURIComponent(location.hash.slice(1)))?.scrollIntoView());
+    // A #section, or a section address such as /story (routes.ts): scroll to that section.
+    const section = location.hash ? decodeURIComponent(location.hash.slice(1)) : sectionOf(location.pathname);
+    if (section) {
+      scrollToSection(section);
     } else if (navigationType === "POP") {
       window.scrollTo(0, Number((location.state as { scrollY?: number } | null)?.scrollY || 0));
     } else {
@@ -277,7 +294,7 @@ function AppRoutes() {
     if (focusNext && payload.kind !== "app") document.getElementById("app-main")?.focus({ preventScroll: true });
     focusNext = false;
     setAnnounced(pathname);
-  }, [pathname, ready, location.hash, location.state, navigationType]);
+  }, [pathname, ready, location.pathname, location.hash, location.state, navigationType]);
 
   // First load: the page is ready, then the intro plays (once; skipped for prerendered pages, transition.ts).
   useEffect(() => {

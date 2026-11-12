@@ -59,9 +59,9 @@ export const ROUTES = {
   aiInfra: { path: "/ai-3d-infrastructure", status: "page" },
   lyon: { path: "/demos/lyon", status: "page" },
   developers: { path: "/developers", status: "live" },
-  howItWorks: { path: "/how-it-works", status: "planned", fallback: "/#engine" },
-  formats: { path: "/supported-formats", status: "planned", fallback: "/#how-to-start" },
-  faq: { path: "/faq", status: "planned", fallback: "/#sec-faq-section" },
+  howItWorks: { path: "/how-it-works", status: "planned", fallback: "/inside-the-engine" },
+  formats: { path: "/supported-formats", status: "planned", fallback: "/how-to-start" },
+  faq: { path: "/faq", status: "planned", fallback: "/faqs" },
 };
 
 /** Calls to action used on several pages. */

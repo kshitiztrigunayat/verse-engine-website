@@ -54,7 +54,7 @@ function resolveRef(raw,from){
   if(!pathname)return;
   checkedReferences++;
   if(!pathname.startsWith('/')){const t=path.resolve(path.dirname(from),pathname);if(!exists(t))err(`${path.relative(dist,from)} -> ${ref}`);return}
-  const route=(pathname.replace(/\/+$/,'')||'/').replace(/^\/studio\/.+/,'/studio'); // Playground addresses (src/routes.ts)
+  const route=(pathname.replace(/\/+$/,'')||'/').replace(/^\/studio\/.+/,'/studio').replace(/^\/(story|how-to-start|inside-the-engine|faqs)$/,'/'); // Playground and home section addresses (src/routes.ts)
   if(routes.has(route)||exists(path.join(dist,pathname))&&fs.statSync(path.join(dist,pathname)).isFile())return;
   err(`${from.startsWith(dist)?path.relative(dist,from):from} -> ${ref}`);
 }

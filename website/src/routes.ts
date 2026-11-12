@@ -25,8 +25,18 @@ export const stylesFor = (path: string, kind?: string) => STYLES[path === "/chal
 /** A pathname as a route key: no trailing slash except the root. */
 // Pages with addresses of their own below them (the Playground: /studio/scenes, /studio/scene/<id>, …) are one route.
 const SUBPAGES = ["/studio"];
+// Addresses of home page sections: the home page, scrolled to the section (its canonical address stays /).
+const SECTIONS: Record<string, string> = {
+  "/story": "story",
+  "/how-to-start": "how-to-start",
+  "/inside-the-engine": "engine",
+  "/faqs": "sec-faq-section",
+};
+const pathOf = (pathname: string) => decodeURIComponent(pathname).replace(/\/+$/, "") || "/";
+export const sectionOf = (pathname: string): string | undefined => SECTIONS[pathOf(pathname)];
 export const routeOf = (pathname: string) => {
-  const path = decodeURIComponent(pathname).replace(/\/+$/, "") || "/";
+  const path = pathOf(pathname);
+  if (SECTIONS[path]) return "/";
   return SUBPAGES.find((base) => path.startsWith(base + "/")) || path;
 };
 

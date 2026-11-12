@@ -44,7 +44,7 @@ export default function MobileMenu({ dialogRef, menuButtonRef, setMenuOpen }) {
         </button>
       </div>
       <nav id="nav-mobile" aria-label="Mobile navigation">
-        <a href="/#story" id="lnk-the-engine-2">
+        <a href="/story" id="lnk-the-engine-2">
           {"The engine"}
         </a>
         <details className="m-group" id="dtl-m-group">
