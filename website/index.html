@@ -1,6 +1,12 @@
 <!doctype html>
 <html lang="en">
 <head>
+<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-TFRKKH9R"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+</script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta id="meta-theme-color" name="theme-color" content="#ffffff">
@@ -87,7 +93,7 @@ setTimeout(function(){document.documentElement.classList.remove("intro-on")},450
 /* /docs only (and /docs/what-is-verse-engine, where /docs redirects): old production docs links (/docs/#/...) go to the new page paths. */
 (function(){if(!/^\/docs(\/what-is-verse-engine)?\/?$/.test(location.pathname))return;var h=location.hash;if(h.indexOf('#/')===0){var p=h.slice(2).split('?')[0];var map={'examples':'/samples','guides/publish-from-substance-painter':'/plugins'};location.replace(map[p]||('/docs/'+p));}})();
 </script>
-<script id="script-main" type="module" src="/src/main.jsx"></script>
+<script id="script-main" type="module" src="/src/main.tsx"></script>
 </head>
 <body id="app-body">
 <noscript><p style="padding:24px;font-family:sans-serif">Verse Engine needs JavaScript to display this site.</p></noscript>
