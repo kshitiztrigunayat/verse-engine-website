@@ -528,63 +528,6 @@ export const faqs = [
   { q: "How much does it cost?", a: "Free to start, then Starter at $29, Pro at $99 and Scale at $499 a month, with Enterprise from $2,000 a month. Every new account gets a 14-day Pro trial. Viewers never pay." },
 ];
 
-// ---------------------------------------------------------------- Footer
-
-export interface FooterLink extends Link {
-  jump?: string;
-}
-
-export const footerNav: { title: string; label: string; id: string; links: FooterLink[]; socials?: boolean }[] = [
-  {
-    title: "EXPLORE",
-    label: "Explore Verse Engine",
-    id: "nav-explore-verse-engine",
-    links: [
-      { href: "#story", label: "The engine", id: "lnk-the-engine-4", jump: "0" },
-      { href: "#possibilities", label: "Possibilities", id: "lnk-possibilities" },
-      { href: "#how-to-start", label: "Your workflow", id: "lnk-your-workflow" },
-      { href: "#lyon", label: "The city" },
-      { href: "#benchmarks", label: "Benchmarks" },
-      { href: "#challenge", label: "Take the Challenge", id: "lnk-take-the-challenge-2" },
-    ],
-  },
-  {
-    title: "RESOURCES",
-    label: "Verse Engine resources",
-    id: "nav-verse-engine-resources",
-    links: [
-      { href: "/about", label: "About Verse Engine", id: "lnk-about-verse-engine-2" },
-      { href: "/docs/what-is-verse-engine", label: "Documentation", id: "lnk-documentation-3" },
-      { href: "/developers", label: "Developers", id: "lnk-developers-2" },
-      { href: "/plugins", label: "Plug-ins", id: "lnk-plug-ins-2" },
-      { href: "/pricing", label: "Pricing", id: "lnk-pricing-4" },
-    ],
-  },
-  {
-    title: "CTRUH",
-    label: "About Ctruh",
-    id: "nav-about-ctruh",
-    links: [
-      { href: "/about", label: "About us", id: "lnk-about-us" },
-      { href: contactUrl, label: "Contact us", id: "lnk-contact-us" },
-      { href: "https://www.ctruh.com/assets/pdf/ctruh-brand-guideline.pdf", label: "Brand guidelines", id: "lnk-brand-guidelines" },
-    ],
-    socials: true,
-  },
-];
-
-export const socials = [
-  { network: "linkedin", href: "https://www.linkedin.com/company/ctruh/", label: "Ctruh on LinkedIn", id: "lnk-ctruh-on-linkedin" },
-  { network: "instagram", href: "https://www.instagram.com/ctruh.official/", label: "Ctruh on Instagram", id: "lnk-ctruh-on-instagram" },
-  { network: "youtube", href: "https://www.youtube.com/@Ctruh", label: "Ctruh on YouTube", id: "lnk-ctruh-on-youtube" },
-] as const;
-
-export const legalLinks: Link[] = [
-  { href: "/privacy", label: "Privacy Policy", id: "lnk-privacy-policy" },
-  { href: "/terms", label: "Terms of Service", id: "lnk-terms-of-service" },
-  { href: "/refunds", label: "Refunds", id: "lnk-refunds" },
-];
-
 // ---------------------------------------------------------------- Plug-in drawings
 
 /** Line drawings used in the plug-ins section (one <g> of <path>s each, referenced by <use href="#plugin-mesh-…">). */

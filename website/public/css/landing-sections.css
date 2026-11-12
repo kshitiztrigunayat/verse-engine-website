@@ -434,6 +434,3 @@
    under-links on dark panels do. */
 .mx-head > p .under-link { color: inherit; }
 
-/* Footer: the one-sentence Verse Engine definition, as in every page's footer (SEO blueprint, Part F). */
-.footer-identity { flex-wrap: wrap; }
-.footer-definition { flex: 0 0 100%; padding-right: max(0px, calc(100% - 380px)); margin-top: 22px; font-size: 12px; line-height: 1.7; color: #59616e; } /* own line, at most 380px of text */

@@ -92,17 +92,17 @@ export const RESOURCES_MENU = [
 
 /** Links the footers add to their columns (SEO blueprint, Part A): the four pages, plus how it works,
     supported formats and FAQ, which go to their home page section until those pages exist (ROUTES).
-    `id` for the site footer, `homeId` for the home page footer. Labels as in the verse-seo-pages footer. */
+    Labels as in the verse-seo-pages footer. */
 export const FOOTER_LINKS = {
   explore: [
-    { href: href("commerce"), label: "3D commerce", id: "lnk-3d-commerce-3", homeId: "lnk-3d-commerce-4" },
-    { href: href("archRe"), label: "Architecture and real estate", id: "lnk-architecture-real-estate-3", homeId: "lnk-architecture-real-estate-4" },
-    { href: href("aiInfra"), label: "AI and 3D infrastructure", id: "lnk-ai-3d-infrastructure-3", homeId: "lnk-ai-3d-infrastructure-4" },
-    { href: href("lyon"), label: "Lyon 3D city demo", id: "lnk-lyon-3d-city-demo", homeId: "lnk-lyon-3d-city-demo-2" },
-    { href: href("howItWorks"), label: "How Verse Engine works", id: "lnk-how-verse-engine-works", homeId: "lnk-how-verse-engine-works-2" },
+    { href: href("commerce"), label: "3D commerce", id: "lnk-3d-commerce-3" },
+    { href: href("archRe"), label: "Architecture and real estate", id: "lnk-architecture-real-estate-3" },
+    { href: href("aiInfra"), label: "AI and 3D infrastructure", id: "lnk-ai-3d-infrastructure-3" },
+    { href: href("lyon"), label: "Lyon 3D city demo", id: "lnk-lyon-3d-city-demo" },
+    { href: href("howItWorks"), label: "How Verse Engine works", id: "lnk-how-verse-engine-works" },
   ],
-  build: [{ href: href("formats"), label: "Supported formats", id: "lnk-supported-formats", homeId: "lnk-supported-formats-2" }],
-  connect: [{ href: href("faq"), label: "FAQs", id: "lnk-faqs", homeId: "lnk-faqs-2" }],
+  build: [{ href: href("formats"), label: "Supported formats", id: "lnk-supported-formats" }],
+  connect: [{ href: href("faq"), label: "FAQs", id: "lnk-faqs" }],
 };
 
 // ── Claims ──

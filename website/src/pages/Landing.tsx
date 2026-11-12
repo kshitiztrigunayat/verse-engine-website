@@ -1,7 +1,6 @@
 // Home page (/). Content lives in ./landing/data.ts and is rendered here with .map().
 // The scroll story, 3D model and other animations are src/animations/landing/ (GSAP, Three.js), mounted on this markup by the router;
 // the sections after the story are wired up by src/animations/landing/sections.js and styled by public/css/landing-sections.css.
-import Logo from "../components/Logo.tsx";
 import { Fragment } from "react";
 import {
   heroAside, realityModes, storyChapters, chapterNav,
@@ -19,12 +18,7 @@ import {
   devHeading, devTabs, devFeatures,
   pricingHeading, plans, contactUrl,
   faqs,
-  footerNav, socials, legalLinks,
 } from "./landing/data.ts";
-import { FOOTER_LINKS, PRODUCT } from "./resources/data.ts";
-
-/** Footer columns that get FOOTER_LINKS (the same links as the site footer's EXPLORE, BUILD and CONNECT). */
-const FOOTER_COLUMN = { "nav-explore-verse-engine": "explore", "nav-verse-engine-resources": "build", "nav-about-ctruh": "connect" };
 
 /** "01", "02", … */
 const nn = (i) => String(i + 1).padStart(2, "0");
@@ -203,29 +197,6 @@ function ShareVisual() {
 }
 
 const workflowVisuals = { upload: UploadVisual, prepare: PrepareVisual, share: ShareVisual };
-
-// ---------------------------------------------------------------- Footer social icons
-
-const socialIcons = {
-  linkedin: (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
-      <path d="M5 9v11M5 4v.5M10 20V9h4v2c1-3 6-3 6 2v7M14 13v7" />
-    </svg>
-  ),
-  instagram: (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
-      <rect x="3" y="3" width="18" height="18" rx="5" />
-      <circle cx="12" cy="12" r="4" />
-      <circle cx="17.5" cy="6.5" r=".7" fill="currentColor" />
-    </svg>
-  ),
-  youtube: (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
-      <rect x="2" y="5" width="20" height="14" rx="4" />
-      <path d="m10 9 5 3-5 3Z" fill="currentColor" stroke="none" />
-    </svg>
-  ),
-};
 
 // ---------------------------------------------------------------- Page
 
@@ -963,7 +934,7 @@ export default function Landing() {
         </div>
       </section>
 
-      <footer className="finale" id="footer">
+      <section className="finale" id="footer">
         <section className="footer-cta footer-world" aria-labelledby="footer-heading" id="sec-footer-heading">
           <header id="hdr-item-4">
             <span className="footer-eyebrow">EVERY GREAT WORLD STARTS SOMEWHERE.</span>
@@ -997,37 +968,7 @@ export default function Landing() {
           </figure>
           <p className="footer-scene-caption">Lyon · 10.3 billion triangles · one link</p>
         </section>
-        <div className="footer-directory">
-          <div className="footer-identity">
-            <a href="#" className="footer-wordmark" aria-label="Verse Engine by Ctruh – Home" id="lnk-verse-engine-home-2"><Logo className="h-16 lg:h-20" /></a>
-            <a href="https://www.ctruh.com/" className="footer-parent" id="lnk-ctruh-2">Ctruh</a>
-            <p className="footer-definition">{PRODUCT.definition}</p>
-          </div>
-          {footerNav.map((group) => (
-            <nav key={group.id} aria-label={group.label} id={group.id}>
-              <h3>{group.title}</h3>
-              {group.links.map((l) => <a key={l.label} href={l.href} data-jump={l.jump} id={l.id}>{l.label}</a>)}
-              {FOOTER_LINKS[FOOTER_COLUMN[group.id]]?.map((l) => <a key={l.homeId} href={l.href} id={l.homeId}>{l.label}</a>)}
-              {group.socials && (
-                <div className="footer-socials">
-                  {socials.map((s) => (
-                    <a key={s.network} href={s.href} aria-label={s.label} id={s.id}>
-                      {socialIcons[s.network]}
-                    </a>
-                  ))}
-                </div>
-              )}
-            </nav>
-          ))}
-        </div>
-        <div className="footer-bottom">
-          <span>© 2026 CTRUH Technologies Private Limited. Verse Engine by Ctruh is a product of Ctruh.</span>
-          <div>
-            {legalLinks.map((l) => <a key={l.id} href={l.href} id={l.id}>{l.label}</a>)}
-          </div>
-          <a href="#" className="back-top" id="lnk-back-to-the-beginning">Back to the beginning ↑</a>
-        </div>
-      </footer>
+      </section>
     </>
   );
 }

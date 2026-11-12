@@ -69,7 +69,7 @@ export function docsJsonLd(path, page, origin) {
 export const META: Record<string, PageMeta> = {
   "/": {
     kind: "landing",
-    chrome: "header",
+    chrome: "full",
     title: "Verse Engine by Ctruh | Browser-Native 3D and XR Engine",
     description: "Create, stream and deploy interactive 3D and XR experiences through the browser. Explore Verse Engine by Ctruh, built for browser-native 3D infrastructure.",
     ogTitle: "Verse Engine by Ctruh: any 3D, one link",
