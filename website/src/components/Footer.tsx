@@ -1,5 +1,6 @@
 // Site footer. Privacy and Terms link to verse.ctruh.com, as before. FOOTER_LINKS adds the Resources
 // pages and related links to the columns.
+import Logo from "./Logo.tsx";
 import { FOOTER_LINKS, PRODUCT } from "../pages/resources/data.ts";
 
 const extra = (links) =>
@@ -32,23 +33,7 @@ export default function Footer({ hidden }) {
             aria-label="Verse Engine by Ctruh – Home"
             id="lnk-verse-engine-home"
           >
-            <svg viewBox="0 0 38 40" fill="none" aria-hidden="true">
-              <path
-                d="m19 2 16 9v19l-16 9-16-9V11L19 2Z"
-                stroke="currentColor"
-                strokeWidth="1.7"
-              />
-              <path
-                d="m3 11 16 10 16-10M19 21v18"
-                stroke="currentColor"
-                strokeWidth="1.7"
-              />
-              <path d="m11 6 16 10" stroke="#0066cc" strokeWidth="2.4" />
-            </svg>
-            <span>
-              {"Verse Engine "}
-              <small>{"BY CTRUH"}</small>
-            </span>
+            <Logo className="h-12" />
           </a>
           <p>{PRODUCT.definition}</p>
           <p>

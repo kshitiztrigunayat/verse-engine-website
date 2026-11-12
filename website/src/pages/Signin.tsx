@@ -2,6 +2,7 @@
 // is a flag in this browser's storage. Replace finish() with a real sign-in when the backend exists.
 // ?mode=signup opens "Create account"; ?next=/path is where to go afterwards (default /studio).
 // (Was public/js/signin.js.)
+import Logo from "../components/Logo.tsx";
 import { useLayoutEffect, useRef, useState } from "react";
 import StudioGate from "./studio/StudioGate.tsx";
 
@@ -49,15 +50,7 @@ export default function Signin() {
       <a className="skip" href="#signin-main" id="lnk-skip-to-content">Skip to content</a>
       <header className="st-top" id="hdr-st-top">
         <a className="brand" href="/" aria-label="Verse Engine by Ctruh – Home" id="lnk-verse-engine-home-2">
-          <svg viewBox="0 0 38 40" fill="none" aria-hidden="true">
-            <path d="m19 2 16 9v19l-16 9-16-9V11L19 2Z" stroke="currentColor" strokeWidth="1.7" />
-            <path d="m3 11 16 10 16-10M19 21v18" stroke="currentColor" strokeWidth="1.7" />
-            <path d="m11 6 16 10" stroke="#0066cc" strokeWidth="2.4" />
-          </svg>
-          <span>
-            Verse Engine{" "}
-            <small>BY CTRUH</small>
-          </span>
+          <Logo className="h-10" />
         </a>
         <div className="st-top-actions">
           <a className="st-link" href="/pricing" id="lnk-pricing-4">Pricing</a>

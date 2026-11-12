@@ -1,6 +1,7 @@
 // Home page (/). Content lives in ./landing/data.ts and is rendered here with .map().
 // The scroll story, 3D model and other animations are src/animations/landing/ (GSAP, Three.js), mounted on this markup by the router;
 // the sections after the story are wired up by src/animations/landing/sections.js and styled by public/css/landing-sections.css.
+import Logo from "../components/Logo.tsx";
 import { Fragment } from "react";
 import {
   heroAside, realityModes, storyChapters, chapterNav,
@@ -998,10 +999,7 @@ export default function Landing() {
         </section>
         <div className="footer-directory">
           <div className="footer-identity">
-            <a href="#" className="footer-wordmark" aria-label="Verse Engine by Ctruh – Home" id="lnk-verse-engine-home-2">
-              Verse Engine{" "}
-              <span>BY CTRUH</span>
-            </a>
+            <a href="#" className="footer-wordmark" aria-label="Verse Engine by Ctruh – Home" id="lnk-verse-engine-home-2"><Logo className="h-16 lg:h-20" /></a>
             <a href="https://www.ctruh.com/" className="footer-parent" id="lnk-ctruh-2">Ctruh</a>
             <p className="footer-definition">{PRODUCT.definition}</p>
           </div>

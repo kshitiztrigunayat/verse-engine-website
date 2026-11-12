@@ -50,9 +50,8 @@ const enhancements=createEnhancements({gsap,ST,reduced,scrollToTarget});cleanups
 function onPage(){const ctx=gsap.context(()=>{
  html.classList.add('story-ready');gsap.set('.story-panel',{autoAlpha:0});gsap.set('.hero-panel',{autoAlpha:1});
  gsap.from('.hero-panel .panel-copy',{y:26,opacity:0,duration:1.1,ease:'expo.out',clearProps:'opacity,transform'});
- const tween=gsap.to(driver,{p:7,ease:'none',scrollTrigger:{trigger:'.story-stage',start:'top top',end:()=>'+='+innerHeight*(innerWidth<600?7.4:8),pin:true,scrub:.7,invalidateOnRefresh:true,onToggle:s=>{$('.site-header').classList.toggle('on-story',s.isActive||scrollY<10)}}});storyTrigger=tween.scrollTrigger;
+ const tween=gsap.to(driver,{p:7,ease:'none',scrollTrigger:{trigger:'.story-stage',start:'top top',end:()=>'+='+innerHeight*(innerWidth<600?7.4:8),pin:true,scrub:.7,invalidateOnRefresh:true}});storyTrigger=tween.scrollTrigger;
  enhancements.mount();showcase.mount();
- ST.create({start:10,onUpdate:()=>$('.site-header').classList.toggle('scrolled',scrollY>80)});
  });return()=>ctx.revert()}
 async function init(){if(reduced||!gsap){staticStory();return}try{const mod=await import('./model.ts');experience=await mod.createExperience($('#stage-three'));html.classList.remove('static-story','no-gl');html.classList.add('gl-ready');}catch(e){console.warn('3D preview unavailable; using the static story.',e);staticStory();return}
  if(innerWidth>800){lenis=new Lenis({lerp:.1,wheelMultiplier:1,anchors:false});lenis.on('scroll',ST.update);const lenisTick=t=>lenis.raf(t*1000);gsap.ticker.add(lenisTick);cleanups.push(()=>{gsap.ticker.remove(lenisTick);lenis.destroy()});gsap.ticker.lagSmoothing(0)}
@@ -72,6 +71,5 @@ return function dispose(){
  html.classList.remove('js','reduced-motion','story-ready','gl-ready','static-story','no-gl','poster-capture');
  ['--stage-ink','--stage-muted','--stage-line'].forEach(p=>html.style.removeProperty(p));
  ST.getAll().forEach(t=>t.kill());
- $('#site-header')?.classList.remove('on-story','scrolled');
 }
 }

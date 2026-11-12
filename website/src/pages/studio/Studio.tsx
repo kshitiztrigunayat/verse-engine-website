@@ -6,6 +6,7 @@
 // How it updates (same as before): moving to another #/ address, or a change that affects the page,
 // rebuilds the view (fresh elements, keeping scroll position and focus); a few things change in
 // place (the floor plan editor, the confirm counter, the drop zone highlight, the toast).
+import Logo from "../../components/Logo.tsx";
 import { Fragment, useEffect, useLayoutEffect, useRef, useState } from "react";
 import { flushSync } from "react-dom";
 import StudioGate from "./StudioGate.tsx";
@@ -204,15 +205,7 @@ export default function Studio() {
         <div className="st-shell">
           <aside className="st-side" aria-label="Playground" id="asd-playground">
             <a className="brand" href="/" aria-label="Verse Engine by Ctruh – Home" id="lnk-verse-engine-home-2">
-              <svg viewBox="0 0 38 40" fill="none" aria-hidden="true">
-                <path d="m19 2 16 9v19l-16 9-16-9V11L19 2Z" stroke="currentColor" strokeWidth="1.7" />
-                <path d="m3 11 16 10 16-10M19 21v18" stroke="currentColor" strokeWidth="1.7" />
-                <path d="m11 6 16 10" stroke="#0066cc" strokeWidth="2.4" />
-              </svg>
-              <span>
-                Verse Engine{" "}
-                <small>PLAYGROUND · BY CTRUH</small>
-              </span>
+              <span><Logo className="h-9" /><small>PLAYGROUND</small></span>
             </a>
             <a className="btn st-new" href="#/new" id="lnk-new-scene">+ New scene</a>
             <nav className="st-nav" aria-label="Playground sections" id="nav-playground-sections">

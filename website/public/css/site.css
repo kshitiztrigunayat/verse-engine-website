@@ -67,8 +67,7 @@
 .button i,.header-cta i,.site-button>span[aria-hidden],.header-cta>span[aria-hidden],.footer-cta .button i{display:none!important}
 .button,.site-button,.header-cta{gap:0!important}
 /* clean, simple nav: logo, links beside it, one button on the right */
-.site-header,.site-header.scrolled:not(.on-story){border-bottom:0!important;box-shadow:none}
-.site-header.scrolled:not(.on-story){box-shadow:0 1px 0 rgba(0,0,0,.06)}
+.site-header{border-bottom:0!important;box-shadow:none}
 .desktop-nav,.site-header .desktop-nav{margin-left:clamp(28px,4.5vw,72px);margin-right:auto;font:500 16px/24px Metropolis,sans-serif;gap:clamp(20px,2.4vw,36px);justify-content:flex-start}
 .nav-link{padding:8px 0;opacity:.82;transition:opacity .15s,color .15s}
 .nav-link:after{display:none!important}

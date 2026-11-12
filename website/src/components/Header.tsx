@@ -1,4 +1,5 @@
 // Site header: brand, main navigation (current route marked), actions and the menu button.
+import Logo from "./Logo.tsx";
 import ResourcesNav from "./ResourcesNav.tsx";
 
 export default function Header({ view, menuOpen, menuButtonRef, onOpenMenu }) {
@@ -14,23 +15,7 @@ export default function Header({ view, menuOpen, menuButtonRef, onOpenMenu }) {
         href="/"
         aria-label="Verse Engine by Ctruh – Home"
       >
-        <svg viewBox="0 0 38 40" fill="none" aria-hidden="true">
-          <path
-            d="m19 2 16 9v19l-16 9-16-9V11L19 2Z"
-            stroke="currentColor"
-            strokeWidth="1.7"
-          />
-          <path
-            d="m3 11 16 10 16-10M19 21v18"
-            stroke="currentColor"
-            strokeWidth="1.7"
-          />
-          <path d="m11 6 16 10" stroke="#0066cc" strokeWidth="2.4" />
-        </svg>
-        <span>
-          {"Verse Engine "}
-          <small>{"BY CTRUH"}</small>
-        </span>
+        <Logo className="h-10 md:h-12" />
       </a>
       <nav id="nav-main" className="desktop-nav" aria-label="Main navigation">
         <a
