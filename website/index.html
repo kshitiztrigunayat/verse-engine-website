@@ -1,6 +1,12 @@
 <!doctype html>
 <html lang="en">
 <head>
+<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-TFRKKH9R"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+</script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta id="meta-theme-color" name="theme-color" content="#ffffff">
@@ -47,7 +53,7 @@
     },
     {
       "@type": "SoftwareApplication",
-      "@id": "https://verse.ctruh.com/#software",
+      "@id": "https://verse.ctruh.com/#verse-engine",
       "name": "Verse Engine by Ctruh",
       "applicationCategory": "DeveloperApplication",
       "applicationSubCategory": "Browser-native 3D engine",
@@ -74,19 +80,20 @@
 <style id="style-boot">
 html{background:#fff}
 [hidden]{display:none!important}
-html:not(.app-ready) body{visibility:hidden}
+html:not(.app-ready):not(.prerendered) body{visibility:hidden}
 html.intro-on body:before{content:"";position:fixed;inset:0;background:#fff;z-index:9998;visibility:visible}
 </style>
 <script id="script-boot">
-/* Runs before first paint: arm the cover for the intro animation. Skipped for reduced motion, ?motion-off and ?poster. */
-try{if(!matchMedia("(prefers-reduced-motion: reduce)").matches&&!/motion-off|poster/.test(location.search))document.documentElement.classList.add("intro-on")}catch(e){}
+/* Runs before first paint: arm the cover for the intro animation. Skipped for reduced motion, ?motion-off, ?poster and
+   prerendered pages (class "prerendered" on <html>, vite.config.js), which show their content at once. */
+try{if(!document.documentElement.classList.contains("prerendered")&&!matchMedia("(prefers-reduced-motion: reduce)").matches&&!/motion-off|poster/.test(location.search))document.documentElement.classList.add("intro-on")}catch(e){}
 setTimeout(function(){document.documentElement.classList.remove("intro-on")},4500);
 </script>
 <script id="script-docs-hash">
 /* /docs only (and /docs/what-is-verse-engine, where /docs redirects): old production docs links (/docs/#/...) go to the new page paths. */
 (function(){if(!/^\/docs(\/what-is-verse-engine)?\/?$/.test(location.pathname))return;var h=location.hash;if(h.indexOf('#/')===0){var p=h.slice(2).split('?')[0];var map={'examples':'/samples','guides/publish-from-substance-painter':'/plugins'};location.replace(map[p]||('/docs/'+p));}})();
 </script>
-<script id="script-main" type="module" src="/src/main.jsx"></script>
+<script id="script-main" type="module" src="/src/main.tsx"></script>
 </head>
 <body id="app-body">
 <noscript><p style="padding:24px;font-family:sans-serif">Verse Engine needs JavaScript to display this site.</p></noscript>

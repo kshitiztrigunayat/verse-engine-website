@@ -99,9 +99,38 @@
       "source": "/docs",
       "destination": "/docs/what-is-verse-engine",
       "permanent": true
+    },
+    {
+      "source": "/(use-cases/ecommerce|use-cases/e-commerce|use-cases/commerce){/}?",
+      "destination": "/use-cases/3d-commerce",
+      "statusCode": 301
+    },
+    {
+      "source": "/(use-cases/real-estate|use-cases/architecture){/}?",
+      "destination": "/use-cases/architecture-real-estate",
+      "statusCode": 301
+    },
+    {
+      "source": "/(ai|ai-and-3d-infrastructure){/}?",
+      "destination": "/ai-3d-infrastructure",
+      "statusCode": 301
+    },
+    {
+      "source": "/(lyon|demo/lyon){/}?",
+      "destination": "/demos/lyon",
+      "statusCode": 301
+    },
+    {
+      "source": "/(.+)/",
+      "destination": "/$1",
+      "statusCode": 301
     }
   ],
   "rewrites": [
+    {
+      "source": "/studio/:path*",
+      "destination": "/studio/index.html"
+    },
     {
       "source": "/((?!.*\\.).*)",
       "destination": "/index.html"
@@ -134,11 +163,20 @@
       ]
     },
     {
-      "source": "/assets/(.*)",
+      "source": "/assets/((?!_h/).*)",
       "headers": [
         {
           "key": "Cache-Control",
           "value": "public, max-age=604800, stale-while-revalidate=86400"
+        }
+      ]
+    },
+    {
+      "source": "/assets/_h/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
         }
       ]
     },
