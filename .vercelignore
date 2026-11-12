@@ -1,7 +1,6 @@
 # Anchored with a leading slash so only these top-level items are skipped.
 # (An unanchored "docs" also matched website/dist/docs, which broke /docs on Vercel.)
-/website/preview-server.mjs
-/website/tools
+/website/preview-server.ts
 /website/source
 /docs
 /reference
