@@ -15,6 +15,7 @@ type ShellView = {
   skipHidden: boolean;
   headerHidden: boolean;
   footerHidden: boolean;
+  footerIntro: boolean;
   navCurrent?: string | null;
   mainHidden: boolean;
   mainClass?: string;
@@ -37,7 +38,7 @@ export default function Shell({ view }: { view: ShellView }) {
       {"\n"}
       <main id="app-main" tabIndex={-1} className={view.mainClass} hidden={view.mainHidden}>{view.mainPage}</main>
       {"\n"}
-      <Footer hidden={view.footerHidden} />
+      <Footer hidden={view.footerHidden} intro={view.footerIntro} />
       {"\n"}
       <MobileMenu dialogRef={dialogRef} menuButtonRef={menuButtonRef} setMenuOpen={setMenuOpen} />
       {"\n"}

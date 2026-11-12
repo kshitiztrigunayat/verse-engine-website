@@ -42,6 +42,8 @@ export function shellView(payload: RoutePayload | null, ready: boolean, page: Re
   return {
     headerHidden: !ready || !payload || !(payload.chrome === "full" || payload.chrome === "header"),
     footerHidden: !ready || !payload || payload.chrome !== "full",
+    // The Resources pages end with their own call to action, so their footer leaves out the "Any 3D world" intro.
+    footerIntro: payload?.kind !== "resources",
     skipHidden: !ready || isApp || payload?.chrome === "none",
     mainHidden: !ready || isApp,
     mainClass: isApp ? undefined : payload?.mainClass || "",

@@ -10,22 +10,24 @@ const extra = (links) =>
     </a>
   ));
 
-export default function Footer({ hidden }) {
+export default function Footer({ hidden, intro }) {
   return (
     <footer id="site-footer" className="page-footer" hidden={hidden}>
-      <div className="footer-intro">
-        <p>
-          {"Any 3D world,"}
-          <br />
-          <strong>{"as a link."}</strong>
-        </p>
-        <a className="site-button" href="/studio" id="lnk-explore-verse-engine">
-          {"Explore Verse Engine"}
-          <span aria-hidden="true" />
-        </a>
-        <span>{"Built in Bengaluru and San Francisco."}</span>
-      </div>
-      <div className="footer-links">
+      {intro && (
+        <div className="footer-intro">
+          <p>
+            {"Any 3D world,"}
+            <br />
+            <strong>{"as a link."}</strong>
+          </p>
+          <a className="site-button" href="/studio" id="lnk-explore-verse-engine">
+            {"Explore Verse Engine"}
+            <span aria-hidden="true" />
+          </a>
+          <span>{"Built in Bengaluru and San Francisco."}</span>
+        </div>
+      )}
+      <div className={"footer-links" + (intro ? "" : " border-t-0! pt-0!")}>
         <div>
           <a
             className="brand"
