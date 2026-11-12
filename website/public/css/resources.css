@@ -156,7 +156,8 @@
   .rs-cols-2,.rs-cols-3{grid-template-columns:1fr}
   .rs-section{padding:52px 0}
   .rs-card,.rs-callout{padding:22px}
-  .rs-step{grid-template-columns:40px 1fr;padding:20px}
+  .rs-step{grid-template-columns:1fr;gap:10px;padding:20px}
+  .rs-step-n{padding-top:0}
   .rs-answer{padding:20px}
   .rs-hero-image{padding:120px 0 44px;min-height:560px}
   .rs-demo-play{font-size:13px;padding:11px 16px}

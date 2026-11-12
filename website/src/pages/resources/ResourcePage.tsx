@@ -418,7 +418,7 @@ function Section({ s }) {
       <div className={"content-width" + (s.narrow ? " rs-narrow" : "")}>
         {s.eyebrow && <p className="eyebrow">{s.eyebrow}</p>}
         <h2 id={s.id + "-h"}>{s.title}</h2>
-        {s.intro && <p className="rs-lead">{s.intro}</p>}
+        {s.intro && <p className="rs-lead mt-3!">{s.intro}</p>}
         <Blocks blocks={s.blocks} />
       </div>
     </section>

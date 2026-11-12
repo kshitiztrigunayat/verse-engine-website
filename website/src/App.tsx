@@ -3,9 +3,9 @@
 // then shows the page, sets <head> (title, description, canonical, social card, robots, JSON-LD), mounts the
 // route's behaviour modules and handles scroll, focus and the page transition. A prerendered page (vite.config.ts)
 // is already on screen on first load: React takes its markup over (main.tsx) and shows the same view at once.
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 import { BrowserRouter, Route, Routes, useLocation, useNavigate, useNavigationType } from "react-router-dom";
-import type { ComponentType } from "react";
+import type { ComponentType, ReactNode } from "react";
 import Shell from "./Shell.tsx";
 import { META, OG_DEFAULT, docsJsonLd } from "./pages/meta.ts";
 import DocsPage from "./pages/docs/DocsPage.tsx";
@@ -119,6 +119,35 @@ function RouteContent({ payload, Component }: { payload: RoutePayload | null; Co
   return Component ? <Component /> : <NotFound />;
 }
 
+/** Mounts the route's behaviour modules on its page once it shows. They stop in a layout-effect cleanup, which runs
+    before React removes the page's markup, so they can still reach their elements while stopping. (Stopping them after
+    the markup was gone threw, and the error unmounted the whole app: a blank page until a manual refresh.) */
+function RouteModules({ pathname, ready, children }: { pathname: string; ready: boolean; children: ReactNode }) {
+  useLayoutEffect(() => {
+    const loaders = MODULES[pathname];
+    if (!ready || !loaders) return undefined;
+    let active = true;
+    let disposers: (() => void)[] = [];
+    const stop = (list: (() => void)[]) => list.reverse().forEach((dispose) => {
+      try { dispose(); } catch (error) { console.error(`Unable to stop the behaviour of ${pathname}.`, error); }
+    });
+    // Each module mounts as soon as its code arrives; one that fails does not stop the others.
+    Promise.allSettled(loaders.map((load) => load().then((module) => module.mount()))).then((results) => {
+      const mounted = results.flatMap((result) => {
+        if (result.status === "rejected") console.error(`Unable to initialize the behaviour of ${pathname}.`, result.reason);
+        return result.status === "fulfilled" && typeof result.value === "function" ? [result.value as () => void] : [];
+      });
+      if (active) disposers = mounted;
+      else stop(mounted);
+    });
+    return () => {
+      active = false;
+      stop(disposers);
+    };
+  }, [pathname, ready]);
+  return children;
+}
+
 function RouteEffects({ payload, pathname, ready }: { payload: RoutePayload | null; pathname: string; ready: boolean }) {
   useEffect(() => {
     if (!payload || !ready) return;
@@ -220,23 +249,6 @@ function AppRoutes() {
   }, [pathname]);
 
   useEffect(() => {
-    if (!payload || !ready) return undefined;
-    const disposers: (() => void)[] = [];
-    let active = true;
-    for (const load of MODULES[pathname] ?? []) {
-      load().then((module) => module.mount()).then((dispose) => {
-        if (typeof dispose !== "function") return;
-        if (active) disposers.push(dispose as () => void);
-        else dispose();
-      }).catch((error) => console.error(`Unable to initialize the behaviour of ${pathname}.`, error));
-    }
-    return () => {
-      active = false;
-      disposers.reverse().forEach((dispose) => dispose());
-    };
-  }, [pathname, ready]);
-
-  useEffect(() => {
     if (!payload || !ready) return;
     if (location.hash) {
       requestAnimationFrame(() => document.getElementById(decodeURIComponent(location.hash.slice(1)))?.scrollIntoView());
@@ -262,7 +274,17 @@ function AppRoutes() {
     <>
       <RouteEffects payload={payload} pathname={pathname} ready={ready} />
       <NavigationBridge />
-      <Shell view={shellView(payload, ready, <RouteContent payload={payload} Component={page.Component} />, announced === pathname)} />
+      <Shell
+        view={shellView(
+          payload,
+          ready,
+          // Keyed by the route's modules, so leaving a route that has some (the home page) removes its page with them.
+          <RouteModules key={MODULES[pathname] ? pathname : "none"} pathname={pathname} ready={!!payload && ready}>
+            <RouteContent payload={payload} Component={page.Component} />
+          </RouteModules>,
+          announced === pathname,
+        )}
+      />
     </>
   );
 }
